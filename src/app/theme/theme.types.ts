@@ -35,6 +35,8 @@ export type ThemeMode = "light" | "dark";
 
 export type ThemeSizeUnit = "xs" | "sm" | "md" | "lg" | "xl";
 
+export type ThemeFormat = "fill" | "outline";
+
 export type ThemeColorKey =
   | "blue"
   | "cyan"
