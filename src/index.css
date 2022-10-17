@@ -1,13 +1,49 @@
+@font-face {
+  font-family: "SFPro";
+  src: local("SFPro-Regular"),
+    url(./app/assets/fonts/SFPro/SFPro-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SFPro";
+  src: local("SFPro-RegularItalic"),
+    url(./app/assets/fonts/SFPro/SFPro-RegularItalic.otf) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SFPro";
+  src: local("SFPro-Bold"),
+    url(./app/assets/fonts/SFPro/SFPro-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SFPro";
+  src: local("SFPro-Heavy"),
+    url(./app/assets/fonts/SFPro/SFPro-Heavy.ttf) format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "SFPro";
+  src: local("SFPro-Light"),
+    url(./app/assets/fonts/SFPro/SFPro-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

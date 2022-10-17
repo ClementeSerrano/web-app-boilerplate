@@ -28,7 +28,18 @@ export type ThemePalette = Record<ThemePaletteKey, ThemePaletteVariant> & {
 
 export type ThemeSpacing = Record<ThemeSizeUnit, number>;
 
-export type ThemeTypography = Record<ThemeTypographyKey, ThemeTypographyProps>;
+export type ThemeTypography = Record<
+  ThemeTypographyKey,
+  ThemeTypographyProps
+> & {
+  fontBaseSize: number;
+  fontSizeScales: Record<string, number>;
+  fontWeights: Record<string, number>;
+};
+
+export type FontSizeScales = Record<FontSizeScaleVariant, number>;
+
+export type FontWeights = Record<FontWeightVariant, number>;
 
 // Helper types.
 export type ThemeMode = "light" | "dark";
@@ -79,13 +90,34 @@ export type ThemeTypographyKey =
   | "title2"
   | "title3"
   | "title4"
+  | "title5"
+  | "title6"
   | "subtitle1"
   | "subtitle2"
   | "paragraph1"
   | "paragraph2"
-  | "paragraph3";
+  | "paragraph3"
+  | "button";
 
-export type ThemeTypographyProps = Pick<
-  CSSProperties,
-  "fontFamily" | "fontWeight" | "fontSize" | "lineHeight" | "letterSpacing"
->;
+export type ThemeTypographyProps = CSSProperties;
+
+export type FontSizeScaleVariant =
+  | "xxxxxl"
+  | "xxxxl"
+  | "xxxl"
+  | "xxl"
+  | "xl"
+  | "lg"
+  | "md"
+  | "sm"
+  | "xs";
+
+export type FontWeightVariant = "light" | "regular" | "medium" | "bold";
+
+// Function types
+export type ParseSizeArgs = {
+  value: number;
+  from: "px" | "rem" | "em";
+  to: "px" | "rem" | "em";
+  withUnits?: boolean;
+};

@@ -1,5 +1,3 @@
-import { useTheme } from "styled-components";
-
 import { ButtonContainer } from "./Button.styles";
 import { ButtonProps } from "./Button.types";
 
@@ -12,10 +10,6 @@ export default function Button({
   loading = false,
   ...props
 }: ButtonProps) {
-  const theme = useTheme();
-
-  console.log({ theme });
-
   return (
     <ButtonContainer as={Component} {...props}>
       {loading ? "Loading..." : children}
