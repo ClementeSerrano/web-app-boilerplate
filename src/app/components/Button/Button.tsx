@@ -11,7 +11,13 @@ export default function Button({
   ...props
 }: ButtonProps) {
   return (
-    <ButtonContainer as={Component} {...props}>
+    <ButtonContainer
+      as={Component}
+      variant={variant}
+      format={format}
+      size={size}
+      {...props}
+    >
       {loading ? "Loading..." : children}
     </ButtonContainer>
   );
