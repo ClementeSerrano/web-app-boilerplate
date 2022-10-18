@@ -10,7 +10,7 @@ export default function Login() {
   console.log({ theme });
 
   return (
-    <div>
+    <div style={{ backgroundColor: theme.palette.background.main }}>
       <img src={logo} className="App-logo" alt="logo" />
 
       <p>Welcome to Hey Backoffice!</p>

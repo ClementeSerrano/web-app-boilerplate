@@ -46,9 +46,9 @@ export const lightThemePalette: ThemePalette = {
     darker: themeColors.gray.light,
   },
   text: {
-    light: themeColors.gray.light,
-    main: themeColors.gray.main,
-    dark: themeColors.gray.dark,
+    light: themeColors.gray.main,
+    main: themeColors.gray.dark,
+    dark: themeColors.gray.darker,
   },
 };
 
@@ -97,8 +97,8 @@ export const darkThemePalette: ThemePalette = {
     darker: themeColors.black.main,
   },
   text: {
-    light: themeColors.white.main,
-    main: themeColors.white.main,
+    light: themeColors.gray.lighter,
+    main: themeColors.gray.light,
     dark: themeColors.gray.main,
   },
 };

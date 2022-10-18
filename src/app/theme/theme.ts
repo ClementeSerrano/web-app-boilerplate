@@ -4,6 +4,7 @@ import { lightThemePalette, darkThemePalette } from "./palette.theme";
 import { themeSpacing } from "./spacing.theme";
 import { themeTypography } from "./typography.theme";
 import { Theme, ThemeWithMode } from "./theme.types";
+import { themeShape } from "./shape.theme";
 
 const lightTheme: Theme = {
   breakpoints: themeBreakpoints,
@@ -11,6 +12,7 @@ const lightTheme: Theme = {
   palette: lightThemePalette,
   spacing: themeSpacing,
   typography: themeTypography,
+  shape: themeShape,
 };
 
 const darkTheme: Theme = { ...lightTheme, palette: darkThemePalette };

@@ -9,10 +9,14 @@ export type Theme = {
   palette: ThemePalette;
   spacing: ThemeSpacing;
   typography: ThemeTypography;
+  shape: ThemeShape;
 };
 
 export type ThemeBreakpoints = {
-  values: Record<ThemeSizeUnit, number>;
+  values: Record<
+    Extract<ThemeSizeUnit, "xs" | "sm" | "md" | "lg" | "xl">,
+    number
+  >;
   unit: "px";
 };
 
@@ -26,7 +30,10 @@ export type ThemePalette = Record<ThemePaletteKey, ThemePaletteVariant> & {
   text: Pick<ThemeColorVariant, "light" | "main" | "dark">;
 };
 
-export type ThemeSpacing = Record<ThemeSizeUnit, number>;
+export type ThemeSpacing = Record<
+  Extract<ThemeSizeUnit, "xs" | "sm" | "md" | "lg" | "xl">,
+  number
+>;
 
 export type ThemeTypography = Record<
   ThemeTypographyKey,
@@ -37,14 +44,30 @@ export type ThemeTypography = Record<
   fontWeights: Record<string, number>;
 };
 
+export type ThemeShape = {
+  borderRadius: Record<
+    Extract<ThemeSizeUnit, "xs" | "sm" | "md" | "lg" | "xl" | "xxl">,
+    number
+  >;
+};
+
 export type FontSizeScales = Record<FontSizeScaleVariant, number>;
 
 export type FontWeights = Record<FontWeightVariant, number>;
 
-// Helper types.
+// Sub types.
 export type ThemeMode = "light" | "dark";
 
-export type ThemeSizeUnit = "xs" | "sm" | "md" | "lg" | "xl";
+export type ThemeSizeUnit =
+  | "xxxxxl"
+  | "xxxxl"
+  | "xxxl"
+  | "xxl"
+  | "xl"
+  | "lg"
+  | "md"
+  | "sm"
+  | "xs";
 
 export type ThemeFormat = "fill" | "outline";
 

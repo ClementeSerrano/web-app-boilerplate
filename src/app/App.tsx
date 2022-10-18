@@ -1,4 +1,4 @@
-import ThemeContextProvider from "./contexts/ThemeContext/ThemeContext";
+import { ThemeContextProvider } from "./contexts/ThemeContext/ThemeContext";
 import Login from "./modules/Login/Login";
 
 export default function App() {

@@ -21,7 +21,7 @@ export const themeColors: ThemeColors = {
   },
   gray: {
     superLight: "#F7FAFC",
-    lighter: "#CFD5DF",
+    lighter: "#E7EAEF",
     light: "#CFD5DF",
     main: "#888C95",
     dark: "#3C3F44",
