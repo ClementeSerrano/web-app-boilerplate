@@ -1,17 +1,8 @@
 import { useEffect, useState } from "react";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { ThemeProvider } from "styled-components";
 
 import theme from "../../theme/theme";
 import { ThemeMode } from "../../theme/theme.types";
-
-const GlobalStyle = createGlobalStyle`
-  p {
-    line-height: 24px;
-    margin: 0;
-  }
-  h1,h2,h3,h4 {
-  }
-`;
 
 export function ThemeContextProvider({ children }: WithChildren) {
   const [mode, setMode] = useState<ThemeMode>("light");
@@ -42,11 +33,7 @@ export function ThemeContextProvider({ children }: WithChildren) {
 
   return (
     <ThemeProvider theme={{ ...theme[mode], mode, setMode, toggleMode }}>
-      <>
-        <GlobalStyle />
-
-        {children}
-      </>
+      {children}
     </ThemeProvider>
   );
 }
