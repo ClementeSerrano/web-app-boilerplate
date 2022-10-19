@@ -7,10 +7,21 @@ export default function Grid({
   container = false,
   size = "md",
   format = "main",
+  direction = "column",
+  align = "unset",
+  justify = "unset",
   ...props
 }: GridProps) {
   return (
-    <GridContainer as={Component} size={size} container={container} {...props}>
+    <GridContainer
+      as={Component}
+      size={size}
+      container={container}
+      direction={direction}
+      align={align}
+      justify={justify}
+      {...props}
+    >
       {children}
     </GridContainer>
   );

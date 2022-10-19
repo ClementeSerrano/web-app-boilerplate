@@ -5,7 +5,9 @@ import { GridProps } from "./Grid.types";
 
 export const GridContainer = styled.section<GridProps>`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ direction }) => direction};
+  align-items: ${({ align }) => align};
+  justify-content: ${({ justify }) => justify};
   padding: ${({ size, theme }) =>
     getGridPadding({ size, spacing: theme.spacing })};
   background-color: ${({ container, format, theme }) =>
