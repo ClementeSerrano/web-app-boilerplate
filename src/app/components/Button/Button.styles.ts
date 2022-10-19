@@ -1,11 +1,11 @@
 import styled from "styled-components";
+
 import {
   getButtonBgColor,
   getButtonBorder,
   getButtonColor,
   getButtonPadding,
 } from "./Button.helpers";
-
 import { ButtonProps } from "./Button.types";
 
 export const ButtonContainer = styled.button.attrs(

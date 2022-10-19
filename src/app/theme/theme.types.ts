@@ -80,15 +80,16 @@ export type ThemeColorKey =
   | "orange"
   | "purple";
 
-export type ThemeColorVariant = {
-  superLight: string;
-  lighter: string;
-  light: string;
-  main: string;
-  darker: string;
-  dark: string;
-  superDark: string;
-};
+export type ThemeColorVariantKey =
+  | "superLight"
+  | "lighter"
+  | "light"
+  | "main"
+  | "darker"
+  | "dark"
+  | "superDark";
+
+export type ThemeColorVariant = Record<ThemeColorVariantKey, string>;
 
 export type ThemePaletteKey =
   | "primary"
