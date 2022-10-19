@@ -6,4 +6,8 @@ export const themeSpacing: ThemeSpacing = {
   md: 24,
   lg: 48,
   xl: 64,
+  xxl: 72,
+  xxxl: 80,
+  xxxxl: 88,
+  xxxxxl: 96,
 };

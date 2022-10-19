@@ -88,8 +88,10 @@ export const themeTypography: ThemeTypography = {
   },
   subtitle1: {
     fontFamily: "SFPro",
-    fontWeight: fontWeights.light,
+    fontWeight: fontWeights.regular,
     textTransform: "uppercase",
+    letterSpacing: "0.2rem",
+    lineHeight: "1.5",
     fontSize: parseSize({
       value: fontBaseSize * fontSizeScales.md,
       from: "px",
@@ -99,8 +101,10 @@ export const themeTypography: ThemeTypography = {
   },
   subtitle2: {
     fontFamily: "SFPro",
+    fontWeight: fontWeights.bold,
     textTransform: "uppercase",
-    fontWeight: fontWeights.regular,
+    letterSpacing: "0.2rem",
+    lineHeight: "1.5",
     fontSize: parseSize({
       value: fontBaseSize * fontSizeScales.sm,
       from: "px",
@@ -147,7 +151,5 @@ export const themeTypography: ThemeTypography = {
       to: "rem",
       withUnits: true,
     }),
-    // lineHeight: ,
-    // letterSpacing: ,
   },
 };

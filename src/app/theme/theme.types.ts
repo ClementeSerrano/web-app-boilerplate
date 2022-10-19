@@ -30,10 +30,7 @@ export type ThemePalette = Record<ThemePaletteKey, ThemePaletteVariant> & {
   text: Pick<ThemeColorVariant, "light" | "main" | "dark">;
 };
 
-export type ThemeSpacing = Record<
-  Extract<ThemeSizeUnit, "xs" | "sm" | "md" | "lg" | "xl">,
-  number
->;
+export type ThemeSpacing = Record<ThemeSizeUnit, number>;
 
 export type ThemeTypography = Record<
   ThemeTypographyKey,
