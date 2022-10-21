@@ -1,7 +1,5 @@
 import { useTheme } from "styled-components";
 
-import logo from "../../../logo.svg";
-import "../../App.css";
 import Button from "../../components/Button/Button";
 import Grid from "../../components/Grid/Grid";
 
@@ -11,10 +9,8 @@ export default function Login() {
   console.log({ theme });
 
   return (
-    <Grid container as="section">
-      <img src={logo} className="App-logo" alt="logo" />
-
-      <p>Welcome to Hey Backoffice!</p>
+    <Grid container as="section" style={{ height: "100vh" }}>
+      <h1 style={{ color: "white" }}>Welcome to Hey Backoffice!</h1>
 
       <Button onClick={() => theme.toggleMode()}>Toggle theme</Button>
     </Grid>

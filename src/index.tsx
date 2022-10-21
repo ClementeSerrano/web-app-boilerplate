@@ -1,16 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import App from "./app/App";
-import "./index.css";
+import { ThemeContextProvider } from "./app/contexts/ThemeContext/ThemeContext";
+import RootRoute from "./app/routes/RootRoute";
+import ErrorFallbackPage from "./app/modules/Errors/ErrorFallbackPage/ErrorFallbackPage";
 import reportWebVitals from "./reportWebVitals";
+import "./index.css";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootRoute />,
+    errorElement: <ErrorFallbackPage />,
+  },
+]);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeContextProvider>
+      <RouterProvider router={router} />
+    </ThemeContextProvider>
   </React.StrictMode>
 );
 
