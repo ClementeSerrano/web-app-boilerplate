@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 import theme from "../../theme/theme";
 import { WithChildren } from "../../../types/app";
 import { ThemeMode } from "../../theme/theme.types";
+
+const GlobalStyle = createGlobalStyle`  
+  h1,h2,h3,h4,h5,h6,p,b,a {
+    margin: 0;
+  }
+`;
 
 export function ThemeContextProvider({ children }: WithChildren) {
   const [mode, setMode] = useState<ThemeMode>("light");
@@ -30,11 +36,13 @@ export function ThemeContextProvider({ children }: WithChildren) {
     }
   }, []);
 
-  console.log({ themeeee: theme[mode] });
-
   return (
-    <ThemeProvider theme={{ ...theme[mode], mode, setMode, toggleMode }}>
-      {children}
-    </ThemeProvider>
+    <>
+      <GlobalStyle />
+
+      <ThemeProvider theme={{ ...theme[mode], mode, setMode, toggleMode }}>
+        {children}
+      </ThemeProvider>
+    </>
   );
 }

@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { ThemeContextProvider } from "./app/contexts/ThemeContext/ThemeContext";
 import RootRoute from "./app/routes/RootRoute";
-import ErrorFallbackPage from "./app/modules/Errors/ErrorFallbackPage/ErrorFallbackPage";
+import ErrorFallbackPage from "./app/modules/Errors/ErrorFallbackScreen/ErrorFallbackScreen";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 

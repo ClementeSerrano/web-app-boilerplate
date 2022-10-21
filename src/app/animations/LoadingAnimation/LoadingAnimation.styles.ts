@@ -15,8 +15,8 @@ export const LoadingAnimationContainer = styled.div<
   Required<LoadingAnimationProps>
 >`
   display: inline-block;
-  width: ${({ height }) => parseVectorHeight(height)}
-  height: ${({ height }) => parseVectorHeight(height)}
+  width: ${({ height }) => parseVectorHeight(height)};
+  height: ${({ height }) => parseVectorHeight(height)};
 
   &:after {
     content: " ";
