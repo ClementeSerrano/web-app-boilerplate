@@ -54,7 +54,8 @@ export type FontSizeScales = Record<FontSizeScaleVariant, number>;
 export type FontWeights = Record<FontWeightVariant, number>;
 
 export type VectorProps = WithStyle &
-  Pick<CSSProperties, "height" | "color"> & {
+  Pick<CSSProperties, "color"> & {
+    height?: number;
     colors?: Partial<ThemeColorVariant>;
     gradient?: { from: string; to: string };
   };
