@@ -1,4 +1,5 @@
 import { CSSProperties } from "react";
+import { WithStyle } from "../../types/app";
 
 // Main types.
 export type ThemeWithMode = Record<ThemeMode, Theme>;
@@ -51,6 +52,12 @@ export type ThemeShape = {
 export type FontSizeScales = Record<FontSizeScaleVariant, number>;
 
 export type FontWeights = Record<FontWeightVariant, number>;
+
+export type VectorProps = WithStyle &
+  Pick<CSSProperties, "height" | "color"> & {
+    colors?: Partial<ThemeColorVariant>;
+    gradient?: { from: string; to: string };
+  };
 
 // Sub types.
 export type ThemeMode = "light" | "dark";

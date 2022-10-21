@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 
 import theme from "../../theme/theme";
+import { WithChildren } from "../../../types/app";
 import { ThemeMode } from "../../theme/theme.types";
 
 export function ThemeContextProvider({ children }: WithChildren) {
