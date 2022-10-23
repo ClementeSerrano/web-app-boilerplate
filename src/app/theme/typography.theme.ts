@@ -35,6 +35,8 @@ export const themeTypography: ThemeTypography = {
       to: "rem",
       withUnits: true,
     }),
+    lineHeight: 1,
+    letterSpacing: "-0.015em",
   },
   title2: {
     fontFamily: "SFPro",
@@ -45,6 +47,8 @@ export const themeTypography: ThemeTypography = {
       to: "rem",
       withUnits: true,
     }),
+    lineHeight: 1,
+    letterSpacing: "-.003em",
   },
   title3: {
     fontFamily: "SFPro",
@@ -55,6 +59,8 @@ export const themeTypography: ThemeTypography = {
       to: "rem",
       withUnits: true,
     }),
+    lineHeight: 1.1,
+    letterSpacing: "0em",
   },
   title4: {
     fontFamily: "SFPro",
@@ -65,6 +71,8 @@ export const themeTypography: ThemeTypography = {
       to: "rem",
       withUnits: true,
     }),
+    lineHeight: 1.1,
+    letterSpacing: "0em",
   },
   title5: {
     fontFamily: "SFPro",
@@ -75,6 +83,8 @@ export const themeTypography: ThemeTypography = {
       to: "rem",
       withUnits: true,
     }),
+    lineHeight: 1.1,
+    letterSpacing: "0em",
   },
   title6: {
     fontFamily: "SFPro",
@@ -85,32 +95,34 @@ export const themeTypography: ThemeTypography = {
       to: "rem",
       withUnits: true,
     }),
+    lineHeight: 1.1,
+    letterSpacing: "0em",
   },
   subtitle1: {
     fontFamily: "SFPro",
     fontWeight: fontWeights.regular,
-    textTransform: "uppercase",
-    letterSpacing: "0.2rem",
-    lineHeight: "1.5",
     fontSize: parseSize({
       value: fontBaseSize * fontSizeScales.md,
       from: "px",
       to: "rem",
       withUnits: true,
     }),
+    letterSpacing: "0.2rem",
+    lineHeight: "1.5",
+    textTransform: "uppercase",
   },
   subtitle2: {
     fontFamily: "SFPro",
     fontWeight: fontWeights.bold,
-    textTransform: "uppercase",
-    letterSpacing: "0.2rem",
-    lineHeight: "1.5",
     fontSize: parseSize({
       value: fontBaseSize * fontSizeScales.sm,
       from: "px",
       to: "rem",
       withUnits: true,
     }),
+    letterSpacing: "0.2rem",
+    lineHeight: "1.5",
+    textTransform: "uppercase",
   },
   paragraph1: {
     fontFamily: "SFPro",
@@ -121,6 +133,8 @@ export const themeTypography: ThemeTypography = {
       to: "rem",
       withUnits: true,
     }),
+    lineHeight: 1.45,
+    letterSpacing: "0em",
   },
   paragraph2: {
     fontFamily: "SFPro",
@@ -131,6 +145,8 @@ export const themeTypography: ThemeTypography = {
       to: "rem",
       withUnits: true,
     }),
+    lineHeight: 1.45,
+    letterSpacing: "0em",
   },
   paragraph3: {
     fontFamily: "SFPro",
@@ -141,6 +157,8 @@ export const themeTypography: ThemeTypography = {
       to: "rem",
       withUnits: true,
     }),
+    lineHeight: 1.45,
+    letterSpacing: "0em",
   },
   button: {
     fontFamily: "SFPro",
@@ -151,5 +169,7 @@ export const themeTypography: ThemeTypography = {
       to: "rem",
       withUnits: true,
     }),
+    lineHeight: 1.45,
+    letterSpacing: "0em",
   },
 };

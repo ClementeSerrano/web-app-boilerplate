@@ -29,4 +29,5 @@ export const FallbackScreenParagraph = styled.p`
   color: ${({ theme }) => theme.palette.text.dark};
   font-size: ${({ theme }) => theme.typography.paragraph1.fontSize};
   font-weight: ${({ theme }) => theme.typography.paragraph1.fontWeight};
+  text-align: center;
 `;

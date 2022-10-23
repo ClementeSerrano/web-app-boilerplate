@@ -9,7 +9,7 @@ export default function ErrorFallbackScreen() {
     <FallbackScreen
       type="error"
       title="Ooops!"
-      description={`An unexpected error has occured: ${
+      description={`Sorry, an unexpected error has occured: ${
         error.statusText || error.message
       }`}
     />
