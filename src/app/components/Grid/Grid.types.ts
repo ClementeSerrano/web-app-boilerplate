@@ -1,5 +1,5 @@
 import { CSSProperties } from "styled-components";
-import { ValueOf } from "../../../types/general";
+import { ValueOf } from "../../../types/general.types";
 import { ThemePalette, ThemeSizeUnit } from "../../theme/theme.types";
 
 export type GridProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {

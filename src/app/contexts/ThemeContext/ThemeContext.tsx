@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 import theme from "../../theme/theme";
-import { WithChildren } from "../../../types/app";
+import { WithChildren } from "../../components/components.types";
 import { ThemeMode } from "../../theme/theme.types";
 
 const GlobalStyle = createGlobalStyle`  

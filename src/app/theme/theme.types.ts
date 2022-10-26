@@ -1,7 +1,9 @@
 import { CSSProperties } from "react";
-import { WithStyle } from "../../types/app";
+import { WithStyle } from "../components/components.types";
 
-// Main types.
+/**
+ * Main type definitions
+ */
 export type ThemeWithMode = Record<ThemeMode, Theme>;
 
 export type Theme = {
@@ -60,7 +62,9 @@ export type VectorProps = WithStyle &
     gradient?: { from: string; to: string };
   };
 
-// Sub types.
+/**
+ * Sub type definitions
+ */
 export type ThemeMode = "light" | "dark";
 
 export type ThemeSizeUnit =
@@ -143,7 +147,9 @@ export type FontSizeScaleVariant =
 
 export type FontWeightVariant = "light" | "regular" | "medium" | "bold";
 
-// Function types
+/**
+ * Function type definitions
+ */
 export type ParseSizeArgs = {
   value: number;
   from: "px" | "rem" | "em";
