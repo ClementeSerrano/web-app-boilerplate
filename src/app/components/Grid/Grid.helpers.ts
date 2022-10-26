@@ -5,8 +5,27 @@ import { GridProps } from "./Grid.types";
 export function getGridPadding({
   size = "md",
   spacing,
-}: Pick<GridProps, "size"> & Pick<Theme, "spacing">): string {
-  return `${spacing[size]}px`;
+  withUnits = true,
+}: Pick<GridProps, "size"> & Pick<Theme, "spacing"> & { withUnits?: boolean }) {
+  return withUnits ? `${spacing[size]}px` : spacing[size];
+}
+
+export function getGridMaxSize({
+  maxHeight,
+  maxWidth,
+  size = "md",
+  spacing,
+}: Pick<GridProps, "maxHeight" | "maxWidth" | "size"> &
+  Pick<Theme, "spacing">): string {
+  if (!maxHeight && !maxWidth) return "unset";
+
+  const extraPadding =
+    2 * (getGridPadding({ size, spacing, withUnits: false }) as number);
+
+  if (maxHeight) return `calc(100vh - ${extraPadding}px)`;
+  if (maxWidth) return `calc(100vw - ${extraPadding}px)`;
+
+  return "";
 }
 
 export function getGridBgColor({

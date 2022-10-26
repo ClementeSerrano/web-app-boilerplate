@@ -12,4 +12,7 @@ export type GridProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   direction?: "row" | "column";
   align?: ValueOf<Pick<CSSProperties, "alignItems">>;
   justify?: ValueOf<Pick<CSSProperties, "justifyContent">>;
+  maxHeight?: boolean;
+  maxWidth?: boolean;
+  fluid?: boolean;
 };

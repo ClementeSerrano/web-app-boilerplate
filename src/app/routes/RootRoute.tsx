@@ -1,5 +1,3 @@
-import Login from "../modules/Login/Login";
-
 export default function RootRoute() {
-  return <Login />;
+  return <div>Root route</div>;
 }

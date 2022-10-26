@@ -6,12 +6,23 @@ import { ThemeContextProvider } from "./app/contexts/ThemeContext/ThemeContext";
 import RootRoute from "./app/routes/RootRoute";
 import ErrorFallbackPage from "./app/modules/Errors/ErrorFallbackScreen/ErrorFallbackScreen";
 import reportWebVitals from "./reportWebVitals";
+import ProtectedRoute from "./app/routes/ProtectedRoute";
+import LoginRoute from "./app/routes/LoginRoute";
 import "./index.css";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootRoute />,
+    element: (
+      <ProtectedRoute>
+        <RootRoute />
+      </ProtectedRoute>
+    ),
+    errorElement: <ErrorFallbackPage />,
+  },
+  {
+    path: "/login",
+    element: <LoginRoute />,
     errorElement: <ErrorFallbackPage />,
   },
 ]);
