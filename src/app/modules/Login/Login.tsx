@@ -5,6 +5,9 @@ import Grid from "../../components/Grid/Grid";
 import Typography from "../../components/Typography/Typography";
 import Carousel from "../../components/Carousel/Carousel";
 import MonkeyAstronautImage from "../../assets/images/MonkeyAstronautImage.png";
+import FlowerHeadManImage from "../../assets/images/FlowerHeadManImage.png";
+import PythagorasWithGlassesImage from "../../assets/images/PythagorasWithGlassesImage.png";
+import DistortionStoneHeadImage from "../../assets/images/DistortionStoneHeadImage.png";
 
 import {
   loginBgImgsCarouselStyle,
@@ -12,10 +15,10 @@ import {
 } from "./Login.styles";
 
 const BG_IMGS = [
+  FlowerHeadManImage,
   MonkeyAstronautImage,
-  MonkeyAstronautImage,
-  MonkeyAstronautImage,
-  MonkeyAstronautImage,
+  PythagorasWithGlassesImage,
+  DistortionStoneHeadImage,
 ];
 
 export default function Login() {
