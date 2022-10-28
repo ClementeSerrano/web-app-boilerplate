@@ -6,5 +6,5 @@ import useAuth from "../hooks/useAuth";
 export default function ProtectedRoute({ children }: WithChildren) {
   const auth = useAuth();
 
-  return auth?.account ? <>{children}</> : <Navigate to="/login" />;
+  return auth?.account ? <>{children}</> : <Navigate to="/register" />;
 }

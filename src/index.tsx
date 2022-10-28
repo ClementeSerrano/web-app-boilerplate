@@ -7,7 +7,7 @@ import RootRoute from "./app/routes/RootRoute";
 import ErrorFallbackPage from "./app/modules/Errors/ErrorFallbackScreen/ErrorFallbackScreen";
 import reportWebVitals from "./reportWebVitals";
 import ProtectedRoute from "./app/routes/ProtectedRoute";
-import LoginRoute from "./app/routes/LoginRoute";
+import RegisterRoute from "./app/routes/RegisterRoute";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -21,8 +21,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorFallbackPage />,
   },
   {
-    path: "/login",
-    element: <LoginRoute />,
+    path: "/register",
+    element: <RegisterRoute />,
     errorElement: <ErrorFallbackPage />,
   },
 ]);
