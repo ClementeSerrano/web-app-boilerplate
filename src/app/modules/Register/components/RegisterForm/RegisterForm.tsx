@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import { Form } from "react-router-dom";
 
 import Button from "../../../../components/Button/Button";
+import TextField from "../../../../components/TextField/TextField";
 import Typography from "../../../../components/Typography/Typography";
 
 import { RegisterFormValues } from "./RegisterForm.types";
@@ -18,11 +19,20 @@ export default function RegisterForm() {
 
   return (
     <Form onSubmit={form.handleSubmit}>
-      <Typography as="h1" variant="title3">
-        Sign up to Hey
+      <Typography as="h1" variant="title3" style={{ marginBottom: 16 }}>
+        Sign up
       </Typography>
 
-      <Button type="submit" style={{ width: "100%" }}>
+      <TextField
+        id="passphrase"
+        name="passphrase"
+        variant="filled"
+        value={form.values.passphrase}
+        onChange={form.handleChange}
+        label="Passphrase"
+      />
+
+      <Button type="submit" style={{ marginTop: 16, width: "100%" }}>
         Create account
       </Button>
     </Form>

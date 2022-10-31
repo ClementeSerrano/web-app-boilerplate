@@ -1,7 +1,8 @@
 import { ThemeSpacing } from "./theme.types";
 
 export const themeSpacing: ThemeSpacing = {
-  xs: 8,
+  xxs: 8,
+  xs: 12,
   sm: 16,
   md: 24,
   lg: 48,

@@ -40,8 +40,9 @@ export type ThemeTypography = Record<
   ThemeTypographyProps
 > & {
   fontBaseSize: number;
-  fontSizeScales: Record<string, number>;
-  fontWeights: Record<string, number>;
+  fontSizeScales: FontSizeScales;
+  fontSizes: FontSizes;
+  fontWeights: FontWeights;
 };
 
 export type ThemeShape = {
@@ -52,6 +53,8 @@ export type ThemeShape = {
 };
 
 export type FontSizeScales = Record<FontSizeScaleVariant, number>;
+
+export type FontSizes = Record<FontSizeScaleVariant, string>;
 
 export type FontWeights = Record<FontWeightVariant, number>;
 
@@ -76,7 +79,8 @@ export type ThemeSizeUnit =
   | "lg"
   | "md"
   | "sm"
-  | "xs";
+  | "xs"
+  | "xxs";
 
 export type ThemeFormat = "fill" | "outline";
 
