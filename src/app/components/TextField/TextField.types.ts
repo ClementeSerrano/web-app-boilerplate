@@ -10,7 +10,7 @@ export type TextFieldProps = InputHTMLAttributes<HTMLInputElement> & {
 };
 
 export type TextFieldStyle = {
-  root?: CSSProperties;
+  container?: CSSProperties;
   input?: CSSProperties;
   inputContainer?: CSSProperties;
   bar?: CSSProperties;

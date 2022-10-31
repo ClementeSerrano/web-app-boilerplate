@@ -38,7 +38,7 @@ export default function TextField({
   const highlightColor = colors?.highlight || theme.palette.text.main;
 
   return (
-    <TextFieldContainer style={style?.root}>
+    <TextFieldContainer style={style?.container}>
       <TextFieldInputContainer
         baseColor={baseColor}
         highlightColor={highlightColor}
