@@ -4,6 +4,7 @@
   "description": "Hey Backoffice - Where creators manage their projects",
   "private": true,
   "dependencies": {
+    "@liskhq/lisk-client": "^6.0.0-alpha.6",
     "@react-spring/web": "^9.5.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

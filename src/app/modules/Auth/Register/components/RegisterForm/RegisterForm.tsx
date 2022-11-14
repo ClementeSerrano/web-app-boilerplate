@@ -2,8 +2,8 @@ import { useFormik } from "formik";
 import { Form } from "react-router-dom";
 import { useTheme } from "styled-components";
 
-import TextField from "../../../../components/TextField/TextField";
-import Typography from "../../../../components/Typography/Typography";
+import TextField from "../../../../../components/TextField/TextField";
+import Typography from "../../../../../components/Typography/Typography";
 
 import { RegisterFormValues } from "./RegisterForm.types";
 import {

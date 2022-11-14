@@ -1,4 +1,4 @@
-import Register from "../modules/Register/Register";
+import Register from "../modules/Auth/Register/Register";
 
 export default function RegisterRoute() {
   return <Register />;

@@ -3,10 +3,14 @@ import { Theme } from "../../theme/theme.types";
 import { GridProps } from "./Grid.types";
 
 export function getGridPadding({
-  size = "md",
+  size = "lg",
   spacing,
   withUnits = true,
-}: Pick<GridProps, "size"> & Pick<Theme, "spacing"> & { withUnits?: boolean }) {
+  container,
+}: Pick<GridProps, "size" | "container"> &
+  Pick<Theme, "spacing"> & { withUnits?: boolean }) {
+  if (!container) return 0;
+
   return withUnits ? `${spacing[size]}px` : spacing[size];
 }
 
@@ -20,7 +24,13 @@ export function getGridMaxSize({
   if (!maxHeight && !maxWidth) return "unset";
 
   const extraPadding =
-    2 * (getGridPadding({ size, spacing, withUnits: false }) as number);
+    2 *
+    (getGridPadding({
+      size,
+      spacing,
+      withUnits: false,
+      container: true,
+    }) as number);
 
   if (maxHeight) return `calc(100vh - ${extraPadding}px)`;
   if (maxWidth) return `calc(100vw - ${extraPadding}px)`;

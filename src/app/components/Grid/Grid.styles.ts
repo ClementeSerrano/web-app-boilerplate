@@ -13,8 +13,8 @@ export const GridContainer = styled.section<GridProps>`
     getGridMaxSize({ maxHeight, size, spacing: theme.spacing })};
   width: ${({ maxWidth, size, theme }) =>
     getGridMaxSize({ maxWidth, size, spacing: theme.spacing })};
-  padding: ${({ size, theme }) =>
-    getGridPadding({ size, spacing: theme.spacing })};
+  padding: ${({ container, size, theme }) =>
+    getGridPadding({ container, size, spacing: theme.spacing })};
   background-color: ${({ container, format, theme }) =>
     getGridBgColor({ container, format, palette: theme.palette })};
 `;

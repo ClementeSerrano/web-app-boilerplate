@@ -5,7 +5,7 @@ export default function Grid({
   children,
   as: Component = "div",
   container = false,
-  size = "md",
+  size = "lg",
   format = "main",
   direction = "column",
   align = "unset",

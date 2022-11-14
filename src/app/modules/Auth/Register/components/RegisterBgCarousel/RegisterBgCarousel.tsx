@@ -1,8 +1,8 @@
-import Carousel from "../../../../components/Carousel/Carousel";
-import MonkeyAstronautImage from "../../../../assets/images/MonkeyAstronautImage.png";
-import FlowerHeadManImage from "../../../../assets/images/FlowerHeadManImage.png";
-import PythagorasWithGlassesImage from "../../../../assets/images/PythagorasWithGlassesImage.png";
-import DistortionStoneHeadImage from "../../../../assets/images/DistortionStoneHeadImage.png";
+import Carousel from "../../../../../components/Carousel/Carousel";
+import MonkeyAstronautImage from "../../../../../assets/images/MonkeyAstronautImage.png";
+import FlowerHeadManImage from "../../../../../assets/images/FlowerHeadManImage.png";
+import PythagorasWithGlassesImage from "../../../../../assets/images/PythagorasWithGlassesImage.png";
+import DistortionStoneHeadImage from "../../../../../assets/images/DistortionStoneHeadImage.png";
 
 import {
   registerBgImgsCarouselStyle,
