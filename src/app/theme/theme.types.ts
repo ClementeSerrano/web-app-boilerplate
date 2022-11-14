@@ -30,7 +30,7 @@ export type ThemePalette = Record<ThemePaletteKey, ThemePaletteVariant> & {
     ThemeColorVariant,
     "lighter" | "light" | "main" | "dark" | "darker"
   >;
-  text: Pick<ThemeColorVariant, "light" | "main" | "dark">;
+  text: Pick<ThemeColorVariant, "lighter" | "light" | "main" | "dark">;
 };
 
 export type ThemeSpacing = Record<ThemeSizeUnit, number>;

@@ -16,7 +16,7 @@ export const StepperBar = styled.div<StepperBarProps>`
   height: 3px;
   background: ${({ theme, color }) =>
     `linear-gradient(to right, ${color || theme.palette.primary.main} 50%, ${
-      theme.palette.text.light
+      theme.palette.text.lighter
     } 50%)`};
   background-size: 200% 100%;
   background-position: ${({ active, completed }) =>
