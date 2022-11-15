@@ -2,22 +2,25 @@ import { useFormik } from "formik";
 import { Form } from "react-router-dom";
 import { useTheme } from "styled-components";
 
-import TextField from "../../../../../components/TextField/TextField";
 import Typography from "../../../../../components/Typography/Typography";
 import { useStepper } from "../../../../../components/Stepper/Stepper.hooks";
 import Stepper from "../../../../../components/Stepper/Stepper";
+import { generatePassphrase } from "../../../auth.helpers";
 
 import { RegisterFormValues } from "./RegisterForm.types";
 import {
-  getRegisterFieldStyles,
   getRegisterStepperStyles,
   getRegisterTitleStyles,
-  RegisterFormSubmitButton,
 } from "./RegisterForm.styles";
+import RegisterFormStepSwitcher from "./components/RegisterFormStepSwitcher";
 
 export default function RegisterForm() {
   const form = useFormik<RegisterFormValues>({
-    initialValues: { passphrase: "", password: "", username: "" },
+    initialValues: {
+      passphrase: generatePassphrase(),
+      password: "",
+      username: "",
+    },
     onSubmit(values) {
       console.log({ values });
     },
@@ -27,11 +30,12 @@ export default function RegisterForm() {
 
   const theme = useTheme();
 
+  console.log({ passphrase: form.values.passphrase });
+
   const titleStyles = getRegisterTitleStyles(theme);
   const stepperStyles = getRegisterStepperStyles();
-  const fieldStyles = getRegisterFieldStyles(theme);
 
-  const stepsLabels = ["Step 1", "Step 2", "Step 3"];
+  const stepsLabels = ["Passphrase", "Verification", "Confirm"];
 
   return (
     <Form onSubmit={form.handleSubmit}>
@@ -47,39 +51,11 @@ export default function RegisterForm() {
         ))}
       </Stepper>
 
-      <TextField
-        id="passphrase"
-        name="passphrase"
-        variant="filled"
-        value={form.values.passphrase}
-        onChange={form.handleChange}
-        label="Passphrase"
-        style={fieldStyles}
+      <RegisterFormStepSwitcher
+        form={form}
+        activeStep={activeStep}
+        dispatchActiveStep={dispatchActiveStep}
       />
-
-      <TextField
-        id="password"
-        name="password"
-        variant="filled"
-        value={form.values.password}
-        onChange={form.handleChange}
-        label="Password"
-        style={fieldStyles}
-      />
-
-      <TextField
-        id="username"
-        name="username"
-        variant="filled"
-        value={form.values.username}
-        onChange={form.handleChange}
-        label="Username"
-        style={fieldStyles}
-      />
-
-      <RegisterFormSubmitButton type="submit">
-        Create account
-      </RegisterFormSubmitButton>
     </Form>
   );
 }
