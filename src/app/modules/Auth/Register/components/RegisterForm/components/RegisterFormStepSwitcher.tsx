@@ -1,17 +1,15 @@
 import { FormikProps } from "formik";
 import { Dispatch } from "react";
-import { useTheme } from "styled-components";
+
 import Button from "../../../../../../components/Button/Button";
 import {
   StepperDispatchAction,
   StepperState,
 } from "../../../../../../components/Stepper/Stepper.types";
-import TextField from "../../../../../../components/TextField/TextField";
-import {
-  getRegisterFieldStyles,
-  RegisterFormSubmitButton,
-} from "../RegisterForm.styles";
 import { RegisterFormValues } from "../RegisterForm.types";
+
+import RegisterFormConfirmStep from "./RegisterConfirmStep";
+import RegisterPassphraseStep from "./RegisterSavePassphraseStep";
 
 export default function RegisterFormStepSwitcher({
   form,
@@ -22,20 +20,13 @@ export default function RegisterFormStepSwitcher({
   activeStep: StepperState;
   dispatchActiveStep: Dispatch<StepperDispatchAction>;
 }) {
-  const theme = useTheme();
-
-  const fieldStyles = getRegisterFieldStyles(theme);
-
   switch (activeStep) {
     case 0:
       return (
-        <>
-          <p>Passphrase show and download. Also accept TNC.</p>
-
-          <Button variant="primary" onClick={() => dispatchActiveStep("next")}>
-            Continue
-          </Button>
-        </>
+        <RegisterPassphraseStep
+          passphrase={form.values.passphrase}
+          dispatchActiveStep={dispatchActiveStep}
+        />
       );
 
     case 1:
@@ -50,41 +41,10 @@ export default function RegisterFormStepSwitcher({
 
     case 2:
       return (
-        <>
-          <TextField
-            id="passphrase"
-            name="passphrase"
-            variant="filled"
-            value={form.values.passphrase}
-            onChange={form.handleChange}
-            label="Passphrase"
-            style={fieldStyles}
-          />
-
-          <TextField
-            id="password"
-            name="password"
-            variant="filled"
-            value={form.values.password}
-            onChange={form.handleChange}
-            label="Password"
-            style={fieldStyles}
-          />
-
-          <TextField
-            id="username"
-            name="username"
-            variant="filled"
-            value={form.values.username}
-            onChange={form.handleChange}
-            label="Username"
-            style={fieldStyles}
-          />
-
-          <RegisterFormSubmitButton type="submit">
-            Create account
-          </RegisterFormSubmitButton>
-        </>
+        <RegisterFormConfirmStep
+          form={form}
+          dispatchActiveStep={dispatchActiveStep}
+        />
       );
 
     default:

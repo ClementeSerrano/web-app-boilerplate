@@ -4,6 +4,7 @@ import { StepperBarProps, StepperLabelProps } from "./Stepper.types";
 
 export const StepperContainer = styled.aside`
   display: flex;
+  margin: ${({ theme }) => theme.spacing.sm}px 0;
 `;
 
 export const StepperStepContainer = styled.div`

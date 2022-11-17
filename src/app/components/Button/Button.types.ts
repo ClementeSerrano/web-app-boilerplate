@@ -9,6 +9,7 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     ThemePaletteKey,
     "primary" | "secondary" | "error" | "info"
   >;
+
   format?: ThemeFormat | "link";
   size?: Extract<ThemeSizeUnit, "sm" | "md" | "lg">;
   style?: React.CSSProperties;

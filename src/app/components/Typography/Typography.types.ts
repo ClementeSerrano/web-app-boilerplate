@@ -3,6 +3,6 @@ import { ThemeTypographyKey } from "../../theme/theme.types";
 
 export type TypographyProps = WithChildren &
   WithStyle & {
-    as: React.ElementType;
+    as?: React.ElementType;
     variant?: ThemeTypographyKey;
   };
