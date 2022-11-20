@@ -15,4 +15,5 @@ export type GridProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   maxHeight?: boolean;
   maxWidth?: boolean;
   fluid?: boolean;
+  bordered?: boolean
 };

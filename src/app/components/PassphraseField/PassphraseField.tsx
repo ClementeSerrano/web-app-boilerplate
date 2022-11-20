@@ -1,8 +1,8 @@
-import { WithStyle } from "../components.types";
+import { WithStyle } from '../components.types';
 import {
   PassphraseFieldContainer,
   PassphraseText,
-} from "./PassphraseField.styles";
+} from './PassphraseField.styles';
 
 export default function PassphraseField({
   passphrase,
@@ -11,7 +11,7 @@ export default function PassphraseField({
 }: WithStyle & {
   passphrase: string;
 }) {
-  const prettifiedPassphrase = passphrase.replace(/\s+/g, "  ");
+  const prettifiedPassphrase = passphrase.replace(/\s+/g, '  ');
 
   return (
     <PassphraseFieldContainer style={style} className={className}>

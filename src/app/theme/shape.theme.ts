@@ -2,11 +2,15 @@ import { ThemeShape } from "./theme.types";
 
 export const themeShape: ThemeShape = {
   borderRadius: {
-    xs: 0,
-    sm: 4,
-    md: 8,
-    lg: 16,
-    xl: 32,
-    xxl: 40,
+    xxs: 0,
+    xs: 4,
+    sm: 8,
+    md: 16,
+    lg: 32,
+    xl: 40,
+    xxl: 64,
+    xxxl: 80,
+    xxxxl: 96,
+    xxxxxl: 112
   },
 };

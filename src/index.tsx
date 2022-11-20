@@ -1,34 +1,32 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { ThemeContextProvider } from "./app/contexts/ThemeContext/ThemeContext";
-import RootRoute from "./app/routes/RootRoute";
-import ErrorFallbackPage from "./app/modules/Errors/ErrorFallbackScreen/ErrorFallbackScreen";
-import reportWebVitals from "./reportWebVitals";
-import ProtectedRoute from "./app/routes/ProtectedRoute";
-import RegisterRoute from "./app/routes/RegisterRoute";
-import "./index.css";
+import { ThemeContextProvider } from './app/contexts/ThemeContext/ThemeContext';
+import RootRoute from './app/routes/RootRoute';
+import ErrorFallbackPage from './app/modules/Errors/ErrorFallbackScreen/ErrorFallbackScreen';
+import reportWebVitals from './reportWebVitals';
+// import ProtectedRoute from './app/routes/ProtectedRoute';
+import RegisterRoute from './app/routes/RegisterRoute';
+import './index.css';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: (
-      <ProtectedRoute>
-        <RootRoute />
-      </ProtectedRoute>
-    ),
+    path: '/',
+    element: <RootRoute />,
     errorElement: <ErrorFallbackPage />,
-  },
-  {
-    path: "/register",
-    element: <RegisterRoute />,
-    errorElement: <ErrorFallbackPage />,
+    children: [
+      {
+        path: '/register',
+        element: <RegisterRoute />,
+        errorElement: <ErrorFallbackPage />,
+      },
+    ],
   },
 ]);
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+  document.getElementById('root') as HTMLElement,
 );
 
 root.render(
@@ -36,7 +34,7 @@ root.render(
     <ThemeContextProvider>
       <RouterProvider router={router} />
     </ThemeContextProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

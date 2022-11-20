@@ -47,7 +47,7 @@ export type ThemeTypography = Record<
 
 export type ThemeShape = {
   borderRadius: Record<
-    Extract<ThemeSizeUnit, "xs" | "sm" | "md" | "lg" | "xl" | "xxl">,
+  ThemeSizeUnit,
     number
   >;
 };

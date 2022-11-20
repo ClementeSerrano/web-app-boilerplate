@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { getGridBgColor, getGridMaxSize, getGridPadding } from "./Grid.helpers";
+import { getGridBgColor, getGridBorderRadius, getGridMaxSize, getGridPadding } from "./Grid.helpers";
 
 import { GridProps } from "./Grid.types";
 
@@ -17,4 +17,5 @@ export const GridContainer = styled.section<GridProps>`
     getGridPadding({ container, size, spacing: theme.spacing })};
   background-color: ${({ container, format, theme }) =>
     getGridBgColor({ container, format, palette: theme.palette })};
+  border-radius: ${({theme, bordered, size}) => getGridBorderRadius({bordered, size, shape: theme.shape})};
 `;

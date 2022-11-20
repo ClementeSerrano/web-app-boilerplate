@@ -47,3 +47,13 @@ export function getGridBgColor({
 
   return palette.background[format];
 }
+
+export function getGridBorderRadius({
+  bordered,
+  size = "md",
+  shape,
+}: Pick<GridProps, "bordered" | "size"> & Pick<Theme, "shape">): string {
+  if(!bordered) return "0px"
+
+  return `${shape.borderRadius[size]}px`
+}

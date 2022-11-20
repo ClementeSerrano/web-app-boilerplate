@@ -117,7 +117,7 @@ export const TextFieldInputContainer = styled.div<{
   color: ${({ theme, baseColor, error }) =>
     error ? theme.colors.red.main : baseColor};
   border-radius: ${({ theme, variant }) =>
-    variant === "filled" ? theme.shape.borderRadius.md : "0"}px;
+    variant === "filled" ? theme.shape.borderRadius.sm : "0"}px;
   transition: 0.2s ease all;
   ${({ variant, baseColor }) =>
     variant === "filled" &&

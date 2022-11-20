@@ -1,5 +1,5 @@
-import { themeColors } from "./colors.theme";
-import { ThemePalette } from "./theme.types";
+import { themeColors } from './colors.theme';
+import { ThemePalette } from './theme.types';
 
 export const lightThemePalette: ThemePalette = {
   primary: {
@@ -40,10 +40,10 @@ export const lightThemePalette: ThemePalette = {
   },
   background: {
     lighter: themeColors.white.main,
-    light: themeColors.white.main,
-    main: themeColors.white.main,
-    dark: themeColors.gray.superLight,
-    darker: themeColors.gray.light,
+    light: themeColors.gray.superLight,
+    main: themeColors.gray.light,
+    dark: themeColors.gray.main,
+    darker: themeColors.gray.dark,
   },
   text: {
     lighter: themeColors.gray.lighter,
@@ -91,10 +91,10 @@ export const darkThemePalette: ThemePalette = {
     contrastText: themeColors.white.main,
   },
   background: {
-    lighter: themeColors.gray.dark,
-    light: themeColors.gray.darker,
-    main: themeColors.black.main,
-    dark: themeColors.black.main,
+    lighter: themeColors.gray.light,
+    light: themeColors.gray.main,
+    main: themeColors.gray.dark,
+    dark: themeColors.gray.darker,
     darker: themeColors.black.main,
   },
   text: {
