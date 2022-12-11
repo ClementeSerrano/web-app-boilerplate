@@ -1,7 +1,12 @@
-import styled, { keyframes } from "styled-components";
-import { lighten } from "polished";
+import styled, { keyframes } from 'styled-components';
+import { lighten } from 'polished';
 
-import { TextFieldVariant } from "./TextField.types";
+import {
+  TextFieldBarProps,
+  TextFieldInputContainerProps,
+  TextFieldInputProps,
+  TextFieldLabelProps,
+} from './TextField.types';
 
 function inputHighlighter(highlightColor: string) {
   return keyframes`
@@ -18,12 +23,7 @@ export const TextFieldContainer = styled.div`
   width: 100%;
 `;
 
-export const TextFieldLabel = styled.label<{
-  baseColor: string;
-  isLeftAdornment: boolean;
-  variant: TextFieldVariant;
-  error?: boolean;
-}>`
+export const TextFieldLabel = styled.label<TextFieldLabelProps>`
   font-size: ${({ theme }) => theme.typography.fontSizes.md};
   color: ${({ theme, baseColor, error }) =>
     error ? theme.colors.red.main : baseColor};
@@ -32,10 +32,10 @@ export const TextFieldLabel = styled.label<{
   top: ${({ theme }) => theme.spacing.xs}px;
   left: ${({ theme, isLeftAdornment, variant }) =>
     isLeftAdornment
-      ? variant === "standard"
+      ? variant === 'standard'
         ? theme.spacing.md
         : theme.spacing.lg
-      : variant === "filled"
+      : variant === 'filled'
       ? theme.spacing.xs
       : 0}px;
   transition: 0.2s ease all;
@@ -43,18 +43,14 @@ export const TextFieldLabel = styled.label<{
   -webkit-transition: 0.2s ease all;
 `;
 
-export const TextFieldBar = styled.span<{
-  highlightColor: string;
-  variant: TextFieldVariant;
-  error?: boolean;
-}>`
-  display: ${({ variant }) => (variant === "filled" ? "none" : "block")};
+export const TextFieldBar = styled.span<TextFieldBarProps>`
+  display: ${({ variant }) => (variant === 'filled' ? 'none' : 'block')};
   position: absolute;
   bottom: -2px;
   width: 100%;
   &::before,
   &::after {
-    content: "";
+    content: '';
     height: 2px;
     width: 0;
     bottom: 0;
@@ -83,65 +79,54 @@ export const TextFieldHighlight = styled.span`
   opacity: 0.5;
 `;
 
-export const TextFieldInputContainer = styled.div<{
-  baseColor: string;
-  highlightColor: string;
-  variant: TextFieldVariant;
-  error?: boolean;
-  isLabel: boolean;
-}>`
+export const TextFieldInputContainer = styled.div<TextFieldInputContainerProps>`
   position: relative;
   display: flex;
   align-items: center;
   margin-top: ${({ theme, variant, isLabel }) =>
     !isLabel
       ? 0
-      : variant === "filled"
+      : variant === 'filled'
       ? theme.spacing.md
       : theme.spacing.sm}px;
   font-size: ${({ theme }) => theme.typography.fontSizes.md};
   padding: ${({ theme }) => theme.spacing.xs}px
-    ${({ theme, variant }) => (variant === "filled" ? theme.spacing.xs : "0")}px;
+    ${({ theme, variant }) => (variant === 'filled' ? theme.spacing.xs : '0')}px;
   border: ${({ theme, variant, baseColor, error }) =>
-    variant === "filled"
+    variant === 'filled'
       ? `1px solid ${lighten(0.4, error ? theme.colors.red.main : baseColor)}`
-      : "unset"};
+      : 'unset'};
   border-bottom: ${({ theme, variant, baseColor, error }) =>
-    variant === "filled" && !error
-      ? "unset"
-      : `${variant === "filled" ? "1px" : "2px"} solid ${
+    variant === 'filled' && !error
+      ? 'unset'
+      : `${variant === 'filled' ? '1px' : '2px'} solid ${
           error ? theme.colors.red.main : lighten(0.2, baseColor)
         }`};
   background-color: ${({ variant, baseColor }) =>
-    variant === "filled" ? lighten(0.4, baseColor) : "transparent"};
+    variant === 'filled' ? lighten(0.4, baseColor) : 'transparent'};
   color: ${({ theme, baseColor, error }) =>
     error ? theme.colors.red.main : baseColor};
   border-radius: ${({ theme, variant }) =>
-    variant === "filled" ? theme.shape.borderRadius.sm : "0"}px;
+    variant === 'filled' ? theme.shape.borderRadius.sm : '0'}px;
   transition: 0.2s ease all;
   ${({ variant, baseColor }) =>
-    variant === "filled" &&
+    variant === 'filled' &&
     `&:hover{ background-color: ${lighten(0.36, baseColor)} }`};
 
   @media (max-width: 600px) {
     padding: ${({ theme }) => theme.spacing.xxs}px
       ${({ theme, variant }) =>
-        variant === "filled" ? theme.spacing.xxs : "0"}px;
+        variant === 'filled' ? theme.spacing.xxs : '0'}px;
     margin-top: ${({ theme, variant, isLabel }) =>
       !isLabel
         ? 0
-        : variant === "filled"
+        : variant === 'filled'
         ? theme.spacing.xs
         : theme.spacing.xxs}px;
   }
 `;
 
-export const TextFieldInput = styled.input<{
-  baseColor: string;
-  highlightColor: string;
-  variant: TextFieldVariant;
-  error?: boolean;
-}>`
+export const TextFieldInput = styled.input<TextFieldInputProps>`
   font-size: ${({ theme }) => theme.typography.fontSizes.md};
   display: block;
   border: none;
@@ -160,12 +145,12 @@ export const TextFieldInput = styled.input<{
     outline: none;
   }
   &:read-only ~ ${TextFieldLabel} {
-    top: -${({ theme, variant }) => (variant === "filled" ? theme.spacing.md : theme.spacing.sm)}px;
+    top: -${({ theme, variant }) => (variant === 'filled' ? theme.spacing.md : theme.spacing.sm)}px;
     color: ${({ highlightColor }) => highlightColor};
     font-size: ${({ theme }) => theme.typography.fontSizes.sm};
   }
   &:focus ~ ${TextFieldLabel}, &:valid ~ ${TextFieldLabel} {
-    top: -${({ theme, variant }) => (variant === "filled" ? theme.spacing.md : theme.spacing.sm)}px;
+    top: -${({ theme, variant }) => (variant === 'filled' ? theme.spacing.md : theme.spacing.sm)}px;
     left: 0;
     color: ${({ theme, highlightColor, error }) =>
       error ? theme.colors.red.main : highlightColor};

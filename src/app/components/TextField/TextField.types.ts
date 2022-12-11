@@ -1,4 +1,4 @@
-import { CSSProperties, InputHTMLAttributes, ReactNode } from "react";
+import { CSSProperties, InputHTMLAttributes, ReactNode } from 'react';
 
 export type TextFieldProps = InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
@@ -18,4 +18,32 @@ export type TextFieldStyle = {
   highlight?: CSSProperties;
 };
 
-export type TextFieldVariant = "standard" | "filled";
+export type TextFieldLabelProps = {
+  baseColor: string;
+  isLeftAdornment: boolean;
+  variant: TextFieldVariant;
+  error?: boolean;
+};
+
+export type TextFieldBarProps = {
+  highlightColor: string;
+  variant: TextFieldVariant;
+  error?: boolean;
+};
+
+export type TextFieldInputContainerProps = {
+  baseColor: string;
+  highlightColor: string;
+  variant: TextFieldVariant;
+  error?: boolean;
+  isLabel: boolean;
+};
+
+export type TextFieldInputProps = {
+  baseColor: string;
+  highlightColor: string;
+  variant: TextFieldVariant;
+  error?: boolean;
+};
+
+export type TextFieldVariant = 'standard' | 'filled';
