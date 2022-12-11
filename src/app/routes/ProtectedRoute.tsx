@@ -1,7 +1,7 @@
-import { Navigate } from "react-router-dom";
+import { Navigate } from 'react-router-dom';
 
-import { WithChildren } from "../components/components.types";
-import useAuth from "../hooks/useAuth";
+import { WithChildren } from '../components/components.types';
+import useAuth from '../modules/Auth/hooks/useAuth';
 
 export default function ProtectedRoute({ children }: WithChildren) {
   const auth = useAuth();

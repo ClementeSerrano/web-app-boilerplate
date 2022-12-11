@@ -11,7 +11,7 @@ export const PassphraseFieldContainer = styled(Grid)`
 export const PassphraseText = styled.code`
   line-height: 2;
   text-align: center;
-  color: ${({ theme }) => theme.palette.text.light};
+  color: ${({ theme }) => theme.palette.text.main};
   font-size: ${({ theme }) => theme.typography.fontSizes.md};
   font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
 `;

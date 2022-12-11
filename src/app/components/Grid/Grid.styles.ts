@@ -1,11 +1,16 @@
-import styled from "styled-components";
-import { getGridBgColor, getGridBorderRadius, getGridMaxSize, getGridPadding } from "./Grid.helpers";
+import styled from 'styled-components';
+import {
+  getGridBgColor,
+  getGridBorderRadius,
+  getGridMaxSize,
+  getGridPadding,
+} from './Grid.helpers';
 
-import { GridProps } from "./Grid.types";
+import { GridContainerProps } from './Grid.types';
 
-export const GridContainer = styled.section<GridProps>`
+export const GridContainer = styled.section<GridContainerProps>`
   display: flex;
-  flex: ${({ fluid }) => (fluid ? 1 : "unset")};
+  flex: ${({ fluid }) => (fluid ? 1 : 'unset')};
   flex-direction: ${({ direction }) => direction};
   align-items: ${({ align }) => align};
   justify-content: ${({ justify }) => justify};
@@ -15,7 +20,8 @@ export const GridContainer = styled.section<GridProps>`
     getGridMaxSize({ maxWidth, size, spacing: theme.spacing })};
   padding: ${({ container, size, theme }) =>
     getGridPadding({ container, size, spacing: theme.spacing })};
-  background-color: ${({ container, format, theme }) =>
-    getGridBgColor({ container, format, palette: theme.palette })};
-  border-radius: ${({theme, bordered, size}) => getGridBorderRadius({bordered, size, shape: theme.shape})};
+  background-color: ${({ container, backgroundColor }) =>
+    getGridBgColor({ container, backgroundColor })};
+  border-radius: ${({ theme, bordered, size }) =>
+    getGridBorderRadius({ bordered, size, shape: theme.shape })};
 `;

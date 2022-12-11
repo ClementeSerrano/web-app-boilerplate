@@ -1,14 +1,14 @@
-import { Theme } from "../../theme/theme.types";
+import { Theme } from '../../theme/theme.types';
 
-import { GridProps } from "./Grid.types";
+import { GridContainerProps } from './Grid.types';
 
 export function getGridPadding({
-  size = "lg",
+  size = 'lg',
   spacing,
   withUnits = true,
   container,
-}: Pick<GridProps, "size" | "container"> &
-  Pick<Theme, "spacing"> & { withUnits?: boolean }) {
+}: Pick<GridContainerProps, 'size' | 'container'> &
+  Pick<Theme, 'spacing'> & { withUnits?: boolean }) {
   if (!container) return 0;
 
   return withUnits ? `${spacing[size]}px` : spacing[size];
@@ -17,11 +17,11 @@ export function getGridPadding({
 export function getGridMaxSize({
   maxHeight,
   maxWidth,
-  size = "md",
+  size = 'md',
   spacing,
-}: Pick<GridProps, "maxHeight" | "maxWidth" | "size"> &
-  Pick<Theme, "spacing">): string {
-  if (!maxHeight && !maxWidth) return "unset";
+}: Pick<GridContainerProps, 'maxHeight' | 'maxWidth' | 'size'> &
+  Pick<Theme, 'spacing'>): string {
+  if (!maxHeight && !maxWidth) return 'unset';
 
   const extraPadding =
     2 *
@@ -35,25 +35,25 @@ export function getGridMaxSize({
   if (maxHeight) return `calc(100vh - ${extraPadding}px)`;
   if (maxWidth) return `calc(100vw - ${extraPadding}px)`;
 
-  return "";
+  return '';
 }
 
 export function getGridBgColor({
   container,
-  format = "main",
-  palette,
-}: Pick<GridProps, "container" | "format"> & Pick<Theme, "palette">): string {
-  if (!container) return "transparent";
+  backgroundColor,
+}: Pick<GridContainerProps, 'container' | 'backgroundColor'>): string {
+  if (!container) return 'transparent';
 
-  return palette.background[format];
+  return backgroundColor;
 }
 
 export function getGridBorderRadius({
   bordered,
-  size = "md",
+  size = 'md',
   shape,
-}: Pick<GridProps, "bordered" | "size"> & Pick<Theme, "shape">): string {
-  if(!bordered) return "0px"
+}: Pick<GridContainerProps, 'bordered' | 'size'> &
+  Pick<Theme, 'shape'>): string {
+  if (!bordered) return '0px';
 
-  return `${shape.borderRadius[size]}px`
+  return `${shape.borderRadius[size]}px`;
 }

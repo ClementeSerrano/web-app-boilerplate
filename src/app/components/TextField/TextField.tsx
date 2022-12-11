@@ -1,6 +1,7 @@
-import { useTheme } from "styled-components";
+import { CSSProperties } from 'react';
+import { useTheme } from 'styled-components';
 
-import { TextFieldProps } from "./TextField.types";
+import { TextFieldProps } from './TextField.types';
 import {
   TextFieldContainer,
   TextFieldInputContainer,
@@ -8,13 +9,13 @@ import {
   TextFieldHighlight,
   TextFieldBar,
   TextFieldLabel,
-} from "./TextField.styles";
+} from './TextField.styles';
 
 export default function TextField({
   id,
   label,
-  variant = "standard",
-  type = "text",
+  variant = 'standard',
+  type = 'text',
   adornments,
   placeholder: basePlaceholder,
   style,
@@ -24,14 +25,14 @@ export default function TextField({
 }: TextFieldProps) {
   const theme = useTheme();
 
-  const inputStyles = {
-    margin: `0 ${adornments?.right ? "8px" : "0"} 0 ${
-      adornments?.left ? "8px" : "0"
+  const inputStyles: CSSProperties = {
+    margin: `0 ${adornments?.right ? '8px' : '0'} 0 ${
+      adornments?.left ? '8px' : '0'
     }`,
     ...style?.input,
   };
 
-  const placeholder = !label ? basePlaceholder : "";
+  const placeholder = !label ? basePlaceholder : '';
 
   const baseColor = colors?.base || theme.palette.text.light;
 
