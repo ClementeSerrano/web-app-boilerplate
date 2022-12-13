@@ -1,4 +1,4 @@
-export type RegisterFormValues = {
+export type CreateAccountFormValues = {
   passphrase: string;
   password: string;
   username?: string;

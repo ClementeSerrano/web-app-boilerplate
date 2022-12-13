@@ -6,19 +6,19 @@ import Button from '../../../../../../components/Button/Button';
 import Grid from '../../../../../../components/Grid/Grid';
 import { StepperDispatchAction } from '../../../../../../components/Stepper/Stepper.types';
 import TextField from '../../../../../../components/TextField/TextField';
-import { getRegisterFieldStyles } from '../RegisterForm.styles';
-import { RegisterFormValues } from '../RegisterForm.types';
+import { getCreateAccountFieldStyles } from '../CreateAccountForm.styles';
+import { CreateAccountFormValues } from '../CreateAccountForm.types';
 
-export default function RegisterConfirmStep({
+export default function CreateAccountConfirmStep({
   form,
   dispatchActiveStep,
 }: {
-  form: FormikProps<RegisterFormValues>;
+  form: FormikProps<CreateAccountFormValues>;
   dispatchActiveStep: Dispatch<StepperDispatchAction>;
 }) {
   const theme = useTheme();
 
-  const fieldStyles = getRegisterFieldStyles(theme);
+  const fieldStyles = getCreateAccountFieldStyles(theme);
 
   return (
     <Grid style={{ flex: 1 }}>

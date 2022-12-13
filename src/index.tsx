@@ -7,7 +7,7 @@ import RootRoute from './app/routes/RootRoute';
 import ErrorFallbackPage from './app/modules/Errors/ErrorFallbackScreen/ErrorFallbackScreen';
 import reportWebVitals from './reportWebVitals';
 // import ProtectedRoute from './app/routes/ProtectedRoute';
-import RegisterRoute from './app/routes/RegisterRoute';
+import CreateAccountRoute from './app/routes/CreateAccountRoute';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -17,8 +17,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorFallbackPage />,
     children: [
       {
-        path: '/register',
-        element: <RegisterRoute />,
+        path: '/create-account',
+        element: <CreateAccountRoute />,
         errorElement: <ErrorFallbackPage />,
       },
     ],

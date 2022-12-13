@@ -7,13 +7,13 @@ import PassphraseField from '../../../../../../components/PassphraseField/Passph
 import Typography from '../../../../../../components/Typography/Typography';
 import { StepperDispatchAction } from '../../../../../../components/Stepper/Stepper.types';
 
-import { RegisterFormValues } from '../RegisterForm.types';
-import { SavePassphraseNoticeText } from '../RegisterForm.styles';
+import { CreateAccountFormValues } from '../CreateAccountForm.types';
+import { SavePassphraseNoticeText } from '../CreateAccountForm.styles';
 
-export default function RegisterSavePassphraseStep({
+export default function CreateAccountSavePassphraseStep({
   passphrase,
   dispatchActiveStep,
-}: Pick<RegisterFormValues, 'passphrase'> & {
+}: Pick<CreateAccountFormValues, 'passphrase'> & {
   dispatchActiveStep: Dispatch<StepperDispatchAction>;
 }) {
   const theme = useTheme();
