@@ -4,7 +4,7 @@ import Grid from '../Grid/Grid';
 
 export const PassphraseFieldContainer = styled(Grid)`
   padding: ${({ theme }) => theme.spacing.sm}px;
-  border: 1px solid ${({ theme }) => theme.palette.background.main};
+  border: 2px solid ${({ theme }) => theme.palette.background.level3};
   border-radius: ${({ theme }) => theme.shape.borderRadius.sm}px;
 `;
 

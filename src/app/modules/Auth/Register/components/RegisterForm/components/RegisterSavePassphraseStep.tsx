@@ -29,7 +29,7 @@ export default function RegisterSavePassphraseStep({
         style={{ margin: `${theme.spacing.md}px 0` }}
       />
 
-      <Grid container bordered variant="dark" size="sm">
+      <Grid container bordered variant="level2" size="sm">
         <SavePassphraseNoticeText variant="paragraph2">
           Backup your passphrase securely. Anyone with access to it can take
           your assets. Lost passphrases can't be recovered.

@@ -13,7 +13,7 @@ export const SwitchLabel = styled.label`
   width: 42px;
   height: 24px;
   border-radius: 15px;
-  border: 1px solid ${({ theme }) => theme.palette.background.light};
+  border: 1px solid ${({ theme }) => theme.palette.background.level2};
   cursor: pointer;
 
   &::after {
@@ -23,7 +23,7 @@ export const SwitchLabel = styled.label`
     width: 18px;
     height: 18px;
     margin: 3px;
-    background: ${({ theme }) => theme.palette.background.lighter};
+    background: ${({ theme }) => theme.palette.background.level3};
     box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
     transition: 0.2s;
   }

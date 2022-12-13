@@ -1,12 +1,12 @@
-import { FormikProps } from "formik";
-import { Dispatch } from "react";
-import { useTheme } from "styled-components";
-import Button from "../../../../../../components/Button/Button";
-import Grid from "../../../../../../components/Grid/Grid";
-import { StepperDispatchAction } from "../../../../../../components/Stepper/Stepper.types";
-import TextField from "../../../../../../components/TextField/TextField";
-import { getRegisterFieldStyles } from "../RegisterForm.styles";
-import { RegisterFormValues } from "../RegisterForm.types";
+import { FormikProps } from 'formik';
+import { Dispatch } from 'react';
+import { useTheme } from 'styled-components';
+import Button from '../../../../../../components/Button/Button';
+import Grid from '../../../../../../components/Grid/Grid';
+import { StepperDispatchAction } from '../../../../../../components/Stepper/Stepper.types';
+import TextField from '../../../../../../components/TextField/TextField';
+import { getRegisterFieldStyles } from '../RegisterForm.styles';
+import { RegisterFormValues } from '../RegisterForm.types';
 
 export default function RegisterConfirmStep({
   form,
@@ -59,7 +59,7 @@ export default function RegisterConfirmStep({
       >
         <Button
           format="link"
-          onClick={() => dispatchActiveStep("prev")}
+          onClick={() => dispatchActiveStep('prev')}
           style={{ marginRight: theme.spacing.md }}
         >
           Back

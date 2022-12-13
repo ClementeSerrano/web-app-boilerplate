@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FallbackScreenContainer = styled.section`
   height: 100vh;
   width: 100vw;
-  background-color: ${({ theme }) => theme.palette.background.main};
+  background-color: ${({ theme }) => theme.palette.background.level1};
 `;
 
 export const FallbackScreenInnerContainer = styled.div`

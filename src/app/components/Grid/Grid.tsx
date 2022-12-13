@@ -1,5 +1,3 @@
-import { useThemeModeBackgroundColor } from '../../theme/hooks/useThemeModeBackgroundColor';
-
 import { GridProps } from './Grid.types';
 import { GridContainer } from './Grid.styles';
 
@@ -11,11 +9,9 @@ export default function Grid({
   direction = 'column',
   align = 'unset',
   justify = 'unset',
-  variant,
+  variant = 'level1',
   ...props
 }: GridProps) {
-  const backgroundColor = useThemeModeBackgroundColor(variant);
-
   return (
     <GridContainer
       as={Component}
@@ -24,7 +20,7 @@ export default function Grid({
       direction={direction}
       align={align}
       justify={justify}
-      backgroundColor={backgroundColor}
+      variant={variant}
       {...props}
     >
       {children}

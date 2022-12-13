@@ -1,7 +1,7 @@
-import { useTheme } from "styled-components";
-import { lighten } from "polished";
+import { useTheme } from 'styled-components';
+import { lighten } from 'polished';
 
-import { VectorProps } from "../theme/theme.types";
+import { VectorProps } from '../theme/theme.types';
 
 export default function ErrorIllustration({
   height = 96,
@@ -39,7 +39,7 @@ export default function ErrorIllustration({
               id="Shape"
               stroke={color}
               strokeWidth="2.5"
-              fill={theme.palette.background.main}
+              fill={theme.palette.background.level1}
               strokeLinecap="round"
             />
             <circle

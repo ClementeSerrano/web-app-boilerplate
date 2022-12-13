@@ -17,6 +17,3 @@ export type GridProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   fluid?: boolean;
   bordered?: boolean;
 };
-
-export type GridContainerProps = GridProps &
-  Required<Pick<CSSProperties, 'backgroundColor'>>;

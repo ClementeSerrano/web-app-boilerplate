@@ -25,8 +25,8 @@ export const TextFieldContainer = styled.div`
 
 export const TextFieldLabel = styled.label<TextFieldLabelProps>`
   font-size: ${({ theme }) => theme.typography.fontSizes.md};
-  color: ${({ theme, baseColor, error }) =>
-    error ? theme.colors.red.main : baseColor};
+  color: ${({ theme, error }) =>
+    error ? theme.colors.red.main : theme.palette.text.main};
   position: absolute;
   pointer-events: none;
   top: ${({ theme }) => theme.spacing.xs}px;
@@ -55,8 +55,8 @@ export const TextFieldBar = styled.span<TextFieldBarProps>`
     width: 0;
     bottom: 0;
     position: absolute;
-    background: ${({ theme, highlightColor, error }) =>
-      error ? theme.colors.red.main : highlightColor};
+    background: ${({ theme, error }) =>
+      error ? theme.colors.red.main : theme.palette.primary.main};
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
@@ -92,26 +92,28 @@ export const TextFieldInputContainer = styled.div<TextFieldInputContainerProps>`
   font-size: ${({ theme }) => theme.typography.fontSizes.md};
   padding: ${({ theme }) => theme.spacing.xs}px
     ${({ theme, variant }) => (variant === 'filled' ? theme.spacing.xs : '0')}px;
-  border: ${({ theme, variant, baseColor, error }) =>
+  border: ${({ theme, variant, error }) =>
     variant === 'filled'
-      ? `1px solid ${lighten(0.4, error ? theme.colors.red.main : baseColor)}`
+      ? `1px solid ${
+          error ? theme.colors.red.main : theme.palette.background.level2
+        }`
       : 'unset'};
-  border-bottom: ${({ theme, variant, baseColor, error }) =>
+  border-bottom: ${({ theme, variant, error }) =>
     variant === 'filled' && !error
       ? 'unset'
       : `${variant === 'filled' ? '1px' : '2px'} solid ${
-          error ? theme.colors.red.main : lighten(0.2, baseColor)
+          error ? theme.colors.red.main : theme.palette.background.level3
         }`};
-  background-color: ${({ variant, baseColor }) =>
-    variant === 'filled' ? lighten(0.4, baseColor) : 'transparent'};
-  color: ${({ theme, baseColor, error }) =>
-    error ? theme.colors.red.main : baseColor};
+  background-color: ${({ variant, theme }) =>
+    variant === 'filled' ? theme.palette.background.level2 : 'transparent'};
+  color: ${({ theme, error }) =>
+    error ? theme.colors.red.main : theme.palette.background.level3};
   border-radius: ${({ theme, variant }) =>
     variant === 'filled' ? theme.shape.borderRadius.sm : '0'}px;
   transition: 0.2s ease all;
-  ${({ variant, baseColor }) =>
+  ${({ variant, theme }) =>
     variant === 'filled' &&
-    `&:hover{ background-color: ${lighten(0.36, baseColor)} }`};
+    `&:hover{ background-color: ${theme.palette.background.level3} }`};
 
   @media (max-width: 600px) {
     padding: ${({ theme }) => theme.spacing.xxs}px
@@ -134,26 +136,24 @@ export const TextFieldInput = styled.input<TextFieldInputProps>`
   overflow: hidden;
   text-overflow: ellipsis;
   transition: 0.3s ease all;
-  color: ${({ theme, baseColor, error }) =>
-    error ? theme.colors.red.main : baseColor};
+  color: ${({ theme, error }) =>
+    error ? theme.colors.red.main : theme.palette.text.main};
   width: 100%;
   ::placeholder {
-    color: ${({ theme, baseColor, error }) =>
-      lighten(0.17, error ? theme.colors.red.main : baseColor)};
+    color: ${({ theme, error }) =>
+      lighten(0.4, error ? theme.colors.red.main : theme.palette.text.main)};
   }
   &:focus {
     outline: none;
   }
   &:read-only ~ ${TextFieldLabel} {
     top: -${({ theme, variant }) => (variant === 'filled' ? theme.spacing.md : theme.spacing.sm)}px;
-    color: ${({ highlightColor }) => highlightColor};
+    color: ${({ theme }) => theme.palette.text.main};
     font-size: ${({ theme }) => theme.typography.fontSizes.sm};
   }
   &:focus ~ ${TextFieldLabel}, &:valid ~ ${TextFieldLabel} {
     top: -${({ theme, variant }) => (variant === 'filled' ? theme.spacing.md : theme.spacing.sm)}px;
     left: 0;
-    color: ${({ theme, highlightColor, error }) =>
-      error ? theme.colors.red.main : highlightColor};
     font-size: ${({ theme }) => theme.typography.fontSizes.sm};
   }
   &:focus ~ ${TextFieldBar}::before, &:focus ~ ${TextFieldBar}::after {
@@ -161,8 +161,10 @@ export const TextFieldInput = styled.input<TextFieldInputProps>`
     &:focus ~ ${TextFieldHighlight} {
       -webkit-animation: inputHighlighter 0.3s ease;
       -moz-animation: inputHighlighter 0.3s ease;
-      animation: ${({ theme, highlightColor, error }) =>
-          inputHighlighter(error ? theme.colors.red.main : highlightColor)}
+      animation: ${({ theme, error }) =>
+          inputHighlighter(
+            error ? theme.colors.red.main : theme.palette.text.main,
+          )}
         0.3s ease;
     }
   }

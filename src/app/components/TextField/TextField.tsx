@@ -1,5 +1,4 @@
 import { CSSProperties } from 'react';
-import { useTheme } from 'styled-components';
 
 import { TextFieldProps } from './TextField.types';
 import {
@@ -19,12 +18,9 @@ export default function TextField({
   adornments,
   placeholder: basePlaceholder,
   style,
-  colors,
   error,
   ...inputProps
 }: TextFieldProps) {
-  const theme = useTheme();
-
   const inputStyles: CSSProperties = {
     margin: `0 ${adornments?.right ? '8px' : '0'} 0 ${
       adornments?.left ? '8px' : '0'
@@ -34,15 +30,9 @@ export default function TextField({
 
   const placeholder = !label ? basePlaceholder : '';
 
-  const baseColor = colors?.base || theme.palette.text.light;
-
-  const highlightColor = colors?.highlight || theme.palette.text.main;
-
   return (
     <TextFieldContainer style={style?.container}>
       <TextFieldInputContainer
-        baseColor={baseColor}
-        highlightColor={highlightColor}
         variant={variant}
         error={error}
         isLabel={!!label}
@@ -53,8 +43,6 @@ export default function TextField({
         <TextFieldInput
           id={id}
           style={inputStyles}
-          baseColor={baseColor}
-          highlightColor={highlightColor}
           variant={variant}
           placeholder={placeholder}
           type={type}
@@ -65,19 +53,13 @@ export default function TextField({
 
         {adornments?.right}
 
-        <TextFieldBar
-          variant={variant}
-          style={style?.bar}
-          highlightColor={colors?.highlight || theme.palette.primary.main}
-          error={error}
-        />
+        <TextFieldBar variant={variant} style={style?.bar} error={error} />
 
         <TextFieldLabel
           style={style?.label}
           isLeftAdornment={!!adornments?.left}
           variant={variant}
           htmlFor={id}
-          baseColor={colors?.base || theme.palette.text.main}
           error={error}
         >
           {label}

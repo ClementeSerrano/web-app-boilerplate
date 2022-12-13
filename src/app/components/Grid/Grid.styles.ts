@@ -6,9 +6,9 @@ import {
   getGridPadding,
 } from './Grid.helpers';
 
-import { GridContainerProps } from './Grid.types';
+import { GridProps } from './Grid.types';
 
-export const GridContainer = styled.section<GridContainerProps>`
+export const GridContainer = styled.section<GridProps>`
   display: flex;
   flex: ${({ fluid }) => (fluid ? 1 : 'unset')};
   flex-direction: ${({ direction }) => direction};
@@ -20,8 +20,8 @@ export const GridContainer = styled.section<GridContainerProps>`
     getGridMaxSize({ maxWidth, size, spacing: theme.spacing })};
   padding: ${({ container, size, theme }) =>
     getGridPadding({ container, size, spacing: theme.spacing })};
-  background-color: ${({ container, backgroundColor }) =>
-    getGridBgColor({ container, backgroundColor })};
+  background-color: ${({ container, variant, theme }) =>
+    getGridBgColor({ container, variant, palette: theme.palette })};
   border-radius: ${({ theme, bordered, size }) =>
     getGridBorderRadius({ bordered, size, shape: theme.shape })};
 `;

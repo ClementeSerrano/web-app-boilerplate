@@ -1,13 +1,13 @@
 import { Theme } from '../../theme/theme.types';
 
-import { GridContainerProps } from './Grid.types';
+import { GridProps } from './Grid.types';
 
 export function getGridPadding({
   size = 'lg',
   spacing,
   withUnits = true,
   container,
-}: Pick<GridContainerProps, 'size' | 'container'> &
+}: Pick<GridProps, 'size' | 'container'> &
   Pick<Theme, 'spacing'> & { withUnits?: boolean }) {
   if (!container) return 0;
 
@@ -19,7 +19,7 @@ export function getGridMaxSize({
   maxWidth,
   size = 'md',
   spacing,
-}: Pick<GridContainerProps, 'maxHeight' | 'maxWidth' | 'size'> &
+}: Pick<GridProps, 'maxHeight' | 'maxWidth' | 'size'> &
   Pick<Theme, 'spacing'>): string {
   if (!maxHeight && !maxWidth) return 'unset';
 
@@ -40,19 +40,19 @@ export function getGridMaxSize({
 
 export function getGridBgColor({
   container,
-  backgroundColor,
-}: Pick<GridContainerProps, 'container' | 'backgroundColor'>): string {
+  variant = 'level1',
+  palette,
+}: Pick<GridProps, 'container' | 'variant'> & Pick<Theme, 'palette'>): string {
   if (!container) return 'transparent';
 
-  return backgroundColor;
+  return palette.background[variant];
 }
 
 export function getGridBorderRadius({
   bordered,
   size = 'md',
   shape,
-}: Pick<GridContainerProps, 'bordered' | 'size'> &
-  Pick<Theme, 'shape'>): string {
+}: Pick<GridProps, 'bordered' | 'size'> & Pick<Theme, 'shape'>): string {
   if (!bordered) return '0px';
 
   return `${shape.borderRadius[size]}px`;

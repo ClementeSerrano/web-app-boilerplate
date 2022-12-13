@@ -1,5 +1,5 @@
-import { CSSProperties } from "react";
-import { WithStyle } from "../components/components.types";
+import { CSSProperties } from 'react';
+import { WithStyle } from '../components/components.types';
 
 /**
  * Main type definitions
@@ -17,20 +17,17 @@ export type Theme = {
 
 export type ThemeBreakpoints = {
   values: Record<
-    Extract<ThemeSizeUnit, "xs" | "sm" | "md" | "lg" | "xl">,
+    Extract<ThemeSizeUnit, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>,
     number
   >;
-  unit: "px";
+  unit: 'px';
 };
 
 export type ThemeColors = Record<ThemeColorKey, ThemeColorVariant>;
 
 export type ThemePalette = Record<ThemePaletteKey, ThemePaletteVariant> & {
-  background: Pick<
-    ThemeColorVariant,
-    "lighter" | "light" | "main" | "dark" | "darker"
-  >;
-  text: Pick<ThemeColorVariant, "lighter" | "light" | "main" | "dark">;
+  background: Record<ThemeBackgroundLevel, string>;
+  text: Pick<ThemeColorVariant, 'lighter' | 'light' | 'main' | 'dark'>;
 };
 
 export type ThemeSpacing = Record<ThemeSizeUnit, number>;
@@ -46,10 +43,7 @@ export type ThemeTypography = Record<
 };
 
 export type ThemeShape = {
-  borderRadius: Record<
-  ThemeSizeUnit,
-    number
-  >;
+  borderRadius: Record<ThemeSizeUnit, number>;
 };
 
 export type FontSizeScales = Record<FontSizeScaleVariant, number>;
@@ -59,7 +53,7 @@ export type FontSizes = Record<FontSizeScaleVariant, string>;
 export type FontWeights = Record<FontWeightVariant, number>;
 
 export type VectorProps = WithStyle &
-  Pick<CSSProperties, "color"> & {
+  Pick<CSSProperties, 'color'> & {
     height?: number;
     colors?: Partial<ThemeColorVariant>;
     gradient?: { from: string; to: string };
@@ -68,95 +62,102 @@ export type VectorProps = WithStyle &
 /**
  * Sub type definitions
  */
-export type ThemeMode = "light" | "dark";
+export type ThemeMode = 'light' | 'dark';
 
 export type ThemeSizeUnit =
-  | "xxxxxl"
-  | "xxxxl"
-  | "xxxl"
-  | "xxl"
-  | "xl"
-  | "lg"
-  | "md"
-  | "sm"
-  | "xs"
-  | "xxs";
+  | 'xxxxxl'
+  | 'xxxxl'
+  | 'xxxl'
+  | 'xxl'
+  | 'xl'
+  | 'lg'
+  | 'md'
+  | 'sm'
+  | 'xs'
+  | 'xxs';
 
-export type ThemeFormat = "fill" | "outline";
+export type ThemeFormat = 'fill' | 'outline';
 
 export type ThemeColorKey =
-  | "blue"
-  | "cyan"
-  | "black"
-  | "gray"
-  | "white"
-  | "red"
-  | "green"
-  | "yellow"
-  | "orange"
-  | "purple";
+  | 'blue'
+  | 'cyan'
+  | 'black'
+  | 'gray'
+  | 'white'
+  | 'red'
+  | 'green'
+  | 'yellow'
+  | 'orange'
+  | 'purple';
 
 export type ThemeColorVariantKey =
-  | "superLight"
-  | "lighter"
-  | "light"
-  | "main"
-  | "darker"
-  | "dark"
-  | "superDark";
+  | 'superLight'
+  | 'lighter'
+  | 'light'
+  | 'main'
+  | 'darker'
+  | 'dark'
+  | 'superDark';
 
 export type ThemeColorVariant = Record<ThemeColorVariantKey, string>;
 
 export type ThemePaletteKey =
-  | "primary"
-  | "secondary"
-  | "error"
-  | "warning"
-  | "info"
-  | "success";
+  | 'primary'
+  | 'secondary'
+  | 'error'
+  | 'warning'
+  | 'info'
+  | 'success';
 
 export type ThemePaletteVariant = Pick<
   ThemeColorVariant,
-  "light" | "main" | "dark"
+  'light' | 'main' | 'dark'
 > & {
   contrastText: string;
 };
 
+export type ThemeBackgroundLevel =
+  | 'level1'
+  | 'level2'
+  | 'level3'
+  | 'level4'
+  | 'level5';
+
 export type ThemeTypographyKey =
-  | "title1"
-  | "title2"
-  | "title3"
-  | "title4"
-  | "title5"
-  | "title6"
-  | "subtitle1"
-  | "subtitle2"
-  | "paragraph1"
-  | "paragraph2"
-  | "paragraph3"
-  | "button";
+  | 'title1'
+  | 'title2'
+  | 'title3'
+  | 'title4'
+  | 'title5'
+  | 'title6'
+  | 'subtitle1'
+  | 'subtitle2'
+  | 'paragraph1'
+  | 'paragraph2'
+  | 'paragraph3'
+  | 'button';
 
 export type ThemeTypographyProps = CSSProperties;
 
 export type FontSizeScaleVariant =
-  | "xxxxxl"
-  | "xxxxl"
-  | "xxxl"
-  | "xxl"
-  | "xl"
-  | "lg"
-  | "md"
-  | "sm"
-  | "xs";
+  | 'xxxxxl'
+  | 'xxxxl'
+  | 'xxxl'
+  | 'xxl'
+  | 'xl'
+  | 'lg'
+  | 'md'
+  | 'sm'
+  | 'xs';
 
-export type FontWeightVariant = "light" | "regular" | "medium" | "bold";
+export type FontWeightVariant = 'light' | 'regular' | 'medium' | 'bold';
 
 /**
  * Function type definitions
  */
 export type ParseSizeArgs = {
   value: number;
-  from: "px" | "rem" | "em";
-  to: "px" | "rem" | "em";
+  from: 'px' | 'rem' | 'em';
+  to: 'px' | 'rem' | 'em';
   withUnits?: boolean;
 };

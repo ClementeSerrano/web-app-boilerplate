@@ -39,11 +39,11 @@ export const lightThemePalette: ThemePalette = {
     contrastText: themeColors.white.main,
   },
   background: {
-    lighter: themeColors.white.main,
-    light: themeColors.white.main,
-    main: themeColors.white.main,
-    dark: themeColors.gray.superLight,
-    darker: themeColors.gray.light,
+    level1: themeColors.white.main,
+    level2: themeColors.gray.superLight,
+    level3: themeColors.gray.lighter,
+    level4: themeColors.gray.light,
+    level5: themeColors.gray.main,
   },
   text: {
     lighter: themeColors.gray.lighter,
@@ -91,11 +91,11 @@ export const darkThemePalette: ThemePalette = {
     contrastText: themeColors.white.main,
   },
   background: {
-    lighter: themeColors.gray.light,
-    light: themeColors.gray.dark,
-    main: themeColors.gray.darker,
-    dark: themeColors.gray.superDark,
-    darker: themeColors.black.main,
+    level1: themeColors.black.main,
+    level2: themeColors.gray.darker,
+    level3: themeColors.gray.dark,
+    level4: themeColors.gray.main,
+    level5: themeColors.gray.light,
   },
   text: {
     lighter: themeColors.gray.superLight,
