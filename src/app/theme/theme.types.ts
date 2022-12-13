@@ -27,7 +27,6 @@ export type ThemeColors = Record<ThemeColorKey, ThemeColorVariant>;
 
 export type ThemePalette = Record<ThemePaletteKey, ThemePaletteVariant> & {
   background: Record<ThemeBackgroundLevel, string>;
-  text: Pick<ThemeColorVariant, 'lighter' | 'light' | 'main' | 'dark'>;
 };
 
 export type ThemeSpacing = Record<ThemeSizeUnit, number>;
@@ -57,6 +56,7 @@ export type VectorProps = WithStyle &
     height?: number;
     colors?: Partial<ThemeColorVariant>;
     gradient?: { from: string; to: string };
+    format?: ThemeFormat;
   };
 
 /**
@@ -107,7 +107,8 @@ export type ThemePaletteKey =
   | 'error'
   | 'warning'
   | 'info'
-  | 'success';
+  | 'success'
+  | 'text';
 
 export type ThemePaletteVariant = Pick<
   ThemeColorVariant,

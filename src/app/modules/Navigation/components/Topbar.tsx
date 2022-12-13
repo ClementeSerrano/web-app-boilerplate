@@ -1,10 +1,7 @@
-import { useTheme } from 'styled-components';
-import Switch from '../../../components/Switch/Switch';
+import ThemeSwitch from '../../../components/ThemeSwitch/ThemeSwitch';
 import { TopbarContainer } from '../Navigation.styles';
 
 export default function Topbar() {
-  const { mode, toggleMode } = useTheme();
-
   return (
     <TopbarContainer
       container
@@ -17,12 +14,7 @@ export default function Topbar() {
     >
       <div>logo</div>
 
-      <Switch
-        id="theme-switcher"
-        name="theme-switcher"
-        checked={mode === 'dark'}
-        onChange={() => toggleMode()}
-      />
+      <ThemeSwitch />
     </TopbarContainer>
   );
 }

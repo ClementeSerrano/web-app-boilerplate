@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { StepperBarProps, StepperLabelProps } from "./Stepper.types";
+import { StepperBarProps, StepperLabelProps } from './Stepper.types';
 
 export const StepperContainer = styled.aside`
   display: flex;
@@ -17,21 +17,21 @@ export const StepperBar = styled.div<StepperBarProps>`
   height: 3px;
   background: ${({ theme, color }) =>
     `linear-gradient(to right, ${color || theme.palette.primary.main} 50%, ${
-      theme.palette.text.lighter
+      theme.palette.background.level3
     } 50%)`};
   background-size: 200% 100%;
   background-position: ${({ active, completed }) =>
-    active || completed ? "left bottom" : "right bottom"};
+    active || completed ? 'left bottom' : 'right bottom'};
   transition: all 0.3s ease-out;
   ${({ position }) => {
-    let styles = "";
-    if (position === "first") {
+    let styles = '';
+    if (position === 'first') {
       styles = `
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
           `;
     }
-    if (position === "last") {
+    if (position === 'last') {
       styles += `
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
@@ -42,7 +42,7 @@ export const StepperBar = styled.div<StepperBarProps>`
 `;
 
 export const StepperLabelContainer = styled.p<
-  Pick<StepperLabelProps, "active" | "color">
+  Pick<StepperLabelProps, 'active' | 'color'>
 >`
   text-align: center;
   margin: 4px 8px;

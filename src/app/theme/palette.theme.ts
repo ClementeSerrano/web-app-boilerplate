@@ -46,10 +46,10 @@ export const lightThemePalette: ThemePalette = {
     level5: themeColors.gray.main,
   },
   text: {
-    lighter: themeColors.gray.lighter,
     light: themeColors.gray.main,
     main: themeColors.gray.dark,
     dark: themeColors.gray.darker,
+    contrastText: themeColors.gray.dark,
   },
 };
 
@@ -98,9 +98,9 @@ export const darkThemePalette: ThemePalette = {
     level5: themeColors.gray.light,
   },
   text: {
-    lighter: themeColors.gray.superLight,
     light: themeColors.gray.lighter,
     main: themeColors.gray.light,
     dark: themeColors.gray.main,
+    contrastText: themeColors.gray.light,
   },
 };
