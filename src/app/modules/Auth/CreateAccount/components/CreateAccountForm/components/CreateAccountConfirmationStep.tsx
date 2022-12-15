@@ -5,11 +5,9 @@ import { useTheme } from 'styled-components';
 import Button from '../../../../../../components/Button/Button';
 import Grid from '../../../../../../components/Grid/Grid';
 import { StepperDispatchAction } from '../../../../../../components/Stepper/Stepper.types';
-import TextField from '../../../../../../components/TextField/TextField';
-import { getCreateAccountFieldStyles } from '../CreateAccountForm.styles';
 import { CreateAccountFormValues } from '../CreateAccountForm.types';
 
-export default function CreateAccountConfirmStep({
+export default function CreateAccountConfirmationStep({
   form,
   dispatchActiveStep,
 }: {
@@ -18,40 +16,9 @@ export default function CreateAccountConfirmStep({
 }) {
   const theme = useTheme();
 
-  const fieldStyles = getCreateAccountFieldStyles(theme);
-
   return (
     <Grid style={{ flex: 1 }}>
-      <TextField
-        id="passphrase"
-        name="passphrase"
-        variant="filled"
-        value={form.values.passphrase}
-        onChange={form.handleChange}
-        label="Passphrase"
-        style={fieldStyles}
-      />
-
-      <TextField
-        id="password"
-        name="password"
-        variant="filled"
-        value={form.values.password}
-        onChange={form.handleChange}
-        label="Password"
-        style={fieldStyles}
-      />
-
-      <TextField
-        id="username"
-        name="username"
-        variant="filled"
-        value={form.values.username}
-        onChange={form.handleChange}
-        label="Username"
-        style={fieldStyles}
-      />
-
+      Congratulations!
       <Grid
         direction="row"
         align="center"
@@ -67,7 +34,7 @@ export default function CreateAccountConfirmStep({
         </Button>
 
         <Button type="submit" style={{ flex: 0.5 }}>
-          Create account
+          Add account
         </Button>
       </Grid>
     </Grid>

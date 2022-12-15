@@ -5,7 +5,7 @@ export function getCreateAccountFormContainerStyle(
   theme: DefaultTheme,
 ): CSSProperties {
   return {
-    marginRight: theme.spacing.lg,
+    margin: 'auto',
     maxWidth: theme.breakpoints.values.xs,
   };
 }

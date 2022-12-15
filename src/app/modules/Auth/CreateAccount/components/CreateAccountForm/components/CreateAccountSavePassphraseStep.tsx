@@ -21,7 +21,7 @@ export default function CreateAccountSavePassphraseStep({
   return (
     <Grid style={{ flex: 1 }}>
       <Typography as="h1" variant="paragraph1">
-        Your secret passphrase is:
+        Please backup in a secure place your secret passphrase:
       </Typography>
 
       <PassphraseField
@@ -31,8 +31,9 @@ export default function CreateAccountSavePassphraseStep({
 
       <Grid container bordered variant="level2" size="sm">
         <SavePassphraseNoticeText variant="paragraph2">
-          Backup your passphrase securely. Anyone with access to it can take
-          your assets. Lost passphrases can't be recovered.
+          Keep your passphrase safe as it is the only way to access your
+          account. Anyone with access to it can take your assets. Lost
+          passphrases can't be recovered.
         </SavePassphraseNoticeText>
       </Grid>
 

@@ -5,7 +5,7 @@ import { useTheme } from 'styled-components';
 import Typography from '../../../../../components/Typography/Typography';
 import { useStepper } from '../../../../../components/Stepper/Stepper.hooks';
 import Stepper from '../../../../../components/Stepper/Stepper';
-import { generatePassphrase } from '../../../auth.helpers';
+import { createPassphrase } from '../../../helpers/auth.helpers';
 
 import { CreateAccountFormValues } from './CreateAccountForm.types';
 import {
@@ -13,13 +13,12 @@ import {
   getCreateAccountTitleStyles,
 } from './CreateAccountForm.styles';
 import CreateAccountFormStepSwitcher from './components/CreateAccountFormStepSwitcher';
+import { WithStyle } from '../../../../../components/components.types';
 
-export default function CreateAccountForm() {
+export default function CreateAccountForm({ style, className }: WithStyle) {
   const form = useFormik<CreateAccountFormValues>({
     initialValues: {
-      passphrase: generatePassphrase(),
-      password: '',
-      username: '',
+      passphrase: createPassphrase(),
     },
     onSubmit(values) {
       console.log({ values });
@@ -30,15 +29,13 @@ export default function CreateAccountForm() {
 
   const theme = useTheme();
 
-  console.log({ passphrase: form.values.passphrase });
-
   const titleStyles = getCreateAccountTitleStyles(theme);
   const stepperStyles = getCreateAccountStepperStyles();
 
   const stepsLabels = ['Passphrase', 'Verification', 'Confirm'];
 
   return (
-    <Form onSubmit={form.handleSubmit}>
+    <Form onSubmit={form.handleSubmit} style={style} className={className}>
       <Typography as="h1" variant="title3" style={titleStyles}>
         Create account
       </Typography>

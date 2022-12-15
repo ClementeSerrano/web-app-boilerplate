@@ -1,15 +1,15 @@
 import { FormikProps } from 'formik';
 import { Dispatch } from 'react';
 
-import Button from '../../../../../../components/Button/Button';
 import {
   StepperDispatchAction,
   StepperState,
 } from '../../../../../../components/Stepper/Stepper.types';
 import { CreateAccountFormValues } from '../CreateAccountForm.types';
 
-import CreateAccountFormConfirmStep from './CreateAccountConfirmStep';
-import CreateAccountPassphraseStep from './CreateAccountSavePassphraseStep';
+import CreateAccountConfirmationStep from './CreateAccountConfirmationStep';
+import CreateAccountSavePassphraseStep from './CreateAccountSavePassphraseStep';
+import CreateAccountVerifyPassphraseStep from './CreateAccountVerifyPassphraseStep';
 
 export default function CreateAccountFormStepSwitcher({
   form,
@@ -23,7 +23,7 @@ export default function CreateAccountFormStepSwitcher({
   switch (activeStep) {
     case 0:
       return (
-        <CreateAccountPassphraseStep
+        <CreateAccountSavePassphraseStep
           passphrase={form.values.passphrase}
           dispatchActiveStep={dispatchActiveStep}
         />
@@ -31,17 +31,15 @@ export default function CreateAccountFormStepSwitcher({
 
     case 1:
       return (
-        <>
-          <p>Passphrase verification.</p>
-          <Button variant="primary" onClick={() => dispatchActiveStep('next')}>
-            Continue
-          </Button>
-        </>
+        <CreateAccountVerifyPassphraseStep
+          passphrase={form.values.passphrase}
+          dispatchActiveStep={dispatchActiveStep}
+        />
       );
 
     case 2:
       return (
-        <CreateAccountFormConfirmStep
+        <CreateAccountConfirmationStep
           form={form}
           dispatchActiveStep={dispatchActiveStep}
         />
