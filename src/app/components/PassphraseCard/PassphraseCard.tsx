@@ -1,10 +1,10 @@
 import { WithStyle } from '../components.types';
 import {
-  PassphraseFieldContainer,
+  PassphraseCardContainer,
   PassphraseText,
-} from './PassphraseField.styles';
+} from './PassphraseCard.styles';
 
-export default function PassphraseField({
+export default function PassphraseCard({
   passphrase,
   style,
   className,
@@ -14,8 +14,8 @@ export default function PassphraseField({
   const prettifiedPassphrase = passphrase.replace(/\s+/g, '  ');
 
   return (
-    <PassphraseFieldContainer style={style} className={className}>
+    <PassphraseCardContainer as="aside" style={style} className={className}>
       <PassphraseText>{prettifiedPassphrase}</PassphraseText>
-    </PassphraseFieldContainer>
+    </PassphraseCardContainer>
   );
 }

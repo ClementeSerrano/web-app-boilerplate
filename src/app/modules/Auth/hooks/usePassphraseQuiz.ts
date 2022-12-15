@@ -4,6 +4,10 @@ import {
   pickRandomlyFromArray,
   shuffleArray,
 } from '../../../../helpers/array.helpers';
+import {
+  UsePassphraseQuiz,
+  UsePassphraseQuizState,
+} from './usePassphraseQuiz.types';
 
 /**
  * Provides all business logic necessary for executing a
@@ -13,7 +17,9 @@ import {
  * an answer checker callback, the current options and if the quiz is
  * passed or not.
  */
-export default function usePassphraseQuiz(passphrase: string) {
+export default function usePassphraseQuiz(
+  passphrase: string,
+): UsePassphraseQuiz {
   const words = useMemo(() => passphrase.split(' '), [passphrase]);
 
   const questions = useMemo(() => pickRandomlyFromArray(words, 2), [words]);
@@ -74,7 +80,7 @@ export default function usePassphraseQuiz(passphrase: string) {
             isAnswered: isQuestion ? !questionsPool.includes(word) : null,
           },
         ];
-      }, [] as { word: string; isQuestion: boolean; isAnswered: null | boolean }[]),
+      }, [] as UsePassphraseQuizState),
     [words, questions, questionsPool],
   );
 

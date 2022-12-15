@@ -1,8 +1,8 @@
 import { CSSProperties } from 'react';
 import styled, { DefaultTheme } from 'styled-components';
 
-import { StepperStyleProps } from '../../../../../components/Stepper/Stepper.types';
-import Typography from '../../../../../components/Typography/Typography';
+import { StepperStyleProps } from '../../../../components/Stepper/Stepper.types';
+import Typography from '../../../../components/Typography/Typography';
 
 export function getCreateAccountTitleStyles(
   theme: DefaultTheme,

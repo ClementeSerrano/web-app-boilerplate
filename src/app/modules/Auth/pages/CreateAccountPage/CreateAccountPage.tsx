@@ -1,11 +1,11 @@
 import { useTheme } from 'styled-components';
 
-import Grid from '../../../components/Grid/Grid';
+import Grid from '../../../../components/Grid/Grid';
 
-import CreateAccountForm from './components/CreateAccountForm/CreateAccountForm';
-import { getCreateAccountFormContainerStyle } from './CreateAccount.styles';
+import CreateAccountForm from '../../components/CreateAccountForm/CreateAccountForm';
+import { getCreateAccountFormContainerStyle } from './CreateAccountPage.styles';
 
-export default function CreateAccount() {
+export default function CreateAccountPage() {
   const theme = useTheme();
 
   const formContainerStyle = getCreateAccountFormContainerStyle(theme);

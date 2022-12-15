@@ -2,10 +2,14 @@ import styled from 'styled-components';
 
 import Grid from '../Grid/Grid';
 
-export const PassphraseFieldContainer = styled(Grid)`
+export const PassphraseCardContainer = styled(Grid)`
   padding: ${({ theme }) => theme.spacing.sm}px;
   border: 2px solid ${({ theme }) => theme.palette.background.level3};
   border-radius: ${({ theme }) => theme.shape.borderRadius.sm}px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 
 export const PassphraseText = styled.code`
@@ -14,4 +18,8 @@ export const PassphraseText = styled.code`
   color: ${({ theme }) => theme.palette.text.main};
   font-size: ${({ theme }) => theme.typography.fontSizes.md};
   font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
+
+  &:not(:first-child) {
+    margin-left: 8px;
+  }
 `;

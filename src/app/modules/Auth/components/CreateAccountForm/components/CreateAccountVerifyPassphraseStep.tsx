@@ -1,29 +1,26 @@
-import { Dispatch } from 'react';
 import { useTheme } from 'styled-components';
 
-import { StepperDispatchAction } from '../../../../../../components/Stepper/Stepper.types';
-import Button from '../../../../../../components/Button/Button';
-import Grid from '../../../../../../components/Grid/Grid';
+import Button from '../../../../../components/Button/Button';
+import Grid from '../../../../../components/Grid/Grid';
 
-import { CreateAccountFormValues } from '../CreateAccountForm.types';
-import usePassphraseQuiz from '../../../../hooks/usePassphraseQuiz';
+import PassphraseQuiz from './PassphraseQuiz';
+import { CreateAccountFormStepSwitcherProps } from '../CreateAccountForm.types';
 
 export default function CreateAccountVerifyPassphraseStep({
-  passphrase,
+  passphraseQuiz,
   dispatchActiveStep,
-}: Pick<CreateAccountFormValues, 'passphrase'> & {
-  dispatchActiveStep: Dispatch<StepperDispatchAction>;
-}) {
+}: Pick<
+  CreateAccountFormStepSwitcherProps,
+  'passphraseQuiz' | 'dispatchActiveStep'
+>) {
   const theme = useTheme();
-
-  const quiz = usePassphraseQuiz(passphrase);
-
-  console.log({ quiz });
 
   return (
     <Grid style={{ flex: 1 }}>
-      Congratulations!
+      <PassphraseQuiz quiz={passphraseQuiz} />
+
       <Grid
+        as="footer"
         direction="row"
         align="center"
         justify="flex-end"

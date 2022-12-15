@@ -1,30 +1,20 @@
-import { FormikProps } from 'formik';
-import { Dispatch } from 'react';
-
-import {
-  StepperDispatchAction,
-  StepperState,
-} from '../../../../../../components/Stepper/Stepper.types';
-import { CreateAccountFormValues } from '../CreateAccountForm.types';
+import { CreateAccountFormStepSwitcherProps } from '../CreateAccountForm.types';
 
 import CreateAccountConfirmationStep from './CreateAccountConfirmationStep';
 import CreateAccountSavePassphraseStep from './CreateAccountSavePassphraseStep';
 import CreateAccountVerifyPassphraseStep from './CreateAccountVerifyPassphraseStep';
 
 export default function CreateAccountFormStepSwitcher({
-  form,
+  passphrase,
+  passphraseQuiz,
   activeStep,
   dispatchActiveStep,
-}: {
-  form: FormikProps<CreateAccountFormValues>;
-  activeStep: StepperState;
-  dispatchActiveStep: Dispatch<StepperDispatchAction>;
-}) {
+}: CreateAccountFormStepSwitcherProps) {
   switch (activeStep) {
     case 0:
       return (
         <CreateAccountSavePassphraseStep
-          passphrase={form.values.passphrase}
+          passphrase={passphrase}
           dispatchActiveStep={dispatchActiveStep}
         />
       );
@@ -32,7 +22,7 @@ export default function CreateAccountFormStepSwitcher({
     case 1:
       return (
         <CreateAccountVerifyPassphraseStep
-          passphrase={form.values.passphrase}
+          passphraseQuiz={passphraseQuiz}
           dispatchActiveStep={dispatchActiveStep}
         />
       );
@@ -40,7 +30,6 @@ export default function CreateAccountFormStepSwitcher({
     case 2:
       return (
         <CreateAccountConfirmationStep
-          form={form}
           dispatchActiveStep={dispatchActiveStep}
         />
       );

@@ -1,33 +1,30 @@
-import { useFormik } from 'formik';
 import { Form } from 'react-router-dom';
 import { useTheme } from 'styled-components';
 
-import Typography from '../../../../../components/Typography/Typography';
-import { useStepper } from '../../../../../components/Stepper/Stepper.hooks';
-import Stepper from '../../../../../components/Stepper/Stepper';
-import { createPassphrase } from '../../../helpers/auth.helpers';
+import Typography from '../../../../components/Typography/Typography';
+import { useStepper } from '../../../../components/Stepper/Stepper.hooks';
+import Stepper from '../../../../components/Stepper/Stepper';
+import { createPassphrase } from '../../helpers/auth.helpers';
 
-import { CreateAccountFormValues } from './CreateAccountForm.types';
 import {
   getCreateAccountStepperStyles,
   getCreateAccountTitleStyles,
 } from './CreateAccountForm.styles';
 import CreateAccountFormStepSwitcher from './components/CreateAccountFormStepSwitcher';
-import { WithStyle } from '../../../../../components/components.types';
+import { WithStyle } from '../../../../components/components.types';
+import { useMemo } from 'react';
+import usePassphraseQuiz from '../../hooks/usePassphraseQuiz';
 
 export default function CreateAccountForm({ style, className }: WithStyle) {
-  const form = useFormik<CreateAccountFormValues>({
-    initialValues: {
-      passphrase: createPassphrase(),
-    },
-    onSubmit(values) {
-      console.log({ values });
-    },
-  });
+  const passphrase = useMemo(() => createPassphrase(), []);
+
+  const passphraseQuiz = usePassphraseQuiz(passphrase);
 
   const [activeStep, dispatchActiveStep] = useStepper();
 
   const theme = useTheme();
+
+  const handleSubmit = () => console.log('create account complete...');
 
   const titleStyles = getCreateAccountTitleStyles(theme);
   const stepperStyles = getCreateAccountStepperStyles();
@@ -35,7 +32,7 @@ export default function CreateAccountForm({ style, className }: WithStyle) {
   const stepsLabels = ['Passphrase', 'Verification', 'Confirm'];
 
   return (
-    <Form onSubmit={form.handleSubmit} style={style} className={className}>
+    <Form onSubmit={handleSubmit} style={style} className={className}>
       <Typography as="h1" variant="title3" style={titleStyles}>
         Create account
       </Typography>
@@ -49,7 +46,8 @@ export default function CreateAccountForm({ style, className }: WithStyle) {
       </Stepper>
 
       <CreateAccountFormStepSwitcher
-        form={form}
+        passphrase={passphrase}
+        passphraseQuiz={passphraseQuiz}
         activeStep={activeStep}
         dispatchActiveStep={dispatchActiveStep}
       />

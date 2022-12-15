@@ -1,5 +1,5 @@
-import CreateAccount from '../modules/Auth/CreateAccount/CreateAccount';
+import CreateAccountPage from '../modules/Auth/pages/CreateAccountPage/CreateAccountPage';
 
 export default function CreateAccountRoute() {
-  return <CreateAccount />;
+  return <CreateAccountPage />;
 }

@@ -1,21 +1,17 @@
-import { Dispatch } from 'react';
 import { useTheme } from 'styled-components';
 
-import Button from '../../../../../../components/Button/Button';
-import Grid from '../../../../../../components/Grid/Grid';
-import PassphraseField from '../../../../../../components/PassphraseField/PassphraseField';
-import Typography from '../../../../../../components/Typography/Typography';
-import { StepperDispatchAction } from '../../../../../../components/Stepper/Stepper.types';
+import Button from '../../../../../components/Button/Button';
+import Grid from '../../../../../components/Grid/Grid';
+import Typography from '../../../../../components/Typography/Typography';
+import PassphraseCard from '../../../../../components/PassphraseCard/PassphraseCard';
 
-import { CreateAccountFormValues } from '../CreateAccountForm.types';
 import { SavePassphraseNoticeText } from '../CreateAccountForm.styles';
+import { CreateAccountFormStepProps } from '../CreateAccountForm.types';
 
 export default function CreateAccountSavePassphraseStep({
   passphrase,
   dispatchActiveStep,
-}: Pick<CreateAccountFormValues, 'passphrase'> & {
-  dispatchActiveStep: Dispatch<StepperDispatchAction>;
-}) {
+}: CreateAccountFormStepProps) {
   const theme = useTheme();
 
   return (
@@ -24,7 +20,7 @@ export default function CreateAccountSavePassphraseStep({
         Please backup in a secure place your secret passphrase:
       </Typography>
 
-      <PassphraseField
+      <PassphraseCard
         passphrase={passphrase}
         style={{ margin: `${theme.spacing.md}px 0` }}
       />
@@ -37,16 +33,12 @@ export default function CreateAccountSavePassphraseStep({
         </SavePassphraseNoticeText>
       </Grid>
 
-      <Grid
-        direction="row"
-        align="center"
-        justify="flex-end"
-        style={{ marginTop: theme.spacing.md }}
+      <Button
+        onClick={() => dispatchActiveStep('next')}
+        style={{ flex: 1, marginTop: theme.spacing.md }}
       >
-        <Button onClick={() => dispatchActiveStep('next')} style={{ flex: 1 }}>
-          Next
-        </Button>
-      </Grid>
+        Next
+      </Button>
     </Grid>
   );
 }

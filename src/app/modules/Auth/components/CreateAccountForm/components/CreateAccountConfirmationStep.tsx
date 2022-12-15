@@ -1,25 +1,19 @@
-import { FormikProps } from 'formik';
-import { Dispatch } from 'react';
 import { useTheme } from 'styled-components';
 
-import Button from '../../../../../../components/Button/Button';
-import Grid from '../../../../../../components/Grid/Grid';
-import { StepperDispatchAction } from '../../../../../../components/Stepper/Stepper.types';
-import { CreateAccountFormValues } from '../CreateAccountForm.types';
+import Button from '../../../../../components/Button/Button';
+import Grid from '../../../../../components/Grid/Grid';
+import { CreateAccountFormStepProps } from '../CreateAccountForm.types';
 
 export default function CreateAccountConfirmationStep({
-  form,
   dispatchActiveStep,
-}: {
-  form: FormikProps<CreateAccountFormValues>;
-  dispatchActiveStep: Dispatch<StepperDispatchAction>;
-}) {
+}: Pick<CreateAccountFormStepProps, 'dispatchActiveStep'>) {
   const theme = useTheme();
 
   return (
     <Grid style={{ flex: 1 }}>
       Congratulations!
       <Grid
+        as="footer"
         direction="row"
         align="center"
         justify="flex-end"
