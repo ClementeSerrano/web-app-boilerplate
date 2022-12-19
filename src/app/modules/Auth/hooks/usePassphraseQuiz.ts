@@ -1,9 +1,11 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import {
   pickRandomlyFromArray,
   shuffleArray,
 } from '../../../../helpers/array.helpers';
+import { createPassphrase } from '../helpers/auth.helpers';
+
 import {
   UsePassphraseQuiz,
   UsePassphraseQuizState,
@@ -26,62 +28,49 @@ export default function usePassphraseQuiz(
 
   const [questionsPool, setQuestionsPool] = useState(questions);
 
-  const activeQuestion = useMemo(() => questionsPool[0], [questionsPool]);
-
-  const createOptions = useCallback(
-    () =>
-      shuffleArray([
-        activeQuestion,
-        ...pickRandomlyFromArray(
-          words.filter(word => word !== activeQuestion),
-          2,
-        ),
-      ]),
-    [words, activeQuestion],
+  const [currentOptions, setCurrentOptions] = useState(
+    createPassphraseQuizOptions(questionsPool[0]),
   );
 
-  const [currentOptions, setCurrentOptions] = useState(createOptions());
+  const activeQuestion = questionsPool[0];
 
-  const checkAnswer = useCallback(
-    (answer: string) => {
-      const isAnswerCorrect = answer === activeQuestion;
+  const checkAnswer = (answer: string) => {
+    const isAnswerCorrect = answer === activeQuestion;
 
-      if (isAnswerCorrect) {
-        // remove question from queue
-        setQuestionsPool(pool =>
-          pool.filter(question => question !== activeQuestion),
-        );
+    if (isAnswerCorrect) {
+      // remove question from pool
+      setQuestionsPool(pool =>
+        pool.filter(question => question !== activeQuestion),
+      );
 
-        // if questions pool is not empty, quiz continues
-        setCurrentOptions(createOptions());
+      // if questions pool is not empty, quiz continues
+      const nextQuestion = questionsPool[questionsPool.length - 1];
 
-        return true;
+      if (nextQuestion) {
+        setCurrentOptions(createPassphraseQuizOptions(nextQuestion));
       }
 
-      return false;
-    },
-    [createOptions, activeQuestion],
-  );
+      return true;
+    }
 
-  const passed = useMemo(() => questionsPool.length === 0, [questionsPool]);
+    return false;
+  };
 
-  const state = useMemo(
-    () =>
-      words.reduce((acc, word) => {
-        const isQuestion = questions.includes(word);
+  const passed = questionsPool.length === 0;
 
-        return [
-          ...acc,
-          {
-            word,
-            isQuestion,
-            isAnswered: isQuestion ? !questionsPool.includes(word) : null,
-            active: isQuestion ? activeQuestion === word : null,
-          },
-        ];
-      }, [] as UsePassphraseQuizState),
-    [words, questions, questionsPool, activeQuestion],
-  );
+  const state = words.reduce((acc, word) => {
+    const isQuestion = questions.includes(word);
+
+    return [
+      ...acc,
+      {
+        word,
+        isQuestion,
+        isAnswered: isQuestion ? !questionsPool.includes(word) : null,
+        active: isQuestion ? activeQuestion === word : null,
+      },
+    ];
+  }, [] as UsePassphraseQuizState);
 
   return {
     state,
@@ -93,4 +82,11 @@ export default function usePassphraseQuiz(
     checkAnswer,
     passed,
   };
+}
+
+function createPassphraseQuizOptions(answer: string) {
+  return shuffleArray([
+    answer,
+    ...pickRandomlyFromArray(createPassphrase().split(' '), 2),
+  ]);
 }
