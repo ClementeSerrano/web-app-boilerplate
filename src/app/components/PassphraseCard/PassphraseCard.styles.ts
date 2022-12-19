@@ -18,8 +18,4 @@ export const PassphraseText = styled.code`
   color: ${({ theme }) => theme.palette.text.main};
   font-size: ${({ theme }) => theme.typography.fontSizes.md};
   font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
-
-  &:not(:first-child) {
-    margin-left: 8px;
-  }
 `;

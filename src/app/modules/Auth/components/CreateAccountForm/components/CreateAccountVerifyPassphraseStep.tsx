@@ -5,6 +5,7 @@ import Grid from '../../../../../components/Grid/Grid';
 
 import PassphraseQuiz from './PassphraseQuiz';
 import { CreateAccountFormStepSwitcherProps } from '../CreateAccountForm.types';
+import Typography from '../../../../../components/Typography/Typography';
 
 export default function CreateAccountVerifyPassphraseStep({
   passphraseQuiz,
@@ -17,28 +18,30 @@ export default function CreateAccountVerifyPassphraseStep({
 
   return (
     <Grid style={{ flex: 1 }}>
-      <PassphraseQuiz quiz={passphraseQuiz} />
+      <Typography as="p" variant="paragraph1">
+        Verify your passphrase by writing down the missing words:
+      </Typography>
 
-      <Grid
-        as="footer"
-        direction="row"
-        align="center"
-        justify="flex-end"
-        style={{ marginTop: theme.spacing.md }}
-      >
+      <PassphraseQuiz
+        quiz={passphraseQuiz}
+        style={{ margin: `${theme.spacing.md}px 0` }}
+      />
+
+      <Grid as="footer" align="center">
         <Button
-          format="link"
-          onClick={() => dispatchActiveStep('prev')}
-          style={{ marginRight: theme.spacing.md }}
+          onClick={() => dispatchActiveStep('next')}
+          disabled={!passphraseQuiz.passed}
+          style={{ width: '100%', marginBottom: theme.spacing.md }}
         >
-          Back
+          Confirm
         </Button>
 
         <Button
-          onClick={() => dispatchActiveStep('next')}
-          style={{ flex: 0.5 }}
+          format="link"
+          onClick={() => dispatchActiveStep('prev')}
+          style={{ width: '100%' }}
         >
-          Next
+          Go back
         </Button>
       </Grid>
     </Grid>

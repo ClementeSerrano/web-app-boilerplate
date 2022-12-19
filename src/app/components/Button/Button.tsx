@@ -1,13 +1,14 @@
-import { ButtonContainer } from "./Button.styles";
-import { ButtonProps } from "./Button.types";
+import { ButtonContainer } from './Button.styles';
+import { ButtonProps } from './Button.types';
 
 export default function Button({
   children,
-  as: Component = "button",
-  variant = "primary",
-  format = "fill",
-  size = "md",
+  as: Component = 'button',
+  variant = 'primary',
+  format = 'fill',
+  size = 'md',
   loading = false,
+  type = 'button',
   ...props
 }: ButtonProps) {
   return (
@@ -16,9 +17,10 @@ export default function Button({
       variant={variant}
       format={format}
       size={size}
+      type={type}
       {...props}
     >
-      {loading ? "Loading..." : children}
+      {loading ? 'Loading...' : children}
     </ButtonContainer>
   );
 }

@@ -2,14 +2,18 @@ export type UsePassphraseQuiz = {
   state: UsePassphraseQuizState;
   words: string[];
   questionsPool: string[];
+  activeQuestion: string;
   currentOptions: string[];
   questions: string[];
-  checkAnswer: (index: number, answer: string) => boolean;
+  checkAnswer: (answer: string) => boolean;
   passed: boolean;
 };
 
-export type UsePassphraseQuizState = {
+export type UsePassphraseQuizState = UsePassphraseWordState[];
+
+export type UsePassphraseWordState = {
   word: string;
   isQuestion: boolean;
   isAnswered: null | boolean;
-}[];
+  active: null | boolean;
+};

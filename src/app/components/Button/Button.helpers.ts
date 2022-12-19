@@ -1,33 +1,31 @@
-import { CSSProperties } from "react";
+import { CSSProperties } from 'react';
 
-import { ValueOf } from "../../../types/general.types";
-import { parseSize } from "../../theme/theme.helpers";
-import { Theme } from "../../theme/theme.types";
+import { ValueOf } from '../../../types/general.types';
+import { parseSize } from '../../theme/theme.helpers';
+import { Theme } from '../../theme/theme.types';
 
-import { ButtonProps } from "./Button.types";
+import { ButtonProps } from './Button.types';
 
 export function getButtonPadding({
   format,
   size,
-}: Pick<ButtonProps, "format" | "size">): string {
-  return format === "link" ? "0px" : size === "sm" ? "4px 16px" : "12px 16px";
+}: Pick<ButtonProps, 'format' | 'size'>): string {
+  return format === 'link' ? '0px' : size === 'sm' ? '4px 16px' : '12px 16px';
 }
 
 export function getButtonBgColor({
   format,
-  variant = "primary",
+  variant = 'primary',
   palette,
   onHover = false,
-}: Pick<ButtonProps, "format" | "variant"> &
-  Pick<Theme, "palette"> & { onHover?: boolean }): string {
+}: Pick<ButtonProps, 'format' | 'variant'> &
+  Pick<Theme, 'palette'> & { onHover?: boolean }): string {
   if (!onHover) {
-    if (format === "link") return "transparent";
+    if (format === 'link' || format === 'outline') return 'transparent';
 
     return palette[variant].main;
   } else {
-    if (format === "outline") return palette[variant].main;
-
-    if (format === "link") return "transparent";
+    if (format === 'link') return 'transparent';
 
     return palette[variant].dark;
   }
@@ -35,17 +33,17 @@ export function getButtonBgColor({
 
 export function getButtonColor({
   format,
-  variant = "primary",
+  variant = 'primary',
   palette,
   onHover = false,
-}: Pick<ButtonProps, "format" | "variant"> &
-  Pick<Theme, "palette"> & { onHover?: boolean }): string {
+}: Pick<ButtonProps, 'format' | 'variant'> &
+  Pick<Theme, 'palette'> & { onHover?: boolean }): string {
   if (!onHover) {
-    if (format === "outline" || format === "link") return palette[variant].main;
+    if (format === 'outline' || format === 'link') return palette[variant].main;
 
     return palette[variant].contrastText;
   } else {
-    if (format === "link") return palette[variant].dark;
+    if (format === 'link') return palette[variant].dark;
 
     return palette[variant].contrastText;
   }
@@ -53,10 +51,10 @@ export function getButtonColor({
 
 export function getButtonBorder({
   format,
-  variant = "primary",
+  variant = 'primary',
   palette,
-}: Pick<ButtonProps, "format" | "variant"> & Pick<Theme, "palette">): string {
-  if (format !== "outline") return "none";
+}: Pick<ButtonProps, 'format' | 'variant'> & Pick<Theme, 'palette'>): string {
+  if (format !== 'outline') return 'none';
 
   return `1px solid ${palette[variant].main}`;
 }
@@ -64,14 +62,14 @@ export function getButtonBorder({
 export function getButtonFontSize({
   size,
   typography,
-}: Pick<ButtonProps, "size"> & Pick<Theme, "typography">): ValueOf<
-  Pick<CSSProperties, "fontSize">
+}: Pick<ButtonProps, 'size'> & Pick<Theme, 'typography'>): ValueOf<
+  Pick<CSSProperties, 'fontSize'>
 > {
-  if (size === "sm")
+  if (size === 'sm')
     return parseSize({
       value: typography.fontBaseSize * typography.fontSizeScales.sm,
-      from: "px",
-      to: "rem",
+      from: 'px',
+      to: 'rem',
       withUnits: true,
     });
 

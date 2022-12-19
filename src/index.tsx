@@ -6,18 +6,18 @@ import { ThemeContextProvider } from './app/contexts/ThemeContext/ThemeContext';
 import RootRoute from './app/routes/RootRoute';
 import ErrorFallbackPage from './app/modules/Errors/ErrorFallbackScreen/ErrorFallbackScreen';
 import reportWebVitals from './reportWebVitals';
-// import ProtectedRoute from './app/routes/ProtectedRoute';
+// import PrivateRoute from './app/routes/PrivateRoute';
 import CreateAccountRoute from './app/routes/CreateAccountRoute';
 import './index.css';
 
 const router = createBrowserRouter([
   {
-    path: '/',
     element: <RootRoute />,
+    path: '*',
     errorElement: <ErrorFallbackPage />,
     children: [
       {
-        path: '/create-account',
+        path: 'create-account',
         element: <CreateAccountRoute />,
         errorElement: <ErrorFallbackPage />,
       },

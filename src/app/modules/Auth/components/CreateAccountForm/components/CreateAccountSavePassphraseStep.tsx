@@ -16,7 +16,7 @@ export default function CreateAccountSavePassphraseStep({
 
   return (
     <Grid style={{ flex: 1 }}>
-      <Typography as="h1" variant="paragraph1">
+      <Typography as="p" variant="paragraph1">
         Please backup in a secure place your secret passphrase:
       </Typography>
 
@@ -37,7 +37,7 @@ export default function CreateAccountSavePassphraseStep({
         onClick={() => dispatchActiveStep('next')}
         style={{ flex: 1, marginTop: theme.spacing.md }}
       >
-        Next
+        I wrote it down
       </Button>
     </Grid>
   );

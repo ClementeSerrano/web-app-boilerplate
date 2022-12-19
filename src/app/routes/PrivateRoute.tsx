@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import useAuth from '../modules/Auth/hooks/useAuth';
-import Navigation from '../modules/Navigation/Navigation';
+import { WithChildren } from '../components/components.types';
 
-export default function RootRoute() {
+export default function PrivateRoute({ children }: WithChildren) {
   const auth = useAuth();
 
   const navigate = useNavigate();
@@ -15,11 +15,5 @@ export default function RootRoute() {
     }
   }, [navigate, auth?.account]);
 
-  return (
-    <>
-      <Navigation />
-
-      <Outlet />
-    </>
-  );
+  return <>{children}</>;
 }

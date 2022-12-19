@@ -101,6 +101,6 @@ export const darkThemePalette: ThemePalette = {
     light: themeColors.gray.lighter,
     main: themeColors.gray.light,
     dark: themeColors.gray.main,
-    contrastText: themeColors.gray.light,
+    contrastText: themeColors.white.main,
   },
 };

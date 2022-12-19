@@ -24,45 +24,43 @@ export default function usePassphraseQuiz(
 
   const questions = useMemo(() => pickRandomlyFromArray(words, 2), [words]);
 
+  const [questionsPool, setQuestionsPool] = useState(questions);
+
+  const activeQuestion = useMemo(() => questionsPool[0], [questionsPool]);
+
   const createOptions = useCallback(
-    (answer: string) =>
+    () =>
       shuffleArray([
-        answer,
+        activeQuestion,
         ...pickRandomlyFromArray(
-          words.filter(word => word !== answer),
+          words.filter(word => word !== activeQuestion),
           2,
         ),
       ]),
-    [words],
+    [words, activeQuestion],
   );
 
-  const [currentOptions, setCurrentOptions] = useState(
-    createOptions(questions[0]),
-  );
-
-  const [questionsPool, setQuestionsPool] = useState(questions);
+  const [currentOptions, setCurrentOptions] = useState(createOptions());
 
   const checkAnswer = useCallback(
-    (index: number, answer: string) => {
-      const correctAnswer = words[index];
-
-      const isAnswerCorrect = answer === correctAnswer;
+    (answer: string) => {
+      const isAnswerCorrect = answer === activeQuestion;
 
       if (isAnswerCorrect) {
         // remove question from queue
         setQuestionsPool(pool =>
-          pool.filter(question => question !== correctAnswer),
+          pool.filter(question => question !== activeQuestion),
         );
 
         // if questions pool is not empty, quiz continues
-        setCurrentOptions(createOptions(questionsPool[0]));
+        setCurrentOptions(createOptions());
 
         return true;
       }
 
       return false;
     },
-    [words, questionsPool, createOptions],
+    [createOptions, activeQuestion],
   );
 
   const passed = useMemo(() => questionsPool.length === 0, [questionsPool]);
@@ -78,16 +76,18 @@ export default function usePassphraseQuiz(
             word,
             isQuestion,
             isAnswered: isQuestion ? !questionsPool.includes(word) : null,
+            active: isQuestion ? activeQuestion === word : null,
           },
         ];
       }, [] as UsePassphraseQuizState),
-    [words, questions, questionsPool],
+    [words, questions, questionsPool, activeQuestion],
   );
 
   return {
     state,
     words,
     questionsPool,
+    activeQuestion,
     currentOptions,
     questions,
     checkAnswer,
