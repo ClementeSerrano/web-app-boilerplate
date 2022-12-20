@@ -16,7 +16,12 @@ export default function CreateAccountConfirmationStep({
         illustration="doneCheck"
         title="Nice! Your account is now created"
         body="You can now add your account to Hey by clicking on 'Add account', to be able to be part of our Digital Community!"
-        style={{ container: { margin: `${theme.spacing.lg}px 0px` } }}
+        style={{
+          container: {
+            marginTop: theme.spacing.sm,
+            marginBottom: theme.spacing.lg,
+          },
+        }}
       />
 
       <Grid as="footer" align="center">
