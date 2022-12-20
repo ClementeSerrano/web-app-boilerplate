@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useTheme } from 'styled-components';
 
 import Button from '../../../../../components/Button/Button';
@@ -12,6 +13,8 @@ export default function CreateAccountSavePassphraseStep({
   passphrase,
   dispatchActiveStep,
 }: CreateAccountFormStepProps) {
+  const navigate = useNavigate();
+
   const theme = useTheme();
 
   return (
@@ -33,12 +36,22 @@ export default function CreateAccountSavePassphraseStep({
         </SavePassphraseNoticeText>
       </Grid>
 
-      <Button
-        onClick={() => dispatchActiveStep('next')}
-        style={{ flex: 1, marginTop: theme.spacing.md }}
-      >
-        I wrote it down
-      </Button>
+      <Grid as="footer" align="center">
+        <Button
+          onClick={() => dispatchActiveStep('next')}
+          style={{ width: '100%', margin: `${theme.spacing.md}px 0` }}
+        >
+          I wrote it down
+        </Button>
+
+        <Button
+          format="link"
+          onClick={() => navigate(-1)}
+          style={{ width: '100%' }}
+        >
+          Go back
+        </Button>
+      </Grid>
     </Grid>
   );
 }

@@ -1,17 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 import {
   getButtonBgColor,
   getButtonBorder,
   getButtonColor,
   getButtonPadding,
-} from "./Button.helpers";
-import { ButtonProps } from "./Button.types";
+} from './Button.helpers';
+import { ButtonProps } from './Button.types';
 
 export const ButtonContainer = styled.button.attrs(
   (props: React.ButtonHTMLAttributes<HTMLButtonElement>) => ({
     disabled: props.disabled,
-  })
+  }),
 )<ButtonProps>`
   font-family: ${({ theme }) => theme.typography.button.fontFamily};
   font-weight: ${({ theme }) => theme.typography.button.fontWeight};
@@ -26,6 +26,7 @@ export const ButtonContainer = styled.button.attrs(
   border-radius: 6px;
   transition: opacity 0.3s, background-color 0.3s;
   text-decoration: none;
+  max-width: ${({ theme }) => theme.breakpoints.values.xs}px;
 
   &:hover {
     cursor: pointer;

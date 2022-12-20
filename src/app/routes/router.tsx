@@ -1,16 +1,22 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import RootRoute from './RootRoute';
-import ErrorFallbackScreen from '../modules/Errors/ErrorFallbackScreen/ErrorFallbackScreen';
+import NavigationLayout from './NavigationLayout';
 import CreateAccountRoute from './CreateAccountRoute';
+import AddAccountRoute from './AddAccountRoute';
+import ErrorFallbackScreen from '../modules/Errors/ErrorFallbackScreen/ErrorFallbackScreen';
 import { ROUTE_PATHS } from './routes.constants';
 
 const router = createBrowserRouter([
   {
-    element: <RootRoute />,
-    path: ROUTE_PATHS.all,
+    element: <NavigationLayout />,
+    path: ROUTE_PATHS.home,
     errorElement: <ErrorFallbackScreen />,
     children: [
+      {
+        path: ROUTE_PATHS.addAccount,
+        element: <AddAccountRoute />,
+        errorElement: <ErrorFallbackScreen />,
+      },
       {
         path: ROUTE_PATHS.createAccount,
         element: <CreateAccountRoute />,
