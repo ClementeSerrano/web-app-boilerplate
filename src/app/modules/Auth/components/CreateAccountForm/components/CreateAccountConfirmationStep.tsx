@@ -2,7 +2,7 @@ import { useTheme } from 'styled-components';
 
 import Button from '../../../../../components/Button/Button';
 import Grid from '../../../../../components/Grid/Grid';
-import Typography from '../../../../../components/Typography/Typography';
+import IllustratedMessage from '../../../../../components/IllustratedMessage/IllustratedMessage';
 import { CreateAccountFormStepProps } from '../CreateAccountForm.types';
 
 export default function CreateAccountConfirmationStep({
@@ -12,14 +12,19 @@ export default function CreateAccountConfirmationStep({
 
   return (
     <Grid style={{ flex: 1 }}>
-      <Typography>Congratulations!</Typography>
+      <IllustratedMessage
+        illustration="doneCheck"
+        title="Nice! Your account is now created"
+        body="You can now add your account to Hey by clicking on 'Add account', to be able to be part of our Digital Community!"
+        style={{ container: { margin: `${theme.spacing.lg}px 0px` } }}
+      />
 
       <Grid as="footer" align="center">
         <Button
           type="submit"
           style={{ width: '100%', marginBottom: theme.spacing.md }}
         >
-          Add account
+          + Add account
         </Button>
 
         <Button
