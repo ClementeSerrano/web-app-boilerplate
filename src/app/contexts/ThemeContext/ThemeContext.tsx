@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { useEffect, useState } from 'react';
+import {
+  ThemeProvider as BaseThemeProvider,
+  createGlobalStyle,
+} from 'styled-components';
 
-import theme from "../../theme/theme";
-import { WithChildren } from "../../components/components.types";
-import { ThemeMode } from "../../theme/theme.types";
+import theme from '../../theme/theme';
+import { WithChildren } from '../../components/components.types';
+import { ThemeMode } from '../../theme/theme.types';
 
 const GlobalStyle = createGlobalStyle`  
   h1,h2,h3,h4,h5,h6,p,b,a {
@@ -11,28 +14,28 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export function ThemeContextProvider({ children }: WithChildren) {
-  const [mode, setMode] = useState<ThemeMode>("light");
+export function ThemeProvider({ children }: WithChildren) {
+  const [mode, setMode] = useState<ThemeMode>('light');
 
   const toggleMode = () => {
-    const updatedMode = mode === "light" ? "dark" : "light";
+    const updatedMode = mode === 'light' ? 'dark' : 'light';
 
     setMode(updatedMode);
 
-    localStorage.setItem("theme", updatedMode);
+    localStorage.setItem('theme', updatedMode);
   };
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as ThemeMode | null;
+    const savedTheme = localStorage.getItem('theme') as ThemeMode | null;
 
     const prefersDark =
       window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (savedTheme && ["dark", "light"].includes(savedTheme)) {
+    if (savedTheme && ['dark', 'light'].includes(savedTheme)) {
       setMode(savedTheme);
     } else if (prefersDark) {
-      setMode("dark");
+      setMode('dark');
     }
   }, []);
 
@@ -40,9 +43,9 @@ export function ThemeContextProvider({ children }: WithChildren) {
     <>
       <GlobalStyle />
 
-      <ThemeProvider theme={{ ...theme[mode], mode, setMode, toggleMode }}>
+      <BaseThemeProvider theme={{ ...theme[mode], mode, setMode, toggleMode }}>
         {children}
-      </ThemeProvider>
+      </BaseThemeProvider>
     </>
   );
 }

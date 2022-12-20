@@ -1,29 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 
-import { ThemeContextProvider } from './app/contexts/ThemeContext/ThemeContext';
-import RootRoute from './app/routes/RootRoute';
-import ErrorFallbackPage from './app/modules/Errors/ErrorFallbackScreen/ErrorFallbackScreen';
+import { ThemeProvider } from './app/contexts/ThemeContext/ThemeContext';
 import reportWebVitals from './reportWebVitals';
-// import PrivateRoute from './app/routes/PrivateRoute';
-import CreateAccountRoute from './app/routes/CreateAccountRoute';
 import './index.css';
-
-const router = createBrowserRouter([
-  {
-    element: <RootRoute />,
-    path: '*',
-    errorElement: <ErrorFallbackPage />,
-    children: [
-      {
-        path: 'create-account',
-        element: <CreateAccountRoute />,
-        errorElement: <ErrorFallbackPage />,
-      },
-    ],
-  },
-]);
+import router from './app/routes/router';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -31,9 +13,9 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <ThemeContextProvider>
+    <ThemeProvider>
       <RouterProvider router={router} />
-    </ThemeContextProvider>
+    </ThemeProvider>
   </React.StrictMode>,
 );
 
