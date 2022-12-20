@@ -2,6 +2,7 @@ import { useTheme } from 'styled-components';
 
 import Button from '../../../../../components/Button/Button';
 import Grid from '../../../../../components/Grid/Grid';
+import Typography from '../../../../../components/Typography/Typography';
 import { CreateAccountFormStepProps } from '../CreateAccountForm.types';
 
 export default function CreateAccountConfirmationStep({
@@ -11,24 +12,22 @@ export default function CreateAccountConfirmationStep({
 
   return (
     <Grid style={{ flex: 1 }}>
-      Congratulations!
-      <Grid
-        as="footer"
-        direction="row"
-        align="center"
-        justify="flex-end"
-        style={{ marginTop: theme.spacing.md }}
-      >
+      <Typography>Congratulations!</Typography>
+
+      <Grid as="footer" align="center">
+        <Button
+          type="submit"
+          style={{ width: '100%', marginBottom: theme.spacing.md }}
+        >
+          Add account
+        </Button>
+
         <Button
           format="link"
           onClick={() => dispatchActiveStep('prev')}
-          style={{ marginRight: theme.spacing.md }}
+          style={{ width: '100%' }}
         >
           Back
-        </Button>
-
-        <Button type="submit" style={{ flex: 0.5 }}>
-          Add account
         </Button>
       </Grid>
     </Grid>

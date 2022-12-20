@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { Form } from 'react-router-dom';
 import { useTheme } from 'styled-components';
 
@@ -12,7 +13,6 @@ import {
 } from './CreateAccountForm.styles';
 import CreateAccountFormStepSwitcher from './components/CreateAccountFormStepSwitcher';
 import { WithStyle } from '../../../../components/components.types';
-import { useMemo } from 'react';
 import usePassphraseQuiz from '../../hooks/usePassphraseQuiz';
 
 export default function CreateAccountForm({ style, className }: WithStyle) {

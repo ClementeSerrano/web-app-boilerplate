@@ -1,11 +1,8 @@
 import { useMemo, useState } from 'react';
 
-import {
-  pickRandomlyFromArray,
-  shuffleArray,
-} from '../../../../helpers/array.helpers';
-import { createPassphrase } from '../helpers/auth.helpers';
+import { pickRandomlyFromArray } from '../../../../helpers/array.helpers';
 
+import { createPassphraseQuizOptions } from './usePassphraseQuiz.helpers';
 import {
   UsePassphraseQuiz,
   UsePassphraseQuizState,
@@ -82,11 +79,4 @@ export default function usePassphraseQuiz(
     checkAnswer,
     passed,
   };
-}
-
-function createPassphraseQuizOptions(answer: string) {
-  return shuffleArray([
-    answer,
-    ...pickRandomlyFromArray(createPassphrase().split(' '), 2),
-  ]);
 }
