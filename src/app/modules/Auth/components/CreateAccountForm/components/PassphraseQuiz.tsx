@@ -13,8 +13,6 @@ export default function PassphraseQuiz({
   style,
   className,
 }: WithStyle & { quiz: UsePassphraseQuiz }) {
-  console.log({ quiz });
-
   return (
     <Grid style={style} className={className}>
       <PassphraseQuizWordsContainer as="aside">
