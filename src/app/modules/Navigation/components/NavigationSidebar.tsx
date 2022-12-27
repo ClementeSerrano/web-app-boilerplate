@@ -1,9 +1,8 @@
+import { useTheme } from 'styled-components';
+import Navlink from '../../../components/Navlink/Navlink';
 import HomeIcon from '../../../icons/HomeIcon';
 import { ROUTE_PATHS } from '../../../routes/routes.constants';
-import {
-  NavigationLink,
-  NavigationSidebarContainer,
-} from '../Navigation.styles';
+import { NavigationSidebarContainer } from '../Navigation.styles';
 
 export default function NavigationSidebar({
   show,
@@ -12,12 +11,33 @@ export default function NavigationSidebar({
   show: boolean;
   toggleShow(): void;
 }) {
+  const theme = useTheme();
+
   return (
     <>
-      <NavigationSidebarContainer container variant="level2" show={show}>
-        <NavigationLink to={ROUTE_PATHS.home} onClick={toggleShow}>
-          <HomeIcon height={20} style={{ marginRight: 8 }} /> Home
-        </NavigationLink>
+      <NavigationSidebarContainer
+        container
+        size="md"
+        variant="level2"
+        show={show}
+      >
+        <Navlink
+          container
+          variant="primary"
+          to={ROUTE_PATHS.home}
+          onClick={toggleShow}
+        >
+          {({ isActive }) => (
+            <>
+              <HomeIcon
+                height={20}
+                format={isActive ? 'fill' : 'outline'}
+                style={{ marginRight: theme.spacing.sm }}
+              />
+              Home
+            </>
+          )}
+        </Navlink>
 
         {/* TODO: Add links coming from the server. */}
       </NavigationSidebarContainer>

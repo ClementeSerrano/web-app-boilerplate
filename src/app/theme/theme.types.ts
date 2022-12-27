@@ -17,7 +17,7 @@ export type Theme = {
 
 export type ThemeBreakpoints = {
   values: Record<
-    Extract<ThemeSizeUnit, 'xs' | 'sm' | 'md' | 'lg' | 'xl'>,
+    Extract<ThemeSizeUnit, 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'>,
     number
   >;
   unit: 'px';
@@ -42,7 +42,22 @@ export type ThemeTypography = Record<
 };
 
 export type ThemeShape = {
-  borderRadius: Record<ThemeSizeUnit, number>;
+  borderRadius: Record<
+    Extract<
+      ThemeSizeUnit,
+      | 'xxs'
+      | 'xs'
+      | 'sm'
+      | 'md'
+      | 'lg'
+      | 'xl'
+      | 'xxl'
+      | 'xxxl'
+      | 'xxxxl'
+      | 'xxxxxl'
+    >,
+    number
+  >;
 };
 
 export type FontSizeScales = Record<FontSizeScaleVariant, number>;
@@ -74,7 +89,8 @@ export type ThemeSizeUnit =
   | 'md'
   | 'sm'
   | 'xs'
-  | 'xxs';
+  | 'xxs'
+  | 'xxxs';
 
 export type ThemeFormat = 'fill' | 'outline';
 
