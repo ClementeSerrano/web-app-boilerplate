@@ -47,7 +47,7 @@ export function getNavlinkActiveBgColor({
   if (!container) return 'unset';
 
   if (variant === 'text') {
-    return theme.palette.background.level3;
+    return theme.palette.background.level2;
   }
 
   switch (theme.mode) {
@@ -55,7 +55,7 @@ export function getNavlinkActiveBgColor({
       return lighten(0.32, theme.palette[variant].main);
 
     case 'dark':
-      return theme.palette.background.level3;
+      return theme.palette.background.level2;
 
     default:
       return lighten(0.32, theme.palette[variant].main);

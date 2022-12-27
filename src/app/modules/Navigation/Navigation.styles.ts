@@ -25,6 +25,8 @@ export const NavigationSidebarContainer = styled(Grid)<{
   transform: ${({ show }) => (!show ? 'translateX(-100%)' : 'translateX(0)')};
   transition: transform 0.3s ease-out;
   z-index: 100;
+  border-right: ${({ theme }) =>
+    `1px solid ${theme.palette.background.level3}`};
 
   @media (max-width: 600px) {
     width: 50vw;

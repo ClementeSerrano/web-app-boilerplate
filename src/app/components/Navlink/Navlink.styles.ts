@@ -42,7 +42,7 @@ export const NavlinkContainer = styled(NavLink)<NavlinkContainerProps>`
   }
 
   @media (max-width: 600px) {
-    margin: ${({ theme }) => theme.spacing.xxxs}px 0px;
+    margin: 4px 0px;
 
     &:not(:last-child) {
       margin-right: 0;

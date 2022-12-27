@@ -18,7 +18,7 @@ export default function NavigationSidebar({
       <NavigationSidebarContainer
         container
         size="md"
-        variant="level2"
+        variant="level1"
         show={show}
       >
         <Navlink
