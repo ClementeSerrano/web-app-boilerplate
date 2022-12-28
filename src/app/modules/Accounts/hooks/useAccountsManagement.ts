@@ -5,9 +5,15 @@ import {
   DeleteAccountFunc,
   GetAccountFunc,
   UpdateAccountMetadataFunc,
+  UseAccountsManagementHook,
 } from './useAccountsManagement.types';
 
-export default function useAccountsManagement() {
+/**
+ * Provides all business logic for CRUD on user accounts context.
+ * @returns The accounts state and a set of callbacks to handle searching,
+ * adding, updating and deleting an account from the global context.
+ */
+export default function useAccountsManagement(): UseAccountsManagementHook {
   const { accounts, setAccounts } = useAccounts();
 
   const getAccount: GetAccountFunc = address =>

@@ -8,6 +8,11 @@ export const AccountsContext = createContext<AccountsContextValues>(
   {} as AccountsContextValues,
 );
 
+/**
+ * Provides a context store for managing user saved accounts and
+ * current active account in local cache.
+ * @param children - Components tree to inject the accounts context.
+ */
 export function AccountsProvider({ children }: WithChildren) {
   const [accounts, setAccounts] = useState<Account[]>([]);
   const [currentAccount, setCurrentAccount] = useState<Account>();
@@ -25,11 +30,3 @@ export function AccountsProvider({ children }: WithChildren) {
     </AccountsContext.Provider>
   );
 }
-
-// return {
-//   accounts,
-//   setAccount,
-//   updateAccount,
-//   deleteAccount,
-//   getAccount,
-// };

@@ -1,6 +1,14 @@
 import { ValueOf } from '../../../../types/general.types';
 import { Account, AccountMetadata } from '../accounts.types';
 
+export type UseAccountsManagementHook = {
+  accounts: Account[];
+  addAccount: AddAccountFunc;
+  deleteAccount: DeleteAccountFunc;
+  getAccount: GetAccountFunc;
+  updateAccountMetadata: UpdateAccountMetadataFunc;
+};
+
 export type AddAccountFunc = (account: Account) => void;
 
 export type DeleteAccountFunc = (
