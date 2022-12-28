@@ -8,8 +8,8 @@ import { ROUTE_PATHS } from './routes.constants';
 
 const router = createBrowserRouter([
   {
-    element: <NavigationLayout />,
     path: ROUTE_PATHS.home,
+    element: <NavigationLayout />,
     errorElement: <ErrorFallbackScreen />,
     children: [
       {
