@@ -12,7 +12,7 @@ export function getNavlinkPadding({
   NavlinkContainerProps,
   'container' | 'size'
 >): string {
-  if (!container) return '0px';
+  if (container === 'false') return '0px';
 
   switch (size) {
     case 'sm':
@@ -44,7 +44,7 @@ export function getNavlinkActiveBgColor({
   NavlinkContainerProps,
   'variant' | 'container'
 >): string {
-  if (!container) return 'unset';
+  if (container === 'false') return 'unset';
 
   if (variant === 'text') {
     return theme.palette.background.level2;
@@ -77,7 +77,7 @@ export function getNavlinkOnHoverBgColor({
   NavlinkContainerProps,
   'variant' | 'container'
 >): string {
-  if (!container) return 'unset';
+  if (container === 'false') return 'unset';
 
   if (variant === 'text') {
     return theme.palette.background.level4;

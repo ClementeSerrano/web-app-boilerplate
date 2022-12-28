@@ -11,6 +11,6 @@ export type NavlinkProps = NavLinkProps &
 export type NavlinkContainerProps = NavLinkProps &
   React.RefAttributes<HTMLAnchorElement> & {
     variant: Extract<ThemePaletteKey, 'primary' | 'secondary' | 'text'>;
-    container: boolean;
+    container: string;
     size: Extract<ThemeSizeUnit, 'sm' | 'md' | 'lg'>;
   };

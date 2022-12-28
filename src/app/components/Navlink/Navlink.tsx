@@ -13,7 +13,7 @@ export default function Navlink({
     <NavlinkContainer
       {...props}
       variant={variant}
-      container={container}
+      container={container.toString()}
       size={size}
       className={({ isActive }) =>
         [className, isActive ? 'active' : null].filter(Boolean).join(' ')

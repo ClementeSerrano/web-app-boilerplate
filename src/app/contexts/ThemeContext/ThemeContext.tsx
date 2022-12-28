@@ -7,6 +7,7 @@ import {
 import theme from '../../theme/theme';
 import { WithChildren } from '../../components/components.types';
 import { ThemeMode } from '../../theme/theme.types';
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 const GlobalStyle = createGlobalStyle`  
   h1,h2,h3,h4,h5,h6,p,b,a {
@@ -17,27 +18,30 @@ const GlobalStyle = createGlobalStyle`
 export function ThemeProvider({ children }: WithChildren) {
   const [mode, setMode] = useState<ThemeMode>('light');
 
+  const [storedMode, setStoredMode] = useLocalStorage<ThemeMode>(
+    'theme',
+    'light',
+  );
+
   const toggleMode = () => {
     const updatedMode = mode === 'light' ? 'dark' : 'light';
 
     setMode(updatedMode);
 
-    localStorage.setItem('theme', updatedMode);
+    setStoredMode(updatedMode);
   };
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as ThemeMode | null;
-
     const prefersDark =
       window.matchMedia &&
       window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (savedTheme && ['dark', 'light'].includes(savedTheme)) {
-      setMode(savedTheme);
+    if (storedMode && ['dark', 'light'].includes(storedMode)) {
+      setMode(storedMode);
     } else if (prefersDark) {
       setMode('dark');
     }
-  }, []);
+  }, [storedMode]);
 
   return (
     <>
