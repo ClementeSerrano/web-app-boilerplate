@@ -30,10 +30,6 @@ export const NavlinkContainer = styled(NavLink)<NavlinkContainerProps>`
       getNavlinkOnHoverBgColor({ theme, variant, container })};
   }
 
-  &:not(:last-child) {
-    margin-bottom: ${({ theme }) => theme.spacing.xxs}px;
-  }
-
   &.active {
     color: ${({ theme, variant }) => getNavlinkActiveColor({ theme, variant })};
     background-color: ${({ theme, variant, container }) =>

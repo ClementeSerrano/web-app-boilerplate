@@ -1,7 +1,7 @@
 {
-  "name": "hey-bo-client",
+  "name": "hey-web-client",
   "version": "0.1.0",
-  "description": "Hey Backoffice - Where creators manage their projects",
+  "description": "Hey - Web3 for independent creators.",
   "private": true,
   "dependencies": {
     "@liskhq/lisk-client": "^6.0.0-alpha.6",

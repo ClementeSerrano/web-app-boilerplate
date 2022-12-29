@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import Grid from '../../components/Grid/Grid';
 
@@ -9,6 +10,23 @@ export const NavigationTopbarContainer = styled(Grid)`
     `1px solid ${theme.palette.background.level3}`};
   width: ${({ theme }) => `calc(100% - ${2 * theme.spacing.sm}px)`};
   padding: ${({ theme }) => theme.spacing.sm}px;
+`;
+
+export const NavigationTopbarLogoNavlink = styled(Link)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: ${({ theme }) => `${theme.spacing.xxxs}px ${theme.spacing.xxs}px`};
+  border-radius: ${({ theme }) => theme.shape.borderRadius.sm}px;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.palette.background.level2};
+  }
 `;
 
 export const NavigationSidebarContainer = styled(Grid)<{

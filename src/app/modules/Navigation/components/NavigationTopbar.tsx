@@ -4,9 +4,13 @@ import Button from '../../../components/Button/Button';
 import Grid from '../../../components/Grid/Grid';
 import ThemeSwitch from '../../../components/ThemeSwitch/ThemeSwitch';
 import MenuIcon from '../../../icons/MenuIcon';
+import { ROUTE_PATHS } from '../../../routes/routes.constants';
 import AuthButton from '../../Auth/components/AuthButton/AuthButton';
 
-import { NavigationTopbarContainer } from '../Navigation.styles';
+import {
+  NavigationTopbarContainer,
+  NavigationTopbarLogoNavlink,
+} from '../Navigation.styles';
 import { NavigationTopbarProps } from '../Navigation.types';
 
 export default function NavigationTopbar({
@@ -30,7 +34,9 @@ export default function NavigationTopbar({
         <MenuIcon height={24} />
       </Button>
 
-      <div>logo</div>
+      <NavigationTopbarLogoNavlink to={ROUTE_PATHS.home}>
+        logo
+      </NavigationTopbarLogoNavlink>
 
       <Grid direction="row" align="center" justify="flex-end">
         <AuthButton style={{ marginRight: theme.spacing.sm }} />
