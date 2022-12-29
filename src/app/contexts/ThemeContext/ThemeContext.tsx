@@ -36,8 +36,6 @@ export function ThemeProvider({ children }: WithChildren) {
     }
   }, [mode, setMode]);
 
-  console.log({ mode });
-
   return (
     <>
       <GlobalStyle />
