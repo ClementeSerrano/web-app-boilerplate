@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import {
   ThemeProvider as BaseThemeProvider,
   createGlobalStyle,
@@ -16,19 +16,12 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export function ThemeProvider({ children }: WithChildren) {
-  const [mode, setMode] = useState<ThemeMode>('light');
-
-  const [storedMode, setStoredMode] = useLocalStorage<ThemeMode>(
-    'theme',
-    'light',
-  );
+  const [mode, setMode] = useLocalStorage<ThemeMode>('theme', 'light');
 
   const toggleMode = () => {
     const updatedMode = mode === 'light' ? 'dark' : 'light';
 
     setMode(updatedMode);
-
-    setStoredMode(updatedMode);
   };
 
   useEffect(() => {
@@ -36,18 +29,27 @@ export function ThemeProvider({ children }: WithChildren) {
       window.matchMedia &&
       window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (storedMode && ['dark', 'light'].includes(storedMode)) {
-      setMode(storedMode);
+    if (mode && ['dark', 'light'].includes(mode)) {
+      setMode(mode);
     } else if (prefersDark) {
       setMode('dark');
     }
-  }, [storedMode]);
+  }, [mode, setMode]);
+
+  console.log({ mode });
 
   return (
     <>
       <GlobalStyle />
 
-      <BaseThemeProvider theme={{ ...theme[mode], mode, setMode, toggleMode }}>
+      <BaseThemeProvider
+        theme={{
+          ...theme[mode],
+          mode,
+          setMode,
+          toggleMode,
+        }}
+      >
         {children}
       </BaseThemeProvider>
     </>

@@ -31,6 +31,7 @@ export default function useLocalStorage<T>(
 
     try {
       const item = window.localStorage.getItem(key);
+
       return (item || initialValue) as T;
     } catch (error) {
       console.warn(`Error reading localStorage key “${key}”:`, error);
@@ -57,7 +58,10 @@ export default function useLocalStorage<T>(
       const newValue = value instanceof Function ? value(storedValue) : value;
 
       // Save to local storage
-      window.localStorage.setItem(key, JSON.stringify(newValue));
+      window.localStorage.setItem(
+        key,
+        typeof newValue !== 'string' ? JSON.stringify(newValue) : newValue,
+      );
 
       // Save state
       setStoredValue(newValue);
