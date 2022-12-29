@@ -7,6 +7,7 @@ import {
   UpdateAccountMetadataFunc,
   UseAccountsManagementHook,
 } from './useAccountsManagement.types';
+import useAccountsStorage from './useAccountsStorage';
 
 /**
  * Provides all business logic for CRUD on user accounts context.
@@ -15,6 +16,9 @@ import {
  */
 export default function useAccountsManagement(): UseAccountsManagementHook {
   const { accounts, setAccounts } = useAccounts();
+  const { accountsStorage } = useAccountsStorage();
+
+  console.log({ accountsStorage });
 
   const getAccount: GetAccountFunc = address =>
     accounts.find(account => account.metadata.address === address);
