@@ -1,5 +1,12 @@
+import { useNavigate } from 'react-router-dom';
+
 import CreateAccountModal from '../modules/Auth/sections/CreateAccountModal/CreateAccountModal';
 
+/**
+ * Route component for the create account section.
+ */
 export default function CreateAccountRoute() {
-  return <CreateAccountModal />;
+  const navigate = useNavigate();
+
+  return <CreateAccountModal onClose={() => navigate(-1)} />;
 }

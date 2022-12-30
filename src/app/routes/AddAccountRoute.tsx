@@ -1,5 +1,6 @@
-import CreateAccountModal from '../modules/Auth/sections/CreateAccountModal/CreateAccountModal';
-
+/**
+ * Route component for the add account section.
+ */
 export default function AddAccountRoute() {
-  return <CreateAccountModal />;
+  return <div>Add account modal</div>;
 }

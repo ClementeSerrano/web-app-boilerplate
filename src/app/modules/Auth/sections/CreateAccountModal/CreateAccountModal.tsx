@@ -1,28 +1,24 @@
-import { useNavigate } from 'react-router-dom';
-import { useTheme } from 'styled-components';
 import Dialog from '../../../../components/Dialog/Dialog';
-
 import CreateAccountForm from '../../components/CreateAccountForm/CreateAccountForm';
-import { getCreateAccountFormContainerStyle } from './CreateAccountModal.styles';
 
-export default function CreateAccountModal() {
-  const navigate = useNavigate();
+import { CreateAccountModalProps } from './CreateAccountModal.types';
 
-  const theme = useTheme();
-
-  const formContainerStyle = getCreateAccountFormContainerStyle(theme);
-
+/**
+ * Renders the user create account form in a modal format.
+ * @param onClose - Callback to call when the close action of the modal is called.
+ */
+export default function CreateAccountModal({
+  onClose,
+}: CreateAccountModalProps) {
   return (
     <Dialog show>
       <Dialog.Header>
         <Dialog.Title>Create an account</Dialog.Title>
 
-        <Dialog.Close onClick={() => navigate(-1)} />
+        <Dialog.Close onClick={onClose} />
       </Dialog.Header>
 
-      <Dialog.Body>
-        <CreateAccountForm style={formContainerStyle} />
-      </Dialog.Body>
+      <CreateAccountForm />
     </Dialog>
   );
 }
