@@ -1,8 +1,8 @@
 import { useTheme } from 'styled-components';
 
 import { DialogCloseProps } from '../Dialog.types';
-import { DialogBaseCloseButton } from '../Dialog.styles';
 import CloseIcon from '../../../icons/CloseIcon';
+import Button from '../../Button/Button';
 
 export default function DialogClose({
   className,
@@ -12,7 +12,7 @@ export default function DialogClose({
   const theme = useTheme();
 
   return (
-    <DialogBaseCloseButton
+    <Button
       variant="text"
       format="link"
       {...props}
@@ -20,6 +20,6 @@ export default function DialogClose({
       style={style}
     >
       <CloseIcon color={theme.colors.gray.light} height={12} />
-    </DialogBaseCloseButton>
+    </Button>
   );
 }

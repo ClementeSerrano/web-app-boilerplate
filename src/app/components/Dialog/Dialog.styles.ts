@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { animated } from 'react-spring';
-import Button from '../Button/Button';
 import Grid from '../Grid/Grid';
 
 export const DialogBackdrop = styled(animated.div)`
@@ -49,15 +48,4 @@ export const DialogBaseHeader = styled.header<{ childrenCount: number }>`
     childrenCount > 1 ? 'space-between' : 'flex-end'};
   width: 100%;
   margin-bottom: ${({ theme }) => theme.spacing.sm}px;
-`;
-
-export const DialogBaseCloseButton = styled(Button)`
-  display: flex;
-  justify-content: center;
-  padding: ${({ theme }) => theme.spacing.xxs}px;
-  border-radius: 50%;
-
-  &:hover {
-    background-color: ${({ theme }) => theme.palette.background.level2};
-  }
 `;
