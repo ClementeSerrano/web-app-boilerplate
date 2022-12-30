@@ -29,7 +29,7 @@ export default function CreateAccountConfirmationStep({
           type="submit"
           style={{ width: '100%', marginBottom: theme.spacing.md }}
         >
-          + Add account
+          Add account
         </Button>
 
         <Button

@@ -1,14 +1,16 @@
-import { RouterProvider } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import { AccountsProvider } from './modules/Accounts/context/AccountsContext';
 import { ThemeProvider } from './contexts/ThemeContext/ThemeContext';
-import router from './routes/router';
+import Routes from './routes/Routes';
 
 export default function App() {
   return (
     <AccountsProvider>
       <ThemeProvider>
-        <RouterProvider router={router} />
+        <Router>
+          <Routes />
+        </Router>
       </ThemeProvider>
     </AccountsProvider>
   );

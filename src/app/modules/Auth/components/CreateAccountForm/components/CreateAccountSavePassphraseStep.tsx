@@ -28,7 +28,7 @@ export default function CreateAccountSavePassphraseStep({
         style={{ margin: `${theme.spacing.md}px 0` }}
       />
 
-      <Grid container bordered variant="level2" size="sm">
+      <Grid container bordered variant="level3" size="sm">
         <SavePassphraseNoticeText variant="paragraph2">
           Keep your passphrase safe as it is the only way to access your
           account. Anyone with access to it can take your assets. Lost

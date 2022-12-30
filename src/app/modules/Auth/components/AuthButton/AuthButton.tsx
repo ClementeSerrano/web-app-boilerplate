@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import Button from '../../../../components/Button/Button';
+import { Link, useLocation } from 'react-router-dom';
+
 import { WithStyle } from '../../../../components/components.types';
-import Dialog from '../../../../components/Dialog/Dialog';
+import { ROUTE_PATHS } from '../../../../routes/routes.constants';
 import useCurrentAccount from '../../../Accounts/hooks/useCurrentAccount';
 
 export default function AuthButton({ style, className }: WithStyle) {
-  const [show, setShow] = useState(false);
+  const location = useLocation();
 
   const [currentAccount] = useCurrentAccount();
 
@@ -16,27 +16,14 @@ export default function AuthButton({ style, className }: WithStyle) {
 
   return (
     <>
-      <Button
-        variant="primary"
-        size="sm"
+      <Link
+        to={ROUTE_PATHS.createAccount}
+        state={{ background: location }}
         style={style}
         className={className}
-        onClick={() => setShow(true)}
       >
         Log in
-      </Button>
-
-      <Dialog show={show}>
-        <Dialog.Header>
-          <Dialog.Title>pico</Dialog.Title>
-
-          <Dialog.Close onClick={() => setShow(false)} />
-        </Dialog.Header>
-
-        <Dialog.Body>sdsdfsdfss</Dialog.Body>
-
-        <Dialog.Footer>footer</Dialog.Footer>
-      </Dialog>
+      </Link>
     </>
   );
 }

@@ -1,5 +1,4 @@
 import { useMemo } from 'react';
-import { Form } from 'react-router-dom';
 
 import { useStepper } from '../../../../components/Stepper/Stepper.hooks';
 import Stepper from '../../../../components/Stepper/Stepper';
@@ -24,7 +23,7 @@ export default function CreateAccountForm({ style, className }: WithStyle) {
   const stepsLabels = ['Passphrase', 'Verification', 'Confirm'];
 
   return (
-    <Form onSubmit={handleSubmit} style={style} className={className}>
+    <form onSubmit={handleSubmit} style={style} className={className}>
       <Stepper activeStep={activeStep} style={stepperStyles}>
         {stepsLabels.map((stepLabel, index) => (
           <Stepper.Step key={index}>
@@ -39,6 +38,6 @@ export default function CreateAccountForm({ style, className }: WithStyle) {
         activeStep={activeStep}
         dispatchActiveStep={dispatchActiveStep}
       />
-    </Form>
+    </form>
   );
 }
