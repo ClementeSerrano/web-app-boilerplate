@@ -14,7 +14,7 @@ export function DeviceProvider({ children }: { children: ReactNode }) {
 
   const isLaptop = useMemo(() => type === 'laptop', [type]);
   const isTablet = useMemo(() => type === 'tablet', [type]);
-  const isMobile = useMemo(() => type === 'phone', [type]);
+  const isPhone = useMemo(() => type === 'phone', [type]);
 
   useEffect(() => {
     const handleWindowResize = () => setType(getDeviceType());
@@ -25,7 +25,7 @@ export function DeviceProvider({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <DeviceContext.Provider value={{ type, isLaptop, isTablet, isMobile }}>
+    <DeviceContext.Provider value={{ type, isLaptop, isTablet, isPhone }}>
       {children}
     </DeviceContext.Provider>
   );
