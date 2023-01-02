@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { DEVICES_BREAKPOINTS } from '../../contexts/DeviceContext/DeviceContext.constants';
 
 import {
   getNavlinkActiveBgColor,
@@ -37,7 +38,7 @@ export const NavlinkContainer = styled(NavLink)<NavlinkContainerProps>`
     font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: ${DEVICES_BREAKPOINTS.phone.max}px) {
     margin: 4px 0px;
 
     &:not(:last-child) {

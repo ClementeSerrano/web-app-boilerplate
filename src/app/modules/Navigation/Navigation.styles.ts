@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import Grid from '../../components/Grid/Grid';
+import { DEVICES_BREAKPOINTS } from '../../contexts/DeviceContext/DeviceContext.constants';
 
 export const NavigationTopbarContainer = styled(Grid)`
   position: fixed;
@@ -46,7 +47,7 @@ export const NavigationSidebarContainer = styled(Grid)<{
   border-right: ${({ theme }) =>
     `1px solid ${theme.palette.background.level3}`};
 
-  @media (max-width: 600px) {
+  @media (max-width: ${DEVICES_BREAKPOINTS.phone.max}px) {
     width: 50vw;
     min-width: 100px;
     padding: ${({ theme }) => theme.spacing.md}px;

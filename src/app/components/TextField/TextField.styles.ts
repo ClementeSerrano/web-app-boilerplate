@@ -7,6 +7,7 @@ import {
   TextFieldInputProps,
   TextFieldLabelProps,
 } from './TextField.types';
+import { DEVICES_BREAKPOINTS } from '../../contexts/DeviceContext/DeviceContext.constants';
 
 function inputHighlighter(highlightColor: string) {
   return keyframes`
@@ -115,7 +116,7 @@ export const TextFieldInputContainer = styled.div<TextFieldInputContainerProps>`
     variant === 'filled' &&
     `&:hover{ background-color: ${theme.palette.background.level3} }`};
 
-  @media (max-width: 600px) {
+  @media (max-width: ${DEVICES_BREAKPOINTS.phone.max}px) {
     padding: ${({ theme }) => theme.spacing.xxs}px
       ${({ theme, variant }) =>
         variant === 'filled' ? theme.spacing.xxs : '0'}px;

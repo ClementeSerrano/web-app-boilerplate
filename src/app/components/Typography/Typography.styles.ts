@@ -1,12 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { DEVICES_BREAKPOINTS } from '../../contexts/DeviceContext/DeviceContext.constants';
 import {
   getMobileTypographyFontSize,
   getTypographyColor,
-} from "./Typography.helpers";
-import { TypographyProps } from "./Typography.types";
+} from './Typography.helpers';
+import { TypographyProps } from './Typography.types';
 
 export const TypographyContainer = styled.p<
-  Required<Pick<TypographyProps, "variant">>
+  Required<Pick<TypographyProps, 'variant'>>
 >`
   font-family: ${({ theme, variant }) => theme.typography[variant].fontFamily};
   font-size: ${({ theme, variant }) => theme.typography[variant].fontSize};
@@ -17,7 +18,7 @@ export const TypographyContainer = styled.p<
   color: ${({ theme, variant }) =>
     getTypographyColor({ variant, mode: theme.mode, palette: theme.palette })};
 
-  @media (max-width: 600px) {
+  @media (max-width: ${DEVICES_BREAKPOINTS.phone.max}px) {
     font-size: ${({ theme, variant }) =>
       getMobileTypographyFontSize({ variant, typography: theme.typography })};
   }

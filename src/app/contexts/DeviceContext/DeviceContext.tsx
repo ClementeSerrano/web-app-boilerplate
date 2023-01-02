@@ -14,7 +14,7 @@ export function DeviceProvider({ children }: { children: ReactNode }) {
 
   const isLaptop = useMemo(() => type === 'laptop', [type]);
   const isTablet = useMemo(() => type === 'tablet', [type]);
-  const isMobile = useMemo(() => type === 'mobile', [type]);
+  const isMobile = useMemo(() => type === 'phone', [type]);
 
   useEffect(() => {
     const handleWindowResize = () => setType(getDeviceType());

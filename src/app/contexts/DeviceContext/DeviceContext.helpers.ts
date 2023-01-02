@@ -1,3 +1,4 @@
+import { DEVICES_BREAKPOINTS } from './DeviceContext.constants';
 import { DeviceType } from './DeviceContext.types';
 
 /**
@@ -6,11 +7,11 @@ import { DeviceType } from './DeviceContext.types';
 export function getDeviceType(): DeviceType {
   const width = window.innerWidth;
 
-  if (width >= 1024) {
+  if (width >= DEVICES_BREAKPOINTS.laptop.min) {
     return 'laptop';
-  } else if (width >= 768) {
+  } else if (width >= DEVICES_BREAKPOINTS.tablet.min) {
     return 'tablet';
   } else {
-    return 'mobile';
+    return 'phone';
   }
 }

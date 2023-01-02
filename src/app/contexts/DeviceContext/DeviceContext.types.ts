@@ -1,8 +1,8 @@
 export type DeviceProviderValues = {
-  type: 'laptop' | 'tablet' | 'mobile';
+  type: 'laptop' | 'tablet' | 'phone';
   isLaptop: boolean;
   isTablet: boolean;
   isMobile: boolean;
 };
 
-export type DeviceType = 'laptop' | 'tablet' | 'mobile';
+export type DeviceType = 'laptop' | 'tablet' | 'phone';

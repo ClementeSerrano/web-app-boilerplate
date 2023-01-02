@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { animated } from 'react-spring';
 import Grid from '../Grid/Grid';
+import { DEVICES_BREAKPOINTS } from '../../contexts/DeviceContext/DeviceContext.constants';
 
 export const DialogBackdrop = styled(animated.div)`
   position: fixed;
@@ -39,6 +40,10 @@ export const DialogContainer = styled(animated(Grid))`
   transform: translate(-50%, -50%);
   z-index: 3;
   max-height: 75vh;
+
+  @media (max-width: ${DEVICES_BREAKPOINTS.tablet.max}px) {
+    width: 75vw;
+  }
 `;
 
 export const DialogBaseHeader = styled.header<{ childrenCount: number }>`
