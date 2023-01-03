@@ -22,11 +22,11 @@ export default function Routes() {
 
       <ReactRouterRoutes location={background || location}>
         <Route path={ROUTE_PATHS.home} element={<div>home...</div>} />
-        <Route path={ROUTE_PATHS.addAccount} element={<AddAccountRoute />} />
         <Route
           path={ROUTE_PATHS.createAccount}
           element={<CreateAccountRoute />}
         />
+        <Route path={ROUTE_PATHS.addAccount} element={<AddAccountRoute />} />
       </ReactRouterRoutes>
 
       {background && (
@@ -35,6 +35,7 @@ export default function Routes() {
             path={ROUTE_PATHS.createAccount}
             element={<CreateAccountRoute />}
           />
+          <Route path={ROUTE_PATHS.addAccount} element={<AddAccountRoute />} />
         </ReactRouterRoutes>
       )}
     </>

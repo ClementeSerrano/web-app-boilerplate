@@ -17,7 +17,7 @@ export default function AuthButton({ style, className }: WithStyle) {
   return (
     <>
       <Link
-        to={ROUTE_PATHS.createAccount}
+        to={ROUTE_PATHS.addAccount}
         state={{ background: location }}
         style={style}
         className={className}

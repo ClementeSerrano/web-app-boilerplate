@@ -1,22 +1,27 @@
 import { useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { useStepper } from '../../../../components/Stepper/Stepper.hooks';
 import Stepper from '../../../../components/Stepper/Stepper';
-import { createPassphrase } from '../../helpers/auth.helpers';
+import { createPassphrase } from '../../helpers/accounts.helpers';
 
-import { getCreateAccountStepperStyles } from './CreateAccountForm.styles';
-import CreateAccountFormStepSwitcher from './components/CreateAccountFormStepSwitcher';
-import { WithStyle } from '../../../../components/components.types';
 import usePassphraseQuiz from '../../hooks/usePassphraseQuiz';
+import { WithStyle } from '../../../../components/components.types';
+import { ROUTE_PATHS } from '../../../../routes/routes.constants';
+
+import CreateAccountFormStepSwitcher from './components/CreateAccountFormStepSwitcher';
+import { getCreateAccountStepperStyles } from './CreateAccountForm.styles';
 
 export default function CreateAccountForm({ style, className }: WithStyle) {
+  const navigate = useNavigate();
+
   const passphrase = useMemo(() => createPassphrase(), []);
 
   const passphraseQuiz = usePassphraseQuiz(passphrase);
 
   const [activeStep, dispatchActiveStep] = useStepper();
 
-  const handleSubmit = () => console.log('create account complete...');
+  const handleSubmit = () => navigate(`/${ROUTE_PATHS.addAccount}`);
 
   const stepperStyles = getCreateAccountStepperStyles();
 

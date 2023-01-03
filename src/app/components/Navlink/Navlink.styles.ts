@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+
 import { DEVICES_BREAKPOINTS } from '../../contexts/DeviceContext/DeviceContext.constants';
 
 import {
@@ -16,7 +17,7 @@ export const NavlinkContainer = styled(NavLink)<NavlinkContainerProps>`
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: ${({ theme }) => theme.palette.text.main};
+  color: ${({ theme, variant }) => theme.palette[variant].main};
   padding: ${({ theme, container, size }) =>
     getNavlinkPadding({ theme, container, size })};
   border-radius: ${({ theme }) => theme.shape.borderRadius.sm}px;

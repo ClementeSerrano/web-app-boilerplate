@@ -5,7 +5,7 @@ import Grid from '../../../components/Grid/Grid';
 import ThemeSwitch from '../../../components/ThemeSwitch/ThemeSwitch';
 import MenuIcon from '../../../icons/MenuIcon';
 import { ROUTE_PATHS } from '../../../routes/routes.constants';
-import AuthButton from '../../Auth/components/AuthButton/AuthButton';
+import AuthButton from '../../Accounts/components/AuthButton/AuthButton';
 
 import {
   NavigationTopbarContainer,

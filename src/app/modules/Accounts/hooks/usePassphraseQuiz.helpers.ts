@@ -2,7 +2,7 @@ import {
   pickRandomlyFromArray,
   shuffleArray,
 } from '../../../../helpers/array.helpers';
-import { createPassphrase } from '../helpers/auth.helpers';
+import { createPassphrase } from '../helpers/accounts.helpers';
 
 /**
  * Generates an array of options to use in the passphrase quiz.
