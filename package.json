@@ -4,7 +4,7 @@
   "description": "Hey - Web3 for independent creators.",
   "private": true,
   "dependencies": {
-    "@liskhq/lisk-client": "^6.0.0-alpha.6",
+    "@liskhq/lisk-client": "6.0.0-alpha.9",
     "@react-spring/web": "^9.5.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
