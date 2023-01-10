@@ -5,33 +5,59 @@ import Stepper from '../../../../components/Stepper/Stepper';
 import { useStepper } from '../../../../components/Stepper/Stepper.hooks';
 import Typography from '../../../../components/Typography/Typography';
 import { ROUTE_PATHS } from '../../../../routes/routes.constants';
+import useAccountsManagement from '../../hooks/useAccountsManagement';
+import useCurrentAccount from '../../hooks/useCurrentAccount';
+import useEncryptAccount from '../../hooks/useEncryptAccount';
 import { getCreateAccountStepperStyles } from '../CreateAccountForm/CreateAccountForm.styles';
 import { AddAccountFormValues } from './AddAccountForm.types';
 import AddAccountFormStepSwitcher from './components/AddAccountFormStepSwitcher';
 
-// pass: index provide fish bracket blame dismiss one bright squeeze disorder spring black
+// passphrase: index provide fish bracket blame dismiss one bright squeeze disorder spring black
 /**
- * Form to add an account to the Hey ecosystem.
+ * Form to add a created account to the user device.
  */
 export default function AddAccountForm() {
+  const [activeStep, dispatchActiveStep] = useStepper(0, 7);
+  const { addAccount } = useAccountsManagement();
+  const [, setCurrentAccount] = useCurrentAccount();
+
+  const [
+    encryptAccount,
+    {
+      data: encryptAccountData,
+      isLoading: isLoadingEncryptAccount,
+      error: errorOnEncryptAccount,
+    },
+  ] = useEncryptAccount({
+    onCompleted(data) {
+      // Set account on context and local storage.
+      addAccount(data);
+
+      setCurrentAccount(data);
+
+      dispatchActiveStep('last');
+    },
+  });
+
   const form = useFormik<AddAccountFormValues>({
     initialValues: {
       passphrase: '',
       password: '',
       confirmPassword: '',
+      name: '',
     },
     onSubmit(values) {
-      console.log({ values });
+      encryptAccount({
+        passphrase: values.passphrase,
+        password: values.password,
+        name: values.name,
+      });
     },
   });
-
-  const [activeStep, dispatchActiveStep] = useStepper();
 
   const stepsLabels = ['Enter passphrase', 'Setup password', 'Backup account'];
 
   const stepperStyles = getCreateAccountStepperStyles();
-
-  console.log({ form });
 
   return (
     <form onSubmit={form.handleSubmit}>
@@ -47,6 +73,9 @@ export default function AddAccountForm() {
         form={form}
         activeStep={activeStep}
         dispatchActiveStep={dispatchActiveStep}
+        encryptAccountData={encryptAccountData}
+        isLoadingEncryptAccount={isLoadingEncryptAccount}
+        errorOnEncryptAccount={errorOnEncryptAccount}
       />
 
       <Grid

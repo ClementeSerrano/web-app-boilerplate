@@ -11,8 +11,11 @@ export default function AddAccountPasswordStep({
   onPasswordChange,
   confirmPassword,
   onConfirmPasswordChange,
+  name,
+  onNameChange,
+  isLoadingEncryptAccount,
   onBack,
-  onNext,
+  errorOnEncryptAccount,
 }: AddAccountPasswordStepProps) {
   const theme = useTheme();
 
@@ -39,11 +42,35 @@ export default function AddAccountPasswordStep({
         onChange={onConfirmPasswordChange}
         variant="filled"
         label="Confirm password"
+        style={{ container: { marginBottom: 16 } }}
+      />
+
+      <TextField
+        id="name"
+        name="name"
+        value={name}
+        onChange={onNameChange}
+        variant="filled"
+        label="Account name (optional)"
       />
 
       <Grid align="center">
+        {!!errorOnEncryptAccount && (
+          <Typography
+            variant="paragraph1"
+            style={{
+              color: theme.palette.error.main,
+              marginTop: theme.spacing.md,
+            }}
+          >
+            An error ocurred when encrypting your account. Please try again.
+          </Typography>
+        )}
+
         <Button
-          onClick={onNext}
+          type="submit"
+          loading={isLoadingEncryptAccount}
+          disabled={!!errorOnEncryptAccount}
           style={{ width: '100%', margin: `${theme.spacing.md}px 0` }}
         >
           Continue

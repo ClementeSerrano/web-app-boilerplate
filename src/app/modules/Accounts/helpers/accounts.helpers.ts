@@ -1,4 +1,6 @@
-import Lisk from '@liskhq/lisk-client';
+import * as Lisk from '@liskhq/lisk-client';
+
+import { getErrorWithMessage } from '../../../../helpers/errors.helpers';
 
 import {
   DEFAULT_DERIVATION_PATH,
@@ -21,9 +23,16 @@ export function createPassphrase(): string {
 }
 
 /**
- * Allows to encrypt an account.
- * @param param0
- * @returns
+ * Creates an encrypted account given a passphrase, password, name and
+ * derivationPath.
+ * @param args.passphrase - Passphrase from where to create the encrypted account.
+ * @param args.password - Password from where to create the encrypted account.
+ * @param args.name - Username to provide to the encrypted account (optional)
+ * @param args.derivationPath - Derivation path to encrypt from (optional).
+ * If its not provided, the default one will be assigned.
+ * @param args.enableCustomDerivationPath - Flag that indicates if derivationPath arg
+ * should be or not used (optional). Default value is false.
+ * @returns An encrypted user account.
  */
 export async function encryptAccount({
   passphrase,
@@ -71,17 +80,19 @@ export async function encryptAccount({
       },
       version: 1,
     };
-  } catch (error: any) {
-    throw new Error(error);
+  } catch (error) {
+    throw getErrorWithMessage(error);
   }
 }
 
 /**
- * Extracts Lisk PrivateKey/PublicKey pair from a given valid Mnemonic passphrase.
- * @param passphrase - Valid Mnemonic passphrase.
- * @param enableCustomDerivationPath - Enable custom derivation for HW
- * @param derivationPath - Custom derivation path for HW
- * @returns - Extracted publicKey for a given valid passphrase
+ * Extracts Lisk private/public keys pair from a given Mnemonic passphrase.
+ * @param args.passphrase - Valid Mnemonic passphrase.
+ * @param args.enableCustomDerivationPath - Flag that indicates if derivationPath
+ * arg should be or not used (optional). Default value is false.
+ * @param args.derivationPath - Derivation path to encrypt from (optional).
+ * If its not provided, the default one will be assigned.
+ * @returns - Extracted public key from passphrase.
  */
 export async function extractKeyPair({
   passphrase,
@@ -108,7 +119,6 @@ export async function extractKeyPair({
 
   if (Lisk.passphrase.Mnemonic.validateMnemonic(passphrase)) {
     const keyPair = Lisk.cryptography.legacy.getKeys(passphrase);
-
     return {
       publicKey: keyPair.publicKey.toString('hex'),
       privateKey: keyPair.privateKey.toString('hex'),
@@ -120,9 +130,9 @@ export async function extractKeyPair({
 }
 
 /**
- * Extracts address from publicKey
+ * Extracts an address from a given public key.
  * @param data - Public key in hex format.
- * @returns - Address derived from the given publicKey
+ * @returns - Address extracted from the given public key.
  */
 export function extractAddressFromPublicKey(data: string): string {
   if (PUBLIC_KEY_VALIDATION_REGEX.test(data)) {
@@ -131,10 +141,6 @@ export function extractAddressFromPublicKey(data: string): string {
     return Lisk.cryptography.address.getLisk32AddressFromPublicKey(
       binaryPublicKey,
     );
-  }
-
-  if (Buffer.isBuffer(data)) {
-    return Lisk.cryptography.address.getLisk32AddressFromPublicKey(data);
   }
 
   throw Error(`Unable to convert publicKey ${data} to address`);

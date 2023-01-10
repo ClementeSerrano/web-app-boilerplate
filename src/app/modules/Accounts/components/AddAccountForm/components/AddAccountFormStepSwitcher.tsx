@@ -15,6 +15,9 @@ export default function AddAccountFormStepSwitcher({
   form,
   activeStep,
   dispatchActiveStep,
+  encryptAccountData,
+  isLoadingEncryptAccount,
+  errorOnEncryptAccount,
 }: AddAccountFormStepSwitcherProps) {
   const navigate = useNavigate();
 
@@ -36,13 +39,17 @@ export default function AddAccountFormStepSwitcher({
           onPasswordChange={form.handleChange}
           confirmPassword={form.values.confirmPassword}
           onConfirmPasswordChange={form.handleChange}
+          name={form.values.name}
+          onNameChange={form.handleChange}
           onBack={() => dispatchActiveStep('prev')}
           onNext={() => dispatchActiveStep('next')}
+          isLoadingEncryptAccount={isLoadingEncryptAccount}
+          errorOnEncryptAccount={errorOnEncryptAccount}
         />
       );
 
     case 2:
-      return <AddAccountBackupStep />;
+      return <AddAccountBackupStep encryptAccountData={encryptAccountData} />;
 
     default:
       return null;

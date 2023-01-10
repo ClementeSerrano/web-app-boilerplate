@@ -1,7 +1,7 @@
-import { CSSProperties, Dispatch, ReactElement, ReactNode } from "react";
+import { CSSProperties, Dispatch, ReactElement, ReactNode } from 'react';
 
-import StepperStep from "./components/StepperStep";
-import StepperLabel from "./components/StepperLabel";
+import StepperStep from './components/StepperStep';
+import StepperLabel from './components/StepperLabel';
 
 // Main typedefs.
 export type StepperComponent = JSX.Element & {
@@ -48,9 +48,14 @@ export type StepperBarProps = {
   color?: string;
 };
 
-export type StepperStepPosition = "first" | "last" | undefined;
+export type StepperStepPosition = 'first' | 'last' | undefined;
 
 // Hooks typedefs.
 export type StepperState = number;
-export type StepperDispatchAction = "next" | "prev" | "reset";
+export type StepperDispatchAction =
+  | 'next'
+  | 'prev'
+  | 'reset'
+  | 'first'
+  | 'last';
 export type UseStepperHook = [StepperState, Dispatch<StepperDispatchAction>];

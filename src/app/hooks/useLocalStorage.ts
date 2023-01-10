@@ -32,9 +32,8 @@ export default function useLocalStorage<T>(
     try {
       const item = window.localStorage.getItem(key);
 
-      return (item || initialValue) as T;
+      return item ? (parseJSON(item) as T) : initialValue;
     } catch (error) {
-      console.warn(`Error reading localStorage key “${key}”:`, error);
       return initialValue;
     }
   }, [initialValue, key]);
@@ -96,4 +95,12 @@ export default function useLocalStorage<T>(
   useEventListener('local-storage', handleStorageChange);
 
   return [storedValue, setValue];
+}
+
+/**
+ * A wrapper for "JSON.parse()"" to support "undefined" or non compatible JSON values.
+ * @param value - Value to convert into object.
+ */
+function parseJSON<T>(value: string | null): T | undefined {
+  return value === 'undefined' ? undefined : JSON.parse(value ?? '');
 }

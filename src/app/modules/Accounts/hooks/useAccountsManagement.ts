@@ -16,15 +16,16 @@ import useAccountsStorage from './useAccountsStorage';
  */
 export default function useAccountsManagement(): UseAccountsManagementHook {
   const { accounts, setAccounts } = useAccounts();
-  const { accountsStorage } = useAccountsStorage();
-
-  console.log({ accountsStorage });
+  const { setAccountsStorage } = useAccountsStorage();
 
   const getAccount: GetAccountFunc = address =>
     accounts.find(account => account.metadata.address === address);
 
-  const addAccount: AddAccountFunc = account =>
+  const addAccount: AddAccountFunc = account => {
     setAccounts(prevAccounts => [...prevAccounts, account]);
+
+    setAccountsStorage(prevAccounts => [...prevAccounts, account]);
+  };
 
   const updateAccountMetadata: UpdateAccountMetadataFunc = (address, data) =>
     setAccounts(prevAccounts =>
