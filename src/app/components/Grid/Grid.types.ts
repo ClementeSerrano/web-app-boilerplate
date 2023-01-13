@@ -5,7 +5,7 @@ import { ThemePalette, ThemeSizeUnit } from '../../theme/theme.types';
 export type GridProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   container?: boolean;
   variant?: keyof ValueOf<Pick<ThemePalette, 'background'>>;
-  size?: Extract<ThemeSizeUnit, 'sm' | 'md' | 'lg'>;
+  size?: Extract<ThemeSizeUnit, 'xs' | 'sm' | 'md' | 'lg'>;
   style?: React.CSSProperties;
   className?: string;
   as?: string | React.ComponentType<any>;
