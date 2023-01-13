@@ -14,7 +14,14 @@ export default function PassphraseCard({
   const prettifiedPassphrase = passphrase.replace(/\s+/g, '  ');
 
   return (
-    <PassphraseCardContainer as="aside" style={style} className={className}>
+    <PassphraseCardContainer
+      container
+      size="sm"
+      justify="center"
+      align="center"
+      style={style}
+      className={className}
+    >
       <PassphraseText>{prettifiedPassphrase}</PassphraseText>
     </PassphraseCardContainer>
   );

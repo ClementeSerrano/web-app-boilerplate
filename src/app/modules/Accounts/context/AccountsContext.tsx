@@ -22,7 +22,7 @@ export function AccountsProvider({ children }: WithChildren) {
   const { accountsStorage } = useAccountsStorage();
 
   useEffect(() => {
-    if (!accounts) setAccounts(accountsStorage);
+    if (accounts.length === 0) setAccounts(accountsStorage);
   }, [accounts, accountsStorage]);
 
   return (

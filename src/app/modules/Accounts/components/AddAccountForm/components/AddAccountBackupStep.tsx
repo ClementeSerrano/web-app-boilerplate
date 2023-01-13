@@ -2,7 +2,9 @@ import { useTheme } from 'styled-components';
 import Button from '../../../../../components/Button/Button';
 import Grid from '../../../../../components/Grid/Grid';
 import IllustratedMessage from '../../../../../components/IllustratedMessage/IllustratedMessage';
+import { downloadMedia } from '../../../../../../helpers/media.helpers';
 import { AddAccountBackupStepProps } from '../AddAccountForm.types';
+import FileCard from '../../../../../components/FileCard/FileCard';
 
 /**
  * @TODO - Handle end on confirm.
@@ -12,7 +14,8 @@ export default function AddAccountBackupStep({
 }: AddAccountBackupStepProps) {
   const theme = useTheme();
 
-  console.log({ encryptAccountData });
+  const encryptAccountDownloadableData = JSON.stringify(encryptAccountData);
+  const encryptAccountFilename = 'pico.json';
 
   return (
     <Grid>
@@ -24,17 +27,22 @@ export default function AddAccountBackupStep({
         style={{
           container: {
             marginTop: theme.spacing.sm,
-            marginBottom: theme.spacing.lg,
+            marginBottom: theme.spacing.md,
           },
         }}
       />
 
-      <Button
-        onClick={() => console.log('blaaa')}
-        style={{ width: '100%', marginBottom: theme.spacing.md }}
-      >
-        Continue
-      </Button>
+      <Grid align="center">
+        <FileCard
+          fileData={encryptAccountDownloadableData}
+          filename={encryptAccountFilename}
+          style={{ marginBottom: theme.spacing.md }}
+        />
+
+        <Button onClick={() => console.log('blaaa')} style={{ width: '100%' }}>
+          Continue
+        </Button>
+      </Grid>
     </Grid>
   );
 }

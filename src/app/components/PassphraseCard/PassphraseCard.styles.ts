@@ -6,7 +6,6 @@ export const PassphraseCardContainer = styled(Grid)`
   padding: ${({ theme }) => theme.spacing.sm}px;
   border: 2px solid ${({ theme }) => theme.palette.background.level3};
   border-radius: ${({ theme }) => theme.shape.borderRadius.sm}px;
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;

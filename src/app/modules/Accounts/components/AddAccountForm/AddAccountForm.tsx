@@ -1,4 +1,5 @@
 import { useFormik } from 'formik';
+
 import Grid from '../../../../components/Grid/Grid';
 import Navlink from '../../../../components/Navlink/Navlink';
 import Stepper from '../../../../components/Stepper/Stepper';
@@ -8,16 +9,20 @@ import { ROUTE_PATHS } from '../../../../routes/routes.constants';
 import useAccountsManagement from '../../hooks/useAccountsManagement';
 import useCurrentAccount from '../../hooks/useCurrentAccount';
 import useEncryptAccount from '../../hooks/useEncryptAccount';
+import {
+  MOCKED_ACCOUNT_NAME,
+  MOCKED_ACCOUNT_PASSWORD,
+  MOCKED_PASSPHRASE,
+} from '../../mocks/account.mock';
 import { getCreateAccountStepperStyles } from '../CreateAccountForm/CreateAccountForm.styles';
 import { AddAccountFormValues } from './AddAccountForm.types';
 import AddAccountFormStepSwitcher from './components/AddAccountFormStepSwitcher';
 
-// passphrase: index provide fish bracket blame dismiss one bright squeeze disorder spring black
 /**
  * Form to add a created account to the user device.
  */
 export default function AddAccountForm() {
-  const [activeStep, dispatchActiveStep] = useStepper(0, 7);
+  const [activeStep, dispatchActiveStep] = useStepper(0, 3);
   const { addAccount } = useAccountsManagement();
   const [, setCurrentAccount] = useCurrentAccount();
 
@@ -39,12 +44,14 @@ export default function AddAccountForm() {
     },
   });
 
+  console.log({ encryptAccountData });
+
   const form = useFormik<AddAccountFormValues>({
     initialValues: {
-      passphrase: '',
-      password: '',
-      confirmPassword: '',
-      name: '',
+      passphrase: MOCKED_PASSPHRASE,
+      password: MOCKED_ACCOUNT_PASSWORD,
+      confirmPassword: MOCKED_ACCOUNT_PASSWORD,
+      name: MOCKED_ACCOUNT_NAME,
     },
     onSubmit(values) {
       encryptAccount({
