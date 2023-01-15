@@ -1,7 +1,10 @@
 import { useCallback } from 'react';
 import { useTheme } from 'styled-components';
 
-import { downloadMedia } from '../../../helpers/media.helpers';
+import {
+  downloadMedia,
+  getReadableMediaSize,
+} from '../../../helpers/media.helpers';
 import Button from '../Button/Button';
 import Grid from '../Grid/Grid';
 import Typography from '../Typography/Typography';
@@ -9,6 +12,7 @@ import FileIcon from '../../icons/FileIcon';
 
 import { FileCardProps } from './FileCard.types';
 import { FileCardContainer, FileCardIconContainer } from './FileCard.styles';
+import DownloadIcon from '../../icons/DownloadIcon';
 
 /**
  * Renders a file information in "Card" format. Allows to trigger download action over the file.
@@ -30,10 +34,12 @@ export default function FileCard({
     [fileData, filename],
   );
 
+  const fileSize = getReadableMediaSize(fileData);
+
   return (
     <FileCardContainer
       container
-      size="xs"
+      size="xxs"
       direction="row"
       justify="space-between"
       align="center"
@@ -45,7 +51,7 @@ export default function FileCard({
           <FileIcon
             format="fill"
             color={theme.palette.primary.main}
-            height={24}
+            height={20}
           />
         </FileCardIconContainer>
 
@@ -54,14 +60,19 @@ export default function FileCard({
             {filename}
           </Typography>
 
-          <Typography as="h2" variant="paragraph1">
-            10 MB
+          <Typography as="h2" variant="paragraph1" color="level4">
+            {fileSize}
           </Typography>
         </Grid>
       </Grid>
 
-      <Button variant="primary" format="link" onClick={handleDownloadClick}>
-        {'>'}
+      <Button
+        variant="text"
+        size="sm"
+        onClick={handleDownloadClick}
+        style={{ lineHeight: 0, padding: 8 }}
+      >
+        <DownloadIcon height={14} />
       </Button>
     </FileCardContainer>
   );

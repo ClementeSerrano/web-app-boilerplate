@@ -20,14 +20,16 @@ export function getButtonBgColor({
   onHover = false,
 }: Pick<ButtonProps, 'format' | 'variant'> &
   Pick<Theme, 'palette'> & { onHover?: boolean }): string {
-  if (variant === 'text') return 'transparent';
-
   if (!onHover) {
     if (format === 'link' || format === 'outline') return 'transparent';
+
+    if (variant === 'text') return palette[variant].level5;
 
     return palette[variant].main;
   } else {
     if (format === 'link') return 'transparent';
+
+    if (variant === 'text') return palette[variant].level4;
 
     return palette[variant].dark;
   }
