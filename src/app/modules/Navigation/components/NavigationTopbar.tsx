@@ -3,7 +3,9 @@ import { useTheme } from 'styled-components';
 import Button from '../../../components/Button/Button';
 import Grid from '../../../components/Grid/Grid';
 import ThemeSwitch from '../../../components/ThemeSwitch/ThemeSwitch';
+import { useDevice } from '../../../contexts/DeviceContext/DeviceContext.hooks';
 import MenuIcon from '../../../icons/MenuIcon';
+import TheArtisanLogo from '../../../icons/TheArtisanLogo';
 import { ROUTE_PATHS } from '../../../routes/routes.constants';
 import AuthButton from '../../Accounts/components/AuthButton/AuthButton';
 
@@ -17,6 +19,7 @@ export default function NavigationTopbar({
   toggleShowSidebar,
 }: NavigationTopbarProps) {
   const theme = useTheme();
+  const device = useDevice();
 
   return (
     <NavigationTopbarContainer
@@ -35,7 +38,10 @@ export default function NavigationTopbar({
       </Button>
 
       <NavigationTopbarLogoNavlink to={ROUTE_PATHS.home}>
-        logo
+        <TheArtisanLogo
+          variant={device.isPhone ? 'isotype' : 'logo'}
+          height={32}
+        />
       </NavigationTopbarLogoNavlink>
 
       <Grid direction="row" align="center" justify="flex-end">
