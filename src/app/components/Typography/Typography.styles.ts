@@ -7,7 +7,7 @@ import {
 import { TypographyProps } from './Typography.types';
 
 export const TypographyContainer = styled.p<
-  Required<Pick<TypographyProps, 'variant'>>
+  Required<Pick<TypographyProps, 'variant' | 'color'>>
 >`
   font-family: ${({ theme, variant }) => theme.typography[variant].fontFamily};
   font-size: ${({ theme, variant }) => theme.typography[variant].fontSize};
@@ -15,8 +15,8 @@ export const TypographyContainer = styled.p<
   line-height: ${({ theme, variant }) => theme.typography[variant].lineHeight};
   letter-spacing: ${({ theme, variant }) =>
     theme.typography[variant].letterSpacing};
-  color: ${({ theme, variant }) =>
-    getTypographyColor({ variant, mode: theme.mode, palette: theme.palette })};
+  color: ${({ theme, variant, color }) =>
+    getTypographyColor({ variant, color, palette: theme.palette })};
 
   @media (max-width: ${DEVICES_BREAKPOINTS.phone.max}px) {
     font-size: ${({ theme, variant }) =>

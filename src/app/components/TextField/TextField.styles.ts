@@ -27,7 +27,7 @@ export const TextFieldContainer = styled.div`
 export const TextFieldLabel = styled.label<TextFieldLabelProps>`
   font-size: ${({ theme }) => theme.typography.fontSizes.md};
   color: ${({ theme, error }) =>
-    error ? theme.colors.red.main : theme.palette.text.main};
+    error ? theme.colors.red.main : theme.palette.text.level1};
   position: absolute;
   pointer-events: none;
   top: ${({ theme }) => theme.spacing.xs}px;
@@ -138,18 +138,18 @@ export const TextFieldInput = styled.input<TextFieldInputProps>`
   text-overflow: ellipsis;
   transition: 0.3s ease all;
   color: ${({ theme, error }) =>
-    error ? theme.colors.red.main : theme.palette.text.main};
+    error ? theme.colors.red.main : theme.palette.text.level1};
   width: 100%;
   ::placeholder {
     color: ${({ theme, error }) =>
-      lighten(0.4, error ? theme.colors.red.main : theme.palette.text.main)};
+      lighten(0.4, error ? theme.colors.red.main : theme.palette.text.level1)};
   }
   &:focus {
     outline: none;
   }
   &:read-only ~ ${TextFieldLabel} {
     top: -${({ theme, variant }) => (variant === 'filled' ? theme.spacing.md : theme.spacing.sm)}px;
-    color: ${({ theme }) => theme.palette.text.main};
+    color: ${({ theme }) => theme.palette.text.level1};
     font-size: ${({ theme }) => theme.typography.fontSizes.sm};
   }
   &:focus ~ ${TextFieldLabel}, &:valid ~ ${TextFieldLabel} {
@@ -164,7 +164,7 @@ export const TextFieldInput = styled.input<TextFieldInputProps>`
       -moz-animation: inputHighlighter 0.3s ease;
       animation: ${({ theme, error }) =>
           inputHighlighter(
-            error ? theme.colors.red.main : theme.palette.text.main,
+            error ? theme.colors.red.main : theme.palette.text.level1,
           )}
         0.3s ease;
     }

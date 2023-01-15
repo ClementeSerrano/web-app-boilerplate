@@ -5,7 +5,7 @@ import { MediaData } from '../types/media.types';
  * @param data - Data to be downloaded as file.
  * @param filename - Name to put to the downloadable file.
  */
-export async function downloadMedia(data: MediaData, filename: string) {
+export function downloadMedia(data: MediaData, filename: string) {
   const blob = new Blob([data]);
 
   const url = window.URL.createObjectURL(blob);

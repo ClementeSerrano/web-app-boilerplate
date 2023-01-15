@@ -19,14 +19,14 @@ export const FallbackScreenInnerContainer = styled.div`
 
 export const FallbackScreenTitle = styled.h1`
   margin-top: ${({ theme }) => theme.spacing.sm}px;
-  color: ${({ theme }) => theme.palette.text.main};
+  color: ${({ theme }) => theme.palette.text.level1};
   font-size: ${({ theme }) => theme.typography.title3.fontSize};
   font-weight: ${({ theme }) => theme.typography.title3.fontWeight};
 `;
 
 export const FallbackScreenParagraph = styled.p`
   margin-top: ${({ theme }) => theme.spacing.xs}px;
-  color: ${({ theme }) => theme.palette.text.dark};
+  color: ${({ theme }) => theme.palette.text.level2};
   font-size: ${({ theme }) => theme.typography.paragraph1.fontSize};
   font-weight: ${({ theme }) => theme.typography.paragraph1.fontWeight};
   text-align: center;

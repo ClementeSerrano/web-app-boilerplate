@@ -6,6 +6,7 @@ import { DEVICES_BREAKPOINTS } from '../../contexts/DeviceContext/DeviceContext.
 import {
   getNavlinkActiveBgColor,
   getNavlinkActiveColor,
+  getNavlinkColor,
   getNavlinkFontSize,
   getNavlinkOnHoverBgColor,
   getNavlinkOnHoverColor,
@@ -17,7 +18,7 @@ export const NavlinkContainer = styled(NavLink)<NavlinkContainerProps>`
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: ${({ theme, variant }) => theme.palette[variant].main};
+  color: ${({ theme, variant }) => getNavlinkColor({ theme, variant })};
   padding: ${({ theme, container, size }) =>
     getNavlinkPadding({ theme, container, size })};
   border-radius: ${({ theme }) => theme.shape.borderRadius.sm}px;

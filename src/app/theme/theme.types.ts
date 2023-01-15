@@ -25,8 +25,12 @@ export type ThemeBreakpoints = {
 
 export type ThemeColors = Record<ThemeColorKey, ThemeColorVariant>;
 
-export type ThemePalette = Record<ThemePaletteKey, ThemePaletteVariant> & {
-  background: Record<ThemeBackgroundLevel, string>;
+export type ThemePalette = Record<
+  Exclude<ThemePaletteKey, 'text'>,
+  ThemePaletteVariant
+> & {
+  background: Record<ThemeColorLevel, string>;
+  text: Record<ThemeColorLevel, string>;
 };
 
 export type ThemeSpacing = Record<ThemeSizeUnit, number>;
@@ -133,7 +137,7 @@ export type ThemePaletteVariant = Pick<
   contrastText: string;
 };
 
-export type ThemeBackgroundLevel =
+export type ThemeColorLevel =
   | 'level1'
   | 'level2'
   | 'level3'

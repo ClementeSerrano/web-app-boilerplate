@@ -20,6 +20,8 @@ export function getButtonBgColor({
   onHover = false,
 }: Pick<ButtonProps, 'format' | 'variant'> &
   Pick<Theme, 'palette'> & { onHover?: boolean }): string {
+  if (variant === 'text') return 'transparent';
+
   if (!onHover) {
     if (format === 'link' || format === 'outline') return 'transparent';
 
@@ -39,10 +41,14 @@ export function getButtonColor({
 }: Pick<ButtonProps, 'format' | 'variant'> &
   Pick<Theme, 'palette'> & { onHover?: boolean }): string {
   if (!onHover) {
+    if (variant === 'text') return palette[variant].level2;
+
     if (format === 'outline' || format === 'link') return palette[variant].main;
 
     return palette[variant].contrastText;
   } else {
+    if (variant === 'text') return palette[variant].level1;
+
     if (format === 'link') return palette[variant].dark;
 
     return palette[variant].contrastText;
@@ -54,7 +60,7 @@ export function getButtonBorder({
   variant = 'primary',
   palette,
 }: Pick<ButtonProps, 'format' | 'variant'> & Pick<Theme, 'palette'>): string {
-  if (format !== 'outline') return 'none';
+  if (format !== 'outline' || variant === 'text') return 'none';
 
   return `1px solid ${palette[variant].main}`;
 }

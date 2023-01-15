@@ -5,10 +5,10 @@ import { TypographyProps } from './Typography.types';
 
 export function getTypographyColor({
   variant = 'paragraph1',
-  mode,
+  color,
   palette,
-}: Pick<TypographyProps, 'variant'> &
-  Pick<DefaultTheme, 'mode' | 'palette'>): string {
+}: Pick<TypographyProps, 'variant' | 'color'> &
+  Pick<DefaultTheme, 'palette'>): string {
   switch (variant) {
     case 'title1':
     case 'title2':
@@ -17,17 +17,17 @@ export function getTypographyColor({
     case 'title5':
     case 'title6':
     case 'button':
-      return mode === 'dark' ? palette.text.light : palette.text.dark;
+      return palette.text[color || 'level1'];
 
     case 'subtitle1':
     case 'subtitle2':
     case 'paragraph1':
     case 'paragraph2':
     case 'paragraph3':
-      return palette.text.main;
+      return palette.text[color || 'level2'];
 
     default:
-      return palette.text.main;
+      return palette.text[color || 'level1'];
   }
 }
 

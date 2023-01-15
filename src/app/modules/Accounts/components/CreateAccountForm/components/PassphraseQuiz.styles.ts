@@ -15,7 +15,7 @@ export const PassphraseQuizWord = styled(PassphraseText)<
   Pick<UsePassphraseWordState, 'isQuestion' | 'isAnswered' | 'active'>
 >`
   color: ${({ isQuestion, theme }) => {
-    if (!isQuestion) return theme.palette.text.main;
+    if (!isQuestion) return theme.palette.text.level1;
 
     return theme.palette.primary.main;
   }};

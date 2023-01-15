@@ -48,5 +48,5 @@ export const StepperLabelContainer = styled.p<
   margin: 4px 8px;
   font-size: ${({ theme }) => theme.typography.fontSizes.sm};
   color: ${({ theme, active, color }) =>
-    active ? color || theme.palette.primary.main : theme.palette.text.main};
+    active ? color || theme.palette.primary.main : theme.palette.text.level1};
 `;

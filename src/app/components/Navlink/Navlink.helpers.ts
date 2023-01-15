@@ -29,10 +29,21 @@ export function getNavlinkPadding({
   }
 }
 
+export function getNavlinkColor({
+  variant,
+  theme,
+}: { theme: DefaultTheme } & Pick<NavlinkContainerProps, 'variant'>): string {
+  if (variant === 'text') return theme.palette[variant].level1;
+
+  return theme.palette[variant].main;
+}
+
 export function getNavlinkActiveColor({
   variant,
   theme,
 }: { theme: DefaultTheme } & Pick<NavlinkContainerProps, 'variant'>): string {
+  if (variant === 'text') return theme.palette[variant].level1;
+
   return theme.palette[variant].main;
 }
 
@@ -66,6 +77,10 @@ export function getNavlinkOnHoverColor({
   variant,
   theme,
 }: { theme: DefaultTheme } & Pick<NavlinkContainerProps, 'variant'>): string {
+  if (variant === 'text') {
+    return theme.palette.background.level3;
+  }
+
   return theme.palette[variant].light;
 }
 
