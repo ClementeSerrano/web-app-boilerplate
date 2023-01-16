@@ -4,7 +4,7 @@ import Typography from '../../../../components/Typography/Typography';
 import { AccountsManagerModalProps } from './AccountsManagerModal.types';
 
 /**
- * Renders the user create account form in a modal format.
+ * Renders the accounts manager in a modal format.
  * @param onClose - Callback to call when the close action of the modal is called.
  */
 export default function AccountsManagerModal({
