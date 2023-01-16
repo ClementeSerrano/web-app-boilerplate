@@ -1,8 +1,8 @@
 import { useTheme } from 'styled-components';
+
 import Button from '../../../../../components/Button/Button';
 import Grid from '../../../../../components/Grid/Grid';
 import IllustratedMessage from '../../../../../components/IllustratedMessage/IllustratedMessage';
-import { downloadMedia } from '../../../../../../helpers/media.helpers';
 import { AddAccountBackupStepProps } from '../AddAccountForm.types';
 import FileCard from '../../../../../components/FileCard/FileCard';
 
