@@ -48,7 +48,7 @@ export default function AvatarIcon({
             d="M24.0603 29.4408C17.108 29.4408 10.6397 32.8864 6.83105 38.6902L10.9155 40.5951L15 42.5L19 44L24.0603 44.5L28.5 44L33 42.5L41.1686 38.5088C37.2996 32.8261 30.8916 29.4408 24.0603 29.4408Z"
             fill={theme.colors.white.main}
           />
-          <circle cx="24" cy="24" r="22" stroke="black" stroke-width="4" />
+          <circle cx="24" cy="24" r="22" stroke={color} strokeWidth="4" />
         </>
       );
       break;

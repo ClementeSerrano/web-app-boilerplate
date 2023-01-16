@@ -16,7 +16,7 @@ import useAccountsStorage from './useAccountsStorage';
  */
 export default function useAccountsManagement(): UseAccountsManagementHook {
   const { accounts, setAccounts } = useAccounts();
-  const { setAccountsStorage } = useAccountsStorage();
+  const [, setAccountsStorage] = useAccountsStorage();
 
   const getAccount: GetAccountFunc = address =>
     accounts.find(account => account.metadata.address === address);

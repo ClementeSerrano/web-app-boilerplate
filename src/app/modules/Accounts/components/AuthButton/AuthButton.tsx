@@ -24,7 +24,7 @@ export default function AuthButton({ style, className }: WithStyle) {
     return (
       <Avatar
         alt={currentAccount.metadata.name || 'User avatar'}
-        // withInitials
+        withInitials
         style={{ marginRight: theme.spacing.xs }}
       />
     );
