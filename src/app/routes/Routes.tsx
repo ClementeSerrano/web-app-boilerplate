@@ -8,6 +8,7 @@ import CreateAccountRoute from './CreateAccountRoute';
 import AddAccountRoute from './AddAccountRoute';
 import { ROUTE_PATHS } from './routes.constants';
 import Navigation from '../modules/Navigation/Navigation';
+import AccountsManagerRoute from './AccountsManagerRoute';
 
 /**
  * Component where the main routes of the app are specified.
@@ -29,6 +30,11 @@ export default function Routes() {
         />
 
         <Route path={ROUTE_PATHS.addAccount} element={<AddAccountRoute />} />
+
+        <Route
+          path={ROUTE_PATHS.accountsManager}
+          element={<AccountsManagerRoute />}
+        />
       </ReactRouterRoutes>
 
       {background && (
@@ -39,6 +45,11 @@ export default function Routes() {
           />
 
           <Route path={ROUTE_PATHS.addAccount} element={<AddAccountRoute />} />
+
+          <Route
+            path={ROUTE_PATHS.accountsManager}
+            element={<AccountsManagerRoute />}
+          />
         </ReactRouterRoutes>
       )}
     </>
