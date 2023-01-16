@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useTheme } from 'styled-components';
 
 import { getInitials } from '../../../helpers/app.helpers';
+import AvatarIcon from '../../icons/AvatarIcon';
 import { getColorFormString } from '../../theme/theme.helpers';
 
 import { AvatarImg, AvatarFallback } from './Avatar.styles';
@@ -29,6 +31,8 @@ export default function Avatar({
   size = 'sm',
 }: AvatarProps) {
   const [hasError, setHasError] = useState(false);
+
+  const theme = useTheme();
 
   const handleError = () => setHasError(true);
 
@@ -61,12 +65,17 @@ export default function Avatar({
         </AvatarFallback>
       );
     } else {
-      // TODO: Render icon here instead.
-
       content = (
-        <AvatarFallback style={style} className={className} size={size}>
-          {alt.charAt(0)}
-        </AvatarFallback>
+        <AvatarIcon
+          format="fill"
+          style={{
+            border: `1px solid ${theme.palette.background.level3}`,
+            borderRadius: '50%',
+            ...style,
+          }}
+          className={className}
+          height={theme.spacing[size] + theme.spacing.xxs}
+        />
       );
     }
   }

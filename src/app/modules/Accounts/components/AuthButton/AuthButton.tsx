@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useTheme } from 'styled-components';
 
 import useCurrentAccount from '../../../Accounts/hooks/useCurrentAccount';
 import { useAccounts } from '../../context/AccountsContext.hooks';
@@ -14,6 +15,8 @@ export default function AuthButton({ style, className }: WithStyle) {
 
   const accounts = useAccounts();
 
+  const theme = useTheme();
+
   console.log({ accounts });
 
   if (currentAccount) {
@@ -21,7 +24,8 @@ export default function AuthButton({ style, className }: WithStyle) {
     return (
       <Avatar
         alt={currentAccount.metadata.name || 'User avatar'}
-        withInitials
+        // withInitials
+        style={{ marginRight: theme.spacing.xs }}
       />
     );
   }
