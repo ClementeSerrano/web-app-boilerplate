@@ -10,7 +10,6 @@ import Navlink from '../../../../components/Navlink/Navlink';
  * Entry point for creating, adding and managing user accounts.
  * @param props.style - CSS inline styles for custom styling.
  * @param props.className - A className for custom styling.
- * @returns
  */
 export default function AuthButton({ style, className }: WithStyle) {
   const location = useLocation();
