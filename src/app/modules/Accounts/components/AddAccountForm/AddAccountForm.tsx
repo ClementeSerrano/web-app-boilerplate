@@ -96,11 +96,7 @@ export default function AddAccountForm() {
           You don't have a Hey account yet?
         </Typography>
 
-        <Navlink
-          variant="primary"
-          style={{ fontWeight: 700 }}
-          to={`/${ROUTE_PATHS.createAccount}`}
-        >
+        <Navlink variant="primary" to={`/${ROUTE_PATHS.createAccount}`}>
           Create one now
         </Navlink>
       </Grid>

@@ -20,7 +20,7 @@ export default function AuthButton({ style, className }: WithStyle) {
     return (
       <Navlink
         to={ROUTE_PATHS.accountsManager}
-        container
+        format="container"
         size="sm"
         state={{ background: location }}
         style={{ padding: 2, borderRadius: '50%', ...style }}
@@ -38,7 +38,9 @@ export default function AuthButton({ style, className }: WithStyle) {
     // TODO: Add also create account button next to it.
     <Navlink
       to={ROUTE_PATHS.addAccount}
-      container
+      format="button"
+      variant="primary"
+      size="md"
       state={{ background: location }}
       style={style}
       className={className}

@@ -1,18 +1,209 @@
 import { lighten } from 'polished';
 import { DefaultTheme } from 'styled-components';
+
 import { parseSize } from '../../theme/theme.helpers';
 
-import { NavlinkContainerProps } from './Navlink.types';
+import {
+  NavlinkContainerProps,
+  NavlinkFormat,
+  NavlinkVariant,
+} from './Navlink.types';
+
+export function getNavlinkColor({
+  format,
+  variant,
+  theme,
+}: { theme: DefaultTheme } & Pick<
+  NavlinkContainerProps,
+  'variant' | 'format'
+>): string {
+  const configs: Record<NavlinkFormat, Record<NavlinkVariant, string>> = {
+    text: {
+      primary: theme.palette.primary.main,
+      secondary: theme.palette.secondary.main,
+      text: theme.palette.text.level1,
+    },
+    container: {
+      primary: theme.palette.text.level1,
+      secondary: theme.palette.text.level1,
+      text: theme.palette.text.level1,
+    },
+    button: {
+      primary: theme.palette.primary.contrastText,
+      secondary: theme.palette.secondary.contrastText,
+      text: theme.palette.text.level5,
+    },
+  };
+
+  return configs[format][variant];
+}
+
+export function getNavlinkBgColor({
+  variant,
+  format,
+  theme,
+}: { theme: DefaultTheme } & Pick<
+  NavlinkContainerProps,
+  'variant' | 'format'
+>): string {
+  const configs: Record<NavlinkFormat, Record<NavlinkVariant, string>> = {
+    text: {
+      primary: 'unset',
+      secondary: 'unset',
+      text: 'unset',
+    },
+    container: {
+      primary: 'unset',
+      secondary: 'unset',
+      text: 'unset',
+    },
+    button: {
+      primary: theme.palette.primary.main,
+      secondary: theme.palette.secondary.main,
+      text: theme.palette.text.level3,
+    },
+  };
+
+  return configs[format][variant];
+}
+
+export function getNavlinkActiveColor({
+  variant,
+  format,
+  theme,
+}: { theme: DefaultTheme } & Pick<
+  NavlinkContainerProps,
+  'variant' | 'format'
+>): string {
+  const configs: Record<NavlinkFormat, Record<NavlinkVariant, string>> = {
+    text: {
+      primary: theme.palette.primary.dark,
+      secondary: theme.palette.secondary.dark,
+      text: theme.palette.text.level3,
+    },
+    container: {
+      primary: theme.palette.primary.main,
+      secondary: theme.palette.secondary.main,
+      text: theme.palette.text.level2,
+    },
+    button: {
+      primary: theme.palette.primary.contrastText,
+      secondary: theme.palette.secondary.contrastText,
+      text: theme.palette.text.level2,
+    },
+  };
+
+  return configs[format][variant];
+}
+
+export function getNavlinkActiveBgColor({
+  format,
+  variant,
+  theme,
+}: { theme: DefaultTheme } & Pick<
+  NavlinkContainerProps,
+  'variant' | 'format'
+>): string {
+  const configs: Record<NavlinkFormat, Record<NavlinkVariant, string>> = {
+    text: {
+      primary: theme.palette.primary.dark,
+      secondary: theme.palette.secondary.dark,
+      text: theme.palette.text.level3,
+    },
+    container: {
+      primary:
+        theme.mode === 'light'
+          ? lighten(0.32, theme.palette.primary.main)
+          : theme.palette.background.level2,
+      secondary:
+        theme.mode === 'light'
+          ? lighten(0.32, theme.palette.secondary.main)
+          : theme.palette.background.level2,
+      text: theme.palette.background.level5,
+    },
+    button: {
+      primary: theme.palette.primary.dark,
+      secondary: theme.palette.secondary.dark,
+      text: theme.palette.text.level2,
+    },
+  };
+
+  return configs[format][variant];
+}
+
+export function getNavlinkOnHoverColor({
+  format,
+  variant,
+  theme,
+}: { theme: DefaultTheme } & Pick<
+  NavlinkContainerProps,
+  'format' | 'variant'
+>): string {
+  const configs: Record<NavlinkFormat, Record<NavlinkVariant, string>> = {
+    text: {
+      primary: theme.palette.primary.dark,
+      secondary: theme.palette.secondary.dark,
+      text: theme.palette.text.level3,
+    },
+    container: {
+      primary: theme.palette.primary.main,
+      secondary: theme.palette.secondary.main,
+      text: theme.palette.text.level2,
+    },
+    button: {
+      primary: theme.palette.primary.contrastText,
+      secondary: theme.palette.secondary.contrastText,
+      text: theme.palette.text.level2,
+    },
+  };
+
+  return configs[format][variant];
+}
+
+export function getNavlinkOnHoverBgColor({
+  variant,
+  format,
+  theme,
+}: { theme: DefaultTheme } & Pick<
+  NavlinkContainerProps,
+  'variant' | 'format'
+>): string {
+  const configs: Record<NavlinkFormat, Record<NavlinkVariant, string>> = {
+    text: {
+      primary: 'unset',
+      secondary: 'unset',
+      text: 'unset',
+    },
+    container: {
+      primary:
+        theme.mode === 'light'
+          ? lighten(0.32, theme.palette.primary.main)
+          : theme.palette.background.level2,
+      secondary:
+        theme.mode === 'light'
+          ? lighten(0.32, theme.palette.secondary.main)
+          : theme.palette.background.level2,
+      text: theme.palette.background.level5,
+    },
+    button: {
+      primary: theme.palette.primary.dark,
+      secondary: theme.palette.secondary.dark,
+      text: theme.palette.text.level2,
+    },
+  };
+
+  return configs[format][variant];
+}
 
 export function getNavlinkPadding({
-  container,
+  format,
   size,
   theme,
 }: { theme: DefaultTheme } & Pick<
   NavlinkContainerProps,
-  'container' | 'size'
+  'format' | 'size'
 >): string {
-  if (container === 'false') return '0px';
+  if (format === 'text') return '0px';
 
   switch (size) {
     case 'sm':
@@ -26,87 +217,6 @@ export function getNavlinkPadding({
 
     default:
       return `${theme.spacing.xs}px ${theme.spacing.sm}px`;
-  }
-}
-
-export function getNavlinkColor({
-  variant,
-  theme,
-}: { theme: DefaultTheme } & Pick<NavlinkContainerProps, 'variant'>): string {
-  if (variant === 'text') return theme.palette[variant].level1;
-
-  return theme.palette[variant].main;
-}
-
-export function getNavlinkActiveColor({
-  variant,
-  theme,
-}: { theme: DefaultTheme } & Pick<NavlinkContainerProps, 'variant'>): string {
-  if (variant === 'text') return theme.palette[variant].level1;
-
-  return theme.palette[variant].main;
-}
-
-export function getNavlinkActiveBgColor({
-  variant,
-  container,
-  theme,
-}: { theme: DefaultTheme } & Pick<
-  NavlinkContainerProps,
-  'variant' | 'container'
->): string {
-  if (container === 'false') return 'unset';
-
-  if (variant === 'text') {
-    return theme.palette.background.level2;
-  }
-
-  switch (theme.mode) {
-    case 'light':
-      return lighten(0.32, theme.palette[variant].main);
-
-    case 'dark':
-      return theme.palette.background.level2;
-
-    default:
-      return lighten(0.32, theme.palette[variant].main);
-  }
-}
-
-export function getNavlinkOnHoverColor({
-  variant,
-  theme,
-}: { theme: DefaultTheme } & Pick<NavlinkContainerProps, 'variant'>): string {
-  if (variant === 'text') {
-    return theme.palette.background.level3;
-  }
-
-  return theme.palette[variant].light;
-}
-
-export function getNavlinkOnHoverBgColor({
-  variant,
-  container,
-  theme,
-}: { theme: DefaultTheme } & Pick<
-  NavlinkContainerProps,
-  'variant' | 'container'
->): string {
-  if (container === 'false') return 'unset';
-
-  if (variant === 'text') {
-    return theme.palette.background.level4;
-  }
-
-  switch (theme.mode) {
-    case 'light':
-      return lighten(0.34, theme.palette[variant].main);
-
-    case 'dark':
-      return theme.palette.background.level4;
-
-    default:
-      return lighten(0.34, theme.palette[variant].main);
   }
 }
 

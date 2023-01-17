@@ -22,8 +22,8 @@ export default function NavigationSidebar({
         show={show}
       >
         <Navlink
-          container
           variant="primary"
+          format="container"
           to={ROUTE_PATHS.home}
           onClick={toggleShow}
         >

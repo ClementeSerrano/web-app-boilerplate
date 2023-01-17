@@ -4,7 +4,7 @@ import { NavlinkProps } from './Navlink.types';
 export default function Navlink({
   children,
   variant = 'primary',
-  container = false,
+  format = 'text',
   size = 'md',
   className,
   ...props
@@ -13,7 +13,7 @@ export default function Navlink({
     <NavlinkContainer
       {...props}
       variant={variant}
-      container={container.toString()}
+      format={format}
       size={size}
       className={({ isActive }) =>
         [className, isActive ? 'active' : null].filter(Boolean).join(' ')

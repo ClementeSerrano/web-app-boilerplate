@@ -1,5 +1,5 @@
 import Dialog from '../../../../components/Dialog/Dialog';
-import Typography from '../../../../components/Typography/Typography';
+import AccountsManager from '../../components/AccountsManager/AccountsManager';
 
 import { AccountsManagerModalProps } from './AccountsManagerModal.types';
 
@@ -18,7 +18,7 @@ export default function AccountsManagerModal({
         <Dialog.Close onClick={onClose} />
       </Dialog.Header>
 
-      <Typography>Accounts...</Typography>
+      <AccountsManager />
     </Dialog>
   );
 }
