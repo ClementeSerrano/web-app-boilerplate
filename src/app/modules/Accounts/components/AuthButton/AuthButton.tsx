@@ -6,6 +6,12 @@ import { ROUTE_PATHS } from '../../../../routes/routes.constants';
 import { WithStyle } from '../../../../components/components.types';
 import Navlink from '../../../../components/Navlink/Navlink';
 
+/**
+ * Entry point for creating, adding and managing user accounts.
+ * @param props.style - CSS inline styles for custom styling.
+ * @param props.className - A className for custom styling.
+ * @returns
+ */
 export default function AuthButton({ style, className }: WithStyle) {
   const location = useLocation();
 
@@ -30,6 +36,7 @@ export default function AuthButton({ style, className }: WithStyle) {
   }
 
   return (
+    // TODO: Add also create account button next to it.
     <Navlink
       to={ROUTE_PATHS.addAccount}
       container
