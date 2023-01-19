@@ -1,6 +1,6 @@
 import Grid from '../../../../components/Grid/Grid';
-import Typography from '../../../../components/Typography/Typography';
 import useAccountsManagement from '../../hooks/useAccountsManagement';
+import AccountCard from './components/AccountCard/AccountCard';
 
 export default function AccountsManager() {
   const {
@@ -22,9 +22,7 @@ export default function AccountsManager() {
   return (
     <Grid>
       {accounts.map(account => (
-        <Typography key={account.metadata.address}>
-          {account.metadata.name}
-        </Typography>
+        <AccountCard key={account.metadata.address} account={account} />
       ))}
     </Grid>
   );
