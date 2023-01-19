@@ -3,21 +3,7 @@ import useAccountsManagement from '../../hooks/useAccountsManagement';
 import AccountCard from './components/AccountCard/AccountCard';
 
 export default function AccountsManager() {
-  const {
-    accounts,
-    addAccount,
-    deleteAccount,
-    getAccount,
-    updateAccountMetadata,
-  } = useAccountsManagement();
-
-  console.log({
-    accounts,
-    addAccount,
-    deleteAccount,
-    getAccount,
-    updateAccountMetadata,
-  });
+  const { accounts } = useAccountsManagement();
 
   return (
     <Grid>
