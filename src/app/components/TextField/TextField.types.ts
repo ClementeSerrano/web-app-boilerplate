@@ -1,11 +1,11 @@
 import { CSSProperties, InputHTMLAttributes, ReactNode } from 'react';
 
 export type TextFieldProps = InputHTMLAttributes<HTMLInputElement> & {
-  label?: string;
-  variant?: TextFieldVariant;
   adornments?: { left?: ReactNode; right?: ReactNode };
   error?: boolean;
+  label?: string;
   style?: TextFieldStyle;
+  variant?: TextFieldVariant;
 };
 
 export type TextFieldStyle = {

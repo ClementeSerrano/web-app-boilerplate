@@ -96,15 +96,13 @@ export const TextFieldInputContainer = styled.div<TextFieldInputContainerProps>`
   border: ${({ theme, variant, error }) =>
     variant === 'filled'
       ? `1px solid ${
-          error ? theme.colors.red.main : theme.palette.background.level2
+          error ? theme.colors.red.main : theme.palette.background.level3
         }`
       : 'unset'};
   border-bottom: ${({ theme, variant, error }) =>
-    variant === 'filled' && !error
-      ? 'unset'
-      : `${variant === 'filled' ? '1px' : '2px'} solid ${
-          error ? theme.colors.red.main : theme.palette.background.level3
-        }`};
+    `${variant === 'filled' ? '1px' : '2px'} solid ${
+      error ? theme.colors.red.main : theme.palette.background.level3
+    }`};
   background-color: ${({ variant, theme }) =>
     variant === 'filled' ? theme.palette.background.level2 : 'transparent'};
   color: ${({ theme, error }) =>
@@ -117,9 +115,6 @@ export const TextFieldInputContainer = styled.div<TextFieldInputContainerProps>`
     `&:hover{ background-color: ${theme.palette.background.level3} }`};
 
   @media (max-width: ${DEVICES_BREAKPOINTS.phone.max}px) {
-    padding: ${({ theme }) => theme.spacing.xxs}px
-      ${({ theme, variant }) =>
-        variant === 'filled' ? theme.spacing.xxs : '0'}px;
     margin-top: ${({ theme, variant, isLabel }) =>
       !isLabel
         ? 0
