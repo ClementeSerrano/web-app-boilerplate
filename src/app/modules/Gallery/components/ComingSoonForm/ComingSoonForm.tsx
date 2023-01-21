@@ -7,6 +7,9 @@ import {
   ComingSoonSubmitButton,
 } from './ComingSoonForm.styles';
 
+/**
+ * Coming soon form to subscribe for updates on the platform.
+ */
 export default function ComingSoonForm() {
   const form = useFormik({
     initialValues: {

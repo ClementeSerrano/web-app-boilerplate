@@ -4,6 +4,9 @@ import Grid from '../../../components/Grid/Grid';
 import Typography from '../../../components/Typography/Typography';
 import ComingSoonForm from '../components/ComingSoonForm/ComingSoonForm';
 
+/**
+ * Gallery module home section.
+ */
 export default function GalleryHome() {
   const theme = useTheme();
 
