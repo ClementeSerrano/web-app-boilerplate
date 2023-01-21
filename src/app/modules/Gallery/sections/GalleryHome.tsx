@@ -22,9 +22,9 @@ export default function GalleryHome() {
       <Typography
         as="h1"
         variant="title1"
-        style={{ marginBottom: theme.spacing.md }}
+        style={{ marginBottom: theme.spacing.md, textAlign: 'center' }}
       >
-        Coming soon.
+        Coming very soon.
       </Typography>
 
       <Typography as="h2" variant="title4" style={{ textAlign: 'center' }}>
@@ -34,7 +34,12 @@ export default function GalleryHome() {
       <ComingSoonForm />
 
       <Grid as="footer" style={{ marginTop: 24 }}>
-        <Typography as="legend" variant="paragraph1" color="level3">
+        <Typography
+          as="legend"
+          variant="paragraph1"
+          color="level3"
+          style={{ textAlign: 'center' }}
+        >
           Notify me when the platform is launched
         </Typography>
       </Grid>
