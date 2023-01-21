@@ -9,6 +9,7 @@ import AddAccountRoute from './AddAccountRoute';
 import { ROUTE_PATHS } from './routes.constants';
 import Navigation from '../modules/Navigation/Navigation';
 import AccountsManagerRoute from './AccountsManagerRoute';
+import GalleryHome from './GalleryHomeRoute';
 
 /**
  * Component where the main routes of the app are specified.
@@ -22,7 +23,7 @@ export default function Routes() {
       <Navigation />
 
       <ReactRouterRoutes location={background || location}>
-        <Route path={ROUTE_PATHS.home} element={<div>home...</div>} />
+        <Route path={ROUTE_PATHS.home} element={<GalleryHome />} />
 
         <Route
           path={ROUTE_PATHS.createAccount}
