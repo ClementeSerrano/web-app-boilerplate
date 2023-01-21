@@ -34,7 +34,7 @@ export default function GalleryHome() {
       <ComingSoonForm />
 
       <Grid as="footer" style={{ marginTop: 24 }}>
-        <Typography as="p" variant="paragraph1" color="level3">
+        <Typography as="legend" variant="paragraph1" color="level3">
           Notify me when the platform is launched
         </Typography>
       </Grid>
