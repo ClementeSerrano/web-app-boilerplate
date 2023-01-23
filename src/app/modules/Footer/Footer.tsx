@@ -1,5 +1,8 @@
+import { useRef } from 'react';
 import Typography from '../../components/Typography/Typography';
 import { useDevice } from '../../contexts/DeviceContext/DeviceContext.hooks';
+import { useLayout } from '../../contexts/LayoutContext/LayoutContext.hooks';
+import useElementSize from '../../hooks/useElementSize';
 import GithubIcon from '../../icons/GithubIcon';
 import InstagramIcon from '../../icons/InstagramIcon';
 import TwitterIcon from '../../icons/TwitterIcon';
@@ -15,13 +18,22 @@ import {
 } from './Footer.styles';
 
 export default function Footer() {
+  const containerRef = useRef(null);
+
   const { isPhone } = useDevice();
+  const { setFooterHeight } = useLayout();
 
   const copyrightDate = new Date();
   const copyrightYear = copyrightDate.getFullYear();
 
+  useElementSize(containerRef, {
+    onUpdate(size) {
+      setFooterHeight(size.height);
+    },
+  });
+
   return (
-    <FooterContainer>
+    <FooterContainer ref={containerRef}>
       <FooterInnerContainer>
         <FooterCopyrightContainer>
           <Typography

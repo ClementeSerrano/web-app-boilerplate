@@ -1,8 +1,8 @@
 import { useTheme } from 'styled-components';
 
 import Grid from '../../../components/Grid/Grid';
+import SectionContainer from '../../../components/SectionContainer/SectionContainer';
 import Typography from '../../../components/Typography/Typography';
-import { useDevice } from '../../../contexts/DeviceContext/DeviceContext.hooks';
 import ComingSoonForm from '../components/ComingSoonForm/ComingSoonForm';
 
 /**
@@ -10,22 +10,9 @@ import ComingSoonForm from '../components/ComingSoonForm/ComingSoonForm';
  */
 export default function GalleryHome() {
   const theme = useTheme();
-  const { isPhone } = useDevice();
 
   return (
-    <Grid
-      container
-      maxWidth
-      as="section"
-      align="center"
-      justify="center"
-      // TODO: Refactor when hook to get footer and topbar height dynamically
-      // is available.
-      style={{
-        height: `calc(100vh - ${isPhone ? 255 : 216}px)`,
-        paddingTop: 80,
-      }}
-    >
+    <SectionContainer>
       <Typography
         as="h1"
         variant="title1"
@@ -50,6 +37,6 @@ export default function GalleryHome() {
           Notify me when the platform is launched
         </Typography>
       </Grid>
-    </Grid>
+    </SectionContainer>
   );
 }
