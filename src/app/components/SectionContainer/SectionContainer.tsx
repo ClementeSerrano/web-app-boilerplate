@@ -24,7 +24,7 @@ export default function SectionContainer({ children }: WithChildren) {
 
   const styles: CSSProperties = {
     paddingTop: navTopbarHeight,
-    height: `calc(100vh - ${navTopbarHeight + footerHeight + padding}px)`,
+    minHeight: `calc(100vh - ${navTopbarHeight + footerHeight + padding}px)`,
   };
 
   return (
