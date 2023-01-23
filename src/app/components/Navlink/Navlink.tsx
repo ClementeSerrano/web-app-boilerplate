@@ -9,6 +9,8 @@ export default function Navlink({
   className,
   ...props
 }: NavlinkProps) {
+  console.log({ className });
+
   return (
     <NavlinkContainer
       {...props}

@@ -2,6 +2,7 @@ import { useTheme } from 'styled-components';
 
 import Grid from '../../../components/Grid/Grid';
 import Typography from '../../../components/Typography/Typography';
+import { useDevice } from '../../../contexts/DeviceContext/DeviceContext.hooks';
 import ComingSoonForm from '../components/ComingSoonForm/ComingSoonForm';
 
 /**
@@ -9,15 +10,21 @@ import ComingSoonForm from '../components/ComingSoonForm/ComingSoonForm';
  */
 export default function GalleryHome() {
   const theme = useTheme();
+  const { isPhone } = useDevice();
 
   return (
     <Grid
       container
-      maxHeight
       maxWidth
       as="section"
       align="center"
       justify="center"
+      // TODO: Refactor when hook to get footer and topbar height dynamically
+      // is available.
+      style={{
+        height: `calc(100vh - ${isPhone ? 255 : 216}px)`,
+        paddingTop: 80,
+      }}
     >
       <Typography
         as="h1"

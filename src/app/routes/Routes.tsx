@@ -10,6 +10,7 @@ import { ROUTE_PATHS } from './routes.constants';
 import Navigation from '../modules/Navigation/Navigation';
 import AccountsManagerRoute from './AccountsManagerRoute';
 import GalleryHome from './GalleryHomeRoute';
+import Footer from '../modules/Footer/Footer';
 
 /**
  * Component where the main routes of the app are specified.
@@ -37,6 +38,8 @@ export default function Routes() {
           element={<AccountsManagerRoute />}
         />
       </ReactRouterRoutes>
+
+      <Footer />
 
       {background && (
         <ReactRouterRoutes>
