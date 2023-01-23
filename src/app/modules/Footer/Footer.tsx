@@ -17,6 +17,10 @@ import {
   FooterLink,
 } from './Footer.styles';
 
+/**
+ * Renders information about copyright data, sections links and social media links
+ * of the project.
+ */
 export default function Footer() {
   const containerRef = useRef(null);
 
