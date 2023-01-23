@@ -1,9 +1,12 @@
+import { useRef } from 'react';
 import { useTheme } from 'styled-components';
 
 import Button from '../../../components/Button/Button';
 import Grid from '../../../components/Grid/Grid';
 import ThemeSwitch from '../../../components/ThemeSwitch/ThemeSwitch';
 import { useDevice } from '../../../contexts/DeviceContext/DeviceContext.hooks';
+import { useLayout } from '../../../contexts/LayoutContext/LayoutContext.hooks';
+import useElementSize from '../../../hooks/useElementSize';
 import MenuIcon from '../../../icons/MenuIcon';
 import TheArtisanLogo from '../../../icons/TheArtisanLogo';
 import { ROUTE_PATHS } from '../../../routes/routes.constants';
@@ -18,21 +21,20 @@ import { NavigationTopbarProps } from '../Navigation.types';
 export default function NavigationTopbar({
   toggleShowSidebar,
 }: NavigationTopbarProps) {
+  const containerRef = useRef(null);
+
   const theme = useTheme();
   const device = useDevice();
+  const { setNavTopbarHeight } = useLayout();
+
+  useElementSize(containerRef, {
+    onUpdate(size) {
+      setNavTopbarHeight(size.height);
+    },
+  });
 
   return (
-    <NavigationTopbarContainer
-      container
-      size="sm"
-      maxWidth
-      direction="row"
-      align="center"
-      justify="space-between"
-      // TODO: Solve styled-component issue to be able to define
-      // this component as a nav element:
-      // as="nav"
-    >
+    <NavigationTopbarContainer ref={containerRef}>
       <Button format="link" variant="text" onClick={toggleShowSidebar}>
         <MenuIcon height={24} />
       </Button>

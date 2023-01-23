@@ -3,14 +3,31 @@ import { Link } from 'react-router-dom';
 
 import Grid from '../../components/Grid/Grid';
 import { DEVICES_BREAKPOINTS } from '../../contexts/DeviceContext/DeviceContext.constants';
+import {
+  getGridBgColor,
+  getGridMaxSize,
+  getGridPadding,
+} from '../../components/Grid/Grid.helpers';
 
-export const NavigationTopbarContainer = styled(Grid)`
+export const NavigationTopbarContainer = styled.nav`
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   z-index: 1;
   border-bottom: ${({ theme }) =>
     `1px solid ${theme.palette.background.level3}`};
   width: ${({ theme }) => `calc(100% - ${2 * theme.spacing.sm}px)`};
-  padding: ${({ theme }) => theme.spacing.sm}px;
+  padding: ${({ theme }) =>
+    getGridPadding({ size: 'sm', container: true, spacing: theme.spacing })};
+  width: ${({ theme }) =>
+    getGridMaxSize({ maxWidth: true, size: 'sm', spacing: theme.spacing })};
+  background-color: ${({ theme }) =>
+    getGridBgColor({
+      container: true,
+      variant: 'level1',
+      palette: theme.palette,
+    })};
 `;
 
 export const NavigationTopbarLogoNavlink = styled(Link)`
