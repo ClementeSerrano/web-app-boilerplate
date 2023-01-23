@@ -36,7 +36,7 @@ export default function Footer() {
         {!isPhone && (
           <FooterLinksContainer>
             <FooterLink to="about">About</FooterLink>
-            <FooterLink to="artToken">ART Token</FooterLink>
+            <FooterLink to="artToken">ARTI Token</FooterLink>
             <FooterLink to="changelog">Changelog</FooterLink>
             <FooterLink to="contact">Contact</FooterLink>
           </FooterLinksContainer>
