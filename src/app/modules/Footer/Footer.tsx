@@ -61,28 +61,28 @@ export default function Footer() {
         <FooterSectionsContainer>
           <FooterSocialMediaLink
             target="_blank"
-            href="https://www.instagram.com/grafito.app/"
+            href="https://www.instagram.com/the.artisan.ofc/"
           >
             <InstagramIcon height={24} format="fill" />
           </FooterSocialMediaLink>
 
           <FooterSocialMediaLink
             target="_blank"
-            href="https://www.linkedin.com/company/71194720"
+            href="https://twitter.com/theartisan_ofc"
           >
             <TwitterIcon height={24} format="fill" />
           </FooterSocialMediaLink>
 
           <FooterSocialMediaLink
             target="_blank"
-            href="https://www.youtube.com/channel/UCvrphOoNdgpU2i0t9-KnSvA"
+            href="https://www.youtube.com/channel/UCfPzqsJmvKVLlOBNc62pQHw"
           >
             <YoutubeIcon height={24} format="fill" />
           </FooterSocialMediaLink>
 
           <FooterSocialMediaLink
             target="_blank"
-            href="https://github.com/grafito-app"
+            href="https://github.com/the-artisan-network"
           >
             <GithubIcon height={24} format="fill" />
           </FooterSocialMediaLink>
