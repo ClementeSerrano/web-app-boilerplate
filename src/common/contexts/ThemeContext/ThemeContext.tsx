@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import {
   ThemeProvider as BaseThemeProvider,
   createGlobalStyle,
@@ -16,25 +15,13 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export function ThemeProvider({ children }: WithChildren) {
-  const [mode, setMode] = useLocalStorage<ThemeMode>('theme', 'light');
+  const [mode, setMode] = useLocalStorage<ThemeMode>('theme', 'dark');
 
   const toggleMode = () => {
     const updatedMode = mode === 'light' ? 'dark' : 'light';
 
     setMode(updatedMode);
   };
-
-  useEffect(() => {
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    if (mode && ['dark', 'light'].includes(mode)) {
-      setMode(mode);
-    } else if (prefersDark) {
-      setMode('dark');
-    }
-  }, [mode, setMode]);
 
   return (
     <>

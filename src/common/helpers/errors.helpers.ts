@@ -1,4 +1,4 @@
-import { ErrorWithMessage } from '../types/error.types';
+import { ErrorWithMessage } from '../../types/error.types';
 
 /**
  * Allows to map any unknown Error to a defined Error object.

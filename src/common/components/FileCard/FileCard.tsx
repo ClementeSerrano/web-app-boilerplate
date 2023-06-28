@@ -4,7 +4,7 @@ import { useTheme } from 'styled-components';
 import {
   downloadMedia,
   getReadableMediaSize,
-} from '../../../helpers/media.helpers';
+} from '../../helpers/media.helpers';
 import Button from '../Button/Button';
 import Grid from '../Grid/Grid';
 import Typography from '../Typography/Typography';

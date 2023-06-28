@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTheme } from 'styled-components';
 
-import { getInitials } from '../../../helpers/app.helpers';
+import { getInitials } from '../../helpers/app.helpers';
 import AvatarIcon from '../../assets/icons/AvatarIcon';
 import { getColorFormString } from '../../theme/theme.helpers';
 

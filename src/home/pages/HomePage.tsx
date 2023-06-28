@@ -22,7 +22,7 @@ export default function HomePage() {
       </Typography>
 
       <Typography as="h2" variant="title4" style={{ textAlign: 'center' }}>
-        Web3 for independent creators.
+        City settlement made easy.
       </Typography>
 
       <ComingSoonForm />

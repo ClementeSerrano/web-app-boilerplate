@@ -7,7 +7,7 @@ import { useDevice } from '../../../contexts/DeviceContext/DeviceContext.hooks';
 import { useLayout } from '../../../contexts/LayoutContext/LayoutContext.hooks';
 import useElementSize from '../../../hooks/useElementSize';
 import MenuIcon from '../../../assets/icons/MenuIcon';
-import TheArtisanLogo from '../../../assets/icons/TheArtisanLogo';
+import ReloLogo from '../../../assets/icons/ReloLogo';
 import { ROUTE_PATHS } from '../../../../routes/routes.constants';
 
 import {
@@ -37,10 +37,7 @@ export default function NavigationTopbar({
       </Button>
 
       <NavigationTopbarLogoNavlink to={ROUTE_PATHS.home}>
-        <TheArtisanLogo
-          variant={device.isPhone ? 'isotype' : 'logo'}
-          height={32}
-        />
+        <ReloLogo variant={device.isPhone ? 'isotype' : 'logo'} height={32} />
       </NavigationTopbarLogoNavlink>
 
       <Grid direction="row" align="center" justify="flex-end">

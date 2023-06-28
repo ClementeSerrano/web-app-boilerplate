@@ -1,7 +1,7 @@
 {
   "name": "hey-web-client",
   "version": "0.1.0",
-  "description": "Hey - Web3 for independent creators.",
+  "description": "Relo - City settlement made easy.",
   "private": true,
   "dependencies": {
     "@liskhq/lisk-client": "6.0.0-alpha.9",

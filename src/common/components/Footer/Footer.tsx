@@ -45,14 +45,13 @@ export default function Footer() {
             variant="paragraph1"
             style={{ margin: '0', textAlign: isPhone ? 'center' : 'left' }}
           >
-            © {copyrightYear} The Artisan {isPhone && '- Designed Worldwide.'}
+            © {copyrightYear} Relo {isPhone && '- Designed Worldwide.'}
           </Typography>
         </FooterCopyrightContainer>
 
         {!isPhone && (
           <FooterLinksContainer>
             <FooterLink to="about">About</FooterLink>
-            <FooterLink to="artToken">ARTI Token</FooterLink>
             <FooterLink to="changelog">Changelog</FooterLink>
             <FooterLink to="contact">Contact</FooterLink>
           </FooterLinksContainer>
@@ -82,7 +81,7 @@ export default function Footer() {
 
           <FooterSocialMediaLink
             target="_blank"
-            href="https://github.com/the-artisan-network"
+            href="https://github.com/relo-network"
           >
             <GithubIcon height={24} format="fill" />
           </FooterSocialMediaLink>

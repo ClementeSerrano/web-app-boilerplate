@@ -1,4 +1,4 @@
-import { DataUnit, MediaData } from '../types/media.types';
+import { DataUnit, MediaData } from '../../types/media.types';
 
 /**
  * Triggers a browser media download given a data content and filename.
