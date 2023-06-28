@@ -1,8 +1,8 @@
 // import original module declarations
 import 'styled-components';
 
-import { Theme, ThemeMode } from './app/theme/theme.types';
-import { SetLocalStorageValueHandler } from './app/hooks/useLocalStorage';
+import { Theme, ThemeMode } from './common/theme/theme.types';
+import { SetLocalStorageValueHandler } from './common/hooks/useLocalStorage';
 
 // and extend them!
 declare module 'styled-components' {
