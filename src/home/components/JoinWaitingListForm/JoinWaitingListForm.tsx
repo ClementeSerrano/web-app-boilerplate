@@ -4,7 +4,7 @@ import TextField from '../../../common/components/TextField/TextField';
 
 import {
   JoinWaitingListFormContainer,
-  ComingSoonSubmitButton,
+  JoinWaitingListSubmitButton,
 } from './JoinWaitingListForm.styles';
 
 /**
@@ -32,9 +32,9 @@ export default function JoinWaitingListForm() {
         placeholder="Enter your email address"
       />
 
-      <ComingSoonSubmitButton type="submit">
+      <JoinWaitingListSubmitButton type="submit">
         Join the Waitlist
-      </ComingSoonSubmitButton>
+      </JoinWaitingListSubmitButton>
     </JoinWaitingListFormContainer>
   );
 }

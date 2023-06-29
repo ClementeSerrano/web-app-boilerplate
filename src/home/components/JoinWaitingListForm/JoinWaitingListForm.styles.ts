@@ -13,7 +13,7 @@ export const JoinWaitingListFormContainer = styled.form`
   margin-top: ${({ theme }) => theme.spacing.lg}px;
 `;
 
-export const ComingSoonSubmitButton = styled(Button)`
+export const JoinWaitingListSubmitButton = styled(Button)`
   margin-top: ${({ theme }) => theme.spacing.sm}px;
   width: 100%;
 `;
