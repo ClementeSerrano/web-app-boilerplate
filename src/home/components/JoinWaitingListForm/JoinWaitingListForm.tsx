@@ -3,14 +3,14 @@ import { useFormik } from 'formik';
 import TextField from '../../../common/components/TextField/TextField';
 
 import {
-  ComingSoonFormContainer,
+  JoinWaitingListFormContainer,
   ComingSoonSubmitButton,
-} from './ComingSoonForm.styles';
+} from './JoinWaitingListForm.styles';
 
 /**
- * Coming soon form to subscribe for updates on the platform.
+ * Form to join the waiting list of the platform launch.
  */
-export default function ComingSoonForm() {
+export default function JoinWaitingListForm() {
   const form = useFormik({
     initialValues: {
       email: '',
@@ -21,7 +21,7 @@ export default function ComingSoonForm() {
   });
 
   return (
-    <ComingSoonFormContainer>
+    <JoinWaitingListFormContainer onSubmit={form.handleSubmit}>
       <TextField
         id="email"
         name="email"
@@ -30,10 +30,11 @@ export default function ComingSoonForm() {
         variant="filled"
         label="Email"
         placeholder="Enter your email address"
-        style={{ container: { flex: 1 } }}
       />
 
-      <ComingSoonSubmitButton type="submit">Notify me</ComingSoonSubmitButton>
-    </ComingSoonFormContainer>
+      <ComingSoonSubmitButton type="submit">
+        Join the Waitlist
+      </ComingSoonSubmitButton>
+    </JoinWaitingListFormContainer>
   );
 }
