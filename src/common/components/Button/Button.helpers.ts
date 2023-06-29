@@ -25,8 +25,6 @@ export function getButtonBgColor({
 
     if (variant === 'text') return palette[variant].level5;
 
-    console.log({ palette, variant });
-
     return palette[variant].main;
   } else {
     if (format === 'link') return 'transparent';
