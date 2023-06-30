@@ -4,6 +4,7 @@
   "description": "Relo - City settlement made easy.",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.7.16",
     "@react-spring/web": "^9.5.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -15,6 +16,7 @@
     "@use-gesture/react": "^10.2.20",
     "buffer": "^6.0.3",
     "formik": "^2.2.9",
+    "graphql": "^16.7.1",
     "patch-package": "^6.5.0",
     "polished": "^4.2.2",
     "postinstall-postinstall": "^2.1.0",
