@@ -77,7 +77,7 @@ export default function WaitingListForm() {
         type="submit"
         loading={loadingWaitingListRegisterMutation}
       >
-        Join the Waitlist
+        Submit form
       </WaitingListSubmitButton>
     </WaitingListFormContainer>
   );

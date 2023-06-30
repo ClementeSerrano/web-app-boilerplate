@@ -10,7 +10,6 @@ export const WaitingListFormContainer = styled.form`
   max-width: ${({ theme }) =>
     `${theme.breakpoints.values.xs}${theme.breakpoints.unit}`};
   justify-content: center;
-  margin-top: ${({ theme }) => theme.spacing.lg}px;
 `;
 
 export const WaitingListSubmitButton = styled(Button)`
