@@ -1,4 +1,5 @@
 import { useFormik } from 'formik';
+import { useWaitingListRegisterMutation } from '../../../auth/api/useWaitingListRegisterMutation';
 
 import TextField from '../../../common/components/TextField/TextField';
 
@@ -11,12 +12,21 @@ import {
  * Form to join the waiting list of the platform launch.
  */
 export default function JoinWaitingListForm() {
+  const [waitingListRegisterMutation] = useWaitingListRegisterMutation({
+    onCompleted: data => {
+      console.log(data);
+    },
+    onError: error => {
+      console.log(error);
+    },
+  });
+
   const form = useFormik({
     initialValues: {
       email: '',
     },
     onSubmit(values) {
-      console.log({ values });
+      waitingListRegisterMutation({ variables: { email: values.email } });
     },
   });
 
