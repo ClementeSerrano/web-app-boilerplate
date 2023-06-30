@@ -3,7 +3,7 @@ import {
   ThemePaletteKey,
   ThemeSizeUnit,
 } from '../../theme/theme.types';
-import { WithStyle } from '../components.types';
+import { WithStyle } from '../../interfaces/components.interfaces';
 
 export type ButtonProps = WithStyle &
   React.ButtonHTMLAttributes<HTMLButtonElement> & {

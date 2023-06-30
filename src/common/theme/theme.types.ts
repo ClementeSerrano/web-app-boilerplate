@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { WithStyle } from '../components/components.types';
+import { WithStyle } from '../interfaces/components.interfaces';
 
 /**
  * Main type definitions

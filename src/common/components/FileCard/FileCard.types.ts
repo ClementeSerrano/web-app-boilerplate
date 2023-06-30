@@ -1,5 +1,5 @@
-import { MediaData } from '../../../types/media.types';
-import { WithStyle } from '../components.types';
+import { MediaData } from '../../interfaces/media.interfaces';
+import { WithStyle } from '../../interfaces/components.interfaces';
 
 export type FileCardProps = WithStyle & {
   fileData: MediaData;

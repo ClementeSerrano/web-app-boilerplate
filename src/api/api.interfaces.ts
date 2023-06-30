@@ -1,4 +1,4 @@
-import { ErrorWithMessage } from './error.types';
+import { ErrorWithMessage } from '../common/interfaces/error.interfaces';
 
 export type ObservableDataState<T = unknown> = {
   data?: T;

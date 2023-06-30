@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-import { WithStyle } from '../components.types';
+import { WithStyle } from '../../interfaces/components.interfaces';
 
 import DialogHeader from './components/DialogHeader';
 import DialogClose from './components/DialogClose';

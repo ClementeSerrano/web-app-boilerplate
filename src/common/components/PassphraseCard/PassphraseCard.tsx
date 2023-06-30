@@ -1,4 +1,4 @@
-import { WithStyle } from '../components.types';
+import { WithStyle } from '../../interfaces/components.interfaces';
 import {
   PassphraseCardContainer,
   PassphraseText,

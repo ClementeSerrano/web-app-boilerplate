@@ -1,4 +1,7 @@
-import { WithChildren, WithStyle } from '../components.types';
+import {
+  WithChildren,
+  WithStyle,
+} from '../../interfaces/components.interfaces';
 import { ThemeColorLevel, ThemeTypographyKey } from '../../theme/theme.types';
 
 export type TypographyProps = WithChildren &

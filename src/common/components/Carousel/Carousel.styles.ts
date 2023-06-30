@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { ElementPosition } from "../components.types";
-import { CarouselArrowDirection } from "./Carousel.types";
+import styled from 'styled-components';
+import { ElementPosition } from '../../interfaces/components.interfaces';
+import { CarouselArrowDirection } from './Carousel.types';
 
 /**
  * Main style definitions.
@@ -61,12 +61,12 @@ export const CarouselCaptionContainer = styled.aside<{
     let top = 50;
 
     switch (position) {
-      case "center":
+      case 'center':
         break;
-      case "top":
+      case 'top':
         top = 25;
         break;
-      case "bottom":
+      case 'bottom':
         top = 75;
         break;
     }
@@ -88,7 +88,7 @@ export const CarouselBulletContainer = styled.li<{ active: boolean }>`
   display: inline-block;
   margin: 0 2px;
   transition: 0.3s opacity;
-  opacity: ${({ active }) => (active ? "0.4" : "1")};
+  opacity: ${({ active }) => (active ? '0.4' : '1')};
 `;
 
 export const CarouselArrowIcon = styled.i<{
@@ -102,7 +102,7 @@ export const CarouselArrowIcon = styled.i<{
   cursor: pointer;
   transition: 0.3s opacity;
   transform: ${({ direction }) =>
-    direction === "left" ? "rotate(135deg)" : "rotate(-45deg)"};
+    direction === 'left' ? 'rotate(135deg)' : 'rotate(-45deg)'};
   &:hover {
     opacity: 0.4;
   }
@@ -119,5 +119,5 @@ export const CarouselArrowContainer = styled.a<{
   align-items: center;
   justify-content: center;
   ${({ direction }) =>
-    direction === "left" ? "margin-left: 0.4em;" : "margin-right: 0.4em;"}
+    direction === 'left' ? 'margin-left: 0.4em;' : 'margin-right: 0.4em;'}
 `;

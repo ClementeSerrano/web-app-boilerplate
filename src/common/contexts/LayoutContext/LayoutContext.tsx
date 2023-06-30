@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react';
-import { WithChildren } from '../../components/components.types';
+import { WithChildren } from '../../interfaces/components.interfaces';
 
 import { LayoutContextValues } from './LayoutContext.types';
 

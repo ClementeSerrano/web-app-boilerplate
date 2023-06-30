@@ -1,5 +1,8 @@
 import { ThemeSizeUnit } from '../../theme/theme.types';
-import { WithChildren, WithStyle } from '../components.types';
+import {
+  WithChildren,
+  WithStyle,
+} from '../../interfaces/components.interfaces';
 
 export type AvatarProps = WithChildren &
   WithStyle & {
