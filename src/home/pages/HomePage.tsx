@@ -5,7 +5,7 @@ import { useDevice } from '../../common/contexts/DeviceContext/DeviceContext.hoo
 import Grid from '../../common/components/Grid/Grid';
 import SectionContainer from '../../common/components/SectionContainer/SectionContainer';
 import Typography from '../../common/components/Typography/Typography';
-import JoinWaitingListForm from '../components/JoinWaitingListForm/JoinWaitingListForm';
+import WaitingListForm from '../../auth/components/WaitingListForm/WaitingListForm';
 
 /**
  * Home module main page.
@@ -25,7 +25,7 @@ export default function HomePage() {
         City settlement made easy.
       </Typography>
 
-      <JoinWaitingListForm />
+      <WaitingListForm />
 
       <Grid as="footer" style={{ marginTop: 24 }}>
         <Typography

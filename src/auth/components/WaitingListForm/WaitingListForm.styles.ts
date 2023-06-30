@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Button from '../../../common/components/Button/Button';
 
-export const JoinWaitingListFormContainer = styled.form`
+export const WaitingListFormContainer = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,7 @@ export const JoinWaitingListFormContainer = styled.form`
   margin-top: ${({ theme }) => theme.spacing.lg}px;
 `;
 
-export const JoinWaitingListSubmitButton = styled(Button)`
+export const WaitingListSubmitButton = styled(Button)`
   margin-top: ${({ theme }) => theme.spacing.sm}px;
   width: 100%;
 `;
