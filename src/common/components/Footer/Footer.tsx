@@ -5,8 +5,8 @@ import { useLayout } from '../../contexts/LayoutContext/LayoutContext.hooks';
 import useElementSize from '../../hooks/useElementSize';
 import GithubIcon from '../../assets/icons/GithubIcon';
 import InstagramIcon from '../../assets/icons/InstagramIcon';
-import TwitterIcon from '../../assets/icons/TwitterIcon';
-import YoutubeIcon from '../../assets/icons/YoutubeIcon';
+// import TwitterIcon from '../../assets/icons/TwitterIcon';
+// import YoutubeIcon from '../../assets/icons/YoutubeIcon';
 import {
   FooterContainer,
   FooterInnerContainer,
@@ -66,6 +66,8 @@ export default function Footer() {
             <InstagramIcon height={24} format="fill" />
           </FooterSocialMediaLink>
 
+          {/* TODO: Uncomment when accounts are created.
+          
           <FooterSocialMediaLink
             target="_blank"
             href="https://twitter.com/theartisan_ofc"
@@ -78,7 +80,7 @@ export default function Footer() {
             href="https://www.youtube.com/channel/UCfPzqsJmvKVLlOBNc62pQHw"
           >
             <YoutubeIcon height={24} format="fill" />
-          </FooterSocialMediaLink>
+          </FooterSocialMediaLink> */}
 
           <FooterSocialMediaLink
             target="_blank"
