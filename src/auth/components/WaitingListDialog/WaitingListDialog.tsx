@@ -56,7 +56,8 @@ export default function WaitingListDialog({
       <>
         <Typography as="legend" variant="paragraph1" color="level3">
           By submitting this form, you will join our waitlist to get early
-          access to Relo.
+          access to Relo, as well as becoming part of a community of other brave
+          members, sharing the same challenge of you!
         </Typography>
 
         <WaitingListForm onCompleted={() => setFormSubmitted(true)} />
