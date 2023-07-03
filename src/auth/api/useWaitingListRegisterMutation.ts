@@ -25,11 +25,13 @@ const WAITING_LIST_REGISTER_MUTATION = gql(/* GraphQL */ `
 
 export type WaitingListRegisterMutationResult = { waitingListRegister: Auth };
 
+export type WaitingListRegisterMutationOptions = MutationHookOptions<
+  WaitingListRegisterMutationResult,
+  WaitingListRegisterMutationVariables
+>;
+
 export function useWaitingListRegisterMutation(
-  options?: MutationHookOptions<
-    WaitingListRegisterMutationResult,
-    WaitingListRegisterMutationVariables
-  >,
+  options?: WaitingListRegisterMutationOptions,
 ) {
   const { showSuccessSnackbar, showErrorSnackbar } = useAlerts();
 

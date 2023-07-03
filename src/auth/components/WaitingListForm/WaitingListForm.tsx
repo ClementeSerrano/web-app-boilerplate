@@ -8,23 +8,23 @@ import {
   WaitingListFormContainer,
   WaitingListSubmitButton,
 } from './WaitingListForm.styles';
+import { WaitingListFormProps } from './WaitingListForm.interfaces';
 
 /**
  * Form to join the waiting list of the platform launch.
  */
-export default function WaitingListForm() {
+export default function WaitingListForm({
+  onCompleted,
+  onError,
+}: WaitingListFormProps) {
   const theme = useTheme();
 
   const [
     waitingListRegisterMutation,
     { loading: loadingWaitingListRegisterMutation },
   ] = useWaitingListRegisterMutation({
-    onCompleted: data => {
-      console.log(data);
-    },
-    onError: error => {
-      console.log(error);
-    },
+    onCompleted: data => onCompleted && onCompleted(data),
+    onError: error => onError && onError(error),
   });
 
   const form = useFormik({

@@ -156,7 +156,8 @@ export type ThemeTypographyKey =
   | 'paragraph1'
   | 'paragraph2'
   | 'paragraph3'
-  | 'button';
+  | 'button'
+  | 'link';
 
 export type ThemeTypographyProps = CSSProperties;
 

@@ -175,4 +175,12 @@ export const themeTypography: ThemeTypography = {
     lineHeight: 1.3,
     letterSpacing: '0em',
   },
+  link: {
+    fontFamily: 'SFPro',
+    fontWeight: fontWeights.regular,
+    fontSize: fontSizes.md,
+    lineHeight: 1.3,
+    letterSpacing: '0em',
+    textDecoration: 'none',
+  },
 };

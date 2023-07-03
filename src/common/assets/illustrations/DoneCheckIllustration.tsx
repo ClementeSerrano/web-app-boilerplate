@@ -38,7 +38,6 @@ export default function DoneCheckIllustration({
               id="Shape"
               stroke={color}
               strokeWidth="2.5"
-              fill={theme.palette.background.level1}
               strokeLinecap="round"
               transform="translate(112.924377, 68.082804) rotate(-44.000000) translate(-112.924377, -68.082804) "
             />

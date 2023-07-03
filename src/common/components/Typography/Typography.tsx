@@ -1,9 +1,9 @@
-import { TypographyProps } from "./Typography.types";
-import { TypographyContainer } from "./Typography.styles";
+import { TypographyProps } from './Typography.types';
+import { TypographyContainer } from './Typography.styles';
 
 export default function Typography({
   children,
-  variant = "paragraph1",
+  variant = 'paragraph1',
   ...props
 }: TypographyProps) {
   return (

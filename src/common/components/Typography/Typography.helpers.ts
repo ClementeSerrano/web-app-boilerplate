@@ -26,6 +26,9 @@ export function getTypographyColor({
     case 'paragraph3':
       return palette.text[color || 'level2'];
 
+    case 'link':
+      return palette.primary.main;
+
     default:
       return palette.text[color || 'level1'];
   }

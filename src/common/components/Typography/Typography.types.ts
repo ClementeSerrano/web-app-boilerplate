@@ -9,4 +9,6 @@ export type TypographyProps = WithChildren &
     as?: React.ElementType;
     variant?: ThemeTypographyKey;
     color?: ThemeColorLevel;
+    href?: string;
+    target?: string;
   };
