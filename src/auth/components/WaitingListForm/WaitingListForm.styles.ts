@@ -7,12 +7,9 @@ export const WaitingListFormContainer = styled.form`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: ${({ theme }) =>
-    `${theme.breakpoints.values.xs}${theme.breakpoints.unit}`};
   justify-content: center;
 `;
 
 export const WaitingListSubmitButton = styled(Button)`
   margin-top: ${({ theme }) => theme.spacing.sm}px;
-  width: 100%;
 `;
