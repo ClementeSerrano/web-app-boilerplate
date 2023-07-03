@@ -10,11 +10,11 @@ import YoutubeIcon from '../../assets/icons/YoutubeIcon';
 import {
   FooterContainer,
   FooterInnerContainer,
-  FooterLinksContainer,
   FooterCopyrightContainer,
   FooterSocialMediaLink,
   FooterSectionsContainer,
-  FooterLink,
+  // FooterLinksContainer,
+  // FooterLink,
 } from './Footer.styles';
 
 /**
@@ -49,13 +49,14 @@ export default function Footer() {
           </Typography>
         </FooterCopyrightContainer>
 
+        {/* TODO: Uncomment when content is available.
         {!isPhone && (
           <FooterLinksContainer>
             <FooterLink to="about">About</FooterLink>
             <FooterLink to="changelog">Changelog</FooterLink>
             <FooterLink to="contact">Contact</FooterLink>
           </FooterLinksContainer>
-        )}
+        )} */}
 
         <FooterSectionsContainer>
           <FooterSocialMediaLink

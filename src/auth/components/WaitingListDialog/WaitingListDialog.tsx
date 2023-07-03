@@ -24,11 +24,11 @@ export default function WaitingListDialog({
       return (
         <FallbackComponent
           type="success"
-          title="You're now part of our community!"
+          title="You're now part of our community ❤️"
           description={
             <>
               <WaitingListDialogParagraph variant="paragraph1" color="level3">
-                You will be hearing from us very soon ❤️ In the meantime, we
+                You will be hearing from us very soon ☺️ In the meantime, we
                 invite you to answer a few questions that will help us making
                 Relo the best solution for you.
               </WaitingListDialogParagraph>
