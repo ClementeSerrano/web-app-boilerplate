@@ -38,6 +38,7 @@ export default function WaitingListDialog({
                 variant="link"
                 href="https://mb1n22472ic.typeform.com/to/Lw9dJfOz"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Go to survey{' '}
                 <ArrowIcon

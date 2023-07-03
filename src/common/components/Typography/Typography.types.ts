@@ -11,4 +11,5 @@ export type TypographyProps = WithChildren &
     color?: ThemeColorLevel;
     href?: string;
     target?: string;
+    rel?: string;
   };
