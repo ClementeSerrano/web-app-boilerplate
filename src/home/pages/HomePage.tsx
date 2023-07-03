@@ -4,9 +4,9 @@ import { useDialog } from '../../common/hooks/useDialog';
 import SectionContainer from '../../common/components/SectionContainer/SectionContainer';
 import Typography from '../../common/components/Typography/Typography';
 import WaitingListDialog from '../../auth/components/WaitingListDialog/WaitingListDialog';
+import ArrowIcon from '../../common/assets/icons/ArrowIcon';
 
 import { HomePageWaitingListButton } from './HomePage.styles';
-import ArrowIcon from '../../common/assets/icons/ArrowIcon';
 
 /**
  * Home module main page.

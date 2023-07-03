@@ -60,7 +60,7 @@ export default function Footer() {
         <FooterSectionsContainer>
           <FooterSocialMediaLink
             target="_blank"
-            href="https://www.instagram.com/the.artisan.ofc/"
+            href="https://www.instagram.com/relo.community/"
           >
             <InstagramIcon height={24} format="fill" />
           </FooterSocialMediaLink>

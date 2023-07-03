@@ -1,4 +1,5 @@
 import { useFormik } from 'formik';
+import { useTheme } from 'styled-components';
 
 import { useWaitingListRegisterMutation } from '../../api/useWaitingListRegisterMutation';
 import TextField from '../../../common/components/TextField/TextField';
@@ -7,7 +8,6 @@ import {
   WaitingListFormContainer,
   WaitingListSubmitButton,
 } from './WaitingListForm.styles';
-import { useTheme } from 'styled-components';
 
 /**
  * Form to join the waiting list of the platform launch.
