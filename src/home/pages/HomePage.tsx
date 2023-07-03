@@ -25,11 +25,11 @@ export default function HomePage() {
       <SectionContainer>
         <UserResearchFormButton style={{ marginBottom: theme.spacing.sm }} />
 
-        <HomePageTitle variant="title1">Relocation redesigned.</HomePageTitle>
+        <HomePageTitle variant="title1">Relocation made easy.</HomePageTitle>
 
         <HomePageSubtitle variant="title5" color="level3">
-          Bypass Germany's complex bureaucracy with Relo. Embrace your new life
-          with confidence and simplicity.
+          Feel empowered and informed as you embrace your new beginning in
+          Germany.
         </HomePageSubtitle>
 
         <HomePageWaitingListButton onClick={waitingListDialog.handleOpen}>
