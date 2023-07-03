@@ -1,6 +1,7 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import { APIProvider } from './api/APIProvider';
+import { AlertsProvider } from './common/contexts/AlertsContext/AlertsContext';
 import { DeviceProvider } from './common/contexts/DeviceContext/DeviceContext';
 import { LayoutProvider } from './common/contexts/LayoutContext/LayoutContext';
 import { ThemeProvider } from './common/contexts/ThemeContext/ThemeContext';
@@ -12,9 +13,11 @@ export default function App() {
       <DeviceProvider>
         <LayoutProvider>
           <ThemeProvider>
-            <Router>
-              <Routes />
-            </Router>
+            <AlertsProvider>
+              <Router>
+                <Routes />
+              </Router>
+            </AlertsProvider>
           </ThemeProvider>
         </LayoutProvider>
       </DeviceProvider>
