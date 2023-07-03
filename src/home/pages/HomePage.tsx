@@ -47,10 +47,12 @@ export default function HomePage() {
         </HomePageWaitingListButton>
       </SectionContainer>
 
-      <WaitingListDialog
-        show={waitingListDialog.show}
-        handleClose={waitingListDialog.handleClose}
-      />
+      {waitingListDialog.show && (
+        <WaitingListDialog
+          show={waitingListDialog.show}
+          handleClose={waitingListDialog.handleClose}
+        />
+      )}
     </>
   );
 }

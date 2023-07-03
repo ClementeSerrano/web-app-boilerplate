@@ -39,7 +39,7 @@ export default function WaitingListDialog({
                 href="https://mb1n22472ic.typeform.com/to/Lw9dJfOz"
                 target="_blank"
               >
-                Go to form{' '}
+                Go to survey{' '}
                 <ArrowIcon
                   height={12}
                   style={{ marginLeft: theme.spacing.xs }}
