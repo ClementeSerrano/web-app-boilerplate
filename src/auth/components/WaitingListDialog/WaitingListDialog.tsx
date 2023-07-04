@@ -24,7 +24,7 @@ export default function WaitingListDialog({
       return (
         <FallbackComponent
           type="success"
-          title="You're now part of our community ❤️"
+          title="Great! You're subscribed to our waitlist"
           description={
             <>
               <WaitingListDialogParagraph variant="paragraph1" color="level3">
