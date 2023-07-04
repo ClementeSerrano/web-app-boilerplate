@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 import { useTheme } from 'styled-components';
 
 import { useLayout } from '../../contexts/LayoutContext/LayoutContext.hooks';
-import { WithChildren } from '../components.types';
+import { WithChildren } from '../../interfaces/components.interfaces';
 import Grid from '../Grid/Grid';
 import { getGridPadding } from '../Grid/Grid.helpers';
 

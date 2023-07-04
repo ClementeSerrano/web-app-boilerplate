@@ -1,6 +1,9 @@
 import { CSSProperties, InputHTMLAttributes, ReactNode } from 'react';
 
-export type TextFieldProps = InputHTMLAttributes<HTMLInputElement> & {
+export type TextFieldProps = Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  'style'
+> & {
   adornments?: { left?: ReactNode; right?: ReactNode };
   error?: boolean;
   label?: string;

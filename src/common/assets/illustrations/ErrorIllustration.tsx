@@ -39,7 +39,6 @@ export default function ErrorIllustration({
               id="Shape"
               stroke={color}
               strokeWidth="2.5"
-              fill={theme.palette.background.level1}
               strokeLinecap="round"
             />
 

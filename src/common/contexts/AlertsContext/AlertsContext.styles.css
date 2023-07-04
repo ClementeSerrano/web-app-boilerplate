@@ -1,0 +1,11 @@
+.success-snackbar {
+  border-radius: 4px;
+  padding: 16px;
+  border-left: 4px solid #12af23;
+}
+
+.error-snackbar {
+  border-radius: 4px;
+  padding: 16px;
+  border-left: 4px solid #ff4d4d;
+}

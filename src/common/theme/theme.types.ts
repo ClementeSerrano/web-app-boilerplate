@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { WithStyle } from '../components/components.types';
+import { WithStyle } from '../interfaces/components.interfaces';
 
 /**
  * Main type definitions
@@ -156,7 +156,8 @@ export type ThemeTypographyKey =
   | 'paragraph1'
   | 'paragraph2'
   | 'paragraph3'
-  | 'button';
+  | 'button'
+  | 'link';
 
 export type ThemeTypographyProps = CSSProperties;
 

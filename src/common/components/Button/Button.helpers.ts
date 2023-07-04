@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 
-import { ValueOf } from '../../../types/general.types';
+import { ValueOf } from '../../interfaces/general.interfaces';
 import { parseSize } from '../../theme/theme.helpers';
 import { Theme } from '../../theme/theme.types';
 

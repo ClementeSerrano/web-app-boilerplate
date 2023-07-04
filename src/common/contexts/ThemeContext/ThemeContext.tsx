@@ -4,7 +4,7 @@ import {
 } from 'styled-components';
 
 import theme from '../../theme/theme';
-import { WithChildren } from '../../components/components.types';
+import { WithChildren } from '../../interfaces/components.interfaces';
 import { ThemeMode } from '../../theme/theme.types';
 import useLocalStorage from '../../hooks/useLocalStorage';
 

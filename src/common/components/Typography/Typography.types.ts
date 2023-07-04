@@ -1,4 +1,7 @@
-import { WithChildren, WithStyle } from '../components.types';
+import {
+  WithChildren,
+  WithStyle,
+} from '../../interfaces/components.interfaces';
 import { ThemeColorLevel, ThemeTypographyKey } from '../../theme/theme.types';
 
 export type TypographyProps = WithChildren &
@@ -6,4 +9,7 @@ export type TypographyProps = WithChildren &
     as?: React.ElementType;
     variant?: ThemeTypographyKey;
     color?: ThemeColorLevel;
+    href?: string;
+    target?: string;
+    rel?: string;
   };

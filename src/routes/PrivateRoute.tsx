@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { WithChildren } from '../common/components/components.types';
+import { WithChildren } from '../common/interfaces/components.interfaces';
 
 import { ROUTE_PATHS } from './routes.constants';
 

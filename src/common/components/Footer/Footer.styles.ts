@@ -5,6 +5,7 @@ import { DEVICES_BREAKPOINTS } from '../../contexts/DeviceContext/DeviceContext.
 export const FooterContainer = styled.footer`
   display: flex;
   background-color: ${({ theme }) => theme.palette.background.level1};
+  position: relative;
 `;
 
 export const FooterInnerContainer = styled.div`

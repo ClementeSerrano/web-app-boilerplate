@@ -1,14 +1,14 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode } from 'react';
 
 import {
   ElementDirection,
   ElementPosition,
   WithChildren,
   WithStyle,
-} from "../components.types";
+} from '../../interfaces/components.interfaces';
 
-import CarouselSlide from "./components/CarouselSlide";
-import CarouselCaption from "./components/CarouselCaption";
+import CarouselSlide from './components/CarouselSlide';
+import CarouselCaption from './components/CarouselCaption';
 
 /**
  * Main type definitions.
@@ -70,7 +70,7 @@ export type CarouselBulletComponentProps = {
 };
 
 export type CarouselBulletComponent = (
-  props: CarouselBulletComponentProps
+  props: CarouselBulletComponentProps,
 ) => React.ReactElement;
 
 export type CarouselArrowProps = WithStyle & {
@@ -80,10 +80,10 @@ export type CarouselArrowProps = WithStyle & {
 };
 
 export type CarouselArrowComponent = (
-  props: Pick<CarouselArrowProps, "onClick" | "direction">
+  props: Pick<CarouselArrowProps, 'onClick' | 'direction'>,
 ) => React.ReactElement;
 
 export type CarouselArrowDirection = Extract<
   ElementDirection,
-  "left" | "right"
+  'left' | 'right'
 >;

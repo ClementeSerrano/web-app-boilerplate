@@ -1,42 +1,49 @@
 import { useTheme } from 'styled-components';
-import ReloLogo from '../../common/assets/icons/ReloLogo';
 
-import { useDevice } from '../../common/contexts/DeviceContext/DeviceContext.hooks';
-import Grid from '../../common/components/Grid/Grid';
+import { useDialog } from '../../common/hooks/useDialog';
 import SectionContainer from '../../common/components/SectionContainer/SectionContainer';
-import Typography from '../../common/components/Typography/Typography';
-import JoinWaitingListForm from '../components/JoinWaitingListForm/JoinWaitingListForm';
+import WaitingListDialog from '../../auth/components/WaitingListDialog/WaitingListDialog';
+import ArrowIcon from '../../common/assets/icons/ArrowIcon';
+import UserResearchFormButton from '../components/UserResearchFormButton/UserResearchFormButton';
+
+import {
+  HomePageSubtitle,
+  HomePageTitle,
+  HomePageWaitingListButton,
+} from './HomePage.styles';
 
 /**
  * Home module main page.
  */
 export default function HomePage() {
   const theme = useTheme();
-  const device = useDevice();
+
+  const waitingListDialog = useDialog();
 
   return (
-    <SectionContainer>
-      <ReloLogo
-        height={device.isPhone ? 64 : 96}
-        style={{ marginBottom: theme.spacing.md }}
-      />
+    <>
+      <SectionContainer>
+        <UserResearchFormButton style={{ marginBottom: theme.spacing.sm }} />
 
-      <Typography as="h2" variant="title4" style={{ textAlign: 'center' }}>
-        City settlement made easy.
-      </Typography>
+        <HomePageTitle variant="title1">Relocation made easy.</HomePageTitle>
 
-      <JoinWaitingListForm />
+        <HomePageSubtitle variant="title5" color="level3">
+          Feel empowered and informed as you embrace your new beginning in
+          Germany.
+        </HomePageSubtitle>
 
-      <Grid as="footer" style={{ marginTop: 24 }}>
-        <Typography
-          as="legend"
-          variant="paragraph1"
-          color="level3"
-          style={{ textAlign: 'center' }}
-        >
-          Notify me when the platform is launched.
-        </Typography>
-      </Grid>
-    </SectionContainer>
+        <HomePageWaitingListButton onClick={waitingListDialog.handleOpen}>
+          Join the Waitlist{' '}
+          <ArrowIcon height={16} style={{ marginLeft: theme.spacing.xxs }} />
+        </HomePageWaitingListButton>
+      </SectionContainer>
+
+      {waitingListDialog.show && (
+        <WaitingListDialog
+          show={waitingListDialog.show}
+          handleClose={waitingListDialog.handleClose}
+        />
+      )}
+    </>
   );
 }
