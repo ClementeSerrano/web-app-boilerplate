@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import Button from '../../common/components/Button/Button';
-import Typography from '../../common/components/Typography/Typography';
+import Button from '../../../../common/components/Button/Button';
+import Typography from '../../../../common/components/Typography/Typography';
 
 export const HomePageTitle = styled(Typography)`
   text-align: center;

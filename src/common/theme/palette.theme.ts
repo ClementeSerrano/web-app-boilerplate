@@ -3,9 +3,9 @@ import { ThemePalette } from './theme.types';
 
 export const lightThemePalette: ThemePalette = {
   primary: {
-    light: themeColors.red.light,
-    main: themeColors.red.main,
-    dark: themeColors.red.dark,
+    light: themeColors.green.light,
+    main: themeColors.green.main,
+    dark: themeColors.green.dark,
     contrastText: themeColors.white.main,
   },
   secondary: {
@@ -56,9 +56,9 @@ export const lightThemePalette: ThemePalette = {
 
 export const darkThemePalette: ThemePalette = {
   primary: {
-    light: themeColors.red.light,
-    main: themeColors.red.main,
-    dark: themeColors.red.dark,
+    light: themeColors.green.light,
+    main: themeColors.green.main,
+    dark: themeColors.green.dark,
     contrastText: themeColors.white.main,
   },
   secondary: {
