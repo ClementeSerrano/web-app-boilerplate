@@ -30,7 +30,7 @@ export default function WaitingListDialog({
               <WaitingListDialogParagraph variant="paragraph1" color="level3">
                 You will be hearing from us very soon ☺️ In the meantime, we
                 invite you to answer a few questions that will help us making
-                Relo the best solution for you.
+                Climeinvest the best solution for you.
               </WaitingListDialogParagraph>
 
               <Typography

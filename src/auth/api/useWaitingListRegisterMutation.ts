@@ -40,7 +40,8 @@ export function useWaitingListRegisterMutation(
     onCompleted: data => {
       showSuccessSnackbar({
         title: "You're in!",
-        message: 'Thanks for joining Relo! Check you email for more details :)',
+        message:
+          'Thanks for joining Climeinvest! Check you email for more details :)',
       });
 
       options?.onCompleted && options.onCompleted(data);

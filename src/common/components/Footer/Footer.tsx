@@ -45,7 +45,7 @@ export default function Footer() {
             variant="paragraph1"
             style={{ margin: '0', textAlign: isPhone ? 'center' : 'left' }}
           >
-            © {copyrightYear} Relo {isPhone && '- Designed Worldwide.'}
+            © {copyrightYear} Climeinvest {isPhone && '- Designed Worldwide.'}
           </Typography>
         </FooterCopyrightContainer>
 
@@ -61,14 +61,14 @@ export default function Footer() {
         <FooterSectionsContainer>
           <FooterSocialMediaLink
             target="_blank"
-            href="https://www.instagram.com/relo.community/"
+            href="https://www.instagram.com/climevest/"
           >
             <InstagramIcon height={24} format="fill" />
           </FooterSocialMediaLink>
 
           <FooterSocialMediaLink
             target="_blank"
-            href="https://twitter.com/theartisan_ofc"
+            href="https://twitter.com/climevest"
           >
             <TwitterIcon height={24} format="fill" />
           </FooterSocialMediaLink>
@@ -82,7 +82,7 @@ export default function Footer() {
 
           <FooterSocialMediaLink
             target="_blank"
-            href="https://github.com/relo-network"
+            href="https://github.com/Climevest"
           >
             <GithubIcon height={24} format="fill" />
           </FooterSocialMediaLink>

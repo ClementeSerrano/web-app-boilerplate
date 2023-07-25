@@ -1,7 +1,7 @@
 {
-  "name": "relo-website",
+  "name": "climeinvest-lp",
   "version": "0.1.0",
-  "description": "Relo - City settlement made easy.",
+  "description": "Climevest - City settlement made easy.",
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.7.16",

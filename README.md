@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="http://get-Relo.com/" target="blank"><img src="https://i.postimg.cc/Pxn1BCXF/Isotype-rounded.png" width="200" alt="Relo Logo" /></a>
+  <a href="https://climeinvest.co/" target="blank"><img src="https://i.postimg.cc/Pxn1BCXF/Isotype-rounded.png" width="200" alt="Climeinvest Logo" /></a>
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">Relo: City settlement made easy.</p>
+  <p align="center">Climevest - First class climate assets investments.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
@@ -24,7 +24,7 @@
 
 ## Description
 
-Relo website repository.
+Climevest LP repository.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ Relo website repository.
 1. Clone the repository on your machine:
 
 ```bash
-git clone https://github.com/relo-network/website.git
+git clone https://github.com/Climevest/lp.git
 ```
 
 2. Change to the project directory:
@@ -89,7 +89,7 @@ $ yarn run test:cov
 
 ## Managing releases
 
-Each new release of major, minor or patches versions of Relo follow a release procedure summarized as follows:
+Each new release of major, minor or patches versions of Climeinvest follow a release procedure summarized as follows:
 
 1. Update repository docs with the new release details:
 
@@ -113,9 +113,9 @@ Each new release of major, minor or patches versions of Relo follow a release pr
 ## Stay in touch
 
 - Author - [Clemente Sutil](https://github.com/ClementeSerrano)
-- Website - [https://relo.network](https://relo.network/)
-- Twitter - [@ReloHQ](https://twitter.com/ReloHQ)
+- Website - [https://climeinvest.co](https://climeinvest.co)
+- Twitter - [@Climevest](https://twitter.com/Climevest)
 
 ## License
 
-Relo is [MIT licensed](LICENSE).
+Climeinvest is [MIT licensed](LICENSE).

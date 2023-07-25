@@ -35,7 +35,7 @@ export default function HeroSection() {
         </HomePageSubtitle>
 
         <HomePageWaitingListButton onClick={waitingListDialog.handleOpen}>
-          Join the Waitlist{' '}
+          Sign up now{' '}
           <ArrowIcon height={16} style={{ marginLeft: theme.spacing.xxs }} />
         </HomePageWaitingListButton>
       </SectionContainer>
