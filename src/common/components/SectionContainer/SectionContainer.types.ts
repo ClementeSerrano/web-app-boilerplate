@@ -7,4 +7,5 @@ import { ThemeColorLevel } from '../../theme/theme.types';
 export type SectionContainerProps = WithChildren &
   WithStyle & {
     variant?: ThemeColorLevel;
+    withSeparator?: boolean;
   };

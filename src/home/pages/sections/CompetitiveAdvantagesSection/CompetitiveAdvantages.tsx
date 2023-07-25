@@ -17,7 +17,7 @@ export default function CompetitiveAdvantagesSection() {
   const theme = useTheme();
 
   return (
-    <SectionContainer>
+    <SectionContainer withSeparator>
       <Typography
         as="h1"
         variant="title3"

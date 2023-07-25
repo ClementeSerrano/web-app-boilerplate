@@ -14,7 +14,7 @@ export const NavigationTopbarContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 9;
   border-bottom: ${({ theme }) =>
     `1px solid ${theme.palette.background.level3}`};
   width: ${({ theme }) => `calc(100% - ${2 * theme.spacing.sm}px)`};

@@ -25,7 +25,7 @@ export default function FeaturesSection() {
   const theme = useTheme();
 
   return (
-    <SectionContainer variant="level2">
+    <SectionContainer withSeparator>
       <FeaturesSubsectionContainer>
         <FeaturesTextsContainer>
           <Typography

@@ -11,13 +11,13 @@ export default function StartTodaySection() {
   const theme = useTheme();
 
   return (
-    <SectionContainer variant="level2">
+    <SectionContainer style={{ paddingTop: 0 }}>
       <ReloLogo
         variant="isotype"
         height={88}
         style={{
           marginBottom: theme.spacing.md,
-          backgroundColor: theme.colors.black.main,
+          backgroundColor: theme.colors.gray.superDark,
           padding: 16,
           borderRadius: 24,
         }}

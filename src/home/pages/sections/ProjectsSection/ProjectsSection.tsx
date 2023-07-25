@@ -12,7 +12,7 @@ export default function ProjectsSection() {
   const theme = useTheme();
 
   return (
-    <SectionContainer style={{ paddingTop: theme.spacing.md }}>
+    <SectionContainer withSeparator style={{ paddingTop: theme.spacing.md }}>
       <ProjectsSectionTitle>
         Empowering first-class climate projects
       </ProjectsSectionTitle>
