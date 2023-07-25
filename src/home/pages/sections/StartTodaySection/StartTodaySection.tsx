@@ -1,5 +1,5 @@
 import { useTheme } from 'styled-components';
-import ReloLogo from '../../../../common/assets/icons/ReloLogo';
+import ReloLogo from '../../../../common/assets/icons/Logo';
 import Button from '../../../../common/components/Button/Button';
 import SectionContainer from '../../../../common/components/SectionContainer/SectionContainer';
 import {

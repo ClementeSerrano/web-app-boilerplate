@@ -65,13 +65,13 @@ export const themeColors: ThemeColors = {
     superDark: '#4F4900',
   },
   green: {
-    superLight: '#F6FCF4',
-    lighter: '#E3F2E0',
+    superLight: '#F0FFF6',
+    lighter: '#B0FFD1',
     light: '#13f871',
     main: '#00D959',
     dark: '#00b048',
     darker: '#018c3a',
-    superDark: '#002F03',
+    superDark: '#003D19',
   },
   red: {
     superLight: '#FFD9DB',

@@ -7,7 +7,7 @@ import { useDevice } from '../../../contexts/DeviceContext/DeviceContext.hooks';
 import { useLayout } from '../../../contexts/LayoutContext/LayoutContext.hooks';
 import useElementSize from '../../../hooks/useElementSize';
 import MenuIcon from '../../../assets/icons/MenuIcon';
-import ReloLogo from '../../../assets/icons/ReloLogo';
+import ReloLogo from '../../../assets/icons/Logo';
 import { ROUTE_PATHS } from '../../../../routes/routes.constants';
 
 import {
