@@ -7,8 +7,10 @@ import Typography from '../../../../common/components/Typography/Typography';
 import BODashImg from '../../../../common/assets/images/features/bo-dash.png';
 import BOShoppersImg from '../../../../common/assets/images/features/bo-shoppers.png';
 import BOOrdersImg from '../../../../common/assets/images/features/bo-orders.png';
-import GalleryHomeImg from '../../../../common/assets/images/features/gallery-home.png';
-import GalleryProfileImg from '../../../../common/assets/images/features/gallery-profile.png';
+import PortfolioDarkMode from '../../../../common/assets/images/features/portfolio-dark-mode.png';
+import PortfolioMobileDarkMode from '../../../../common/assets/images/features/portfolio-mobile-dark-mode.png';
+import PortfolioLightMode from '../../../../common/assets/images/features/portfolio-light-mode.png';
+import PortfolioMobileLightMode from '../../../../common/assets/images/features/portfolio-mobile-light-mode.png';
 import GalleryCrossSells1Img from '../../../../common/assets/images/features/gallery-crosssells1.png';
 import GalleryCrossSells2Img from '../../../../common/assets/images/features/gallery-crosssells2.png';
 import GalleryCrossSells3Img from '../../../../common/assets/images/features/gallery-crosssells3.png';
@@ -86,7 +88,7 @@ export default function FeaturesSection() {
       <FeaturesSubsectionContainer>
         <FeaturesIconsContainer>
           <FeatureImg
-            src={GalleryHomeImg}
+            src={theme.mode === 'dark' ? PortfolioDarkMode : PortfolioLightMode}
             style={{
               position: 'absolute',
               left: 0,
@@ -97,7 +99,11 @@ export default function FeaturesSection() {
           />
 
           <FeatureImg
-            src={GalleryProfileImg}
+            src={
+              theme.mode === 'dark'
+                ? PortfolioMobileDarkMode
+                : PortfolioMobileLightMode
+            }
             style={{
               position: 'absolute',
               left: 380,
@@ -204,7 +210,7 @@ export default function FeaturesSection() {
       <FeaturesSubsectionContainer>
         <FeaturesIconsContainer>
           <FeatureImg
-            src={GalleryHomeImg}
+            src={theme.mode === 'dark' ? PortfolioDarkMode : PortfolioLightMode}
             style={{
               position: 'absolute',
               left: 0,
@@ -215,7 +221,11 @@ export default function FeaturesSection() {
           />
 
           <FeatureImg
-            src={GalleryProfileImg}
+            src={
+              theme.mode === 'dark'
+                ? PortfolioMobileDarkMode
+                : PortfolioMobileLightMode
+            }
             style={{
               position: 'absolute',
               left: 380,

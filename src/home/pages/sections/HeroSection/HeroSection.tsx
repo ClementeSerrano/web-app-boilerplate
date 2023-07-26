@@ -30,8 +30,8 @@ export default function HeroSection() {
         </HomePageTitle>
 
         <HomePageSubtitle variant="title5" color="level3">
-          Invest in nature-based carbon removal projects for both financial
-          returns and climate impact.
+          Use your money to make an impact. Allocate a part of your portfolio to
+          nature today.
         </HomePageSubtitle>
 
         <HomePageWaitingListButton onClick={waitingListDialog.handleOpen}>
