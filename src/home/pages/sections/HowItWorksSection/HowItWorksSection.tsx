@@ -1,18 +1,19 @@
+import { useTheme } from 'styled-components';
+
 import { useDevice } from '../../../../common/contexts/DeviceContext/DeviceContext.hooks';
 import Typography from '../../../../common/components/Typography/Typography';
 import Card from '../../../../common/components/Card/Card';
 import ValueIcon from '../../../../common/assets/icons/ValueIcon';
 import TeamworkIcon from '../../../../common/assets/icons/TeamworkIcon';
 import BeautifulIcon from '../../../../common/assets/icons/BeautifulIcon';
+import SectionContainer from '../../../../common/components/SectionContainer/SectionContainer';
 
 import {
   CompetitiveAdvantagesCardsContainer,
   CompetitiveAdvantagesIconContainer,
-} from './CompetitiveAdvantages.styles';
-import { useTheme } from 'styled-components';
-import SectionContainer from '../../../../common/components/SectionContainer/SectionContainer';
+} from './HowItWorksSection.styles';
 
-export default function CompetitiveAdvantagesSection() {
+export default function HowItWorksSection() {
   const { isPhone } = useDevice();
   const theme = useTheme();
 
@@ -23,9 +24,7 @@ export default function CompetitiveAdvantagesSection() {
         variant="title3"
         style={{ textAlign: 'center', marginBottom: theme.spacing.lg }}
       >
-        Get high yields <br />
-        by investing in strong <br />
-        climate action stocks.
+        How it works.
       </Typography>
 
       <CompetitiveAdvantagesCardsContainer>

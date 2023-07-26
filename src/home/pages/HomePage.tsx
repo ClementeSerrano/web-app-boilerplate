@@ -1,6 +1,6 @@
-import ProjectsSection from './sections/ProjectsSection/ProjectsSection';
+import ProjectsSection from './sections/ProblemStatementSection/ProblemStatementSection';
 import FeaturesSection from './sections/FeaturesSection/FeaturesSection';
-import CompetitiveAdvantagesSection from './sections/CompetitiveAdvantagesSection/CompetitiveAdvantages';
+import CompetitiveAdvantagesSection from './sections/HowItWorksSection/HowItWorksSection';
 import StartTodaySection from './sections/StartTodaySection/StartTodaySection';
 import HeroSection from './sections/HeroSection/HeroSection';
 

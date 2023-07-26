@@ -46,10 +46,9 @@ export default function FeaturesSection() {
             color="level3"
             style={{ maxWidth: 380 }}
           >
-            By investing in nature-based carbon removal projects, you directly
-            contribute to mitigating climate change, supporting biodiversity &
-            local communities, and helping to create a sustainable future for us
-            all.
+            Directly contribute to mitigating climate change, supporting
+            biodiversity & local communities, and helping to create a
+            sustainable future for us all.
           </Typography>
         </FeaturesTextsContainer>
 
@@ -133,9 +132,9 @@ export default function FeaturesSection() {
               textAlign: isPhone ? 'center' : 'right',
             }}
           >
-            Going green doesn't mean compromising on returns. Invest directly in
-            carefully selected projects that work to combat climate change and
-            have the potential for attractive returns.
+            Going green doesn't mean compromising on returns. Diversify your
+            investment portfolio and invest in projects that have the potential
+            for attractive returns.
           </Typography>
         </FeaturesTextsContainer>
       </FeaturesSubsectionContainer>
@@ -160,10 +159,9 @@ export default function FeaturesSection() {
             color="level3"
             style={{ maxWidth: 380 }}
           >
-            Access to a curated selection of high-impact, nature-based carbon
-            removal projects. From reforestation initiatives to blue carbon
-            schemes, every investment opportunity listed has been rigorously
-            evaluated for both impact and potential returns.
+            A curated selection of high-impact, initiatives, from reforestation
+            to blue carbon schemes. Every investment opportunity listed has been
+            rigorously evaluated for both impact and financial viability.
           </Typography>
         </FeaturesTextsContainer>
 
@@ -201,6 +199,62 @@ export default function FeaturesSection() {
             }}
           />
         </FeaturesIconsContainer>
+      </FeaturesSubsectionContainer>
+
+      <FeaturesSubsectionContainer>
+        <FeaturesIconsContainer>
+          <FeatureImg
+            src={GalleryHomeImg}
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: 0,
+              height: 312,
+              border: `2px solid ${theme.palette.background.level2}`,
+            }}
+          />
+
+          <FeatureImg
+            src={GalleryProfileImg}
+            style={{
+              position: 'absolute',
+              left: 380,
+              top: 28,
+              height: 360,
+              border: `2px solid ${theme.palette.background.level2}`,
+            }}
+          />
+        </FeaturesIconsContainer>
+
+        <FeaturesTextsContainer
+          style={{ alignItems: isPhone ? 'center' : 'flex-end' }}
+        >
+          <Typography
+            as="h1"
+            variant="title3"
+            style={{
+              maxWidth: 380,
+              textAlign: isPhone ? 'center' : 'right',
+              marginBottom: theme.spacing.lg,
+            }}
+          >
+            AI-driven due diligence and impact prediction.
+          </Typography>
+
+          <Typography
+            as="p"
+            variant="title5"
+            color="level3"
+            style={{
+              maxWidth: 380,
+              textAlign: isPhone ? 'center' : 'right',
+            }}
+          >
+            A state-of-the-art predictive AI model that assesses each project
+            against stringent financial and impact viability metrics. This
+            ensures we only work with the highest quality projects.
+          </Typography>
+        </FeaturesTextsContainer>
       </FeaturesSubsectionContainer>
     </SectionContainer>
   );
