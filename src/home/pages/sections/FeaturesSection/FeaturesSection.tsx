@@ -4,8 +4,8 @@ import { useDevice } from '../../../../common/contexts/DeviceContext/DeviceConte
 import SectionContainer from '../../../../common/components/SectionContainer/SectionContainer';
 import Typography from '../../../../common/components/Typography/Typography';
 
-import BODashImg from '../../../../common/assets/images/features/bo-dash.png';
-import BOShoppersImg from '../../../../common/assets/images/features/bo-shoppers.png';
+import ProjectsDarkMode from '../../../../common/assets/images/features/projects-dark-mode.png';
+import ProjectsLightMode from '../../../../common/assets/images/features/projects-light-mode.png';
 import BOOrdersImg from '../../../../common/assets/images/features/bo-orders.png';
 import PortfolioDarkMode from '../../../../common/assets/images/features/portfolio-dark-mode.png';
 import PortfolioMobileDarkMode from '../../../../common/assets/images/features/portfolio-mobile-dark-mode.png';
@@ -56,21 +56,13 @@ export default function FeaturesSection() {
 
         <FeaturesIconsContainer>
           <FeatureImg
-            src={BODashImg}
+            src={theme.mode === 'dark' ? ProjectsDarkMode : ProjectsLightMode}
             style={{
               position: 'absolute',
               top: 0,
-              right: 80,
-              height: 312,
-            }}
-          />
-
-          <FeatureImg
-            src={BOShoppersImg}
-            style={{
-              top: 16,
-              right: 180,
-              height: 360,
+              right: 138,
+              height: 392,
+              border: `2px solid ${theme.palette.background.level2}`,
             }}
           />
 
