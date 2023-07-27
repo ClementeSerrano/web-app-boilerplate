@@ -2,7 +2,6 @@ import { useTheme } from 'styled-components';
 
 import SectionContainer from '../../../../common/components/SectionContainer/SectionContainer';
 import Typography from '../../../../common/components/Typography/Typography';
-import ValueIcon from '../../../../common/assets/icons/ValueIcon';
 
 import {
   ProblemStatementCardsContainer,
@@ -10,6 +9,9 @@ import {
   ProblemStatementIconContainer,
   ProblemStatementCard,
 } from './ProblemStatementSection.styles';
+import DollarSignIcon from '../../../../common/assets/icons/DollarSignIcon';
+import ClockArrowIcon from '../../../../common/assets/icons/ClockArrowIcon';
+import CircledClosedEyeIcon from '../../../../common/assets/icons/CircledClosedEyeIcon';
 
 export default function ProblemStatementSection() {
   const theme = useTheme();
@@ -23,7 +25,7 @@ export default function ProblemStatementSection() {
       <ProblemStatementCardsContainer>
         <ProblemStatementCard>
           <ProblemStatementIconContainer>
-            <ValueIcon height={40} />
+            <DollarSignIcon height={40} color={theme.palette.primary.main} />
           </ProblemStatementIconContainer>
 
           <Typography as="h2" variant="title6">
@@ -33,17 +35,20 @@ export default function ProblemStatementSection() {
 
         <ProblemStatementCard>
           <ProblemStatementIconContainer>
-            <ValueIcon height={44} />
+            <ClockArrowIcon height={40} color={theme.palette.primary.main} />
           </ProblemStatementIconContainer>
           <Typography as="h2" variant="title6">
-            The risk profile of a project is notoriously difficult to price and
-            unstandardised.
+            It’s difficult to assess the risk of a climate project and it takes
+            a long time to estimate it.
           </Typography>
         </ProblemStatementCard>
 
         <ProblemStatementCard>
           <ProblemStatementIconContainer>
-            <ValueIcon height={32} />
+            <CircledClosedEyeIcon
+              height={40}
+              color={theme.palette.primary.main}
+            />
           </ProblemStatementIconContainer>
 
           <Typography as="h2" variant="title6">
