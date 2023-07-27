@@ -6,7 +6,8 @@ import Typography from '../../../../common/components/Typography/Typography';
 
 import ProjectsDarkMode from '../../../../common/assets/images/features/projects-dark-mode.png';
 import ProjectsLightMode from '../../../../common/assets/images/features/projects-light-mode.png';
-import BOOrdersImg from '../../../../common/assets/images/features/bo-orders.png';
+import ProjectPageMobileImgDarkMode from '../../../../common/assets/images/features/project-details-mobile-dark-mode.png';
+import ProjectPageMobileImgLightMode from '../../../../common/assets/images/features/project-details-mobile-light-mode.png';
 import PortfolioDarkMode from '../../../../common/assets/images/features/portfolio-dark-mode.png';
 import PortfolioMobileDarkMode from '../../../../common/assets/images/features/portfolio-mobile-dark-mode.png';
 import PortfolioLightMode from '../../../../common/assets/images/features/portfolio-light-mode.png';
@@ -67,11 +68,16 @@ export default function FeaturesSection() {
           />
 
           <FeatureImg
-            src={BOOrdersImg}
+            src={
+              theme.mode === 'dark'
+                ? ProjectPageMobileImgDarkMode
+                : ProjectPageMobileImgLightMode
+            }
             style={{
               top: 16,
               right: 0,
               height: 360,
+              border: `2px solid ${theme.palette.background.level2}`,
             }}
           />
         </FeaturesIconsContainer>
