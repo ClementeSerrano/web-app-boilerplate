@@ -12,9 +12,8 @@ import PortfolioDarkMode from '../../../../common/assets/images/features/portfol
 import PortfolioMobileDarkMode from '../../../../common/assets/images/features/portfolio-mobile-dark-mode.png';
 import PortfolioLightMode from '../../../../common/assets/images/features/portfolio-light-mode.png';
 import PortfolioMobileLightMode from '../../../../common/assets/images/features/portfolio-mobile-light-mode.png';
-import GalleryCrossSells1Img from '../../../../common/assets/images/features/gallery-crosssells1.png';
-import GalleryCrossSells2Img from '../../../../common/assets/images/features/gallery-crosssells2.png';
-import GalleryCrossSells3Img from '../../../../common/assets/images/features/gallery-crosssells3.png';
+import ProjectsMobileImgDarkMode from '../../../../common/assets/images/features/projects-mobile-dark-mode.png';
+import ProjectsMobileImgLightMode from '../../../../common/assets/images/features/projects-mobile-light-mode.png';
 
 import {
   FeaturesSubsectionContainer,
@@ -171,7 +170,11 @@ export default function FeaturesSection() {
 
         <FeaturesIconsContainer>
           <FeatureImg
-            src={GalleryCrossSells1Img}
+            src={
+              theme.mode === 'dark'
+                ? ProjectsMobileImgDarkMode
+                : ProjectsMobileImgLightMode
+            }
             style={{
               height: 380,
               position: 'absolute',
@@ -182,7 +185,11 @@ export default function FeaturesSection() {
           />
 
           <FeatureImg
-            src={GalleryCrossSells3Img}
+            src={
+              theme.mode === 'dark'
+                ? ProjectsMobileImgDarkMode
+                : ProjectsMobileImgLightMode
+            }
             style={{
               height: 380,
               position: 'absolute',
@@ -193,7 +200,11 @@ export default function FeaturesSection() {
           />
 
           <FeatureImg
-            src={GalleryCrossSells2Img}
+            src={
+              theme.mode === 'dark'
+                ? ProjectsMobileImgDarkMode
+                : ProjectsMobileImgLightMode
+            }
             style={{
               height: 480,
               position: 'absolute',
