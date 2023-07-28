@@ -4,7 +4,7 @@ import { useDialog } from '../../../../common/hooks/useDialog';
 import SectionContainer from '../../../../common/components/SectionContainer/SectionContainer';
 import WaitingListDialog from '../../../../auth/components/WaitingListDialog/WaitingListDialog';
 import ArrowIcon from '../../../../common/assets/icons/ArrowIcon';
-import UserResearchFormButton from '../../../components/UserResearchFormButton/UserResearchFormButton';
+// import UserResearchFormButton from '../../../components/UserResearchFormButton/UserResearchFormButton';
 
 import {
   HomePageSubtitle,
@@ -23,15 +23,15 @@ export default function HeroSection() {
   return (
     <>
       <SectionContainer>
-        <UserResearchFormButton style={{ marginBottom: theme.spacing.sm }} />
+        {/* <UserResearchFormButton style={{ marginBottom: theme.spacing.sm }} /> */}
 
         <HomePageTitle variant="title2">
           Invest your money directly in nature.
         </HomePageTitle>
 
         <HomePageSubtitle variant="title5" color="level3">
-          Use your money to make an impact. Allocate a part of your portfolio to
-          nature today.
+          Use your money to make an impact. <br />
+          Allocate a part of your portfolio to nature today.
         </HomePageSubtitle>
 
         <HomePageWaitingListButton onClick={waitingListDialog.handleOpen}>

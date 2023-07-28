@@ -19,7 +19,7 @@ export default function ProblemStatementSection() {
   return (
     <SectionContainer withSeparator style={{ paddingTop: theme.spacing.md }}>
       <ProblemStatementTitle>
-        Nature is in dire need of your support
+        Democratizing climate investment
       </ProblemStatementTitle>
 
       <ProblemStatementCardsContainer>

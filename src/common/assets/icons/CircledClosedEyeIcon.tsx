@@ -31,7 +31,7 @@ export default function CircledClosedEyeIcon({
       className={className}
       fill="none"
     >
-      <g clip-path="url(#clip0_1007_43)">
+      <g clipPath="url(#clip0_1007_43)">
         <path d={d} fill={color} />
       </g>
 

@@ -17,8 +17,8 @@ export const ProblemStatementCardsContainer = styled.div`
 
 export const ProblemStatementTitle = styled.h1`
   font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.2rem;
+  font-weight: 600;
+  letter-spacing: 0.25rem;
   line-height: 1.5;
   text-transform: uppercase;
   color: ${({ theme }) => theme.palette.primary.main};
