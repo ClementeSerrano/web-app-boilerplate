@@ -10,8 +10,8 @@ import {
   ProblemStatementCard,
 } from './ProblemStatementSection.styles';
 import DollarSignIcon from '../../../../common/assets/icons/DollarSignIcon';
-import ClockArrowIcon from '../../../../common/assets/icons/ClockArrowIcon';
-import CircledClosedEyeIcon from '../../../../common/assets/icons/CircledClosedEyeIcon';
+import DocAndMagnifyingGlass from '../../../../common/assets/icons/DocAndMagnifyingGlass';
+import LockOpenIcon from '../../../../common/assets/icons/LockOpenIcon';
 
 export default function ProblemStatementSection() {
   const theme = useTheme();
@@ -45,7 +45,10 @@ export default function ProblemStatementSection() {
 
         <ProblemStatementCard>
           <ProblemStatementIconContainer>
-            <ClockArrowIcon height={40} color={theme.palette.primary.main} />
+            <DocAndMagnifyingGlass
+              height={40}
+              color={theme.palette.primary.main}
+            />
           </ProblemStatementIconContainer>
           <Typography
             as="h2"
@@ -64,10 +67,7 @@ export default function ProblemStatementSection() {
 
         <ProblemStatementCard>
           <ProblemStatementIconContainer>
-            <CircledClosedEyeIcon
-              height={40}
-              color={theme.palette.primary.main}
-            />
+            <LockOpenIcon height={40} color={theme.palette.primary.main} />
           </ProblemStatementIconContainer>
           <Typography
             as="h2"
