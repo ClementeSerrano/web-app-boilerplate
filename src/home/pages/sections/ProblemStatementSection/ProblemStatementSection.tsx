@@ -28,8 +28,18 @@ export default function ProblemStatementSection() {
             <DollarSignIcon height={40} color={theme.palette.primary.main} />
           </ProblemStatementIconContainer>
 
-          <Typography as="h2" variant="title6">
-            Investing in nature requires deep pockets and is highly complex.
+          <Typography
+            as="h2"
+            variant="title6"
+            style={{ marginBottom: theme.spacing.sm }}
+          >
+            Making Climate Investment Accessible.
+          </Typography>
+
+          <Typography as="h2" variant="paragraph1">
+            Forget about needing deep pockets or navigating complexity. With
+            Climevest, we make climate investment possible for every budget and
+            understanding level.
           </Typography>
         </ProblemStatementCard>
 
@@ -37,9 +47,18 @@ export default function ProblemStatementSection() {
           <ProblemStatementIconContainer>
             <ClockArrowIcon height={40} color={theme.palette.primary.main} />
           </ProblemStatementIconContainer>
-          <Typography as="h2" variant="title6">
-            It’s difficult to assess the risk of a climate project and it takes
-            a long time to estimate it.
+          <Typography
+            as="h2"
+            variant="title6"
+            style={{ marginBottom: theme.spacing.sm }}
+          >
+            Risk Assessment Made Simple
+          </Typography>
+
+          <Typography as="h2" variant="paragraph1">
+            Estimating risk doesn't have to be a marathon. Our robust platform
+            provides easy-to-understand risk assessments for every project,
+            saving you time and providing peace of mind.
           </Typography>
         </ProblemStatementCard>
 
@@ -50,10 +69,18 @@ export default function ProblemStatementSection() {
               color={theme.palette.primary.main}
             />
           </ProblemStatementIconContainer>
+          <Typography
+            as="h2"
+            variant="title6"
+            style={{ marginBottom: theme.spacing.sm }}
+          >
+            Unrestricted Access to Quality Projects
+          </Typography>
 
-          <Typography as="h2" variant="title6">
-            Access to high quality projects is limited and out of reach for the
-            average & sophisticated investor.
+          <Typography as="h2" variant="paragraph1">
+            Don't be limited by your investor status. Climevest levels the
+            playing field, providing unrestricted access to high-quality climate
+            projects for both average and sophisticated investors.
           </Typography>
         </ProblemStatementCard>
       </ProblemStatementCardsContainer>

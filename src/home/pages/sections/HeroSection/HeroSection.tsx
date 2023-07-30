@@ -22,7 +22,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <SectionContainer>
+      <SectionContainer style={{ paddingBottom: theme.spacing.xl }}>
         {/* <UserResearchFormButton style={{ marginBottom: theme.spacing.sm }} /> */}
 
         <HomePageTitle variant="title2">
