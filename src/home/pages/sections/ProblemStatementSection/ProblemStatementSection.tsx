@@ -33,13 +33,11 @@ export default function ProblemStatementSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Making Climate Investment Accessible.
+            Big impact with small amounts
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Forget about needing deep pockets or navigating complexity. With
-            Climevest, we make climate investment possible for every budget and
-            understanding level.
+            Investing in nature requires deep pockets. With ClimeInvest, you can invest as much as your wallet allows. 
           </Typography>
         </ProblemStatementCard>
 
@@ -55,13 +53,11 @@ export default function ProblemStatementSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Risk Assessment Made Simple
+            No nature expertise required
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Estimating risk doesn't have to be a marathon. Our robust platform
-            provides easy-to-understand risk assessments for every project,
-            saving you time and providing peace of mind.
+            At ClimeInvest, we vet each project with our predictive AI built by climate scientists to provide you with a risk assessment you understand.
           </Typography>
         </ProblemStatementCard>
 
@@ -74,13 +70,11 @@ export default function ProblemStatementSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Unrestricted Access to Quality Projects
+            Simple investment structures
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Don't be limited by your investor status. Climevest levels the
-            playing field, providing unrestricted access to high-quality climate
-            projects for both average and sophisticated investors.
+            Traditional nature investing is highly complex. ClimeInvest has standard investment structures that provide fast financing to projects.
           </Typography>
         </ProblemStatementCard>
       </ProblemStatementCardsContainer>

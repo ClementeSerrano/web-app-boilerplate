@@ -137,7 +137,7 @@ export default function FeaturesSection() {
           >
             Going green doesn't mean compromising on returns. Diversify your
             investment portfolio and invest in projects that have the potential
-            for attractive returns.
+            for attractive returns and earn 2-4x on average.
           </Typography>
         </FeaturesTextsContainer>
       </FeaturesSubsectionContainer>

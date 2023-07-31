@@ -24,12 +24,11 @@ export default function StartTodaySection() {
       />
 
       <StartTodayTitle variant="title2">
-        Start today with Climevest
+        Project developer? Raise financing today
       </StartTodayTitle>
 
       <StartTodaySubtitle variant="title5" color="level3">
-        We are the most convenient platform for entrepreneurs. State-of-the-art
-        technology to grow your project.
+        We are revolutionising the way nature investments are made. Get in touch if you are raising financing to build your nature project.
       </StartTodaySubtitle>
 
       <Button

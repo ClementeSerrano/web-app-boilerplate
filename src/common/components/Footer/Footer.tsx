@@ -61,14 +61,14 @@ export default function Footer() {
         <FooterSectionsContainer>
           <FooterSocialMediaLink
             target="_blank"
-            href="https://www.instagram.com/climevest/"
+            href="https://www.instagram.com/climeinvest.official"
           >
             <InstagramIcon height={24} format="fill" />
           </FooterSocialMediaLink>
 
           <FooterSocialMediaLink
             target="_blank"
-            href="https://twitter.com/climevest"
+            href="https://twitter.com/climeinvest"
           >
             <TwitterIcon height={24} format="fill" />
           </FooterSocialMediaLink>

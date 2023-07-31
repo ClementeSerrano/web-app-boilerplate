@@ -30,7 +30,7 @@ export default function HeroSection() {
         </HomePageTitle>
 
         <HomePageSubtitle variant="title5" color="level3">
-          Use your money to make an impact. <br />
+          You can help save nature. <br />
           Allocate a part of your portfolio to nature today.
         </HomePageSubtitle>
 
