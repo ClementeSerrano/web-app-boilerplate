@@ -50,7 +50,10 @@ export default function FeaturesSection() {
             as="p"
             variant="title5"
             color="level3"
-            style={{ maxWidth: 380 }}
+            style={{
+              maxWidth: 380,
+              textAlign: isPhone ? 'center' : 'left',
+            }}
           >
             Directly contribute to mitigating climate change, supporting
             biodiversity & local communities, and helping to create a
@@ -131,7 +134,10 @@ export default function FeaturesSection() {
             as="p"
             variant="title5"
             color="level3"
-            style={{ maxWidth: 380 }}
+            style={{
+              maxWidth: 380,
+              textAlign: isPhone ? 'center' : 'left',
+            }}
           >
             A curated selection of high-impact, initiatives, from reforestation
             to blue carbon schemes. Every investment opportunity listed has been

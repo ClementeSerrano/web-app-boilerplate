@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const FeaturesSubsectionContainer = styled.div`
   display: flex;
-  // position: relative;
   margin-top: 80px;
   justify-content: space-between;
   align-items: center;

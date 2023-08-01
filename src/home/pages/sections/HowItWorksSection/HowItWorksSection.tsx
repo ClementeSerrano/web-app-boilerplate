@@ -36,7 +36,10 @@ export default function HowItWorksSection() {
             <Typography
               as="h1"
               variant="title4"
-              style={{ color: theme.palette.primary.main }}
+              style={{
+                color: theme.palette.primary.main,
+                fontWeight: theme.typography.fontWeights.bold,
+              }}
             >
               1.
             </Typography>
@@ -67,7 +70,10 @@ export default function HowItWorksSection() {
             <Typography
               as="h1"
               variant="title4"
-              style={{ color: theme.palette.primary.main }}
+              style={{
+                color: theme.palette.primary.main,
+                fontWeight: theme.typography.fontWeights.bold,
+              }}
             >
               2.
             </Typography>
@@ -98,7 +104,10 @@ export default function HowItWorksSection() {
             <Typography
               as="h1"
               variant="title4"
-              style={{ color: theme.palette.primary.main }}
+              style={{
+                color: theme.palette.primary.main,
+                fontWeight: theme.typography.fontWeights.bold,
+              }}
             >
               3.
             </Typography>
@@ -109,7 +118,7 @@ export default function HowItWorksSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            SVV Management.
+            SPV Management.
           </Typography>
 
           <Typography as="p" variant="paragraph1" color="level3">
@@ -129,7 +138,10 @@ export default function HowItWorksSection() {
             <Typography
               as="h1"
               variant="title4"
-              style={{ color: theme.palette.primary.main }}
+              style={{
+                color: theme.palette.primary.main,
+                fontWeight: theme.typography.fontWeights.bold,
+              }}
             >
               4.
             </Typography>
@@ -160,7 +172,10 @@ export default function HowItWorksSection() {
             <Typography
               as="h1"
               variant="title4"
-              style={{ color: theme.palette.primary.main }}
+              style={{
+                color: theme.palette.primary.main,
+                fontWeight: theme.typography.fontWeights.bold,
+              }}
             >
               5.
             </Typography>
