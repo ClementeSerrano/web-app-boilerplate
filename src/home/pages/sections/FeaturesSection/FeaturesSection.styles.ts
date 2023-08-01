@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const FeaturesSubsectionContainer = styled.div`
   display: flex;
-  position: relative;
+  // position: relative;
   margin-top: 80px;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   max-width: 1200px;
   margin: auto;
@@ -35,9 +36,14 @@ export const FeaturesTextsContainer = styled.div`
   }
 `;
 
-export const FeaturesIconsContainer = styled.div`
-  flex: 0.4;
+export const FeaturesMockupsContainer = styled.div<{
+  position?: 'left' | 'right';
+}>`
   position: relative;
+  display: flex;
+  flex: 1;
+  justify-content: ${({ position }) =>
+    position === 'right' ? 'flex-end' : 'flex-start'};
 
   @media (max-width: 600px) {
     display: none;
@@ -45,8 +51,8 @@ export const FeaturesIconsContainer = styled.div`
 `;
 
 export const FeatureImg = styled.img`
-  position: absolute;
-  height: 400px;
+  height: 480px;
   border-radius: 12px;
-  box-shadow: rgb(0 0 0 / 11%) 0px 1px 20px 3px;
+  box-shadow: 0px 16px 70px 0px rgba(0, 0, 0, 0.2);
+  border: 2px solid ${({ theme }) => theme.palette.background.level2};
 `;

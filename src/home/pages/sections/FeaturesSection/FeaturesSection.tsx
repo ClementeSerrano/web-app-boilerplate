@@ -14,11 +14,13 @@ import PortfolioLightMode from '../../../../common/assets/images/features/portfo
 import PortfolioMobileLightMode from '../../../../common/assets/images/features/portfolio-mobile-light-mode.png';
 import ProjectsMobileImgDarkMode from '../../../../common/assets/images/features/projects-mobile-dark-mode.png';
 import ProjectsMobileImgLightMode from '../../../../common/assets/images/features/projects-mobile-light-mode.png';
+import BuyTokensMobileImgDarkMode from '../../../../common/assets/images/features/buy-tokens-mobile-dark-mode.png';
+import BuyTokensMobileImgLightMode from '../../../../common/assets/images/features/buy-tokens-mobile-light-mode.png';
 
 import {
   FeaturesSubsectionContainer,
   FeaturesTextsContainer,
-  FeaturesIconsContainer,
+  FeaturesMockupsContainer,
   FeatureImg,
 } from './FeaturesSection.styles';
 
@@ -54,45 +56,18 @@ export default function FeaturesSection() {
           </Typography>
         </FeaturesTextsContainer>
 
-        <FeaturesIconsContainer>
+        <FeaturesMockupsContainer position="right">
           <FeatureImg
             src={theme.mode === 'dark' ? ProjectsDarkMode : ProjectsLightMode}
-            style={{
-              position: 'absolute',
-              top: 0,
-              right: 138,
-              height: 392,
-              border: `2px solid ${theme.palette.background.level2}`,
-            }}
+            style={{ height: 480 }}
           />
-
-          <FeatureImg
-            src={
-              theme.mode === 'dark'
-                ? ProjectPageMobileImgDarkMode
-                : ProjectPageMobileImgLightMode
-            }
-            style={{
-              top: 16,
-              right: 0,
-              height: 360,
-              border: `2px solid ${theme.palette.background.level2}`,
-            }}
-          />
-        </FeaturesIconsContainer>
+        </FeaturesMockupsContainer>
       </FeaturesSubsectionContainer>
 
       <FeaturesSubsectionContainer>
-        <FeaturesIconsContainer>
+        <FeaturesMockupsContainer position="left">
           <FeatureImg
             src={theme.mode === 'dark' ? PortfolioDarkMode : PortfolioLightMode}
-            style={{
-              position: 'absolute',
-              left: 0,
-              top: 0,
-              height: 312,
-              border: `2px solid ${theme.palette.background.level2}`,
-            }}
           />
 
           <FeatureImg
@@ -101,15 +76,9 @@ export default function FeaturesSection() {
                 ? PortfolioMobileDarkMode
                 : PortfolioMobileLightMode
             }
-            style={{
-              position: 'absolute',
-              left: 380,
-              top: 28,
-              height: 360,
-              border: `2px solid ${theme.palette.background.level2}`,
-            }}
+            style={{ position: 'absolute', right: 88, top: 24 }}
           />
-        </FeaturesIconsContainer>
+        </FeaturesMockupsContainer>
 
         <FeaturesTextsContainer
           style={{ alignItems: isPhone ? 'center' : 'flex-end' }}
@@ -168,35 +137,14 @@ export default function FeaturesSection() {
           </Typography>
         </FeaturesTextsContainer>
 
-        <FeaturesIconsContainer>
-          <FeatureImg
-            src={
-              theme.mode === 'dark'
-                ? ProjectPageMobileImgDarkMode
-                : ProjectPageMobileImgLightMode
-            }
-            style={{
-              height: 380,
-              position: 'absolute',
-              bottom: 0,
-              right: 0,
-              border: `2px solid ${theme.palette.background.level2}`,
-            }}
-          />
-
+        <FeaturesMockupsContainer position="right">
           <FeatureImg
             src={
               theme.mode === 'dark'
                 ? ProjectsMobileImgDarkMode
                 : ProjectsMobileImgLightMode
             }
-            style={{
-              height: 380,
-              position: 'absolute',
-              bottom: 0,
-              right: 431,
-              border: `2px solid ${theme.palette.background.level2}`,
-            }}
+            style={{ marginRight: 16 }}
           />
 
           <FeatureImg
@@ -205,28 +153,23 @@ export default function FeaturesSection() {
                 ? ProjectPageMobileImgDarkMode
                 : ProjectPageMobileImgLightMode
             }
-            style={{
-              height: 480,
-              position: 'absolute',
-              bottom: 0,
-              right: 192,
-              border: `2px solid ${theme.palette.background.level2}`,
-            }}
+            style={{ marginRight: 16 }}
           />
-        </FeaturesIconsContainer>
+
+          <FeatureImg
+            src={
+              theme.mode === 'dark'
+                ? BuyTokensMobileImgDarkMode
+                : BuyTokensMobileImgLightMode
+            }
+          />
+        </FeaturesMockupsContainer>
       </FeaturesSubsectionContainer>
 
       <FeaturesSubsectionContainer>
-        <FeaturesIconsContainer>
+        <FeaturesMockupsContainer position="left">
           <FeatureImg
             src={theme.mode === 'dark' ? PortfolioDarkMode : PortfolioLightMode}
-            style={{
-              position: 'absolute',
-              left: 0,
-              top: 0,
-              height: 312,
-              border: `2px solid ${theme.palette.background.level2}`,
-            }}
           />
 
           <FeatureImg
@@ -235,15 +178,9 @@ export default function FeaturesSection() {
                 ? PortfolioMobileDarkMode
                 : PortfolioMobileLightMode
             }
-            style={{
-              position: 'absolute',
-              left: 380,
-              top: 28,
-              height: 360,
-              border: `2px solid ${theme.palette.background.level2}`,
-            }}
+            style={{ position: 'absolute', right: 88, top: 24 }}
           />
-        </FeaturesIconsContainer>
+        </FeaturesMockupsContainer>
 
         <FeaturesTextsContainer
           style={{ alignItems: isPhone ? 'center' : 'flex-end' }}
