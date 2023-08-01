@@ -50,7 +50,7 @@ export default function HowItWorksSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Access list of projects.
+            Access vetted projects
           </Typography>
 
           <Typography as="p" variant="paragraph1" color="level3">
@@ -84,7 +84,7 @@ export default function HowItWorksSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Choose project.
+            Choose a project
           </Typography>
 
           <Typography as="p" variant="paragraph1" color="level3">
@@ -118,12 +118,12 @@ export default function HowItWorksSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            SPV Management.
+            ClimeInvest pools the funds
           </Typography>
 
           <Typography as="p" variant="paragraph1" color="level3">
             We pool all the investor funds together and invest in the project
-            through an SPV.
+            through an SPV structure.
           </Typography>
         </Card>
 
@@ -152,7 +152,7 @@ export default function HowItWorksSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Monitor project & investment.
+            Ongoing monitoring
           </Typography>
 
           <Typography as="p" variant="paragraph1" color="level3">
@@ -186,7 +186,7 @@ export default function HowItWorksSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Exit investment.
+            Exit your investment
           </Typography>
 
           <Typography as="p" variant="paragraph1" color="level3">
