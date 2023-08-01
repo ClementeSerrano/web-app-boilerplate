@@ -172,8 +172,8 @@ export default function FeaturesSection() {
           <FeatureImg
             src={
               theme.mode === 'dark'
-                ? ProjectsMobileImgDarkMode
-                : ProjectsMobileImgLightMode
+                ? ProjectPageMobileImgDarkMode
+                : ProjectPageMobileImgLightMode
             }
             style={{
               height: 380,
@@ -202,8 +202,8 @@ export default function FeaturesSection() {
           <FeatureImg
             src={
               theme.mode === 'dark'
-                ? ProjectsMobileImgDarkMode
-                : ProjectsMobileImgLightMode
+                ? ProjectPageMobileImgDarkMode
+                : ProjectPageMobileImgLightMode
             }
             style={{
               height: 480,
