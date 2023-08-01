@@ -16,6 +16,8 @@ import ProjectsMobileImgDarkMode from '../../../../common/assets/images/features
 import ProjectsMobileImgLightMode from '../../../../common/assets/images/features/projects-mobile-light-mode.png';
 import BuyTokensMobileImgDarkMode from '../../../../common/assets/images/features/buy-tokens-mobile-dark-mode.png';
 import BuyTokensMobileImgLightMode from '../../../../common/assets/images/features/buy-tokens-mobile-light-mode.png';
+import AIVerificationMobileImgDarkMode from '../../../../common/assets/images/features/ai-verification-mobile-dark-mode.png';
+import AIVerificationMobileImgLightMode from '../../../../common/assets/images/features/ai-verification-mobile-light-mode.png';
 
 import {
   FeaturesSubsectionContainer,
@@ -175,8 +177,8 @@ export default function FeaturesSection() {
           <FeatureImg
             src={
               theme.mode === 'dark'
-                ? PortfolioMobileDarkMode
-                : PortfolioMobileLightMode
+                ? AIVerificationMobileImgDarkMode
+                : AIVerificationMobileImgLightMode
             }
             style={{ position: 'absolute', right: 88, top: 24 }}
           />
