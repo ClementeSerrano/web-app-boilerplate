@@ -3,9 +3,6 @@ import { useTheme } from 'styled-components';
 import { useDevice } from '../../../../common/contexts/DeviceContext/DeviceContext.hooks';
 import Typography from '../../../../common/components/Typography/Typography';
 import Card from '../../../../common/components/Card/Card';
-import ValueIcon from '../../../../common/assets/icons/ValueIcon';
-import TeamworkIcon from '../../../../common/assets/icons/TeamworkIcon';
-import BeautifulIcon from '../../../../common/assets/icons/BeautifulIcon';
 import SectionContainer from '../../../../common/components/SectionContainer/SectionContainer';
 
 import {
@@ -36,7 +33,13 @@ export default function HowItWorksSection() {
           }}
         >
           <CompetitiveAdvantagesIconContainer>
-            <ValueIcon height={40} />
+            <Typography
+              as="h1"
+              variant="title4"
+              style={{ color: theme.palette.primary.main }}
+            >
+              1.
+            </Typography>
           </CompetitiveAdvantagesIconContainer>
 
           <Typography
@@ -44,13 +47,12 @@ export default function HowItWorksSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Curated climate projects.
+            Access list of projects.
           </Typography>
 
           <Typography as="p" variant="paragraph1" color="level3">
-            Grafito is made up only by local creators. With us you will find
-            projects with unique proposals and with highly creative & exclusive
-            products.
+            You can access the list of projects currently available for funding
+            and view all the impact and financial details.
           </Typography>
         </Card>
 
@@ -62,7 +64,13 @@ export default function HowItWorksSection() {
           }}
         >
           <CompetitiveAdvantagesIconContainer>
-            <TeamworkIcon height={44} />
+            <Typography
+              as="h1"
+              variant="title4"
+              style={{ color: theme.palette.primary.main }}
+            >
+              2.
+            </Typography>
           </CompetitiveAdvantagesIconContainer>
 
           <Typography
@@ -70,13 +78,12 @@ export default function HowItWorksSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Community oriented.
+            Choose project.
           </Typography>
 
-          {/* Add: we help each other and work together (more teamwork oriented). */}
           <Typography as="p" variant="paragraph1" color="level3">
-            We are a community who believe in the local value, supports it and
-            contribute to make it growth and competitive.
+            Choose a project to invest in that matches your impact and financial
+            expectations.
           </Typography>
         </Card>
 
@@ -88,7 +95,13 @@ export default function HowItWorksSection() {
           }}
         >
           <CompetitiveAdvantagesIconContainer>
-            <BeautifulIcon height={32} />
+            <Typography
+              as="h1"
+              variant="title4"
+              style={{ color: theme.palette.primary.main }}
+            >
+              3.
+            </Typography>
           </CompetitiveAdvantagesIconContainer>
 
           <Typography
@@ -96,13 +109,12 @@ export default function HowItWorksSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Beautiful and easy to use.
+            SVV Management.
           </Typography>
 
           <Typography as="p" variant="paragraph1" color="level3">
-            Intuitive, robust and meticulous designed features to unlock your
-            project's potential and give your followers a fresh shopping
-            experience.
+            We pool all the investor funds together and invest in the project
+            through an SPV.
           </Typography>
         </Card>
 
@@ -114,7 +126,13 @@ export default function HowItWorksSection() {
           }}
         >
           <CompetitiveAdvantagesIconContainer>
-            <ValueIcon height={40} />
+            <Typography
+              as="h1"
+              variant="title4"
+              style={{ color: theme.palette.primary.main }}
+            >
+              4.
+            </Typography>
           </CompetitiveAdvantagesIconContainer>
 
           <Typography
@@ -122,13 +140,12 @@ export default function HowItWorksSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Curated climate projects.
+            Monitor project & investment.
           </Typography>
 
           <Typography as="p" variant="paragraph1" color="level3">
-            Grafito is made up only by local creators. With us you will find
-            projects with unique proposals and with highly creative & exclusive
-            products.
+            Once invested, you can monitor the impact and financial status of
+            the projects and see the value of your portfolio.
           </Typography>
         </Card>
 
@@ -140,7 +157,13 @@ export default function HowItWorksSection() {
           }}
         >
           <CompetitiveAdvantagesIconContainer>
-            <TeamworkIcon height={44} />
+            <Typography
+              as="h1"
+              variant="title4"
+              style={{ color: theme.palette.primary.main }}
+            >
+              5.
+            </Typography>
           </CompetitiveAdvantagesIconContainer>
 
           <Typography
@@ -148,39 +171,12 @@ export default function HowItWorksSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Community oriented.
-          </Typography>
-
-          {/* Add: we help each other and work together (more teamwork oriented). */}
-          <Typography as="p" variant="paragraph1" color="level3">
-            We are a community who believe in the local value, supports it and
-            contribute to make it growth and competitive.
-          </Typography>
-        </Card>
-
-        <Card
-          style={{
-            padding: isPhone ? '32px 24px' : '32px 52px',
-            alignItems: isPhone ? 'center' : 'unset',
-            backgroundColor: theme.palette.background.level2,
-          }}
-        >
-          <CompetitiveAdvantagesIconContainer>
-            <BeautifulIcon height={32} />
-          </CompetitiveAdvantagesIconContainer>
-
-          <Typography
-            as="h2"
-            variant="title6"
-            style={{ marginBottom: theme.spacing.sm }}
-          >
-            Beautiful and easy to use.
+            Exit investment.
           </Typography>
 
           <Typography as="p" variant="paragraph1" color="level3">
-            Intuitive, robust and meticulous designed features to unlock your
-            project's potential and give your followers a fresh shopping
-            experience.
+            If needed, exit your investment on our internal marketplace or wait
+            till we sell the entire stake in the project.
           </Typography>
         </Card>
       </CompetitiveAdvantagesCardsContainer>
