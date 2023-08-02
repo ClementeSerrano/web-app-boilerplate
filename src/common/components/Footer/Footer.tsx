@@ -43,7 +43,7 @@ export default function Footer() {
             variant="paragraph1"
             style={{ margin: '0', textAlign: isPhone ? 'center' : 'left' }}
           >
-            © {copyrightYear} ClimeInvest {isPhone && '- Designed Worldwide.'}
+            © {copyrightYear} Climeinvest {isPhone && '- Designed Worldwide.'}
           </Typography>
         </FooterCopyrightContainer>
 

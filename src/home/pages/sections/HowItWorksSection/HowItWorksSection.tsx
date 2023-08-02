@@ -118,7 +118,7 @@ export default function HowItWorksSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            ClimeInvest pools the funds
+            Climeinvest pools the funds
           </Typography>
 
           <Typography as="p" variant="paragraph1" color="level3">

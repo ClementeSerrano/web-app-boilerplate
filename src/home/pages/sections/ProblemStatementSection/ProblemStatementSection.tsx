@@ -37,7 +37,8 @@ export default function ProblemStatementSection() {
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Investing in nature requires deep pockets. With ClimeInvest, you can invest as much as your wallet allows. 
+            Investing in nature requires deep pockets. With Climeinvest, you can
+            invest as much as your wallet allows.
           </Typography>
         </ProblemStatementCard>
 
@@ -57,7 +58,9 @@ export default function ProblemStatementSection() {
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            At ClimeInvest, we vet each project with our predictive AI built by climate scientists to provide you with a risk assessment you understand.
+            At Climeinvest, we vet each project with our predictive AI built by
+            climate scientists to provide you with a risk assessment you
+            understand.
           </Typography>
         </ProblemStatementCard>
 
@@ -74,7 +77,9 @@ export default function ProblemStatementSection() {
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Traditional nature investing is highly complex. ClimeInvest has standard investment structures that provide fast financing to projects.
+            Traditional nature investing is highly complex. Climeinvest has
+            standard investment structures that provide fast financing to
+            projects.
           </Typography>
         </ProblemStatementCard>
       </ProblemStatementCardsContainer>
