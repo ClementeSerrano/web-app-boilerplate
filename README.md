@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="https://climeinvest.co/" target="blank"><img src="https://i.postimg.cc/Pxn1BCXF/Isotype-rounded.png" width="200" alt="Climeinvest Logo" /></a>
+  <a href="https://climeinvest.com/" target="blank"><img src="https://i.postimg.cc/W1G2SGqz/Isotype-rounded.png" width="200" alt="ClimeInvest Logo" /></a>
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">Climevest - First class climate assets investments.</p>
+  <p align="center">ClimeInvest - Invest in nature assets.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
@@ -24,7 +24,7 @@
 
 ## Description
 
-Climevest LP repository.
+ClimeInvest LP repository.
 
 ## Prerequisites
 
@@ -113,8 +113,7 @@ Each new release of major, minor or patches versions of Climeinvest follow a rel
 ## Stay in touch
 
 - Author - [Clemente Sutil](https://github.com/ClementeSerrano)
-- Website - [https://climeinvest.co](https://climeinvest.co)
-- Twitter - [@Climevest](https://twitter.com/Climevest)
+- Website - [https://climeinvest.com](https://climeinvest.com)
 
 ## License
 

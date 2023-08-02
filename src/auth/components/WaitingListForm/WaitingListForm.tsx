@@ -8,7 +8,10 @@ import {
   WaitingListFormContainer,
   WaitingListSubmitButton,
 } from './WaitingListForm.styles';
-import { WaitingListFormProps } from './WaitingListForm.interfaces';
+import {
+  WaitingListFormProps,
+  WaitingListFormValues,
+} from './WaitingListForm.interfaces';
 
 /**
  * Form to join the waiting list of the platform launch.
@@ -27,11 +30,12 @@ export default function WaitingListForm({
     onError: error => onError && onError(error),
   });
 
-  const form = useFormik({
+  const form = useFormik<WaitingListFormValues>({
     initialValues: {
       email: '',
       firstname: '',
       lastname: '',
+      preferredInvestmentAmount: 0,
     },
     onSubmit(values) {
       waitingListRegisterMutation({ variables: values });
@@ -70,6 +74,18 @@ export default function WaitingListForm({
         variant="filled"
         label="Last name"
         placeholder="Enter your last name"
+        style={{ container: { marginBottom: theme.spacing.sm } }}
+      />
+
+      <TextField
+        id="preferredInvestmentAmount"
+        name="preferredInvestmentAmount"
+        type="number"
+        value={form.values.preferredInvestmentAmount}
+        onChange={form.handleChange}
+        variant="filled"
+        label="Amount you’d like to invest (EUR)"
+        placeholder="Amount you’d like to invest"
         style={{ container: { marginBottom: theme.spacing.sm } }}
       />
 

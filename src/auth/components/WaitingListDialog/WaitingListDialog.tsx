@@ -56,7 +56,7 @@ export default function WaitingListDialog({
       <>
         <Typography as="legend" variant="paragraph1" color="level3">
           By submitting this form, you will join our waitlist to get early
-          access to Climeinvest.
+          access to ClimeInvest.
         </Typography>
 
         <WaitingListForm onCompleted={() => setFormSubmitted(true)} />
@@ -67,7 +67,7 @@ export default function WaitingListDialog({
   return (
     <Dialog show={show} style={{ maxWidth: theme.breakpoints.values.sm }}>
       <Dialog.Header>
-        <Dialog.Title>Join the Waitlist</Dialog.Title>
+        <Dialog.Title>Sign up</Dialog.Title>
         <Dialog.Close onClick={handleClose} />
       </Dialog.Header>
 

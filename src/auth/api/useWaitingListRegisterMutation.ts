@@ -12,11 +12,13 @@ const WAITING_LIST_REGISTER_MUTATION = gql(/* GraphQL */ `
     $email: String!
     $firstname: String
     $lastname: String
+    $preferredInvestmentAmount: Int
   ) {
     waitingListRegister(
       email: $email
       firstname: $firstname
       lastname: $lastname
+      preferredInvestmentAmount: $preferredInvestmentAmount
     ) {
       accessToken
     }

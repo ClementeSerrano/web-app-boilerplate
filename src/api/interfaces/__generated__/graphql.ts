@@ -45,6 +45,7 @@ export type AuthProfile = {
   lastname?: Maybe<Scalars['String']['output']>;
   oauthId?: Maybe<Scalars['ID']['output']>;
   preferences?: Maybe<Array<Scalars['String']['output']>>;
+  preferredInvestmentAmount?: Maybe<Scalars['Int']['output']>;
   updatedAt: Scalars['DateTime']['output'];
   userId: Scalars['String']['output'];
   username: Scalars['String']['output'];
@@ -126,7 +127,7 @@ export type MutationCreateUserArgs = {
   firstname?: InputMaybe<Scalars['String']['input']>;
   lastname?: InputMaybe<Scalars['String']['input']>;
   password?: InputMaybe<Scalars['String']['input']>;
-  preferences?: InputMaybe<Array<Scalars['String']['input']>>;
+  preferredInvestmentAmount?: InputMaybe<Scalars['Int']['input']>;
   username: Scalars['String']['input'];
 };
 
@@ -135,6 +136,7 @@ export type MutationWaitingListRegisterArgs = {
   email: Scalars['String']['input'];
   firstname?: InputMaybe<Scalars['String']['input']>;
   lastname?: InputMaybe<Scalars['String']['input']>;
+  preferredInvestmentAmount?: InputMaybe<Scalars['Int']['input']>;
 };
 
 /** Place object type. */
@@ -183,6 +185,7 @@ export type User = {
   lastname?: Maybe<Scalars['String']['output']>;
   oauthId?: Maybe<Scalars['ID']['output']>;
   preferences?: Maybe<Array<Scalars['String']['output']>>;
+  preferredInvestmentAmount?: Maybe<Scalars['Int']['output']>;
   updatedAt: Scalars['DateTime']['output'];
   username: Scalars['String']['output'];
 };
@@ -191,10 +194,11 @@ export type WaitingListRegisterMutationVariables = Exact<{
   email: Scalars['String']['input'];
   firstname?: InputMaybe<Scalars['String']['input']>;
   lastname?: InputMaybe<Scalars['String']['input']>;
+  preferredInvestmentAmount?: InputMaybe<Scalars['Int']['input']>;
 }>;
 
 
 export type WaitingListRegisterMutation = { __typename?: 'Mutation', waitingListRegister: { __typename?: 'Auth', accessToken: string } };
 
 
-export const WaitingListRegisterDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"WaitingListRegister"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"email"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"firstname"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"lastname"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"waitingListRegister"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"email"},"value":{"kind":"Variable","name":{"kind":"Name","value":"email"}}},{"kind":"Argument","name":{"kind":"Name","value":"firstname"},"value":{"kind":"Variable","name":{"kind":"Name","value":"firstname"}}},{"kind":"Argument","name":{"kind":"Name","value":"lastname"},"value":{"kind":"Variable","name":{"kind":"Name","value":"lastname"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"accessToken"}}]}}]}}]} as unknown as DocumentNode<WaitingListRegisterMutation, WaitingListRegisterMutationVariables>;
+export const WaitingListRegisterDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"WaitingListRegister"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"email"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"firstname"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"lastname"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"preferredInvestmentAmount"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"waitingListRegister"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"email"},"value":{"kind":"Variable","name":{"kind":"Name","value":"email"}}},{"kind":"Argument","name":{"kind":"Name","value":"firstname"},"value":{"kind":"Variable","name":{"kind":"Name","value":"firstname"}}},{"kind":"Argument","name":{"kind":"Name","value":"lastname"},"value":{"kind":"Variable","name":{"kind":"Name","value":"lastname"}}},{"kind":"Argument","name":{"kind":"Name","value":"preferredInvestmentAmount"},"value":{"kind":"Variable","name":{"kind":"Name","value":"preferredInvestmentAmount"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"accessToken"}}]}}]}}]} as unknown as DocumentNode<WaitingListRegisterMutation, WaitingListRegisterMutationVariables>;
