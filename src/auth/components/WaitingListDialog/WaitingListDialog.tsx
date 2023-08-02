@@ -36,9 +36,10 @@ export default function WaitingListDialog({
               <Typography
                 as="a"
                 variant="link"
-                href="https://mb1n22472ic.typeform.com/to/Lw9dJfOz"
+                href="https://3uzljrqqoz4.typeform.com/to/evVBKAwP"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ fontWeight: theme.typography.fontWeights.bold }}
               >
                 Go to survey{' '}
                 <ArrowIcon
