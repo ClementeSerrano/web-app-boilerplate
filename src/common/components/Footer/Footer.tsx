@@ -3,10 +3,8 @@ import Typography from '../Typography/Typography';
 import { useDevice } from '../../contexts/DeviceContext/DeviceContext.hooks';
 import { useLayout } from '../../contexts/LayoutContext/LayoutContext.hooks';
 import useElementSize from '../../hooks/useElementSize';
-import GithubIcon from '../../assets/icons/GithubIcon';
 import InstagramIcon from '../../assets/icons/InstagramIcon';
-import TwitterIcon from '../../assets/icons/TwitterIcon';
-import YoutubeIcon from '../../assets/icons/YoutubeIcon';
+import LinkedInIcon from '../../assets/icons/LinkedInIcon';
 import {
   FooterContainer,
   FooterInnerContainer,
@@ -68,23 +66,9 @@ export default function Footer() {
 
           <FooterSocialMediaLink
             target="_blank"
-            href="https://twitter.com/climeinvest"
+            href="https://www.linkedin.com/company/climeinvest"
           >
-            <TwitterIcon height={24} format="fill" />
-          </FooterSocialMediaLink>
-
-          <FooterSocialMediaLink
-            target="_blank"
-            href="https://www.youtube.com/channel/UCfPzqsJmvKVLlOBNc62pQHw"
-          >
-            <YoutubeIcon height={24} format="fill" />
-          </FooterSocialMediaLink>
-
-          <FooterSocialMediaLink
-            target="_blank"
-            href="https://github.com/Climevest"
-          >
-            <GithubIcon height={24} format="fill" />
+            <LinkedInIcon height={24} format="fill" />
           </FooterSocialMediaLink>
         </FooterSectionsContainer>
       </FooterInnerContainer>
