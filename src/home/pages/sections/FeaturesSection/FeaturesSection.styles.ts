@@ -20,6 +20,7 @@ export const FeaturesSubsectionContainer = styled.div`
   @media (max-width: 600px) {
     flex: 1;
     margin-top: 0;
+    flex-direction: column;
   }
 `;
 
@@ -45,7 +46,7 @@ export const FeaturesMockupsContainer = styled.div<{
     position === 'right' ? 'flex-end' : 'flex-start'};
 
   @media (max-width: 600px) {
-    display: none;
+    justify-content: center;
   }
 `;
 
@@ -54,4 +55,12 @@ export const FeatureImg = styled.img`
   border-radius: 12px;
   box-shadow: 0px 16px 70px 0px rgba(0, 0, 0, 0.2);
   border: 2px solid ${({ theme }) => theme.palette.background.level2};
+
+  @media (max-width: 600px) {
+    height: 290px;
+    margin-bottom: 48px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-color: transparent;
+  }
 `;
