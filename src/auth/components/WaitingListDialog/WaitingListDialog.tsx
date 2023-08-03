@@ -71,7 +71,7 @@ export default function WaitingListDialog({
         <Dialog.Close onClick={handleClose} />
       </Dialog.Header>
 
-      <Dialog.Body>{renderBody()}</Dialog.Body>
+      <Dialog.Body style={{ overflowY: 'unset' }}>{renderBody()}</Dialog.Body>
     </Dialog>
   );
 }

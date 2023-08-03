@@ -9,5 +9,5 @@ export type WaitingListFormValues = {
   email: '';
   firstname?: '';
   lastname?: '';
-  preferredInvestmentAmount?: number;
+  preferredInvestmentRange?: { value: string; label: string };
 };

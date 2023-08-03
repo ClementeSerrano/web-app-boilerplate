@@ -12,6 +12,9 @@ import {
   WaitingListFormProps,
   WaitingListFormValues,
 } from './WaitingListForm.interfaces';
+import Select from '../../../common/components/Select/Select';
+import Typography from '../../../common/components/Typography/Typography';
+import { PREFERRED_INVESTMENT_OPTIONS } from './WaitingListForm.constants';
 
 /**
  * Form to join the waiting list of the platform launch.
@@ -35,10 +38,14 @@ export default function WaitingListForm({
       email: '',
       firstname: '',
       lastname: '',
-      preferredInvestmentAmount: 0,
     },
-    onSubmit(values) {
-      waitingListRegisterMutation({ variables: values });
+    onSubmit({ preferredInvestmentRange, ...values }) {
+      waitingListRegisterMutation({
+        variables: {
+          ...values,
+          preferredInvestmentRange: preferredInvestmentRange?.value,
+        },
+      });
     },
   });
 
@@ -77,15 +84,22 @@ export default function WaitingListForm({
         style={{ container: { marginBottom: theme.spacing.sm } }}
       />
 
-      <TextField
-        id="preferredInvestmentAmount"
-        name="preferredInvestmentAmount"
-        type="number"
-        value={form.values.preferredInvestmentAmount}
-        onChange={form.handleChange}
-        variant="filled"
-        label="Amount you’d be open to investing (EUR)"
-        placeholder="Amount you’d be open to investing"
+      <Typography
+        variant="paragraph2"
+        style={{ marginBottom: theme.spacing.xxs, width: '100%' }}
+      >
+        Amount you’d be open to investing
+      </Typography>
+
+      <Select
+        options={PREFERRED_INVESTMENT_OPTIONS}
+        value={form.values.preferredInvestmentRange}
+        onChange={value =>
+          form.setFieldValue('preferredInvestmentRange', value)
+        }
+        className="basic-multi-select"
+        classNamePrefix="select"
+        placeholder="Select amount"
         style={{ container: { marginBottom: theme.spacing.sm } }}
       />
 
