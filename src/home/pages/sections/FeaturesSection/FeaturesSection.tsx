@@ -9,8 +9,6 @@ import ProjectsLightMode from '../../../../common/assets/images/features/project
 
 import ProjectPageMobileImgDarkMode from '../../../../common/assets/images/features/project-details-mobile-dark-mode.png';
 import ProjectPageMobileImgLightMode from '../../../../common/assets/images/features/project-details-mobile-light-mode.png';
-import OnPhoneProjectPageMobileImgDarkMode from '../../../../common/assets/images/features/mobile/project-details-mobile-dark-mode.png';
-import OnPhoneProjectPageMobileImgLightMode from '../../../../common/assets/images/features/mobile/project-details-mobile-light-mode.png';
 
 import PortfolioDarkMode from '../../../../common/assets/images/features/portfolio-dark-mode.png';
 import PortfolioLightMode from '../../../../common/assets/images/features/portfolio-light-mode.png';
@@ -71,9 +69,9 @@ export default function FeaturesSection() {
               textAlign: isPhone ? 'center' : 'left',
             }}
           >
-            Directly contribute to building a nature-based project that supports biodiversity & local communities.
-            This will mitigate climate change and help create a
-            sustainable future for us all.
+            Directly contribute to building a nature-based project that supports
+            biodiversity & local communities. This will mitigate climate change
+            and help create a sustainable future for us all.
           </Typography>
         </FeaturesTextsContainer>
 
@@ -180,9 +178,10 @@ export default function FeaturesSection() {
               textAlign: isPhone ? 'center' : 'left',
             }}
           >
-            A curated selection of vetted projects, from reforestation
-            to blue carbon schemes. Our state-of-the-art predictive AI model assesses each project
-            against stringent financial viability and climate impact metrics.
+            A curated selection of vetted projects, from reforestation to blue
+            carbon schemes. Our state-of-the-art predictive AI model assesses
+            each project against stringent financial viability and climate
+            impact metrics.
           </Typography>
         </FeaturesTextsContainer>
 
@@ -191,8 +190,8 @@ export default function FeaturesSection() {
             <FeatureImg
               src={
                 theme.mode === 'dark'
-                  ? OnPhoneProjectPageMobileImgDarkMode
-                  : OnPhoneProjectPageMobileImgLightMode
+                  ? OnPhoneAIVerificationMobileImgDarkMode
+                  : OnPhoneAIVerificationMobileImgLightMode
               }
             />
           ) : (
@@ -218,8 +217,8 @@ export default function FeaturesSection() {
               <FeatureImg
                 src={
                   theme.mode === 'dark'
-                    ? BuyTokensMobileImgDarkMode
-                    : BuyTokensMobileImgLightMode
+                    ? AIVerificationMobileImgDarkMode
+                    : AIVerificationMobileImgLightMode
                 }
               />
             </>
@@ -233,8 +232,8 @@ export default function FeaturesSection() {
             <FeatureImg
               src={
                 theme.mode === 'dark'
-                  ? OnPhoneAIVerificationMobileImgDarkMode
-                  : OnPhoneAIVerificationMobileImgLightMode
+                  ? OnPhonePortfolioMobileDarkMode
+                  : OnPhonePortfolioMobileLightMode
               }
             />
           ) : (
@@ -248,8 +247,8 @@ export default function FeaturesSection() {
               <FeatureImg
                 src={
                   theme.mode === 'dark'
-                    ? AIVerificationMobileImgDarkMode
-                    : AIVerificationMobileImgLightMode
+                    ? BuyTokensMobileImgDarkMode
+                    : BuyTokensMobileImgLightMode
                 }
                 style={{ position: 'absolute', right: 88, top: 24 }}
               />
