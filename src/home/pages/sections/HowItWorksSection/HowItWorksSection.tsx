@@ -54,7 +54,7 @@ export default function HowItWorksSection() {
           </HowItWorksIconContainer>
 
           <HowItWorksSubtitle variant="title6">
-            Climeinvest pools the funds
+            Receive shares in the project
           </HowItWorksSubtitle>
 
           <HowItWorksParagraph variant="paragraph1" color="level3">

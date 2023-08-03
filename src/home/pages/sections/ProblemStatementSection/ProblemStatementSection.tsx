@@ -78,7 +78,7 @@ export default function ProblemStatementSection() {
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Investing in nature-projects can be highly complex. Climeinvest has
+            Investing in nature projects can be highly complex. Climeinvest has
             standard investment structures that provide fast financing to
             projects.
           </Typography>
