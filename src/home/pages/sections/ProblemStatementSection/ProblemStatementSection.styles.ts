@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Card from '../../../../common/components/Card/Card';
+import Typography from '../../../../common/components/Typography/Typography';
 
 export const ProblemStatementCardsContainer = styled.div`
   display: grid;
@@ -28,6 +29,12 @@ export const ProblemStatementTitle = styled.h1`
   @media (max-width: 600px) {
     font-size: 14px;
   }
+`;
+
+export const ProblemStatementSubtitle = styled(Typography)`
+  margin-top: ${({ theme }) => theme.spacing.lg}px;
+  max-width: 1200px;
+  text-align: center;
 `;
 
 export const ProblemStatementCard = styled(Card)`

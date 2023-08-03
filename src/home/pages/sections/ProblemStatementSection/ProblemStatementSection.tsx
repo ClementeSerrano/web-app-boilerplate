@@ -8,6 +8,7 @@ import {
   ProblemStatementTitle,
   ProblemStatementIconContainer,
   ProblemStatementCard,
+  // ProblemStatementSubtitle,
 } from './ProblemStatementSection.styles';
 import DollarSignIcon from '../../../../common/assets/icons/DollarSignIcon';
 import DocAndMagnifyingGlass from '../../../../common/assets/icons/DocAndMagnifyingGlass';
@@ -37,8 +38,8 @@ export default function ProblemStatementSection() {
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Investing in nature projects requires deep pockets. With Climeinvest, you can
-            invest as much as your wallet allows.
+            Investing in nature projects requires deep pockets. With
+            Climeinvest, you can invest as much as your wallet allows.
           </Typography>
         </ProblemStatementCard>
 
@@ -83,6 +84,12 @@ export default function ProblemStatementSection() {
           </Typography>
         </ProblemStatementCard>
       </ProblemStatementCardsContainer>
+
+      {/* <ProblemStatementSubtitle variant="title5" color="level3">
+        From reforestation to ocean clean ups to green infrastructure. With
+        Climeinvest, you invest to build nature-based projects that remove
+        carbon from the atmosphere.
+      </ProblemStatementSubtitle> */}
     </SectionContainer>
   );
 }

@@ -24,12 +24,14 @@ export default function StartTodaySection() {
         }}
       />
 
-      <StartTodayTitle variant="title2">
-        Project developer? Get in touch.
+      <StartTodayTitle variant="title3">
+        Project developer? <br /> Get in touch.
       </StartTodayTitle>
 
       <StartTodaySubtitle variant="title5" color="level3">
-        We invest in developers at early stages that are building high quality projects. We help you raise financing and get to verification up to 50% faster.
+        We invest in developers at early stages that are building high quality
+        projects. We help you raise financing and get to verification up to 50%
+        faster.
       </StartTodaySubtitle>
 
       <Button

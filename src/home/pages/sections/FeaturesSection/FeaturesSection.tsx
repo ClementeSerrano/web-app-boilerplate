@@ -57,7 +57,7 @@ export default function FeaturesSection() {
               marginBottom: theme.spacing.lg,
             }}
           >
-            Mitigate climate change.
+            Nature-based projects that remove carbon from the air.
           </Typography>
 
           <Typography
@@ -70,8 +70,8 @@ export default function FeaturesSection() {
             }}
           >
             Directly contribute to building a nature-based project that supports
-            biodiversity & local communities. This will mitigate climate change
-            and help create a sustainable future for us all.
+            biodiversity & local communities. From reforestation to ocean clean
+            ups to green infrastructure.
           </Typography>
         </FeaturesTextsContainer>
 
@@ -178,10 +178,9 @@ export default function FeaturesSection() {
               textAlign: isPhone ? 'center' : 'left',
             }}
           >
-            A curated selection of vetted projects, from reforestation to blue
-            carbon schemes. Our state-of-the-art predictive AI model assesses
-            each project against stringent financial viability and climate
-            impact metrics.
+            A curated selection of vetted projects. Our state-of-the-art
+            predictive AI model assesses each project against stringent
+            financial viability and climate impact metrics.
           </Typography>
         </FeaturesTextsContainer>
 
