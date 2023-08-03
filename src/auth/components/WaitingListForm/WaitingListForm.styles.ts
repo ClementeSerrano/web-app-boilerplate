@@ -12,4 +12,5 @@ export const WaitingListFormContainer = styled.form`
 
 export const WaitingListSubmitButton = styled(Button)`
   margin-top: ${({ theme }) => theme.spacing.sm}px;
+  min-width: 172px;
 `;

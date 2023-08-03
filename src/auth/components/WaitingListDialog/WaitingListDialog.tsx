@@ -24,12 +24,12 @@ export default function WaitingListDialog({
       return (
         <FallbackComponent
           type="success"
-          title="Great! You're subscribed to our waitlist"
+          title="Great! Thanks for signing up"
           description={
             <>
               <WaitingListDialogParagraph variant="paragraph1" color="level3">
-                You will be hearing from us very soon ☺️ In the meantime, we
-                invite you to answer a few questions that will help us making
+                You will be hearing from us very soon. In the meantime, we
+                invite you to answer a few questions that will help us make
                 Climeinvest the best solution for you.
               </WaitingListDialogParagraph>
 
@@ -56,8 +56,7 @@ export default function WaitingListDialog({
     return (
       <>
         <Typography as="legend" variant="paragraph1" color="level3">
-          By submitting this form, you will join our waitlist to get early
-          access to Climeinvest.
+          By submitting this form, you will get early access to Climeinvest.
         </Typography>
 
         <WaitingListForm onCompleted={() => setFormSubmitted(true)} />

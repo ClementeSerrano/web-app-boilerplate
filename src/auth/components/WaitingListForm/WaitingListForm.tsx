@@ -84,8 +84,8 @@ export default function WaitingListForm({
         value={form.values.preferredInvestmentAmount}
         onChange={form.handleChange}
         variant="filled"
-        label="Amount you’d like to invest (EUR)"
-        placeholder="Amount you’d like to invest"
+        label="Amount you’d be open to investing (EUR)"
+        placeholder="Amount you’d be open to investing"
         style={{ container: { marginBottom: theme.spacing.sm } }}
       />
 
@@ -93,7 +93,7 @@ export default function WaitingListForm({
         type="submit"
         loading={loadingWaitingListRegisterMutation}
       >
-        Submit form
+        Sign up
       </WaitingListSubmitButton>
     </WaitingListFormContainer>
   );
