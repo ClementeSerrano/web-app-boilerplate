@@ -25,12 +25,11 @@ export default function StartTodaySection() {
       />
 
       <StartTodayTitle variant="title2">
-        Project developer? Raise financing today
+        Project developer? Get in touch.
       </StartTodayTitle>
 
       <StartTodaySubtitle variant="title5" color="level3">
-        We are revolutionising the way nature investments are made. Get in touch
-        if you are raising financing to build your nature project
+        We invest in developers at early stages that are building high quality projects. We help you raise financing and get to verification up to 50% faster.
       </StartTodaySubtitle>
 
       <Button

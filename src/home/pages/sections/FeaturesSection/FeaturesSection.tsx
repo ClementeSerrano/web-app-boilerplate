@@ -71,8 +71,8 @@ export default function FeaturesSection() {
               textAlign: isPhone ? 'center' : 'left',
             }}
           >
-            Directly contribute to mitigating climate change, supporting
-            biodiversity & local communities, and helping to create a
+            Directly contribute to building a nature-based project that supports biodiversity & local communities.
+            This will mitigate climate change and help create a
             sustainable future for us all.
           </Typography>
         </FeaturesTextsContainer>
@@ -150,7 +150,7 @@ export default function FeaturesSection() {
           >
             Going green doesn't mean compromising on returns. Diversify your
             investment portfolio and invest in projects that have the potential
-            for attractive returns and earn 2-4x on average.
+            to earn 2-4x on average.
           </Typography>
         </FeaturesTextsContainer>
       </FeaturesSubsectionContainer>
@@ -168,7 +168,7 @@ export default function FeaturesSection() {
               marginBottom: theme.spacing.lg,
             }}
           >
-            Access to quality projects.
+            AI driven due diligence.
           </Typography>
 
           <Typography
@@ -180,9 +180,9 @@ export default function FeaturesSection() {
               textAlign: isPhone ? 'center' : 'left',
             }}
           >
-            A curated selection of high-impact, initiatives, from reforestation
-            to blue carbon schemes. Every investment opportunity listed has been
-            rigorously evaluated for both impact and financial viability.
+            A curated selection of vetted projects, from reforestation
+            to blue carbon schemes. Our state-of-the-art predictive AI model assesses each project
+            against stringent financial viability and climate impact metrics.
           </Typography>
         </FeaturesTextsContainer>
 

@@ -55,7 +55,7 @@ export default function HowItWorksSection() {
 
           <Typography as="p" variant="paragraph1" color="level3">
             You can access the list of projects currently available for funding
-            and view all the impact and financial details.
+            and view all the relevant details.
           </Typography>
         </Card>
 
@@ -84,11 +84,11 @@ export default function HowItWorksSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Choose a project
+            Choose a project to invest in
           </Typography>
 
           <Typography as="p" variant="paragraph1" color="level3">
-            Choose a project to invest in that matches your impact and financial
+            Choose a project to invest in that matches your climate impact and financial
             expectations.
           </Typography>
         </Card>
@@ -123,7 +123,7 @@ export default function HowItWorksSection() {
 
           <Typography as="p" variant="paragraph1" color="level3">
             We pool all the investor funds together and invest in the project
-            through an SPV structure.
+            through an SPV structure. Each investor receives their shares in the project.
           </Typography>
         </Card>
 
@@ -156,8 +156,8 @@ export default function HowItWorksSection() {
           </Typography>
 
           <Typography as="p" variant="paragraph1" color="level3">
-            Once invested, you can monitor the impact and financial status of
-            the projects and see the value of your portfolio.
+            Once invested, you can monitor the status of
+            the project and see the value of your portfolio.
           </Typography>
         </Card>
 
@@ -186,11 +186,11 @@ export default function HowItWorksSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Exit your investment
+            Get a return on your investment
           </Typography>
 
           <Typography as="p" variant="paragraph1" color="level3">
-            If needed, exit your investment on our internal marketplace or wait
+            Trade your shares with other investors on our marketplace or wait
             till we sell the entire stake in the project.
           </Typography>
         </Card>

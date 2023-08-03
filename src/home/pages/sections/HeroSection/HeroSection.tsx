@@ -26,12 +26,12 @@ export default function HeroSection() {
         {/* <UserResearchFormButton style={{ marginBottom: theme.spacing.sm }} /> */}
 
         <HomePageTitle variant="title2">
-          Invest your money directly in nature.
+          Invest your money directly in nature. <br />
         </HomePageTitle>
 
         <HomePageSubtitle variant="title5" color="level3">
-          You can help save nature. <br />
-          Allocate a part of your portfolio to nature today.
+          Earn up to 4x returns. <br />
+          Allocate a part of your portfolio to nature-based climate projects today.
         </HomePageSubtitle>
 
         <HomePageWaitingListButton onClick={waitingListDialog.handleOpen}>

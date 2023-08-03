@@ -19,7 +19,7 @@ export default function ProblemStatementSection() {
   return (
     <SectionContainer withSeparator style={{ paddingTop: theme.spacing.md }}>
       <ProblemStatementTitle>
-        Democratizing climate investment
+        Opening access to climate investments
       </ProblemStatementTitle>
 
       <ProblemStatementCardsContainer>
@@ -37,7 +37,7 @@ export default function ProblemStatementSection() {
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Investing in nature requires deep pockets. With Climeinvest, you can
+            Investing in nature projects requires deep pockets. With Climeinvest, you can
             invest as much as your wallet allows.
           </Typography>
         </ProblemStatementCard>
@@ -54,7 +54,7 @@ export default function ProblemStatementSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            No nature expertise required
+            No deep expertise required
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
@@ -73,11 +73,11 @@ export default function ProblemStatementSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Simple investment structures
+            Faster financing for project developers
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Traditional nature investing is highly complex. Climeinvest has
+            Investing in nature-projects can be highly complex. Climeinvest has
             standard investment structures that provide fast financing to
             projects.
           </Typography>
