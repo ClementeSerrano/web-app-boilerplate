@@ -268,7 +268,7 @@ export default function FeaturesSection() {
               marginBottom: theme.spacing.lg,
             }}
           >
-            AI-driven due diligence and impact prediction.
+            Monitor and trade your investment stake.
           </Typography>
 
           <Typography
@@ -280,9 +280,9 @@ export default function FeaturesSection() {
               textAlign: isPhone ? 'center' : 'right',
             }}
           >
-            A state-of-the-art predictive AI model that assesses each project
-            against stringent financial and impact viability metrics. This
-            ensures we only work with the highest quality projects.
+            Buy and sell shares in the projects on our trading platform. Once
+            the project has reached its financing goal, you can trade your stake
+            as the value of the project changes.
           </Typography>
         </FeaturesTextsContainer>
       </FeaturesSubsectionContainer>

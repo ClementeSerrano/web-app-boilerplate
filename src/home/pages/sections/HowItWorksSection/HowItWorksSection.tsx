@@ -1,200 +1,99 @@
-import { useTheme } from 'styled-components';
-
-import { useDevice } from '../../../../common/contexts/DeviceContext/DeviceContext.hooks';
-import Typography from '../../../../common/components/Typography/Typography';
-import Card from '../../../../common/components/Card/Card';
 import SectionContainer from '../../../../common/components/SectionContainer/SectionContainer';
 
 import {
-  CompetitiveAdvantagesCardsContainer,
-  CompetitiveAdvantagesIconContainer,
+  HowItWorksSectionTitle,
+  HowItWorksCardsContainer,
+  HowItWorksCard,
+  HowItWorksIconContainer,
+  HowItWorksTitle,
+  HowItWorksSubtitle,
+  HowItWorksParagraph,
 } from './HowItWorksSection.styles';
 
 export default function HowItWorksSection() {
-  const { isPhone } = useDevice();
-  const theme = useTheme();
-
   return (
     <SectionContainer withSeparator>
-      <Typography
-        as="h1"
-        variant="title3"
-        style={{ textAlign: 'center', marginBottom: theme.spacing.lg }}
-      >
+      <HowItWorksSectionTitle variant="title3">
         How it works.
-      </Typography>
+      </HowItWorksSectionTitle>
 
-      <CompetitiveAdvantagesCardsContainer>
-        <Card
-          style={{
-            padding: isPhone ? '32px 24px' : '32px 52px',
-            alignItems: isPhone ? 'center' : 'unset',
-            backgroundColor: theme.palette.background.level2,
-          }}
-        >
-          <CompetitiveAdvantagesIconContainer>
-            <Typography
-              as="h1"
-              variant="title4"
-              style={{
-                color: theme.palette.primary.main,
-                fontWeight: theme.typography.fontWeights.bold,
-              }}
-            >
-              1.
-            </Typography>
-          </CompetitiveAdvantagesIconContainer>
+      <HowItWorksCardsContainer>
+        <HowItWorksCard>
+          <HowItWorksIconContainer>
+            <HowItWorksTitle variant="title4">1.</HowItWorksTitle>
+          </HowItWorksIconContainer>
 
-          <Typography
-            as="h2"
-            variant="title6"
-            style={{ marginBottom: theme.spacing.sm }}
-          >
+          <HowItWorksSubtitle variant="title6">
             Access vetted projects
-          </Typography>
+          </HowItWorksSubtitle>
 
-          <Typography as="p" variant="paragraph1" color="level3">
+          <HowItWorksParagraph variant="paragraph1" color="level3">
             You can access the list of projects currently available for funding
             and view all the relevant details.
-          </Typography>
-        </Card>
+          </HowItWorksParagraph>
+        </HowItWorksCard>
 
-        <Card
-          style={{
-            padding: isPhone ? '32px 24px' : '32px 52px',
-            alignItems: isPhone ? 'center' : 'unset',
-            backgroundColor: theme.palette.background.level2,
-          }}
-        >
-          <CompetitiveAdvantagesIconContainer>
-            <Typography
-              as="h1"
-              variant="title4"
-              style={{
-                color: theme.palette.primary.main,
-                fontWeight: theme.typography.fontWeights.bold,
-              }}
-            >
-              2.
-            </Typography>
-          </CompetitiveAdvantagesIconContainer>
+        <HowItWorksCard>
+          <HowItWorksIconContainer>
+            <HowItWorksTitle variant="title4">2.</HowItWorksTitle>
+          </HowItWorksIconContainer>
 
-          <Typography
-            as="h2"
-            variant="title6"
-            style={{ marginBottom: theme.spacing.sm }}
-          >
+          <HowItWorksSubtitle variant="title6">
             Choose a project to invest in
-          </Typography>
+          </HowItWorksSubtitle>
 
-          <Typography as="p" variant="paragraph1" color="level3">
-            Choose a project to invest in that matches your climate impact and financial
-            expectations.
-          </Typography>
-        </Card>
+          <HowItWorksParagraph variant="paragraph1" color="level3">
+            Choose a project to invest in that matches your climate impact and
+            financial expectations.
+          </HowItWorksParagraph>
+        </HowItWorksCard>
 
-        <Card
-          style={{
-            padding: isPhone ? '32px 24px' : '32px 52px',
-            alignItems: isPhone ? 'center' : 'unset',
-            backgroundColor: theme.palette.background.level2,
-          }}
-        >
-          <CompetitiveAdvantagesIconContainer>
-            <Typography
-              as="h1"
-              variant="title4"
-              style={{
-                color: theme.palette.primary.main,
-                fontWeight: theme.typography.fontWeights.bold,
-              }}
-            >
-              3.
-            </Typography>
-          </CompetitiveAdvantagesIconContainer>
+        <HowItWorksCard>
+          <HowItWorksIconContainer>
+            <HowItWorksTitle variant="title4">3.</HowItWorksTitle>
+          </HowItWorksIconContainer>
 
-          <Typography
-            as="h2"
-            variant="title6"
-            style={{ marginBottom: theme.spacing.sm }}
-          >
+          <HowItWorksSubtitle variant="title6">
             Climeinvest pools the funds
-          </Typography>
+          </HowItWorksSubtitle>
 
-          <Typography as="p" variant="paragraph1" color="level3">
+          <HowItWorksParagraph variant="paragraph1" color="level3">
             We pool all the investor funds together and invest in the project
-            through an SPV structure. Each investor receives their shares in the project.
-          </Typography>
-        </Card>
+            through an SPV structure. Each investor receives their shares in the
+            project.
+          </HowItWorksParagraph>
+        </HowItWorksCard>
 
-        <Card
-          style={{
-            padding: isPhone ? '32px 24px' : '32px 52px',
-            alignItems: isPhone ? 'center' : 'unset',
-            backgroundColor: theme.palette.background.level2,
-          }}
-        >
-          <CompetitiveAdvantagesIconContainer>
-            <Typography
-              as="h1"
-              variant="title4"
-              style={{
-                color: theme.palette.primary.main,
-                fontWeight: theme.typography.fontWeights.bold,
-              }}
-            >
-              4.
-            </Typography>
-          </CompetitiveAdvantagesIconContainer>
+        <HowItWorksCard>
+          <HowItWorksIconContainer>
+            <HowItWorksTitle variant="title4">4.</HowItWorksTitle>
+          </HowItWorksIconContainer>
 
-          <Typography
-            as="h2"
-            variant="title6"
-            style={{ marginBottom: theme.spacing.sm }}
-          >
+          <HowItWorksSubtitle variant="title6">
             Ongoing monitoring
-          </Typography>
+          </HowItWorksSubtitle>
 
-          <Typography as="p" variant="paragraph1" color="level3">
-            Once invested, you can monitor the status of
-            the project and see the value of your portfolio.
-          </Typography>
-        </Card>
+          <HowItWorksParagraph variant="paragraph1" color="level3">
+            Once invested, you can monitor the status of the project and see the
+            value of your portfolio.
+          </HowItWorksParagraph>
+        </HowItWorksCard>
 
-        <Card
-          style={{
-            padding: isPhone ? '32px 24px' : '32px 52px',
-            alignItems: isPhone ? 'center' : 'unset',
-            backgroundColor: theme.palette.background.level2,
-          }}
-        >
-          <CompetitiveAdvantagesIconContainer>
-            <Typography
-              as="h1"
-              variant="title4"
-              style={{
-                color: theme.palette.primary.main,
-                fontWeight: theme.typography.fontWeights.bold,
-              }}
-            >
-              5.
-            </Typography>
-          </CompetitiveAdvantagesIconContainer>
+        <HowItWorksCard>
+          <HowItWorksIconContainer>
+            <HowItWorksTitle variant="title4">5.</HowItWorksTitle>
+          </HowItWorksIconContainer>
 
-          <Typography
-            as="h2"
-            variant="title6"
-            style={{ marginBottom: theme.spacing.sm }}
-          >
+          <HowItWorksSubtitle variant="title6">
             Get a return on your investment
-          </Typography>
+          </HowItWorksSubtitle>
 
-          <Typography as="p" variant="paragraph1" color="level3">
+          <HowItWorksParagraph variant="paragraph1" color="level3">
             Trade your shares with other investors on our marketplace or wait
             till we sell the entire stake in the project.
-          </Typography>
-        </Card>
-      </CompetitiveAdvantagesCardsContainer>
+          </HowItWorksParagraph>
+        </HowItWorksCard>
+      </HowItWorksCardsContainer>
     </SectionContainer>
   );
 }
