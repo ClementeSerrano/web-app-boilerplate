@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Button from '../../../common/components/Button/Button';
+import Button from '../Button/Button';
 
-export const UserResearchFormButtonContainer = styled(Button)`
+export const InformativePillContainer = styled(Button)`
   display: flex;
   align-items: center;
   border-radius: ${({ theme }) => theme.shape.borderRadius.md}px;
