@@ -6,18 +6,18 @@ import OnMobileProjectsMobileImgDarkMode from '../../../../common/assets/images/
 import OnMobileProjectsMobileImgLightMode from '../../../../common/assets/images/features/mobile/projects-mobile-light-mode.png';
 
 import {
-  ProjectDescriptionSectionContainer,
-  ProjectDescriptionSectionImg,
+  MissionStatementSectionContainer,
+  MissionStatementSectionImg,
   ProjectDescriptionTitle,
-} from './ProjectDescriptionSection.styles';
+} from './MissionStatementSection.styles';
 
-export default function ProjectDescriptionSection() {
+export default function MissionStatementSection() {
   const theme = useTheme();
 
   const { isLaptop } = useDevice();
 
   return (
-    <ProjectDescriptionSectionContainer withSeparator>
+    <MissionStatementSectionContainer withSeparator>
       <PosterCard
         bgColor={theme.palette.background.level2}
         style={{
@@ -31,7 +31,7 @@ export default function ProjectDescriptionSection() {
         </ProjectDescriptionTitle>
 
         {isLaptop && (
-          <ProjectDescriptionSectionImg
+          <MissionStatementSectionImg
             src={
               theme.mode === 'dark'
                 ? OnMobileProjectsMobileImgDarkMode
@@ -40,6 +40,6 @@ export default function ProjectDescriptionSection() {
           />
         )}
       </PosterCard>
-    </ProjectDescriptionSectionContainer>
+    </MissionStatementSectionContainer>
   );
 }

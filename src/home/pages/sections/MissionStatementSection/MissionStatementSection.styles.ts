@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import SectionContainer from '../../../../common/components/SectionContainer/SectionContainer';
 import Typography from '../../../../common/components/Typography/Typography';
 
-export const ProjectDescriptionSectionContainer = styled(SectionContainer)`
+export const MissionStatementSectionContainer = styled(SectionContainer)`
   @media (max-width: 600px) {
     padding: 80px;
   }
 `;
 
-export const ProjectDescriptionSectionImg = styled.img`
+export const MissionStatementSectionImg = styled.img`
   position: absolute;
   right: 80px;
   bottom: 0;

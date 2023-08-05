@@ -3,7 +3,7 @@ import ProblemStatementSection from './sections/ProblemStatementSection/ProblemS
 import FeaturesSection from './sections/FeaturesSection/FeaturesSection';
 import HowItWorksSection from './sections/HowItWorksSection/HowItWorksSection';
 import StartTodaySection from './sections/StartTodaySection/StartTodaySection';
-import ProjectDescriptionSection from './sections/ProjectDescriptionSection/ProjectDescriptionSection';
+import MissionStatementSection from './sections/MissionStatementSection/MissionStatementSection';
 
 /**
  * Home module main page.
@@ -19,7 +19,7 @@ export default function HomePage() {
 
       <HowItWorksSection />
 
-      <ProjectDescriptionSection />
+      <MissionStatementSection />
 
       <StartTodaySection />
     </>
