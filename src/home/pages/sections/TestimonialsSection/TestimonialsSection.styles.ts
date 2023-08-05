@@ -1,18 +1,11 @@
 import styled from 'styled-components';
 
 import Card from '../../../../common/components/Card/Card';
+import Typography from '../../../../common/components/Typography/Typography';
 
-export const TestimonialsContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  background-color: hsl(0deg 0% 3%);
-  padding: 72px;
-
-  @media (max-width: 600px) {
-    padding: 40px;
-  }
+export const TestimonialsTitle = styled(Typography)`
+  text-align: center;
+  margin-bottom: ${({ theme }) => theme.spacing.lg}px;
 `;
 
 export const TestimonialsCardsContainer = styled.div`

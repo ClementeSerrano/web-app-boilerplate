@@ -1,7 +1,7 @@
 import User1Avatar from '../../../../common/assets/images/users/user1-avatar.jpg';
 
 import {
-  TestimonialsContainer,
+  TestimonialsTitle,
   TestimonialsCardsContainer,
   TestimonialsCardsSubContainer,
   TestimonialCardBodyContainer,
@@ -11,16 +11,15 @@ import {
 import { useDevice } from '../../../../common/contexts/DeviceContext/DeviceContext.hooks';
 import Typography from '../../../../common/components/Typography/Typography';
 import { useTheme } from 'styled-components';
+import SectionContainer from '../../../../common/components/SectionContainer/SectionContainer';
 
 export default function TestimonialsSection() {
   const { isPhone } = useDevice();
   const theme = useTheme();
 
   return (
-    <TestimonialsContainer>
-      <Typography as="h1" variant="title2">
-        What our investors say
-      </Typography>
+    <SectionContainer withSeparator>
+      <TestimonialsTitle variant="title3">Testimonials.</TestimonialsTitle>
 
       <TestimonialsCardsContainer>
         <TestimonialsCardsSubContainer>
@@ -247,6 +246,6 @@ export default function TestimonialsSection() {
           </TestimonialCard>
         </TestimonialsCardsSubContainer>
       </TestimonialsCardsContainer>
-    </TestimonialsContainer>
+    </SectionContainer>
   );
 }
