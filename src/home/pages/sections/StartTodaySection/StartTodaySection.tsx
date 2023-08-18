@@ -24,7 +24,7 @@ export default function StartTodaySection() {
         }}
       />
 
-      <StartTodayTitle variant="title3">
+      {/* <StartTodayTitle variant="title3">
         Project developer? <br /> Get in touch.
       </StartTodayTitle>
 
@@ -40,7 +40,7 @@ export default function StartTodaySection() {
         href="mailto:info@climeinvest.com?subject=I%20want%20to%20start%20with%20ClimeInvest"
       >
         Contact us
-      </Button>
+      </Button> */}
     </SectionContainer>
   );
 }

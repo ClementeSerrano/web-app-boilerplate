@@ -14,15 +14,15 @@ export default function HomePage() {
     <>
       <HeroSection />
 
-      <ProblemStatementSection />
+      {/* <ProblemStatementSection /> */}
 
-      <FeaturesSection />
+      {/* <FeaturesSection /> */}
 
-      <HowItWorksSection />
+      {/* <HowItWorksSection /> */}
 
       {/* <TestimonialsSection /> */}
 
-      <MissionStatementSection />
+      {/* <MissionStatementSection /> */}
 
       <StartTodaySection />
     </>

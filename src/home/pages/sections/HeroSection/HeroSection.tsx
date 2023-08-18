@@ -33,27 +33,26 @@ export default function HeroSection() {
         </InformativePill> */}
 
         <HomePageTitle variant="title2">
-          Invest your money directly in nature. <br />
+          Restore nature with confidence. <br />
         </HomePageTitle>
 
         <HomePageSubtitle variant="title5" color="level3">
-          Earn up to 4x returns. <br />
-          Allocate a part of your portfolio to nature-based climate projects
-          today.
+          The financial infrastructure to power the next generation of nature investments. <br />
+          
         </HomePageSubtitle>
 
-        <HomePageWaitingListButton onClick={waitingListDialog.handleOpen}>
-          Sign up now{' '}
+        <HomePageWaitingListButton onClick={() => window.location.href = 'https://app.climeinvest.com'}>
+          Get started{' '}
           <ArrowIcon height={16} style={{ marginLeft: theme.spacing.xxs }} />
         </HomePageWaitingListButton>
       </SectionContainer>
 
-      {waitingListDialog.show && (
+      {/* {waitingListDialog.show && (
         <WaitingListDialog
           show={waitingListDialog.show}
           handleClose={waitingListDialog.handleClose}
         />
-      )}
+      )} */}
     </>
   );
 }

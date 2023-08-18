@@ -38,8 +38,8 @@ export default function ProblemStatementSection() {
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Investing in nature projects requires deep pockets. With
-            Climeinvest, you can invest as much as your wallet allows.
+          Investing in nature projects requires deep pockets. 
+          With Climeinvest, you can invest as much as your wallet allows.
           </Typography>
         </ProblemStatementCard>
 
@@ -78,9 +78,8 @@ export default function ProblemStatementSection() {
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Investing in nature projects can be highly complex. Climeinvest has
-            standard investment structures that provide fast financing to
-            projects.
+          Investing in nature projects can be highly complex. 
+          Climeinvest has standard investment structures that provide fast financing to projects.
           </Typography>
         </ProblemStatementCard>
       </ProblemStatementCardsContainer>

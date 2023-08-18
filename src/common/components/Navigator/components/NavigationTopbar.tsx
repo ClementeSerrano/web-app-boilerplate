@@ -51,20 +51,20 @@ export default function NavigationTopbar({
           <Button
             variant="primary"
             size="sm"
-            onClick={waitingListDialog.handleOpen}
+            onClick={() => window.location.href = 'https://app.climeinvest.com'}
             style={{ borderRadius: 50, marginLeft: 16 }}
           >
-            Sign up
+            Get started
           </Button>
         </Grid>
       </NavigationTopbarContainer>
 
-      {waitingListDialog.show && (
+      {/* {waitingListDialog.show && (
         <WaitingListDialog
           show={waitingListDialog.show}
           handleClose={waitingListDialog.handleClose}
         />
-      )}
+      )} */}
     </>
   );
 }
