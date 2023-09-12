@@ -5,9 +5,9 @@ import {
 } from 'react-router-dom';
 
 import { ROUTE_PATHS } from './routes.constants';
-import Navigation from '../common/components/Navigator/Navigation';
-import Footer from '../common/components/Footer/Footer';
-import HomeRoute from './HomeRoute';
+import Navigation from '../components/Navigator/Navigation';
+import Footer from '../components/Footer/Footer';
+import HomePage from '../modules/home/pages/HomePage';
 
 /**
  * Component where the main routes of the app are specified.
@@ -21,7 +21,7 @@ export default function Routes() {
       <Navigation />
 
       <ReactRouterRoutes location={background || location}>
-        <Route path={ROUTE_PATHS.home} element={<HomeRoute />} />
+        <Route path={ROUTE_PATHS.home} element={<HomePage />} />
       </ReactRouterRoutes>
 
       <Footer />

@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'SFPro';
   src: local('SFPro-Regular'),
-    url(./common/assets/fonts/SFPro/SFPro-Regular.ttf) format('truetype');
+    url(./lib/assets/fonts/SFPro/SFPro-Regular.ttf) format('truetype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'SFPro';
   src: local('SFPro-RegularItalic'),
-    url(./common/assets/fonts/SFPro/SFPro-RegularItalic.otf) format('truetype');
+    url(./lib/assets/fonts/SFPro/SFPro-RegularItalic.otf) format('truetype');
   font-weight: 400;
   font-style: italic;
 }
@@ -16,21 +16,21 @@
 @font-face {
   font-family: 'SFPro';
   src: local('SFPro-Bold'),
-    url(./common/assets/fonts/SFPro/SFPro-Bold.ttf) format('truetype');
+    url(./lib/assets/fonts/SFPro/SFPro-Bold.ttf) format('truetype');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'SFPro';
   src: local('SFPro-Heavy'),
-    url(./common/assets/fonts/SFPro/SFPro-Heavy.ttf) format('truetype');
+    url(./lib/assets/fonts/SFPro/SFPro-Heavy.ttf) format('truetype');
   font-weight: 800;
 }
 
 @font-face {
   font-family: 'SFPro';
   src: local('SFPro-Light'),
-    url(./common/assets/fonts/SFPro/SFPro-Light.ttf) format('truetype');
+    url(./lib/assets/fonts/SFPro/SFPro-Light.ttf) format('truetype');
   font-weight: 300;
 }
 
