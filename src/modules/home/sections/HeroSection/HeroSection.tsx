@@ -5,11 +5,13 @@ import ArrowIcon from 'lib/assets/icons/ArrowIcon';
 import {
   HomePageSubtitle,
   HomePageTitle,
-  HomePageWaitingListButton,
+  HomePageGoToAppButton,
 } from './HeroSection.styles';
 import Grid from 'components/Grid/Grid';
 import { useLayout } from 'contexts/LayoutContext/LayoutContext.hooks';
 import { CSSProperties } from 'react';
+import InformativePill from 'components/InformativePill/InformativePill';
+import BoltCircledIcon from 'lib/assets/icons/BoltCircledIcon';
 
 /**
  * Home module main page.
@@ -18,6 +20,13 @@ export default function HeroSection() {
   const theme = useTheme();
 
   const { footerHeight } = useLayout();
+
+  const handleRiskAssessmentTrialClick = () =>
+    (window.location.href =
+      'https://app.climeinvest.com/risk-assessments/trial');
+
+  const handleGoToAppClick = () =>
+    (window.location.href = 'https://app.climeinvest.com');
 
   const styles: CSSProperties = {
     paddingTop: 0,
@@ -37,6 +46,17 @@ export default function HeroSection() {
       size="lg"
       style={styles}
     >
+      <InformativePill
+        onClick={handleRiskAssessmentTrialClick}
+        style={{ marginBottom: theme.spacing.sm }}
+      >
+        <BoltCircledIcon
+          height={16}
+          style={{ marginRight: theme.spacing.xs }}
+        />
+        Try our new AI risk assessment tool
+      </InformativePill>
+
       <HomePageTitle variant="title2">
         Restore nature with confidence.
       </HomePageTitle>
@@ -46,12 +66,10 @@ export default function HeroSection() {
         investments.
       </HomePageSubtitle>
 
-      <HomePageWaitingListButton
-        onClick={() => (window.location.href = 'https://app.climeinvest.com')}
-      >
-        Get started{' '}
+      <HomePageGoToAppButton onClick={handleGoToAppClick}>
+        Get started
         <ArrowIcon height={16} style={{ marginLeft: theme.spacing.xxs }} />
-      </HomePageWaitingListButton>
+      </HomePageGoToAppButton>
     </Grid>
   );
 }
