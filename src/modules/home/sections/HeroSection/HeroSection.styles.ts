@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
-import Button from '../../../../components/Button/Button';
-import Typography from '../../../../components/Typography/Typography';
+import Button from 'components/Button/Button';
+import Typography from 'components/Typography/Typography';
+import Grid from 'components/Grid/Grid';
+
+export const HomePageContainer = styled(Grid)``;
 
 export const HomePageTitle = styled(Typography)`
   text-align: center;

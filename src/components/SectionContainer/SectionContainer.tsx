@@ -28,23 +28,19 @@ export default function SectionContainer({
   };
 
   return (
-    <>
-      <Grid
-        container
-        maxWidth
-        as="section"
-        align="center"
-        justify="center"
-        size="lg"
-        variant={variant}
-        style={styles}
-      >
-        {children}
+    <Grid
+      container
+      maxWidth
+      as="section"
+      align="center"
+      justify="center"
+      size="lg"
+      variant={variant}
+      style={styles}
+    >
+      {children}
 
-        {withSeparator && (
-          <SectionSeparator paddingVertical={paddingVertical} />
-        )}
-      </Grid>
-    </>
+      {withSeparator && <SectionSeparator paddingVertical={paddingVertical} />}
+    </Grid>
   );
 }

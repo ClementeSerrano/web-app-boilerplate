@@ -1,6 +1,5 @@
 import { useTheme } from 'styled-components';
 
-import SectionContainer from 'components/SectionContainer/SectionContainer';
 import ArrowIcon from 'lib/assets/icons/ArrowIcon';
 
 import {
@@ -8,6 +7,9 @@ import {
   HomePageTitle,
   HomePageWaitingListButton,
 } from './HeroSection.styles';
+import Grid from 'components/Grid/Grid';
+import { useLayout } from 'contexts/LayoutContext/LayoutContext.hooks';
+import { CSSProperties } from 'react';
 
 /**
  * Home module main page.
@@ -15,40 +17,41 @@ import {
 export default function HeroSection() {
   const theme = useTheme();
 
+  const { footerHeight } = useLayout();
+
+  const styles: CSSProperties = {
+    paddingTop: 0,
+    paddingBottom: 0,
+    height: `calc(100vh - ${footerHeight}px)`,
+  };
+
   return (
-    <>
-      <SectionContainer style={{ paddingBottom: theme.spacing.xl }}>
-        {/* <InformativePill style={{ marginBottom: theme.spacing.sm }}>
-          <BoltCircledIcon
-            height={16}
-            style={{ marginRight: theme.spacing.xs }}
-          />{' '}
-          Earn up to 4x returns
-        </InformativePill> */}
+    <Grid
+      variant="level1"
+      container
+      maxWidth
+      maxHeight
+      as="section"
+      align="center"
+      justify="center"
+      size="lg"
+      style={styles}
+    >
+      <HomePageTitle variant="title2">
+        Restore nature with confidence.
+      </HomePageTitle>
 
-        <HomePageTitle variant="title2">
-          Restore nature with confidence. <br />
-        </HomePageTitle>
+      <HomePageSubtitle variant="title5" color="level3">
+        The financial infrastructure to power the next generation of nature
+        investments.
+      </HomePageSubtitle>
 
-        <HomePageSubtitle variant="title5" color="level3">
-          The financial infrastructure to power the next generation of nature
-          investments. <br />
-        </HomePageSubtitle>
-
-        <HomePageWaitingListButton
-          onClick={() => (window.location.href = 'https://app.climeinvest.com')}
-        >
-          Get started{' '}
-          <ArrowIcon height={16} style={{ marginLeft: theme.spacing.xxs }} />
-        </HomePageWaitingListButton>
-      </SectionContainer>
-
-      {/* {waitingListDialog.show && (
-        <WaitingListDialog
-          show={waitingListDialog.show}
-          handleClose={waitingListDialog.handleClose}
-        />
-      )} */}
-    </>
+      <HomePageWaitingListButton
+        onClick={() => (window.location.href = 'https://app.climeinvest.com')}
+      >
+        Get started{' '}
+        <ArrowIcon height={16} style={{ marginLeft: theme.spacing.xxs }} />
+      </HomePageWaitingListButton>
+    </Grid>
   );
 }
