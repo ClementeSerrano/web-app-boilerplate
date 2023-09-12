@@ -59,7 +59,7 @@ export function getMobileTypographyFontSize({
     case 'title5':
     case 'title6':
       return parseSize({
-        value: typography.fontBaseSize * typography.fontSizeScales.xl,
+        value: typography.fontBaseSize * typography.fontSizeScales.lg,
         from: 'px',
         to: 'rem',
         withUnits: true,
