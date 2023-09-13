@@ -1,5 +1,5 @@
 import { useTheme } from 'styled-components';
-import Lottie from 'react-lottie';
+// import Lottie from 'react-lottie';
 
 import ArrowIcon from 'lib/assets/icons/ArrowIcon';
 
@@ -10,18 +10,18 @@ import {
 } from './HeroSection.styles';
 import Grid from 'components/Grid/Grid';
 import { useLayout } from 'contexts/LayoutContext/LayoutContext.hooks';
-import { useDevice } from 'contexts/DeviceContext/DeviceContext.hooks';
+// import { useDevice } from 'contexts/DeviceContext/DeviceContext.hooks';
 import { CSSProperties } from 'react';
 import InformativePill from 'components/InformativePill/InformativePill';
 import BoltCircledIcon from 'lib/assets/icons/BoltCircledIcon';
-import floatingBlurredCirclesAnimation from 'lib/assets/lotties/floating-blurred-circles-animation.json';
+// import floatingBlurredCirclesAnimation from 'lib/assets/lotties/floating-blurred-circles-animation.json';
 
 /**
  * Home module main page.
  */
 export default function HeroSection() {
   const theme = useTheme();
-  const { isLaptop } = useDevice();
+  // const { isLaptop } = useDevice();
 
   const { footerHeight } = useLayout();
 
@@ -38,14 +38,14 @@ export default function HeroSection() {
     height: `calc(100vh - ${footerHeight + 24}px)`,
   };
 
-  const animationOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: floatingBlurredCirclesAnimation,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-  };
+  // const animationOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: floatingBlurredCirclesAnimation,
+  //   rendererSettings: {
+  //     preserveAspectRatio: 'xMidYMid slice',
+  //   },
+  // };
 
   return (
     <Grid
@@ -85,9 +85,9 @@ export default function HeroSection() {
         <ArrowIcon height={16} style={{ marginLeft: theme.spacing.xxs }} />
       </HomePageGoToAppButton>
 
-      {isLaptop && (
+      {/* {isLaptop && (
         <Lottie options={animationOptions} height={400} width={400} />
-      )}
+      )} */}
     </Grid>
   );
 }
