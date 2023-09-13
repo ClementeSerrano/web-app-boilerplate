@@ -10,6 +10,7 @@ import {
 } from './HeroSection.styles';
 import Grid from 'components/Grid/Grid';
 import { useLayout } from 'contexts/LayoutContext/LayoutContext.hooks';
+import { useDevice } from 'contexts/DeviceContext/DeviceContext.hooks';
 import { CSSProperties } from 'react';
 import InformativePill from 'components/InformativePill/InformativePill';
 import BoltCircledIcon from 'lib/assets/icons/BoltCircledIcon';
@@ -20,6 +21,7 @@ import floatingBlurredCirclesAnimation from 'lib/assets/lotties/floating-blurred
  */
 export default function HeroSection() {
   const theme = useTheme();
+  const { isPhone } = useDevice();
 
   const { footerHeight } = useLayout();
 
@@ -31,12 +33,12 @@ export default function HeroSection() {
     (window.location.href = 'https://app.climeinvest.com');
 
   const styles: CSSProperties = {
-    paddingTop: 0,
+    paddingTop: 24,
     paddingBottom: 0,
-    height: `calc(100vh - ${footerHeight}px)`,
+    height: `calc(100vh - ${footerHeight + 24}px)`,
   };
 
-  const defaultOptions = {
+  const animationOptions = {
     loop: true,
     autoplay: true,
     animationData: floatingBlurredCirclesAnimation,
@@ -44,6 +46,8 @@ export default function HeroSection() {
       preserveAspectRatio: 'xMidYMid slice',
     },
   };
+
+  const animationSize = isPhone ? 200 : 400;
 
   return (
     <Grid
@@ -83,7 +87,11 @@ export default function HeroSection() {
         <ArrowIcon height={16} style={{ marginLeft: theme.spacing.xxs }} />
       </HomePageGoToAppButton>
 
-      <Lottie options={defaultOptions} height={200} width={200} />
+      <Lottie
+        options={animationOptions}
+        height={animationSize}
+        width={animationSize}
+      />
     </Grid>
   );
 }
