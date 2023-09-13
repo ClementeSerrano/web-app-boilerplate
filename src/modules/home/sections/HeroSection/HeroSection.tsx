@@ -1,4 +1,5 @@
 import { useTheme } from 'styled-components';
+import Lottie from 'react-lottie';
 
 import ArrowIcon from 'lib/assets/icons/ArrowIcon';
 
@@ -12,6 +13,7 @@ import { useLayout } from 'contexts/LayoutContext/LayoutContext.hooks';
 import { CSSProperties } from 'react';
 import InformativePill from 'components/InformativePill/InformativePill';
 import BoltCircledIcon from 'lib/assets/icons/BoltCircledIcon';
+import floatingBlurredCirclesAnimation from 'lib/assets/lotties/floating-blurred-circles-animation.json';
 
 /**
  * Home module main page.
@@ -34,6 +36,15 @@ export default function HeroSection() {
     height: `calc(100vh - ${footerHeight}px)`,
   };
 
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: floatingBlurredCirclesAnimation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
+
   return (
     <Grid
       variant="level1"
@@ -54,7 +65,7 @@ export default function HeroSection() {
           height={16}
           style={{ marginRight: theme.spacing.xs }}
         />
-        Try our new risk assessment engine
+        Try our new risk assessments engine
         <ArrowIcon height={12} style={{ marginLeft: theme.spacing.xxs }} />
       </InformativePill>
 
@@ -71,6 +82,8 @@ export default function HeroSection() {
         Get started
         <ArrowIcon height={16} style={{ marginLeft: theme.spacing.xxs }} />
       </HomePageGoToAppButton>
+
+      <Lottie options={defaultOptions} height={200} width={200} />
     </Grid>
   );
 }
