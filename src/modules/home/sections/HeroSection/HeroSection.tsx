@@ -48,13 +48,14 @@ export default function HeroSection() {
     >
       <InformativePill
         onClick={handleRiskAssessmentTrialClick}
-        style={{ marginBottom: theme.spacing.sm }}
+        style={{ marginBottom: theme.spacing.md }}
       >
         <BoltCircledIcon
           height={16}
           style={{ marginRight: theme.spacing.xs }}
         />
-        Try our new AI risk assessment tool
+        Try our new risk assessment engine
+        <ArrowIcon height={12} style={{ marginLeft: theme.spacing.xxs }} />
       </InformativePill>
 
       <HomePageTitle variant="title2">
