@@ -21,7 +21,7 @@ import floatingBlurredCirclesAnimation from 'lib/assets/lotties/floating-blurred
  */
 export default function HeroSection() {
   const theme = useTheme();
-  const { isPhone } = useDevice();
+  const { isLaptop } = useDevice();
 
   const { footerHeight } = useLayout();
 
@@ -47,8 +47,6 @@ export default function HeroSection() {
     },
   };
 
-  const animationSize = isPhone ? 200 : 400;
-
   return (
     <Grid
       variant="level1"
@@ -67,7 +65,7 @@ export default function HeroSection() {
       >
         <BoltCircledIcon
           height={16}
-          style={{ marginRight: theme.spacing.xs }}
+          style={{ marginRight: theme.spacing.xxs }}
         />
         Try our new risk assessments engine
         <ArrowIcon height={12} style={{ marginLeft: theme.spacing.xxs }} />
@@ -87,11 +85,9 @@ export default function HeroSection() {
         <ArrowIcon height={16} style={{ marginLeft: theme.spacing.xxs }} />
       </HomePageGoToAppButton>
 
-      <Lottie
-        options={animationOptions}
-        height={animationSize}
-        width={animationSize}
-      />
+      {isLaptop && (
+        <Lottie options={animationOptions} height={400} width={400} />
+      )}
     </Grid>
   );
 }
