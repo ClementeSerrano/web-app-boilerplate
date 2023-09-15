@@ -8,22 +8,15 @@ import {
   HomePageTitle,
   HomePageGoToAppButton,
 } from './HeroSection.styles';
-import Grid from 'components/Grid/Grid';
-import { useLayout } from 'contexts/LayoutContext/LayoutContext.hooks';
-// import { useDevice } from 'contexts/DeviceContext/DeviceContext.hooks';
-import { CSSProperties } from 'react';
 import InformativePill from 'components/InformativePill/InformativePill';
 import BoltCircledIcon from 'lib/assets/icons/BoltCircledIcon';
-// import floatingBlurredCirclesAnimation from 'lib/assets/lotties/floating-blurred-circles-animation.json';
+import SectionContainer from 'components/SectionContainer/SectionContainer';
 
 /**
  * Home module main page.
  */
 export default function HeroSection() {
   const theme = useTheme();
-  // const { isLaptop } = useDevice();
-
-  const { footerHeight } = useLayout();
 
   const handleRiskAssessmentTrialClick = () =>
     (window.location.href =
@@ -32,33 +25,8 @@ export default function HeroSection() {
   const handleGoToAppClick = () =>
     (window.location.href = 'https://app.climeinvest.com');
 
-  const styles: CSSProperties = {
-    paddingTop: 24,
-    paddingBottom: 0,
-    height: `calc(100vh - ${footerHeight + 24}px)`,
-  };
-
-  // const animationOptions = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: floatingBlurredCirclesAnimation,
-  //   rendererSettings: {
-  //     preserveAspectRatio: 'xMidYMid slice',
-  //   },
-  // };
-
   return (
-    <Grid
-      variant="level1"
-      container
-      maxWidth
-      maxHeight
-      as="section"
-      align="center"
-      justify="center"
-      size="lg"
-      style={styles}
-    >
+    <SectionContainer style={{ paddingBottom: theme.spacing.xl }}>
       <InformativePill
         onClick={handleRiskAssessmentTrialClick}
         style={{ marginBottom: theme.spacing.md }}
@@ -81,13 +49,13 @@ export default function HeroSection() {
       </HomePageSubtitle>
 
       <HomePageGoToAppButton onClick={handleGoToAppClick}>
-        Get started
+        Sign up
         <ArrowIcon height={16} style={{ marginLeft: theme.spacing.xxs }} />
       </HomePageGoToAppButton>
 
       {/* {isLaptop && (
         <Lottie options={animationOptions} height={400} width={400} />
       )} */}
-    </Grid>
+    </SectionContainer>
   );
 }

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Card from '../../../../components/Card/Card';
 import Typography from '../../../../components/Typography/Typography';
 
-export const ProblemStatementCardsContainer = styled.div`
+export const ValuePropositionCardsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
   gap: 16px;
@@ -16,7 +16,7 @@ export const ProblemStatementCardsContainer = styled.div`
   }
 `;
 
-export const ProblemStatementTitle = styled.h1`
+export const ValuePropositionTitle = styled.h1`
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.25rem;
@@ -31,13 +31,13 @@ export const ProblemStatementTitle = styled.h1`
   }
 `;
 
-export const ProblemStatementSubtitle = styled(Typography)`
+export const ValuePropositionSubtitle = styled(Typography)`
   margin-top: ${({ theme }) => theme.spacing.lg}px;
   max-width: 1200px;
   text-align: center;
 `;
 
-export const ProblemStatementCard = styled(Card)`
+export const ValuePropositionCard = styled(Card)`
   padding: 32px 52px;
   background-color: ${({ theme }) => theme.palette.background.level2};
 
@@ -47,7 +47,7 @@ export const ProblemStatementCard = styled(Card)`
   }
 `;
 
-export const ProblemStatementIconContainer = styled.div`
+export const ValuePropositionIconContainer = styled.div`
   display: flex;
   justify-content: left;
   align-items: center;

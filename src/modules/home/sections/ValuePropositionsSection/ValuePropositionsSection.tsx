@@ -4,30 +4,29 @@ import SectionContainer from '../../../../components/SectionContainer/SectionCon
 import Typography from '../../../../components/Typography/Typography';
 
 import {
-  ProblemStatementCardsContainer,
-  ProblemStatementTitle,
-  ProblemStatementIconContainer,
-  ProblemStatementCard,
-  // ProblemStatementSubtitle,
-} from './ProblemStatementSection.styles';
+  ValuePropositionCardsContainer,
+  ValuePropositionTitle,
+  ValuePropositionIconContainer,
+  ValuePropositionCard,
+} from './ValuePropositionsSection.styles';
 import DollarSignIcon from '../../../../lib/assets/icons/DollarSignIcon';
 import DocAndMagnifyingGlass from '../../../../lib/assets/icons/DocAndMagnifyingGlass';
 import LockOpenIcon from '../../../../lib/assets/icons/LockOpenIcon';
 
-export default function ProblemStatementSection() {
+export default function ValuePropositionsSection() {
   const theme = useTheme();
 
   return (
-    <SectionContainer withSeparator style={{ paddingTop: theme.spacing.md }}>
-      <ProblemStatementTitle>
+    <SectionContainer style={{ paddingTop: theme.spacing.md }}>
+      <ValuePropositionTitle>
         Opening access to climate investments
-      </ProblemStatementTitle>
+      </ValuePropositionTitle>
 
-      <ProblemStatementCardsContainer>
-        <ProblemStatementCard>
-          <ProblemStatementIconContainer>
+      <ValuePropositionCardsContainer>
+        <ValuePropositionCard>
+          <ValuePropositionIconContainer>
             <DollarSignIcon height={40} color={theme.palette.primary.main} />
-          </ProblemStatementIconContainer>
+          </ValuePropositionIconContainer>
 
           <Typography
             as="h2"
@@ -40,15 +39,15 @@ export default function ProblemStatementSection() {
           <Typography as="h2" variant="paragraph1">
             Get assurance on future price stability based on core risk elements.
           </Typography>
-        </ProblemStatementCard>
+        </ValuePropositionCard>
 
-        <ProblemStatementCard>
-          <ProblemStatementIconContainer>
+        <ValuePropositionCard>
+          <ValuePropositionIconContainer>
             <DocAndMagnifyingGlass
               height={40}
               color={theme.palette.primary.main}
             />
-          </ProblemStatementIconContainer>
+          </ValuePropositionIconContainer>
           <Typography
             as="h2"
             variant="title6"
@@ -58,14 +57,15 @@ export default function ProblemStatementSection() {
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Mitigate reputation risk and invest in climate projects with confidence.
+            Mitigate reputation risk and invest in climate projects with
+            confidence.
           </Typography>
-        </ProblemStatementCard>
+        </ValuePropositionCard>
 
-        <ProblemStatementCard>
-          <ProblemStatementIconContainer>
+        <ValuePropositionCard>
+          <ValuePropositionIconContainer>
             <LockOpenIcon height={40} color={theme.palette.primary.main} />
-          </ProblemStatementIconContainer>
+          </ValuePropositionIconContainer>
           <Typography
             as="h2"
             variant="title6"
@@ -77,14 +77,8 @@ export default function ProblemStatementSection() {
           <Typography as="h2" variant="paragraph1">
             Get faster access to financing for your nature-based solution.
           </Typography>
-        </ProblemStatementCard>
-      </ProblemStatementCardsContainer>
-
-      {/* <ProblemStatementSubtitle variant="title5" color="level3">
-        From reforestation to ocean clean ups to green infrastructure. With
-        Climeinvest, you invest to build nature-based projects that remove
-        carbon from the atmosphere.
-      </ProblemStatementSubtitle> */}
+        </ValuePropositionCard>
+      </ValuePropositionCardsContainer>
     </SectionContainer>
   );
 }
