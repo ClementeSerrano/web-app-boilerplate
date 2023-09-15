@@ -67,7 +67,7 @@ export default function HeroSection() {
           height={16}
           style={{ marginRight: theme.spacing.xxs }}
         />
-        Try our new risk assessments engine
+        Try our community risk assessment AI
         <ArrowIcon height={12} style={{ marginLeft: theme.spacing.xxs }} />
       </InformativePill>
 

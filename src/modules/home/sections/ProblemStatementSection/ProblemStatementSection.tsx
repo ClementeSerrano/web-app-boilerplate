@@ -34,12 +34,11 @@ export default function ProblemStatementSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Big impact with small amounts
+            Investors
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Investing in nature projects requires deep pockets. With
-            Climeinvest, you can invest as much as your wallet allows.
+            Get assurance on future price stability based on core risk elements.
           </Typography>
         </ProblemStatementCard>
 
@@ -55,13 +54,11 @@ export default function ProblemStatementSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            No deep expertise required
+            Corporates
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            At Climeinvest, we vet each project with our predictive AI built by
-            climate scientists to provide you with a risk assessment you
-            understand.
+            Mitigate reputation risk and invest in climate projects with confidence.
           </Typography>
         </ProblemStatementCard>
 
@@ -74,13 +71,11 @@ export default function ProblemStatementSection() {
             variant="title6"
             style={{ marginBottom: theme.spacing.sm }}
           >
-            Faster financing for project developers
+            Project developers
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Investing in nature projects can be highly complex. Climeinvest has
-            standard investment structures that provide fast financing to
-            projects.
+            Get faster access to financing for your nature-based solution.
           </Typography>
         </ProblemStatementCard>
       </ProblemStatementCardsContainer>
