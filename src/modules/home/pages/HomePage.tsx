@@ -1,5 +1,5 @@
 import HeroSection from '../sections/HeroSection/HeroSection';
-import ProblemStatementSection from '/Users/sauraj/lp/src/modules/home/sections/ProblemStatementSection/ProblemStatementSection';
+import ProblemStatementSection from '../sections/ProblemStatementSection/ProblemStatementSection';
 
 /**
  * Home module main page.
@@ -7,8 +7,8 @@ import ProblemStatementSection from '/Users/sauraj/lp/src/modules/home/sections/
 export default function HomePage() {
   return (
     <>
-    <HeroSection />
-    <ProblemStatementSection />
+      <HeroSection />
+      <ProblemStatementSection />
     </>
   )
   
