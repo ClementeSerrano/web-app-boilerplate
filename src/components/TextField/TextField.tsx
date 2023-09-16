@@ -53,6 +53,7 @@ export default function TextField({
   placeholder: basePlaceholder,
   style,
   error,
+  as = 'input',
   ...inputProps
 }: TextFieldProps) {
   const inputStyles: CSSProperties = {
@@ -66,38 +67,32 @@ export default function TextField({
 
   return (
     <TextFieldContainer style={style?.container}>
+      <TextFieldLabel style={style?.label} htmlFor={id} $error={error}>
+        {label}
+      </TextFieldLabel>
+
       <TextFieldInputContainer
-        variant={variant}
-        error={error}
-        isLabel={!!label}
+        $variant={variant}
+        $error={error}
+        $isLabel={!!label}
         style={style?.inputContainer}
       >
         {adornments?.left}
 
         <TextFieldInput
+          as={as}
           id={id}
           style={inputStyles}
-          variant={variant}
           placeholder={placeholder}
           type={type}
-          error={error}
+          $error={error}
           required
           {...inputProps}
         />
 
         {adornments?.right}
 
-        <TextFieldBar variant={variant} style={style?.bar} error={error} />
-
-        <TextFieldLabel
-          style={style?.label}
-          isLeftAdornment={!!adornments?.left}
-          variant={variant}
-          htmlFor={id}
-          error={error}
-        >
-          {label}
-        </TextFieldLabel>
+        <TextFieldBar $variant={variant} style={style?.bar} $error={error} />
       </TextFieldInputContainer>
 
       <TextFieldHighlight style={style?.highlight} />

@@ -4,7 +4,9 @@ export type TextFieldProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'style'
 > & {
+  as?: string | React.ComponentType<unknown>;
   adornments?: { left?: ReactNode; right?: ReactNode };
+  rows?: number;
   error?: boolean;
   label?: string;
   style?: TextFieldStyle;
