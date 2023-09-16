@@ -23,7 +23,7 @@ export const ButtonContainer = styled.button.attrs(
     getButtonColor({ variant, format, palette: theme.palette })};
   border: ${({ theme, format, variant }) =>
     getButtonBorder({ variant, format, palette: theme.palette })};
-  border-radius: 6px;
+  border-radius: 8px;
   transition: opacity 0.3s, background-color 0.3s;
   text-decoration: none;
   max-width: ${({ theme }) => theme.breakpoints.values.xs}px;

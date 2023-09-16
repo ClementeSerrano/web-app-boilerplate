@@ -1,3 +1,4 @@
+import { DEVICES_BREAKPOINTS } from 'contexts/DeviceContext/DeviceContext.constants';
 import styled from 'styled-components';
 import Button from '../Button/Button';
 
@@ -10,4 +11,8 @@ export const InformativePillContainer = styled(Button)`
   border-style: solid;
   border-color: ${({ theme }) => theme.palette.background.level3};
   font-size: 13px;
+
+  @media (max-width: ${DEVICES_BREAKPOINTS.phone.max}px) {
+    font-size: 10px;
+  }
 `;

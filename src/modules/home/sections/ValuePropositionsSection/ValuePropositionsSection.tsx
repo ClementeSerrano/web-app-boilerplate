@@ -1,7 +1,10 @@
 import { useTheme } from 'styled-components';
 
-import SectionContainer from '../../../../components/SectionContainer/SectionContainer';
-import Typography from '../../../../components/Typography/Typography';
+import SectionContainer from 'components/SectionContainer/SectionContainer';
+import Typography from 'components/Typography/Typography';
+import DollarSignIcon from 'lib/assets/icons/DollarSignIcon';
+import CubeIcon from 'lib/assets/icons/CubeIcon';
+import LeafIcon from 'lib/assets/icons/LeafIcon';
 
 import {
   ValuePropositionCardsContainer,
@@ -9,9 +12,6 @@ import {
   ValuePropositionIconContainer,
   ValuePropositionCard,
 } from './ValuePropositionsSection.styles';
-import DollarSignIcon from '../../../../lib/assets/icons/DollarSignIcon';
-import DocAndMagnifyingGlass from '../../../../lib/assets/icons/DocAndMagnifyingGlass';
-import LockOpenIcon from '../../../../lib/assets/icons/LockOpenIcon';
 
 export default function ValuePropositionsSection() {
   const theme = useTheme();
@@ -43,10 +43,7 @@ export default function ValuePropositionsSection() {
 
         <ValuePropositionCard>
           <ValuePropositionIconContainer>
-            <DocAndMagnifyingGlass
-              height={40}
-              color={theme.palette.primary.main}
-            />
+            <CubeIcon height={40} color={theme.palette.primary.main} />
           </ValuePropositionIconContainer>
           <Typography
             as="h2"
@@ -64,7 +61,7 @@ export default function ValuePropositionsSection() {
 
         <ValuePropositionCard>
           <ValuePropositionIconContainer>
-            <LockOpenIcon height={40} color={theme.palette.primary.main} />
+            <LeafIcon height={40} color={theme.palette.primary.main} />
           </ValuePropositionIconContainer>
           <Typography
             as="h2"
