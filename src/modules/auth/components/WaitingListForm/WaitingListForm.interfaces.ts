@@ -6,8 +6,8 @@ export type WaitingListFormProps = Pick<
 >;
 
 export type WaitingListFormValues = {
-  email: '';
-  firstname?: '';
-  lastname?: '';
-  preferredInvestmentRange?: { value: string; label: string };
+  email: string;
+  firstname?: string;
+  lastname?: string;
+  companyName?: string;
 };

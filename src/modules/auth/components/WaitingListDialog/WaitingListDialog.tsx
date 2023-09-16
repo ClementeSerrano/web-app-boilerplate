@@ -29,19 +29,18 @@ export default function WaitingListDialog({
             <>
               <WaitingListDialogParagraph variant="paragraph1" color="level3">
                 You will be hearing from us very soon. In the meantime, we
-                invite you to answer a few questions that will help us make
-                Climeinvest the best solution for you.
+                invite you to try our new community risk assessment AI.
               </WaitingListDialogParagraph>
 
               <Typography
                 as="a"
                 variant="link"
-                href="https://3uzljrqqoz4.typeform.com/to/evVBKAwP"
+                href="https://app.climeinvest.com/risk-assessments/trial"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ fontWeight: theme.typography.fontWeights.bold }}
               >
-                Go to survey{' '}
+                Go to app{' '}
                 <ArrowIcon
                   height={12}
                   style={{ marginLeft: theme.spacing.xs }}
@@ -55,7 +54,12 @@ export default function WaitingListDialog({
 
     return (
       <>
-        <Typography as="legend" variant="paragraph1" color="level3">
+        <Typography
+          as="legend"
+          variant="paragraph1"
+          color="level3"
+          style={{ marginBottom: theme.spacing.sm }}
+        >
           By submitting this form, you will get early access to Climeinvest.
         </Typography>
 

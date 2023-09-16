@@ -2,7 +2,7 @@ import { useFormik } from 'formik';
 import { useTheme } from 'styled-components';
 
 import { useWaitingListRegisterMutation } from '../../api/useWaitingListRegisterMutation';
-import TextField from '../../../../components/TextField/TextField';
+import TextField from 'components/TextField/TextField';
 
 import {
   WaitingListFormContainer,
@@ -12,9 +12,6 @@ import {
   WaitingListFormProps,
   WaitingListFormValues,
 } from './WaitingListForm.interfaces';
-import Select from '../../../../components/Select/Select';
-import Typography from '../../../../components/Typography/Typography';
-import { PREFERRED_INVESTMENT_OPTIONS } from './WaitingListForm.constants';
 
 /**
  * Form to join the waiting list of the platform launch.
@@ -38,13 +35,11 @@ export default function WaitingListForm({
       email: '',
       firstname: '',
       lastname: '',
+      companyName: '',
     },
-    onSubmit({ preferredInvestmentRange, ...values }) {
+    onSubmit(values) {
       waitingListRegisterMutation({
-        variables: {
-          ...values,
-          preferredInvestmentRange: preferredInvestmentRange?.value,
-        },
+        variables: values,
       });
     },
   });
@@ -84,22 +79,14 @@ export default function WaitingListForm({
         style={{ container: { marginBottom: theme.spacing.sm } }}
       />
 
-      <Typography
-        variant="paragraph2"
-        style={{ marginBottom: theme.spacing.xxs, width: '100%' }}
-      >
-        Amount you’d be open to investing
-      </Typography>
-
-      <Select
-        options={PREFERRED_INVESTMENT_OPTIONS}
-        value={form.values.preferredInvestmentRange}
-        onChange={value =>
-          form.setFieldValue('preferredInvestmentRange', value)
-        }
-        className="basic-multi-select"
-        classNamePrefix="select"
-        placeholder="Select amount"
+      <TextField
+        id="companyName"
+        name="companyName"
+        value={form.values.companyName}
+        onChange={form.handleChange}
+        variant="filled"
+        label="Company"
+        placeholder="Enter your company"
         style={{ container: { marginBottom: theme.spacing.sm } }}
       />
 

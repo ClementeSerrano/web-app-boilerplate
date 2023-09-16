@@ -31,7 +31,7 @@ export default function LeafIcon({
       className={className}
       fill="none"
     >
-      <g clip-path="url(#clip0_1105_18)">
+      <g clipPath="url(#clip0_1105_18)">
         <path d={d} fill={color} />
       </g>
       <defs>

@@ -1,34 +1,32 @@
 import { MutationHookOptions, useMutation } from '@apollo/client';
+import { gql } from 'api/interfaces/__generated__';
 
-import { gql } from '../../../lib/api/interfaces/__generated__';
 import {
-  Auth,
+  WaitingListRegisterMutation,
   WaitingListRegisterMutationVariables,
-} from '../../../lib/api/interfaces/__generated__/graphql';
-import { useAlerts } from '../../../lib/hooks/useAlerts';
+} from 'lib/api/interfaces/__generated__/graphql';
+import { useAlerts } from 'lib/hooks/useAlerts';
 
 const WAITING_LIST_REGISTER_MUTATION = gql(/* GraphQL */ `
   mutation WaitingListRegister(
     $email: String!
     $firstname: String
     $lastname: String
-    $preferredInvestmentRange: String
+    $companyName: String
   ) {
     waitingListRegister(
       email: $email
       firstname: $firstname
       lastname: $lastname
-      preferredInvestmentRange: $preferredInvestmentRange
+      companyName: $companyName
     ) {
       accessToken
     }
   }
 `);
 
-export type WaitingListRegisterMutationResult = { waitingListRegister: Auth };
-
 export type WaitingListRegisterMutationOptions = MutationHookOptions<
-  WaitingListRegisterMutationResult,
+  WaitingListRegisterMutation,
   WaitingListRegisterMutationVariables
 >;
 
