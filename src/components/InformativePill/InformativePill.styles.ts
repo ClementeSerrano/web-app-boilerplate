@@ -13,6 +13,6 @@ export const InformativePillContainer = styled(Button)`
   font-size: 13px;
 
   @media (max-width: ${DEVICES_BREAKPOINTS.phone.max}px) {
-    font-size: 10px;
+    font-size: 11px;
   }
 `;
