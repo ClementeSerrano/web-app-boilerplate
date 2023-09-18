@@ -1,24 +1,20 @@
 import { useTheme } from 'styled-components';
-// import Lottie from 'react-lottie';
+import { useLocation } from 'react-router-dom';
 
 import ArrowIcon from 'lib/assets/icons/ArrowIcon';
 
-import {
-  HomePageSubtitle,
-  HomePageTitle,
-  HomePageGoToAppButton,
-} from './HeroSection.styles';
+import { HomePageSubtitle, HomePageTitle } from './HeroSection.styles';
 import InformativePill from 'components/InformativePill/InformativePill';
 import BoltCircledIcon from 'lib/assets/icons/BoltCircledIcon';
 import SectionContainer from 'components/SectionContainer/SectionContainer';
-import WaitingListDialog from 'modules/auth/components/WaitingListDialog/WaitingListDialog';
-import { useDialog } from 'lib/hooks/useDialog';
+import Navlink from 'components/Navlink/Navlink';
+import { ROUTE_PATHS } from 'routes/routes.constants';
 
 /**
  * Home module main page.
  */
 export default function HeroSection() {
-  const waitingListRegisterDialog = useDialog();
+  const location = useLocation();
 
   const theme = useTheme();
 
@@ -50,17 +46,16 @@ export default function HeroSection() {
           investments.
         </HomePageSubtitle>
 
-        <HomePageGoToAppButton onClick={waitingListRegisterDialog.handleOpen}>
-          Sign up
-          <ArrowIcon height={16} style={{ marginLeft: theme.spacing.xxs }} />
-        </HomePageGoToAppButton>
-
-        {/* {isLaptop && (
-        <Lottie options={animationOptions} height={400} width={400} />
-      )} */}
+        <Navlink
+          to={ROUTE_PATHS.waitlistRegister}
+          format="button"
+          state={{ backgroundLocation: location }}
+          style={{ marginLeft: theme.spacing.sm, marginTop: theme.spacing.md }}
+        >
+          Sign up{' '}
+          <ArrowIcon height={14} style={{ marginLeft: theme.spacing.xxs }} />
+        </Navlink>
       </SectionContainer>
-
-      <WaitingListDialog {...waitingListRegisterDialog} />
     </>
   );
 }

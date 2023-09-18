@@ -6,29 +6,33 @@ import {
 
 import { ROUTE_PATHS } from './routes.constants';
 import Navigation from '../components/Navigator/Navigation';
-import Footer from '../components/Footer/Footer';
-import HomePage from '../modules/home/pages/HomePage';
+import Footer from 'components/Footer/Footer';
+import HomePage from 'modules/home/pages/HomePage';
+import WaitlistDialog from 'modules/auth/pages/WaitlistDialog/WaitlistDialog';
 
 /**
  * Component where the main routes of the app are specified.
  */
 export default function Routes() {
   const location = useLocation();
-  const background = location.state && location.state.background;
+  const state = location.state as { backgroundLocation?: Location };
 
   return (
     <>
       <Navigation />
 
-      <ReactRouterRoutes location={background || location}>
+      <ReactRouterRoutes location={state?.backgroundLocation || location}>
         <Route path={ROUTE_PATHS.home} element={<HomePage />} />
       </ReactRouterRoutes>
 
       <Footer />
 
-      {background && (
+      {state?.backgroundLocation && (
         <ReactRouterRoutes>
-          {/* Add here modal-based routes */}
+          <Route
+            path={ROUTE_PATHS.waitlistRegister}
+            element={<WaitlistDialog />}
+          />
         </ReactRouterRoutes>
       )}
     </>

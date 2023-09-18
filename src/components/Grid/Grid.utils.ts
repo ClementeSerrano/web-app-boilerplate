@@ -1,6 +1,5 @@
-import { Theme } from '../../lib/interfaces/theme.interfaces';
-
-import { GridProps } from './Grid.types';
+import { Theme } from 'lib/interfaces/theme.interfaces';
+import { GridProps } from './Grid.interfaces';
 
 export function getGridPadding({
   size = 'lg',

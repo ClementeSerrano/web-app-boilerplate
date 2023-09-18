@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-const DialogBody = styled.div`
-  width: 100%;
-  overflow-y: scroll;
+import Grid from 'components/Grid/Grid';
+
+const DialogBody = styled(Grid)`
+  overflow: hidden;
 `;
 
 export default DialogBody;

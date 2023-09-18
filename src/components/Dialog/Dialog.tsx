@@ -6,7 +6,7 @@ import DialogClose from './components/DialogClose';
 import DialogTitle from './components/DialogTitle';
 import DialogBody from './components/DialogBody';
 import DialogFooter from './components/DialogFooter';
-import { DialogComponent, DialogProps } from './Dialog.types';
+import { DialogComponent, DialogProps } from './Dialog.interfaces';
 import { DialogBackdrop, DialogContainer } from './Dialog.styles';
 
 /**
@@ -51,6 +51,7 @@ import { DialogBackdrop, DialogContainer } from './Dialog.styles';
 export default function Dialog({
   show,
   children,
+  size = 'md',
   style,
   className,
 }: DialogProps) {
@@ -73,6 +74,7 @@ export default function Dialog({
             >
               <DialogContainer
                 container
+                $size={size}
                 size="md"
                 className={className}
                 style={{ ...transitionStyle, ...style }}

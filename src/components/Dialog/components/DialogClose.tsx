@@ -1,8 +1,8 @@
 import { useTheme } from 'styled-components';
 
-import { DialogCloseProps } from '../Dialog.types';
-import CloseIcon from '../../../lib/assets/icons/CloseIcon';
-import Button from '../../Button/Button';
+import { DialogCloseProps } from '../Dialog.interfaces';
+import CloseIcon from 'lib/assets/icons/CloseIcon';
+import Button from 'components/Button/Button';
 
 export default function DialogClose({
   className,

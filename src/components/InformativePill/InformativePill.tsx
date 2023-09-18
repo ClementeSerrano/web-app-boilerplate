@@ -1,4 +1,4 @@
-import { ButtonProps } from 'components/Button/Button.types';
+import { ButtonProps } from 'components/Button/Button.interfaces';
 import {
   WithChildren,
   WithStyle,

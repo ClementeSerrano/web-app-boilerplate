@@ -1,7 +1,7 @@
+import { parseSize } from 'lib/utils/theme.utils';
 import { DefaultTheme } from 'styled-components';
-import { parseSize } from '../../lib/utils/theme.utils';
 
-import { TypographyProps } from './Typography.types';
+import { TypographyProps } from './Typography.interfaces';
 
 export function getTypographyColor({
   variant = 'paragraph1',
@@ -59,7 +59,7 @@ export function getMobileTypographyFontSize({
     case 'title5':
     case 'title6':
       return parseSize({
-        value: typography.fontBaseSize * typography.fontSizeScales.lg,
+        value: typography.fontBaseSize * typography.fontSizeScales.xl,
         from: 'px',
         to: 'rem',
         withUnits: true,

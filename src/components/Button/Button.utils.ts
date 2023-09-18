@@ -1,10 +1,10 @@
 import { CSSProperties } from 'react';
 
-import { ValueOf } from '../../lib/interfaces/general.interfaces';
-import { parseSize } from '../../lib/utils/theme.utils';
-import { Theme } from '../../lib/interfaces/theme.interfaces';
+import { ValueOf } from 'lib/interfaces/general.interfaces';
+import { Theme } from 'lib/interfaces/theme.interfaces';
 
-import { ButtonProps } from './Button.types';
+import { ButtonProps } from './Button.interfaces';
+import { parseSize } from 'lib/utils/theme.utils';
 
 export function getButtonPadding({
   format,

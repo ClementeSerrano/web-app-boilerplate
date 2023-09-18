@@ -7,7 +7,7 @@ import {
   getGridBgColor,
   getGridMaxSize,
   getGridPadding,
-} from '../Grid/Grid.helpers';
+} from '../Grid/Grid.utils';
 
 export const NavigationTopbarContainer = styled.nav`
   position: fixed;
@@ -48,7 +48,7 @@ export const NavigationTopbarLogoNavlink = styled(Link)`
 `;
 
 export const NavigationSidebarContainer = styled(Grid)<{
-  show: boolean;
+  $show: boolean;
 }>`
   position: absolute;
   left: 0;
@@ -58,7 +58,7 @@ export const NavigationSidebarContainer = styled(Grid)<{
   width: 30vw;
   max-width: ${({ theme }) => theme.breakpoints.values.xxs}px;
   box-shadow: 0px 12px 0px ${({ theme }) => theme.colors.black.main};
-  transform: ${({ show }) => (!show ? 'translateX(-100%)' : 'translateX(0)')};
+  transform: ${({ $show }) => (!$show ? 'translateX(-100%)' : 'translateX(0)')};
   transition: transform 0.3s ease-out;
   z-index: 100;
   border-right: ${({ theme }) =>
@@ -71,8 +71,8 @@ export const NavigationSidebarContainer = styled(Grid)<{
   }
 `;
 
-export const NavigationBackdropContainer = styled.div<{ show: boolean }>`
-  display: ${({ show }) => (show ? 'block' : 'none')};
+export const NavigationBackdropContainer = styled.div<{ $show: boolean }>`
+  display: ${({ $show }) => ($show ? 'block' : 'none')};
   position: fixed;
   width: 100%;
   height: 100%;

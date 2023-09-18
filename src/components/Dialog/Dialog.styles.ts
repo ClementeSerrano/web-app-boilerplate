@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { animated } from 'react-spring';
 import Grid from '../Grid/Grid';
-import { DEVICES_BREAKPOINTS } from '../../contexts/DeviceContext/DeviceContext.constants';
+import { DEVICES_BREAKPOINTS } from 'contexts/DeviceContext/DeviceContext.constants';
+import { ThemeSizeUnit } from 'lib/interfaces/theme.interfaces';
 
 export const DialogBackdrop = styled(animated.div)`
   position: fixed;
@@ -20,10 +21,26 @@ export const DialogBackdrop = styled(animated.div)`
   overflow: hidden;
 `;
 
-export const DialogContainer = styled(animated(Grid))`
+export const DialogContainer = styled(animated(Grid))<{
+  $size: Extract<ThemeSizeUnit, 'sm' | 'md' | 'lg'>;
+}>`
   position: fixed;
   animation-duration: 0.75s;
-  width: 25vw;
+  width: ${({ $size }) => {
+    switch ($size) {
+      case 'sm':
+        return '25vw';
+
+      case 'md':
+        return '50vw';
+
+      case 'lg':
+        return '75vw';
+
+      default:
+        return '25vw';
+    }
+  }};
   border-radius: ${({ theme }) => theme.shape.borderRadius.sm}px;
   background-color: ${({ theme }) =>
     theme.mode === 'dark'
@@ -46,11 +63,11 @@ export const DialogContainer = styled(animated(Grid))`
   }
 `;
 
-export const DialogBaseHeader = styled.header<{ childrenCount: number }>`
+export const DialogBaseHeader = styled.header<{ $childrenCount: number }>`
   display: flex;
   align-items: center;
-  justify-content: ${({ childrenCount }) =>
-    childrenCount > 1 ? 'space-between' : 'flex-end'};
+  justify-content: ${({ $childrenCount }) =>
+    $childrenCount > 1 ? 'space-between' : 'flex-end'};
   width: 100%;
   margin-bottom: ${({ theme }) => theme.spacing.sm}px;
 `;

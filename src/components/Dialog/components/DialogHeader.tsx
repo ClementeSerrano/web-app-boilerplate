@@ -1,6 +1,6 @@
 import { Children } from 'react';
 
-import { DialogHeaderProps } from '../Dialog.types';
+import { DialogHeaderProps } from '../Dialog.interfaces';
 import { DialogBaseHeader } from '../Dialog.styles';
 
 export default function DialogHeader({
@@ -12,7 +12,7 @@ export default function DialogHeader({
 
   return (
     <DialogBaseHeader
-      childrenCount={childrenCount}
+      $childrenCount={childrenCount}
       className={className}
       style={style}
     >

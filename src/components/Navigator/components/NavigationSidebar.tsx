@@ -19,7 +19,7 @@ export default function NavigationSidebar({
         container
         size="md"
         variant="level1"
-        show={show}
+        $show={show}
       >
         <Navlink
           variant="primary"

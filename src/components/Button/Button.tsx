@@ -1,5 +1,5 @@
 import { ButtonContainer } from './Button.styles';
-import { ButtonProps } from './Button.types';
+import { ButtonProps } from './Button.interfaces';
 
 export default function Button({
   children,
@@ -14,9 +14,9 @@ export default function Button({
   return (
     <ButtonContainer
       as={Component}
-      variant={variant}
-      format={format}
-      size={size}
+      $variant={variant}
+      $format={format}
+      $size={size}
       type={type}
       {...props}
     >

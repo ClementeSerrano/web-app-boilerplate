@@ -1,6 +1,1 @@
-export type Route =
-  | 'all'
-  | 'accountsManager'
-  | 'addAccount'
-  | 'createAccount'
-  | 'home';
+export type Route = 'all' | 'waitlistRegister' | 'home';

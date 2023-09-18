@@ -1,9 +1,9 @@
+import { WithStyle } from 'lib/interfaces/components.interfaces';
 import {
   ThemeFormat,
   ThemePaletteKey,
   ThemeSizeUnit,
-} from '../../lib/interfaces/theme.interfaces';
-import { WithStyle } from '../../lib/interfaces/components.interfaces';
+} from 'lib/interfaces/theme.interfaces';
 
 export type ButtonProps = WithStyle &
   React.ButtonHTMLAttributes<HTMLButtonElement> & {

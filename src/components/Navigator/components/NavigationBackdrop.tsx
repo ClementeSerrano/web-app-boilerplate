@@ -8,6 +8,6 @@ export function NavigationBackdrop({
   toggleShowSidebar(): void;
 }) {
   return (
-    <NavigationBackdropContainer show={show} onClick={toggleShowSidebar} />
+    <NavigationBackdropContainer $show={show} onClick={toggleShowSidebar} />
   );
 }

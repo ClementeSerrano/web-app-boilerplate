@@ -6,6 +6,7 @@ import { DeviceProvider } from 'contexts/DeviceContext/DeviceContext';
 import { LayoutProvider } from 'contexts/LayoutContext/LayoutContext';
 import { ThemeProvider } from 'contexts/ThemeContext/ThemeContext';
 import Routes from './routes/Routes';
+import AuthProfileProvider from 'modules/auth/contexts/AuthProfileProvider';
 
 export default function App() {
   return (
@@ -14,9 +15,11 @@ export default function App() {
         <LayoutProvider>
           <ThemeProvider>
             <AlertsProvider>
-              <Router>
-                <Routes />
-              </Router>
+              <AuthProfileProvider>
+                <Router>
+                  <Routes />
+                </Router>
+              </AuthProfileProvider>
             </AlertsProvider>
           </ThemeProvider>
         </LayoutProvider>

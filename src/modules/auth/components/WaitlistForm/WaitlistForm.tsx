@@ -1,36 +1,34 @@
 import { useFormik } from 'formik';
 import { useTheme } from 'styled-components';
 
-import { useWaitingListRegisterMutation } from '../../api/useWaitingListRegisterMutation';
 import TextField from 'components/TextField/TextField';
 
 import {
-  WaitingListFormContainer,
-  WaitingListSubmitButton,
-} from './WaitingListForm.styles';
+  WaitlistFormContainer,
+  WaitlistSubmitButton,
+} from './WaitlistForm.styles';
 import {
-  WaitingListFormProps,
-  WaitingListFormValues,
-} from './WaitingListForm.interfaces';
+  WaitlistFormProps,
+  WaitlistFormValues,
+} from './WaitlistForm.interfaces';
+import { useWaitlistRegister } from 'modules/auth/lib/hooks/useWaitlistRegister';
 
 /**
  * Form to join the waiting list of the platform launch.
  */
-export default function WaitingListForm({
+export default function WaitlistForm({
   onCompleted,
   onError,
-}: WaitingListFormProps) {
+}: WaitlistFormProps) {
   const theme = useTheme();
 
-  const [
-    waitingListRegisterMutation,
-    { loading: loadingWaitingListRegisterMutation },
-  ] = useWaitingListRegisterMutation({
-    onCompleted: data => onCompleted && onCompleted(data),
-    onError: error => onError && onError(error),
-  });
+  const [waitlistRegister, { loading: loadingWaitlistRegister }] =
+    useWaitlistRegister({
+      onCompleted,
+      onError,
+    });
 
-  const form = useFormik<WaitingListFormValues>({
+  const form = useFormik<WaitlistFormValues>({
     initialValues: {
       email: '',
       firstname: '',
@@ -38,14 +36,14 @@ export default function WaitingListForm({
       companyName: '',
     },
     onSubmit(values) {
-      waitingListRegisterMutation({
+      waitlistRegister({
         variables: values,
       });
     },
   });
 
   return (
-    <WaitingListFormContainer onSubmit={form.handleSubmit}>
+    <WaitlistFormContainer onSubmit={form.handleSubmit}>
       <TextField
         id="email"
         name="email"
@@ -90,12 +88,9 @@ export default function WaitingListForm({
         style={{ container: { marginBottom: theme.spacing.sm } }}
       />
 
-      <WaitingListSubmitButton
-        type="submit"
-        loading={loadingWaitingListRegisterMutation}
-      >
+      <WaitlistSubmitButton type="submit" loading={loadingWaitlistRegister}>
         Sign up
-      </WaitingListSubmitButton>
-    </WaitingListFormContainer>
+      </WaitlistSubmitButton>
+    </WaitlistFormContainer>
   );
 }

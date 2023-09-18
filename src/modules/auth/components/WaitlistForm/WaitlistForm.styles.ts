@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import Button from '../../../../components/Button/Button';
+import Button from 'components/Button/Button';
 
-export const WaitingListFormContainer = styled.form`
+export const WaitlistFormContainer = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@ export const WaitingListFormContainer = styled.form`
   justify-content: center;
 `;
 
-export const WaitingListSubmitButton = styled(Button)`
+export const WaitlistSubmitButton = styled(Button)`
   margin-top: ${({ theme }) => theme.spacing.sm}px;
   min-width: 172px;
 `;
