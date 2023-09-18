@@ -3,7 +3,7 @@ import { useTheme } from 'styled-components';
 import ArrowIcon from '../../../../lib/assets/icons/ArrowIcon';
 
 import Dialog from '../../../../components/Dialog/Dialog';
-import FallbackComponent from '../../../../components/FallbackPage/FallbackComponent';
+import FallbackComponent from '../../../../components/FallbackComponent/FallbackComponent';
 import Typography from '../../../../components/Typography/Typography';
 import WaitingListForm from '../WaitingListForm/WaitingListForm';
 import { WaitingListDialogParagraph } from './WaitingListDialog.styles';

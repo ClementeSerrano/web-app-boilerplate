@@ -1,6 +1,6 @@
 import { useRouteError } from 'react-router-dom';
 
-import FallbackComponent from '../FallbackPage/FallbackComponent';
+import FallbackComponent from '../FallbackComponent/FallbackComponent';
 
 export default function ErrorFallbackPage() {
   const error: any = useRouteError();
