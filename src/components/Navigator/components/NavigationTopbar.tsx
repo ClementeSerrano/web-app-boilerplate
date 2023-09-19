@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useTheme } from 'styled-components';
 
 import { useAuthProfile } from 'modules/auth/lib/hooks/useAuthProfile';
@@ -6,6 +7,7 @@ import Grid from 'components/Grid/Grid';
 import Avatar from 'components/Avatar/Avatar';
 import Button from 'components/Button/Button';
 import ThemeSwitch from 'components/ThemeSwitch/ThemeSwitch';
+import Navlink from 'components/Navlink/Navlink';
 import { useDevice } from 'contexts/DeviceContext/DeviceContext.hooks';
 import { useLayout } from 'contexts/LayoutContext/LayoutContext.hooks';
 import useElementSize from 'lib/hooks/useElementSize';
@@ -23,6 +25,8 @@ export default function NavigationTopbar({
   toggleShowSidebar,
 }: NavigationTopbarProps) {
   const { profile, isAuth } = useAuthProfile();
+
+  const location = useLocation();
 
   const containerRef = useRef(null);
 
@@ -49,9 +53,11 @@ export default function NavigationTopbar({
       </NavigationTopbarLogoNavlink>
 
       <Grid direction="row" align="center" justify="flex-end">
-        <ThemeSwitch style={{ marginRight: theme.spacing.sm }} />
+        {!device.isPhone && (
+          <ThemeSwitch style={{ marginRight: theme.spacing.sm }} />
+        )}
 
-        {isAuth && (
+        {isAuth ? (
           <Avatar
             withInitials
             src={profile?.avatar as string | undefined}
@@ -59,6 +65,18 @@ export default function NavigationTopbar({
           >
             {profile?.firstname} {profile?.lastname}
           </Avatar>
+        ) : (
+          <Navlink
+            to={ROUTE_PATHS.waitlistRegister}
+            format="button"
+            state={{ backgroundLocation: location }}
+            style={{
+              padding: '6px 12px',
+              borderRadius: theme.shape.borderRadius.lg,
+            }}
+          >
+            Sign up
+          </Navlink>
         )}
       </Grid>
     </NavigationTopbarContainer>
