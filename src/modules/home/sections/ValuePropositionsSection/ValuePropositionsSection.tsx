@@ -19,7 +19,7 @@ export default function ValuePropositionsSection() {
   return (
     <SectionContainer style={{ paddingTop: theme.spacing.md }}>
       <ValuePropositionTitle>
-        Opening access to climate investments
+        Financial infrastructure for climate investments
       </ValuePropositionTitle>
 
       <ValuePropositionCardsContainer>

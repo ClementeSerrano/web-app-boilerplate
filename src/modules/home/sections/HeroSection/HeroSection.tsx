@@ -7,6 +7,8 @@ import SectionContainer from 'components/SectionContainer/SectionContainer';
 import Button from 'components/Button/Button';
 import useGA from 'modules/rum/lib/hooks/useGA';
 import { GAEvent } from 'modules/rum/lib/interfaces/ga-event.enum';
+import InformativePill from 'components/InformativePill/InformativePill';
+import BoltCircledIcon from 'lib/assets/icons/BoltCircledIcon';
 
 /**
  * Home module main page.
@@ -23,25 +25,35 @@ export default function HeroSection() {
   };
 
   return (
-    <>
-      <SectionContainer style={{ paddingBottom: theme.spacing.xl }}>
-        <HomePageTitle variant="title2">
-          Restore nature with confidence.
-        </HomePageTitle>
+    <SectionContainer style={{ paddingBottom: theme.spacing.xl }}>
+      <InformativePill
+        onClick={handleGetStartedButtonClick}
+        style={{ marginBottom: theme.spacing.md }}
+      >
+        <BoltCircledIcon
+          height={16}
+          style={{ marginRight: theme.spacing.xxs }}
+        />
+        Try our community risk assessment AI
+        <ArrowIcon height={12} style={{ marginLeft: theme.spacing.xxs }} />
+      </InformativePill>
 
-        <HomePageSubtitle variant="title5" color="level3">
-          The financial infrastructure to power the next generation of nature
-          investments.
-        </HomePageSubtitle>
+      <HomePageTitle variant="title2">
+        Restore nature with confidence.
+      </HomePageTitle>
 
-        <Button
-          onClick={handleGetStartedButtonClick}
-          style={{ marginLeft: theme.spacing.sm, marginTop: theme.spacing.md }}
-        >
-          Get started{' '}
-          <ArrowIcon height={14} style={{ marginLeft: theme.spacing.xxs }} />
-        </Button>
-      </SectionContainer>
-    </>
+      <HomePageSubtitle variant="title5" color="level3">
+        AI-assessments on climate and co-benefits to get pricing and reputation
+        impact analysis.
+      </HomePageSubtitle>
+
+      <Button
+        onClick={handleGetStartedButtonClick}
+        style={{ marginLeft: theme.spacing.sm, marginTop: theme.spacing.md }}
+      >
+        Get started{' '}
+        <ArrowIcon height={14} style={{ marginLeft: theme.spacing.xxs }} />
+      </Button>
+    </SectionContainer>
   );
 }

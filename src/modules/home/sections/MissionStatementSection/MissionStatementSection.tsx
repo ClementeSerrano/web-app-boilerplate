@@ -2,8 +2,8 @@ import { useTheme } from 'styled-components';
 
 import { useDevice } from '../../../../contexts/DeviceContext/DeviceContext.hooks';
 import PosterCard from '../../../../components/PosterCard/PosterCard';
-import OnMobileProjectsMobileImgDarkMode from '../../../../common/assets/images/features/mobile/projects-mobile-dark-mode.png';
-import OnMobileProjectsMobileImgLightMode from '../../../../common/assets/images/features/mobile/projects-mobile-light-mode.png';
+import OnMobileProjectsMobileImgDarkMode from 'lib/assets/images/features/mobile/projects-mobile-dark-mode.png';
+import OnMobileProjectsMobileImgLightMode from 'lib/assets/images/features/mobile/projects-mobile-light-mode.png';
 
 import {
   MissionStatementSectionContainer,
@@ -17,7 +17,7 @@ export default function MissionStatementSection() {
   const { isLaptop } = useDevice();
 
   return (
-    <MissionStatementSectionContainer withSeparator>
+    <MissionStatementSectionContainer>
       <PosterCard
         bgColor={theme.palette.background.level2}
         style={{
@@ -25,9 +25,9 @@ export default function MissionStatementSection() {
           position: 'relative',
         }}
       >
-        <ProjectDescriptionTitle variant="title3">
-          Our mission is to accelerate the development of nature-based projects
-          by opening access for investors.
+        <ProjectDescriptionTitle variant="title4">
+          We are building the financial infrastructure needed to power the next
+          generation of nature investments.
         </ProjectDescriptionTitle>
 
         {isLaptop && (
