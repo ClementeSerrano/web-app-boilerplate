@@ -7,6 +7,7 @@ import { LayoutProvider } from 'contexts/LayoutContext/LayoutContext';
 import { ThemeProvider } from 'contexts/ThemeContext/ThemeContext';
 import Routes from './routes/Routes';
 import AuthProfileProvider from 'modules/auth/contexts/AuthProfileProvider';
+import { GAProvider } from 'modules/rum/contexts/GAProvider';
 
 export default function App() {
   return (
@@ -17,7 +18,9 @@ export default function App() {
             <AlertsProvider>
               <AuthProfileProvider>
                 <Router>
-                  <Routes />
+                  <GAProvider enabled={process.env.NODE_ENV === 'production'}>
+                    <Routes />
+                  </GAProvider>
                 </Router>
               </AuthProfileProvider>
             </AlertsProvider>

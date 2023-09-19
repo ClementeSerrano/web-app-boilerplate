@@ -12,6 +12,8 @@ import {
   WaitlistFormValues,
 } from './WaitlistForm.interfaces';
 import { useWaitlistRegister } from 'modules/auth/lib/hooks/useWaitlistRegister';
+import useGA from 'modules/rum/lib/hooks/useGA';
+import { AuthType } from 'api/interfaces/__generated__/graphql';
 
 /**
  * Form to join the waiting list of the platform launch.
@@ -28,6 +30,8 @@ export default function WaitlistForm({
       onError,
     });
 
+  const ga = useGA();
+
   const form = useFormik<WaitlistFormValues>({
     initialValues: {
       email: '',
@@ -36,6 +40,8 @@ export default function WaitlistForm({
       companyName: '',
     },
     onSubmit(values) {
+      ga.sendRegisterEvent(AuthType.WaitingList);
+
       waitlistRegister({
         variables: values,
       });
