@@ -4,35 +4,43 @@ import {
   useLocation,
 } from 'react-router-dom';
 
+import { DIALOG_ROUTES, PAGE_ROUTES } from './routes-mapping';
 import { ROUTE_PATHS } from './routes.constants';
 import Navigation from '../components/Navigator/Navigation';
 import Footer from 'components/Footer/Footer';
-import HomePage from 'modules/home/pages/HomePage';
-import WaitlistDialog from 'modules/auth/pages/WaitlistDialog/WaitlistDialog';
 
 /**
- * Component where the main routes of the app are specified.
+ * Main routes of the app.
  */
 export default function Routes() {
   const location = useLocation();
   const state = location.state as { backgroundLocation?: Location };
 
+  const isDialogRoute = DIALOG_ROUTES.some(
+    route => route.path === location.pathname,
+  );
+
+  const backgroundLocation =
+    state?.backgroundLocation ||
+    (isDialogRoute ? { pathname: ROUTE_PATHS.home } : location);
+
   return (
     <>
       <Navigation />
 
-      <ReactRouterRoutes location={state?.backgroundLocation || location}>
-        <Route path={ROUTE_PATHS.home} element={<HomePage />} />
+      <ReactRouterRoutes location={backgroundLocation}>
+        {PAGE_ROUTES.map(route => (
+          <Route key={route.path} path={route.path} element={route.element} />
+        ))}
       </ReactRouterRoutes>
 
       <Footer />
 
-      {state?.backgroundLocation && (
-        <ReactRouterRoutes>
-          <Route
-            path={ROUTE_PATHS.waitlistRegister}
-            element={<WaitlistDialog />}
-          />
+      {isDialogRoute && (
+        <ReactRouterRoutes location={location}>
+          {DIALOG_ROUTES.map(route => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
         </ReactRouterRoutes>
       )}
     </>
