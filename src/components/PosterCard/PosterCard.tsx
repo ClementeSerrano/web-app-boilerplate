@@ -14,6 +14,7 @@ export default function PosterCard({
   bgImg,
   gradientFrom,
   gradientTo,
+  withBlackMask = false,
 }: PosterCardProps) {
   const background =
     bgColor ||
@@ -32,7 +33,7 @@ export default function PosterCard({
       >
         <PosterCardChildrenContainer>{children}</PosterCardChildrenContainer>
 
-        {bgImg && <PosterCardBlackMask />}
+        {withBlackMask && <PosterCardBlackMask />}
       </PosterCardContainer>
     </>
   );

@@ -10,5 +10,6 @@ export type PosterCardProps = WithChildren<
     bgColor?: string;
     bgImg?: string;
     as?: React.ElementType;
+    withBlackMask?: boolean;
   }>
 >;
