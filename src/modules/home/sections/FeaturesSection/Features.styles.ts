@@ -37,20 +37,20 @@ export const FeaturesTextsContainer = styled.div`
 `;
 
 export const FeaturesMockupsContainer = styled.div<{
-  position?: 'left' | 'right';
+  $position?: 'left' | 'right';
 }>`
   position: relative;
   display: flex;
   flex: 1;
-  justify-content: ${({ position }) =>
-    position === 'right' ? 'flex-end' : 'flex-start'};
+  justify-content: ${({ $position }) =>
+    $position === 'right' ? 'flex-end' : 'flex-start'};
 
   @media (max-width: 600px) {
     justify-content: center;
   }
 `;
 
-export const FeatureImg = styled.img`
+export const FeaturesImg = styled.img`
   height: 480px;
   border-radius: 12px;
   box-shadow: 0px 16px 70px 0px rgba(0, 0, 0, 0.2);
@@ -58,7 +58,7 @@ export const FeatureImg = styled.img`
 
   @media (max-width: 600px) {
     height: 290px;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     border-bottom-color: transparent;

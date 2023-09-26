@@ -17,8 +17,7 @@ export default function PosterCard({
 }: PosterCardProps) {
   const background =
     bgColor ||
-    bgImg ||
-    `url(${bgImg}) center center / cover no-repeat` ||
+    (bgImg && `url(${bgImg}) center center / cover no-repeat`) ||
     `linear-gradient(${gradientFrom}, ${gradientTo})`;
 
   return (

@@ -14,6 +14,7 @@ export default function SectionContainer({
   variant = 'level1',
   withSeparator = false,
   style,
+  className,
 }: SectionContainerProps) {
   const theme = useTheme();
 
@@ -37,10 +38,11 @@ export default function SectionContainer({
       size="lg"
       variant={variant}
       style={styles}
+      className={className}
     >
       {children}
 
-      {withSeparator && <SectionSeparator paddingVertical={paddingVertical} />}
+      {withSeparator && <SectionSeparator $paddingVertical={paddingVertical} />}
     </Grid>
   );
 }

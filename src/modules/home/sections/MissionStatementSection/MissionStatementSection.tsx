@@ -1,26 +1,19 @@
-import { useTheme } from 'styled-components';
+import { useDevice } from 'contexts/DeviceContext/DeviceContext.hooks';
+import PosterCard from 'components/PosterCard/PosterCard';
+import BgImg from 'lib/assets/images/backgrounds/mission-bg.jpg';
 
-import { useDevice } from '../../../../contexts/DeviceContext/DeviceContext.hooks';
-import PosterCard from '../../../../components/PosterCard/PosterCard';
-import OnMobileProjectsMobileImgDarkMode from 'lib/assets/images/features/mobile/projects-mobile-dark-mode.png';
-import OnMobileProjectsMobileImgLightMode from 'lib/assets/images/features/mobile/projects-mobile-light-mode.png';
-
-import {
-  MissionStatementSectionContainer,
-  MissionStatementSectionImg,
-  ProjectDescriptionTitle,
-} from './MissionStatementSection.styles';
+import { ProjectDescriptionTitle } from './MissionStatementSection.styles';
+import SectionContainer from 'components/SectionContainer/SectionContainer';
 
 export default function MissionStatementSection() {
-  const theme = useTheme();
-
-  const { isLaptop } = useDevice();
+  const { isLaptop, isPhone } = useDevice();
 
   return (
-    <MissionStatementSectionContainer>
+    <SectionContainer style={{ paddingTop: isPhone ? 0 : 'unset' }}>
       <PosterCard
-        bgColor={theme.palette.background.level2}
+        bgImg={BgImg}
         style={{
+          minHeight: isLaptop ? 400 : 'unset',
           maxWidth: 1056,
           position: 'relative',
         }}
@@ -29,17 +22,7 @@ export default function MissionStatementSection() {
           We are building the financial infrastructure needed to power the next
           generation of nature investments.
         </ProjectDescriptionTitle>
-
-        {isLaptop && (
-          <MissionStatementSectionImg
-            src={
-              theme.mode === 'dark'
-                ? OnMobileProjectsMobileImgDarkMode
-                : OnMobileProjectsMobileImgLightMode
-            }
-          />
-        )}
       </PosterCard>
-    </MissionStatementSectionContainer>
+    </SectionContainer>
   );
 }

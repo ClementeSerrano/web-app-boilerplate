@@ -1,32 +1,14 @@
 import styled from 'styled-components';
-import SectionContainer from '../../../../components/SectionContainer/SectionContainer';
-import Typography from '../../../../components/Typography/Typography';
 
-export const MissionStatementSectionContainer = styled(SectionContainer)`
-  @media (max-width: 600px) {
-    padding: 80px;
-  }
-`;
-
-export const MissionStatementSectionImg = styled.img`
-  position: absolute;
-  right: 80px;
-  bottom: 0;
-  height: 440px;
-  border-radius: 12px;
-  box-shadow: 0px 16px 70px 0px rgba(0, 0, 0, 0.2);
-  border: 2px solid ${({ theme }) => theme.palette.background.level2};
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-color: transparent;
-`;
+import Typography from 'components/Typography/Typography';
+import { DEVICES_BREAKPOINTS } from 'contexts/DeviceContext/DeviceContext.constants';
 
 export const ProjectDescriptionTitle = styled(Typography)`
   max-width: 560px;
   font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
   line-height: 1.3;
 
-  @media (max-width: 600px) {
-    font-size: 1.8rem;
+  @media (max-width: ${DEVICES_BREAKPOINTS.phone.max}px) {
+    font-size: 1.6rem;
   }
 `;

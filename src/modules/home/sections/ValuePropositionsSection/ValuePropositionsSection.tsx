@@ -17,7 +17,7 @@ export default function ValuePropositionsSection() {
   const theme = useTheme();
 
   return (
-    <SectionContainer style={{ paddingTop: theme.spacing.md }}>
+    <SectionContainer withSeparator style={{ paddingTop: theme.spacing.md }}>
       <ValuePropositionTitle>
         Financial infrastructure for climate investments
       </ValuePropositionTitle>
