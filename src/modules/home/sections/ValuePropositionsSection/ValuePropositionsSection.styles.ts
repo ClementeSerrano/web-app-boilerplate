@@ -16,21 +16,6 @@ export const ValuePropositionCardsContainer = styled.div`
   }
 `;
 
-export const ValuePropositionTitle = styled.h1`
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.25rem;
-  line-height: 1.5;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.palette.primary.main};
-  margin-bottom: ${({ theme }) => theme.spacing.lg}px;
-  text-align: center;
-
-  @media (max-width: 600px) {
-    font-size: 14px;
-  }
-`;
-
 export const ValuePropositionSubtitle = styled(Typography)`
   margin-top: ${({ theme }) => theme.spacing.lg}px;
   max-width: 1200px;

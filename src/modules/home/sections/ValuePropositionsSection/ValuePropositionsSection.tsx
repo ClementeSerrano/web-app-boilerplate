@@ -8,7 +8,6 @@ import LeafIcon from 'lib/assets/icons/LeafIcon';
 
 import {
   ValuePropositionCardsContainer,
-  ValuePropositionTitle,
   ValuePropositionIconContainer,
   ValuePropositionCard,
 } from './ValuePropositionsSection.styles';
@@ -18,10 +17,6 @@ export default function ValuePropositionsSection() {
 
   return (
     <SectionContainer withSeparator style={{ paddingTop: theme.spacing.md }}>
-      <ValuePropositionTitle>
-        Financial infrastructure for climate investments
-      </ValuePropositionTitle>
-
       <ValuePropositionCardsContainer>
         <ValuePropositionCard>
           <ValuePropositionIconContainer>

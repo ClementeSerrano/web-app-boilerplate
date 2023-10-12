@@ -34,7 +34,7 @@ export default function HeroSection() {
           height={16}
           style={{ marginRight: theme.spacing.xxs }}
         />
-        Try our community risk assessment AI
+        Try our community risk assessment demo
         <ArrowIcon height={12} style={{ marginLeft: theme.spacing.xxs }} />
       </InformativePill>
 
@@ -43,8 +43,8 @@ export default function HeroSection() {
       </HomePageTitle>
 
       <HomePageSubtitle variant="title5" color="level3">
-        AI-assessments on climate and co-benefits to get pricing and reputation
-        impact analysis.
+        AI-assessments on co-benefits claims for reducing reputation risk on
+        climate investments.
       </HomePageSubtitle>
 
       <Button
