@@ -1,7 +1,7 @@
 {
   "name": "climeinvest-lp",
-  "version": "0.1.0",
-  "description": "Climevest - City settlement made easy.",
+  "version": "0.2.0",
+  "description": "Climevest - Due diligence for carbon investors",
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.7.16",
