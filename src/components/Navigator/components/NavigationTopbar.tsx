@@ -6,7 +6,7 @@ import { useAuthProfile } from 'modules/auth/lib/hooks/useAuthProfile';
 import Grid from 'components/Grid/Grid';
 import Avatar from 'components/Avatar/Avatar';
 import Button from 'components/Button/Button';
-import ThemeSwitch from 'components/ThemeSwitch/ThemeSwitch';
+// import ThemeSwitch from 'components/ThemeSwitch/ThemeSwitch';
 import Navlink from 'components/Navlink/Navlink';
 import { useDevice } from 'contexts/DeviceContext/DeviceContext.hooks';
 import { useLayout } from 'contexts/LayoutContext/LayoutContext.hooks';
@@ -49,13 +49,13 @@ export default function NavigationTopbar({
       </Button>
 
       <NavigationTopbarLogoNavlink to={ROUTE_PATHS.home}>
-        <Logo variant={device.isPhone ? 'isotype' : 'logo'} height={32} />
+        <Logo variant={device.isPhone ? 'isotype' : 'logo'} height={24} />
       </NavigationTopbarLogoNavlink>
 
       <Grid direction="row" align="center" justify="flex-end">
-        {!device.isPhone && (
+        {/* {!device.isPhone && (
           <ThemeSwitch style={{ marginRight: theme.spacing.sm }} />
-        )}
+        )} */}
 
         {isAuth ? (
           <Avatar

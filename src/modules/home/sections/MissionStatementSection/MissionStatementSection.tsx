@@ -22,7 +22,7 @@ export default function MissionStatementSection() {
           position: 'relative',
         }}
       >
-        <ProjectDescriptionTitle variant="title4">
+        <ProjectDescriptionTitle variant="title3">
           We are building the financial infrastructure needed to power the next
           generation of nature investments.
         </ProjectDescriptionTitle>

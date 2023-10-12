@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export function ThemeProvider({ children }: WithChildren) {
-  const [mode, setMode] = useLocalStorage<ThemeMode>('theme', 'dark');
+  const [mode, setMode] = useLocalStorage<ThemeMode>('theme', 'light');
 
   const toggleMode = () => {
     const updatedMode = mode === 'light' ? 'dark' : 'light';

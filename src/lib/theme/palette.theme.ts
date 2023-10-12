@@ -3,15 +3,15 @@ import { ThemePalette } from '../interfaces/theme.interfaces';
 
 export const lightThemePalette: ThemePalette = {
   primary: {
-    light: themeColors.green.light,
-    main: themeColors.green.main,
-    dark: themeColors.green.dark,
-    contrastText: themeColors.white.main,
-  },
-  secondary: {
     light: themeColors.blue.light,
     main: themeColors.blue.main,
     dark: themeColors.blue.dark,
+    contrastText: themeColors.white.main,
+  },
+  secondary: {
+    light: themeColors.gray.light,
+    main: themeColors.gray.main,
+    dark: themeColors.gray.dark,
     contrastText: themeColors.white.main,
   },
   error: {
@@ -46,7 +46,7 @@ export const lightThemePalette: ThemePalette = {
     level5: themeColors.gray.main,
   },
   text: {
-    level1: themeColors.gray.darker,
+    level1: themeColors.black.main,
     level2: themeColors.gray.dark,
     level3: themeColors.gray.main,
     level4: themeColors.gray.light,
@@ -56,15 +56,15 @@ export const lightThemePalette: ThemePalette = {
 
 export const darkThemePalette: ThemePalette = {
   primary: {
-    light: themeColors.green.light,
-    main: themeColors.green.main,
-    dark: themeColors.green.dark,
+    light: themeColors.blue.light,
+    main: themeColors.blue.main,
+    dark: themeColors.blue.dark,
     contrastText: themeColors.white.main,
   },
   secondary: {
-    light: themeColors.cyan.light,
-    main: themeColors.cyan.main,
-    dark: themeColors.cyan.dark,
+    light: themeColors.gray.light,
+    main: themeColors.gray.main,
+    dark: themeColors.gray.dark,
     contrastText: themeColors.white.main,
   },
   error: {
@@ -99,7 +99,7 @@ export const darkThemePalette: ThemePalette = {
     level5: themeColors.gray.light,
   },
   text: {
-    level1: themeColors.gray.lighter,
+    level1: themeColors.white.main,
     level2: themeColors.gray.light,
     level3: themeColors.gray.main,
     level4: themeColors.gray.dark,

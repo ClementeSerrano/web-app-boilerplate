@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://climeinvest.com/" target="blank"><img src="https://i.postimg.cc/W1G2SGqz/Isotype-rounded.png" width="200" alt="Climeinvest Logo" /></a>
+  <a href="https://climeinvest.com/" target="blank"><img src="https://i.postimg.cc/bNhFP74y/Isotype-squared.png" width="200" alt="Climeinvest Logo" /></a>
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456

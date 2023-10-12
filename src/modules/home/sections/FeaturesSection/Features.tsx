@@ -6,8 +6,8 @@ import Typography from 'components/Typography/Typography';
 
 import RiskAssessmentTrialDarkMode from 'lib/assets/images/features/risk-assessment-trial-dark-mode.jpg';
 import RiskAssessmentTrialLightMode from 'lib/assets/images/features/risk-assessment-trial-light-mode.jpg';
-import MobileRiskAssessmentTrialImgDarkMode from 'lib/assets/images/features/mobile/risk-assessment-trial-mobile-dark-mode.jpg';
-import MobileRiskAssessmentTrialImgLightMode from 'lib/assets/images/features/mobile/risk-assessment-trial-mobile-light-mode.jpg';
+import OnPhoneRiskAssessmentTrialImgDarkMode from 'lib/assets/images/features/mobile/on-mobile-risk-assessment-trial-dark-mode.jpg';
+import OnPhoneRiskAssessmentTrialImgLightMode from 'lib/assets/images/features/mobile/on-mobile-risk-assessment-trial-light-mode.jpg';
 
 import RiskAssessmentResultDarkMode from 'lib/assets/images/features/risk-assessment-result-dark-mode.jpg';
 import RiskAssessmentResultLightMode from 'lib/assets/images/features/risk-assessment-result-light-mode.jpg';
@@ -66,8 +66,8 @@ export default function Features() {
             <FeaturesImg
               src={
                 theme.mode === 'dark'
-                  ? MobileRiskAssessmentTrialImgDarkMode
-                  : MobileRiskAssessmentTrialImgLightMode
+                  ? OnPhoneRiskAssessmentTrialImgDarkMode
+                  : OnPhoneRiskAssessmentTrialImgLightMode
               }
             />
           ) : (
