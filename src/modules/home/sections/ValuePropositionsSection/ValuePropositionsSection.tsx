@@ -32,7 +32,7 @@ export default function ValuePropositionsSection() {
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Get assurance on future price stability based on core risk elements.
+            Identify, verify & monitor project claims for pre-issuance projects.
           </Typography>
         </ValuePropositionCard>
 
@@ -49,8 +49,7 @@ export default function ValuePropositionsSection() {
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Mitigate reputation risk and invest in climate projects with
-            confidence.
+            Mitigate reputation risk and automate co-benefits due diligence.
           </Typography>
         </ValuePropositionCard>
 
@@ -67,7 +66,8 @@ export default function ValuePropositionsSection() {
           </Typography>
 
           <Typography as="h2" variant="paragraph1">
-            Get faster access to financing for your nature-based solution.
+            Get faster access to financing and display a strong investor
+            narrative.
           </Typography>
         </ValuePropositionCard>
       </ValuePropositionCardsContainer>

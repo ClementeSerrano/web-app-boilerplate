@@ -54,10 +54,10 @@ export default function Features() {
               textAlign: isPhone ? 'center' : 'left',
             }}
           >
-            Add your project documents or just type in the text. Anyone building
-            or assessing our project can use our AI model to analyse and perform
-            an assessment on credit pricing and reputation risk across climate
-            and co-benefits indicators. We do not store any data you upload.
+            Add your project documents. Anyone assessing a carbon removal or
+            avoidance project can use our AI model to instantly identify
+            co-benefits claims made by a project and assess the impact on
+            reputation risk and carbon price.
           </Typography>
         </FeaturesTextsContainer>
 
@@ -126,7 +126,7 @@ export default function Features() {
               marginBottom: isPhone ? theme.spacing.md : theme.spacing.lg,
             }}
           >
-            Get your pricing and risk impact analysis.
+            Reputation impact analysis & co-benefits due diligence.
           </Typography>
 
           <Typography
@@ -138,10 +138,10 @@ export default function Features() {
               textAlign: isPhone ? 'center' : 'right',
             }}
           >
-            Receive a detailed evaluation of your project with summaries, scores
-            and feedback. Understand how credit pricing and reputation risk will
-            be impacted from each indicator so that you can make informed
-            decisions about where to invest.
+            Receive an instant assessment of a project claims with detailed
+            analysis, scores and feedback. Understand how reputation risk and
+            carbon price will be impacted by each claim made by the project to
+            verify and monitor those claims on an ongoing basis.
           </Typography>
         </FeaturesTextsContainer>
       </FeaturesSubsectionContainer>

@@ -18,8 +18,8 @@ export default function MissionStatementSection() {
         }}
       >
         <ProjectDescriptionTitle variant="title3" color="level5">
-          We are building the most complete due diligence offering for corporate
-          sustainability teams and nature investors.
+          Our mission is to facilitate the development of the next generation of
+          carbon projects.
         </ProjectDescriptionTitle>
       </PosterCard>
     </SectionContainer>
