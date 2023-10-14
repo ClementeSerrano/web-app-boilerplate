@@ -1,6 +1,6 @@
 {
   "name": "climeinvest-lp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Climevest - Due diligence for carbon investors",
   "private": true,
   "dependencies": {
