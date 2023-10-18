@@ -1,7 +1,7 @@
 {
   "name": "climeinvest-lp",
-  "version": "0.3.0",
-  "description": "Climevest - Due diligence for carbon investors",
+  "version": "0.3.1",
+  "description": "Climevest - AI-powered due diligence for carbon projects",
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.7.16",
