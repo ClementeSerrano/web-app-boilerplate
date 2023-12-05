@@ -23,7 +23,7 @@
 
 ## Description
 
-Web app boilerplate to start building from a scalable app.
+App boilerplate to start building a scalable web app.
 
 ## Prerequisites
 
