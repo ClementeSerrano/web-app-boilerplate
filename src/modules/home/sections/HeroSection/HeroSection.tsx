@@ -7,8 +7,6 @@ import SectionContainer from 'components/SectionContainer/SectionContainer';
 import Button from 'components/Button/Button';
 import useGA from 'modules/rum/lib/hooks/useGA';
 import { GAEvent } from 'modules/rum/lib/interfaces/ga-event.enum';
-import InformativePill from 'components/InformativePill/InformativePill';
-import BoltCircledIcon from 'lib/assets/icons/BoltCircledIcon';
 
 /**
  * Home module main page.
@@ -26,24 +24,11 @@ export default function HeroSection() {
 
   return (
     <SectionContainer style={{ paddingBottom: theme.spacing.xl }}>
-      <InformativePill
-        onClick={handleGetStartedButtonClick}
-        style={{ marginBottom: theme.spacing.md }}
-      >
-        <BoltCircledIcon
-          height={16}
-          style={{ marginRight: theme.spacing.xxs }}
-        />
-        Try our co-benefits assessment now
-        <ArrowIcon height={12} style={{ marginLeft: theme.spacing.xxs }} />
-      </InformativePill>
-
-      <HomePageTitle variant="title2">
-        Invest in carbon projects with confidence.
-      </HomePageTitle>
+      <HomePageTitle variant="title2">Web app boilerplate.</HomePageTitle>
 
       <HomePageSubtitle variant="title5" color="level3">
-        AI-powered due diligence & MRV for co-benefits claims.
+        Scalable boilerplate to start building a web app from. <br /> By
+        Clemente Serrano.
       </HomePageSubtitle>
 
       <Button
